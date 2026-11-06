@@ -3174,7 +3174,7 @@ const _hud67=hud;hud=function(){_hud67();if(LVQ.length||LVSHOW)return;if(!['home
   TXs(lock?'เริ่มที่ Lv '+s.lv:(s.g.st==='gold'?a.toLocaleString()+'/'+b.toLocaleString()+' G':a+'/'+b)+(storyReady()?' · พร้อมรับรางวัล':''),32,y+40,12,storyReady()?'#8fe08a':'#cfe6f2')}
  if(n){gc_(338,y+6,12,'#e8504a');TXB(String(n),338,y+6,13,'#fff','center')}};
 
-const GAME_VER='V1.40';
+const GAME_VER='V1.41';
 // ===== V0.68 STEP 8 — UX/UI: main dock (บ้าน / ตู้ / อ่าง / เมือง / เควส), Lv1-5 tutorial pointers tied to the story,
 // one UI skin drawn by the user's ChatGPT (buttons, tags, icons), Demo/dev tools hidden in real play, online save per player. =====
 const UI_IMG={"btn_blue": "data:image/webp;base64,UklGRj4BAABXRUJQVlA4TDIBAAAvIkAEEL/AJgCANLi/HgFy0P8lh82lBpsAAJNML3fcQxCDgiSgn6viSJKSO1zfEAJJkH9C7vMfkPmcXjc1/ElsyWQDAYsn14oZmTJEcwnaLHRUVJHFNUEQQYDgB37wgR8gTMAfUc2kqTFAjG0rChMDCG4fd+2/VcGYDt6N6P8E3EWH/hnoo/u6hG9iR/O1e9B0ClGp+zi4QsSP/cdtIrib0EV/vT7fDzF5R+jjJZ0c1YUNWCUAG1PriGG8jrd7YS3CNhTSdB6wS0txfc6QpVVWOxaYd1HPAkmydasMq2bIABKgsj1rWpVVsPz2MY1tIUymLMszMrJM2arT0MXg+EmMk60m7aYsWXmWJoYQadyNT4Rx+HQkQte6W/hI+mNM1TZI3t0SPqiVeCmeQujXcT/5V0k=", "btn_gray": "data:image/webp;base64,UklGRlABAABXRUJQVlA4TEMBAAAvIkAEELegKrKVijeoISSBoS3J562hNpKtBA0hhNSd/uuhBIbUvuJIUqKF4gmeL4tEDNJUNYFz/kOEZi6OJBvIMZ+pq48rnbSrfCw3b2u5mR0QEADQRwBAHwCEstnTi82fgwFiJNttGwnhgxkMENh/rYBkuoN3Ef2fgLvr0T8Dw+if7uGwub7cG1CXH+V782SEOk/fx+nHMfhb4m01WBqeTRX5W5Qahs/TS6o4jxtt+MDSX9uLbpaK1eAx6bOw7dKyQhaXhHILp43RY2Na9k3S2gFduX+wnqn2tl1au1dmy9IBEogfziPrUpau3IWTVipfKAeQaZv9OAWSihSiPBrjcOpAqAVJoLYozRY8r4oN5ZTKqXJKTdEpFSkZvP2Nq0RLjxrJmPC3cPX72AIIAcQgOX9LuBhiiAqKfwwxCM/d8q+SAAA=", "btn_green": "data:image/webp;base64,UklGRloBAABXRUJQVlA4TE4BAAAvIkAEELegJpKt5mdiT8VgAv89KlCAgmhDaSRbzfuf6GIFWBz9N0MNGRQK2khS7u75Xbx/ccw4/+G9vaWW3ZdWEYrAEdX2ZKBbra6EZh+VBOgDEMSHAMDgfxSdULIzUjK7t95kgBhJctyGxv8LAAUw/1gPUskZ7Eb0fwKeoybxvyTjvPjjE9Xl7nL9Wp/u6aPb798uow8+OUa5vgUBIGwq/YDvruL99cR9nAD8ptK8Upw3MPvn9iKBVggw2W00gzV3/zzYgBfaOZfkl9UMK8zDkK0SspCZQPL7VMRoojKzYlRZkJNfp9RHH+cqR5WDBfDbamK51KWocpCsHAQQnT0gpkMfzJUcMoMAYrhp9MNNF1PJwCuhgZWZCSAi4Ilw6Ydq0zp65+nov3X0LgKT+gFV2B/XeS+5SWeUU/oBqIw1gDWwZ2OlgTX403wk/xUA", "btn_orange": "data:image/webp;base64,UklGRkoBAABXRUJQVlA4TD4BAAAvIkAEELegNJKk6F7UOX4U5B8gCjYNRZEkNXsHz3uRkwA04N9MskCdgjaSlL17Zg3v3x/T/AdL7PaLIiVtYnjit+20N7eRi7m9v7rjJLQOACgQfwIgEAYw4P4nv2pJYXAY21acGHaQ7Jj0XyvoxA7ejej/BNxDi/4MZPH0CDOFrNf0sO2YruyCyvX5Ln5Mxg5CNi4/HBLG3iLL6Hr6ncBYXA66+Jzj4zy2X9VCcpbg3XVq4ziP4XkA6iS1mLwlpHxuVA5Bp26n7mzwpcTzqHPd6QBpH8/b+sNcZ2CncjBX9n4G1vaNNsO6zdRj3mdgZ4ZVaipeXVJpaz/vLNTBurS1SSVcwVleCV+a1qUtTfu8rJLauMSQmeyNSfgQn1VWeDt7CxNJEBOUcVSfwMkIe0sYN/TOj53vnSQmy93zV0k=", "btn_purple": "data:image/webp;base64,UklGRiwBAABXRUJQVlA4TCABAAAvIkAEEJ+gKJKk5nLgmXnhAf+ecIAPtY0kNe//sZEL6YD+mwMxDQAgDdbcMo3MA1zOH/zhMgnzH9xZz0QYVc4vxlFfJNtbdzpQPUmoOvaDLxogRAAgQoAAIrB3cXtmgBhJctzGeH0SwAO//JMFSdMZ7ET0fwLOywj6X8AI8eUrgtJhP2/Hq0PZxPEQPSTFi2yp1N93ZaR4CiN9dm3vtmqEiIzPtgM+JK2S0EJ3abhasRSxxL7BuJ4k+W2vliPF6ubDpZVx7xoX/UFfHHji9zeaLockH/Knvd2UzgJ98eEdSRqu4RLwLflC37722QWgeTC3euQUT4zyaR2a9zbNrUODmk0hngQjl/quDI4cTxGyvS4lhXhKhPzXpHsinDP/KUk=", "btn_rose": "data:image/webp;base64,UklGRj4BAABXRUJQVlA4TDEBAAAvIkAEEK+gNJKk6PbUD3giQJJ/VEjUpqE0kiTl2D1IcOQ+/8xe7lcpjSQpum/UOXB48s+KGH5q/kNTBisqvMJsq/ksfHobO9X50+vXbEWMjgwGwAokhBRYfDwXw34wQLBtq2qTVP5aeEh1/nMVbTKDcyP6PwHn1KEvAxn36RnLTz54/ffNa+ouvI8cUPl7uPJQ3k1ClnhYMmWeiYXFneLIgUP7Z39TYXGELA7tYEL0NjeporbF4h0KfgdMoC67dEO7VGGkEh0qabcGXYboRr+auglGKt4R11RbpYEJ1OdGF4wHrU66TDcYFXgQRwVabV0Y0w6VAZtn4jXqvNXbzqgDtnhk704KcR2Vcb0Z021NIevtTnwhKn00KhOO4E6xxHK7in8GeS3ulFj8F+U4r3xVEgA=", "close": "data:image/webp;base64,UklGRgABAABXRUJQVlA4TPQAAAAvDsADEK/AJgCANLi7l4BI9H9l68KgkSRFx8z4YIJ1vObXRVEbyVbyP+45dVAKFVA+IZHL/AfUNmaUiog9ixooQxU4LjR/TBAUM0YYIj3/36WZK94aPDp3tWJjz2IuidfBvjIwjGSrifoI/8sP5P57hSIi+q+2bRvGTs+mM/beAPbta4pt4fjKVldbbv4HXGoxsYiIZeyNdyV3M1PShI1k7r2o95LlA4pYn73OWYUCXmctY87pLJTwehapc450y1hPzi6SEyCsfXYeszJ9QFQqTvI7pdbCBksmOd9VFza+rHzcVls47EIiorBCq7hhPs9zWEYA", "ic_coin": "data:image/webp;base64,UklGRtwBAABXRUJQVlA4TM8BAAAvHsAHEJfAIACAJHR35wP9v8cRflEV2VbycPl0JwFd6B+CBqY2kq3kKxZ/WqEZ+s80IrL5DwAaMyEGKPpy09trW9jwsVxiYGze/HEQAqn0s/8k3z4eU1QKNFSAYNtK2Gga/SAKgun+N6sknSVE9F+R27aNHAMZ7Wk94vuukvX9p0q5snLj93qiuNcym7V+fiblorjvex1UJ9W/8u56HzXa2qg2fMqbKWVtThUBeYqrvOfup7bRheGqzjve3E56FnURgakCNVE+cd+cVk9v7cCk2pHXlLaiZUeEs5xo6uCa8OWyVrKqvECJQit4rjXjDlWHJFi14SwubXkz2zZTHc7CREy24auUay3q5rGSxxD47CAbDGzqRiUiMr27DmY66/hghuHhLftIIKzKwAMJm/OFARFSbS90sce8jy0IuzoyatylJZ/gMZhfMfMTI0kA2rQ0ycehmy7gPjrAwgCFan3BSHoXoTGQjypM8bgpBV0b5AhA9rRWn/y1MRofRFiEW4QFAfV5C0ff8diFiLnNqFf5PqL3rpNpK2UBnIN8ewG9D9U5T2bTmYHsZ9pEs9zBIqjl1+urnAVw2vGPd11xxFyv61+vv3ySrtfsf7/Gj+wLAA==", "ic_drop": "data:image/webp;base64,UklGRm4BAABXRUJQVlA4TGIBAAAvF8AHEJ+gIACAItvmmv4v6ZDiSJKSE+znEgApeP5B8aJQ0EaScs/MDIrev5M3MP8BQESIBBEUZTXZvfvcN6kvSGKSFZyRlCR44LDGAANatS++3S7RC3I0OIxtpY424gP/Bk3/xUZ0U0JE/xm4bdvIrqDb+z7xHEv0fCtdF32EPX0DCZ8GQeMn0e9WxqsvbgL2P/qHH1oCAEd/cKqtRry66HxEHX30EgHxdOR+mb0UBtjReaMxtdUaGXJYRE5fptZaswDR0cY9dNqUCDAcnZbN0ds7Ehtt7suttSVGZEfW1WIkQDLBaHWMfo53RG5o6WtqmxFBzCYlDe1bUngjNjHN2U8W2RO3NGMJW0IopdTlvEg92SSOMabSsl3bTR7yyhxshVl0luzJvK3MLDv3nGX5WUrMAPNiDOslaI6yCE21JewvmLzPJb0trWT2xw/lcqnWmnOCc+e/hsht/f8vkelh6gE=", "ic_gear": "data:image/webp;base64,UklGRhgCAABXRUJQVlA4TAsCAAAvH8AHEJegoJGk5nulSEAF/jWBGkWRJDUXyRnkUPgXwRsFCFATSYrEDxkmKETgXwUqiO+S+Q8ATwzmCqyPD8fj80Y2pVObnjWnsIDCqg6qvJt3/IfeP3cXg8TYtuO2iYAPfOwEyP6r1RKX8G5E/yfg+T1+1N/jUDzEP+Pc0qqe4gP8ByAxYVFzigRekV8whci/MddQtRTtWjWH+A2/bkzX0kTgdq2pmkP8hN1LOvcaYtKle02E52/Xep99VEl9sgBayhbfeI032rklba+TvmZLpvBBpCWNekvXvjl4HXMkSyE+n0lrtvuwKafscrzNlSzE59tZ47rPpsAu7JNHrzlFPoCvcd2bEjBpA6qtJnsp8ohymO3ah2DiJdtQfCzp9hwirrmohWNBRHidfbA+epsZi/gaVN3aphAfiXPtYrWpj0x4m4x6l2P+pRjqjPZt0Oq1cXvD9qGo9dGVsUhwatMGTCHC2QdPVUlSDvEh4L1qU7Zb0NlQgrdqChAfCV5VOl42t3R2OZ5qT7IIz0e8Ny8bOBQw1daThfh8xleTKAe8YJJ3GFlfeF29iarsBTfl2kdTX9nil06Doeo5QW0aXaimHOKbyIOeqZ1Wm1SdPrqSLD6fyd2ThTRabT2Z5KMmKT7fMaUQX7NJJAuvmBOKz68AYjQ6SSE+vMTz/3iVyIT4CPSXhHeLz9/zUb8DAA==", "ic_heart": "data:image/webp;base64,UklGRpABAABXRUJQVlA4TIQBAAAvHwAHEJegNpKt5GORu6Sk1EH/fVCCt6Emkq3m/dQHkh704gcXtJSgKJKk5nIgK8AGDvDvhR+v+Q8ARBawEz6Kv451P7Kf/ps5FxeDEhFg6jPMGAUhIPSgVrdBlwFiJMlxGxP/Swp0/skSC1DKYDei/wrbtm0cGzDq7vaKfyiLxf0uuCsdWEK3bGKrWCWl8GfnJgxsIm4oEz9DV8tBhxWjhtRKCsYu0jlu6kxyxsp8hqSemYwspu2eNa7yUG3cVJdqUjgspoDrbDWFOnVNZOfnOU1F6SR7Tm2Al2pyDAaAflbN12DXKak4v6D1e1wIcl2gJE/nFwxd50v1uke9+IpWkttARU39RXOWFfGB2HeUSuYU/WHhXQrJulI1M3mS8C6UQZCb2TBlBhCa8rRS61UE77T9GA+gihrXVDJ2++8SgJmQck252FBLTtM4Qpoh3TI+EEmP6Ua7sCRHLbNB+s6cHLQpm532AzJ2wvQrKqcp8N9RQY/d+i8GBE9N/wPJn0RKehMB", "ic_home": "data:image/webp;base64,UklGRuABAABXRUJQVlA4TNQBAAAvH8AGEJegJgBAxr68rr3rKCWaUJsabAIAaMLecM0A64U4NCcAaAa9FEWS1Fy+A1ygCyOo5p2Z/2Ak5/FDDolPwapGn94Q3DNnC7KX/ap/svIDMKskiaSgl6Hmpq0ODgMAaZuioDIj9P9rTTo+iOi/ArdtlIyO+T7x/iBw5P2HgLu7Hv1xFsiMcIQ3AO3V4CfStQPoXoN+wt0V+y1FNBB+4Li9B9GYY46vSTgor0FjzjWJBnxJWXn4psFrzpMak+CT2XWZ+WZsvBfRnHPQIPiIlW9qXZDXOjbm+KBwmZUvQkVWWnuOo7fKZ1ntRRgpLO6817HTqsENO9bEQ0QjZa0xz/DtbnWZLEJxFhFhFuLb1eHj6KGst+Z5k3B318UN8RPVuwQzb89bcGwNBfHZ7dUapzdCTNm8MQk1NiI8gr7aziAXSd9+SYqqb8RHQ2VscnBJvyIlWSUYrZ6IcLiySMrlG5MVUe2q6vAGU27E7sQk6aqiKepaZlXHTJlEVJBF3CMiUtC6Ve8ndrMqJHURRUZDF/VudbhlLjsSmRkoSCSI2quqV69bE7SKCHevKjMjLDSrk3icO+g9bRkel1V4Ve8ffx8AoHYAdwTrAD99YQC4t/s23hs=", "ic_pond": "data:image/webp;base64,UklGRtYBAABXRUJQVlA4TMkBAAAvH0AGEJegNpKtJPuCu2Y/onxaY2iGcQAAhepnm6u1amvhwDYAgCR0N5zG/1OD+oDL/Ach03KAoAaKwgerD/AbVxATwe8ZZ4/AGav/n7C3g5u7GJyVJENiAQi2rYSNIggKTvKB7n+z1Um3ENF/BW7bKOl2zPCJz5vamz6nfpWYr0Pu9rugNYuoylgrIivDx3uiWVYuVWVVVfOVmYvbi0elMRNRl0PDPDOt/fOsYBY8zyOYgEDGsLXtf5ppp577eeacPmWKjJWhbVM16OQBxKqi5IaMDP/SvIoEc6eeB1SVWSGArFwbqxwApgiJiNdXGSSgdQajKgg3cM8dRVamyc7k2GhWrQ65pW+AwQJgRFpvx1hZFQZAnnMwEsDz63ywMqoqfZDc27uMyIzBTAeeKzN3Qa7la2VlLmNmvXYx+C8y4qg6RwlXZWbuR4wbK2J5+PGkzPQQs1I7HVgb+884nDtx+7QO3PT6JPWIOpMQ2zZgDla3deS+GsrMEJDoQVY43zA3dxtnekIApuuLZy5XCPRoMbRDeCogg493E2F6AyBW7cosIpnOInQdQ6mpzhtwumjrmrZc+eqtvf036MXtRcr082v9+o0vi/gAAA==", "ic_quest": "data:image/webp;base64,UklGRtQBAABXRUJQVlA4TMcBAAAvHcAHEJegJpKkqO6iu+h/Qgoj+LeBBVKMKIokqSG/cs5gAf8O8HACkKE0kq3mf7J7FfwKUFRE/waX4/wHkBD559N6/kpnVNVcAo2Nb1AfKgGfYoRYLtouESoOZP9VFwYDxEi22zbmxwdAgAgM/VebrBLeRfR/Aq7fGujnQALjR/wtqfVWF/sJacxeywbRfsDSx5QoecXtG0ikMTUklQzfcHFR50NXitntDdZtddOYGlKH5vEDYd12jqXMl0aO4YPv2w6hTw0JGrW4XW/h1H5IqfQhaFXavgg//Thr20rtNN3DFxFcbd2A0qqkHOz6iO/kRt8gVqn4n10fWYrWvDU2WsyVYFzvkPoUsa0ba/Ms43qH1MfUUM0btByw6yNe+5g3SlxR8BPjhdiHpoYkWgk4pw4FeymKqT5R/NRtP9xueI4qKQ91aMWPU+Fgh2i3mFODNXcatfgpBd/vp91Ukuct01tVWY4T/2PnOP225OLEtKpR5XYe7IuO/TQuSaScIl5zasrGucNi4XC7HjxDUolq1Z/cOMOTiBkoHlu2i7jDaRfolZglj0WLXeSnz3jKkBa7WHaOXf8QuATX7TT9SwKkm3OBfg76DgA=", "ic_tank": "data:image/webp;base64,UklGRvIBAABXRUJQVlA4TOUBAAAvHsAHEJegNrKVCIghJULNro6tytCxDqO7DzYBAKTB3SLwW1SKUcRZgR2KIklqjpzzEzF4RBBK0BAFUPMfBGX1FlAKn1JC9b+CgRPiZzKbaUnYiLCR+nRLtX8YZ9pdWmOrrTNAjG0raCQEkP8R+B/7rzZodjt4L6L/E3A/hu391wFSjWT48Smwt8pGLlytk1QIEMMmQFptpZ7hfVuQcAPBei1sleXpBhCw9CuM1cjKT8olAfgAAcBCqJveuEhcQP9WCE6uRmKz+La2b1xAA+qm16+rcYEkayMJQMtDWzxZMoCTrL2R12pnflW1ZIhnFJJnYa94w6oo2a6UgYKzEO/qpZD6GZaBImdm4bumJ4Q2wOxz9LIrT1UBlyHJ5sAcLD9RAVGfA1hj0ob+ktSnqPQ11sDEyD+owEH7pLGAbuOXcroSQqQ8RxrGnlnTi1OdAoIpJ8kpA+mqyE/FleTUxImYU7bES53pIcOHOaNhevz4R1z7q2LTSQJAJN0c6Cpu527A6LQJxm9A5VK3UXdzANOckR49wtTZIajNYrhDd0aaG0nBHJgc6LRWPTLABEM6AaPvjei1nZE8Asy3RlIwRCEAerPII+AOJA9w63sjBZFHuAGE9we3Hj0G3H8Y9iSPcP9jAHBvAQA=", "ic_town": "data:image/webp;base64,UklGRuQBAABXRUJQVlA4TNcBAAAvH4AGEJfAIADAMrPtBmfe13sGZ2EbyVYbvPdUAR3QApGvXz0o0ihSENs29Bf7ThkR1NZAAAGk8Gf+Q+jcOCStIqvorNEwM9TL7/dWTRYxnmH6lr9fe56Ou53/gcdzNRSDZYAY2W7cJiB4ExBhqf9qr0kJ/0f0fwKuZ/l4/a8crxtyyeM32W/An/xGkBQAL3J83X8/ngQJQuVB9pdd8vn+eyu1M4CsG8gnfi9KykOf5jS3MOzg736S7PlBaqctkh6lpzw6C8mgViSVC2Kz2jpAxoAWIzmA7tGZ5AIkB81pTtShHU6aMyyyPvFYbZYOZkKju43ZPEjNN9nLly9fvnxBYzht0qNHaQ/LF33RuXhsjT7uFmQjk1xyOBYdBIEU5kY/OXhq475pInMhWHfS041ubm4fakaMrm3qUfV0GEE6IjWmh+gxkBsDm8oEzSXXSPc/uaRHb9ZZ2lyt59A5Ss1lKzOTXBDlsUiCJGsOzgWCXSPrTnJJezz2QSIHSUVCr8HGREFuwARQMXrL1Bj3To1EygUZoX0i12mobMq4Y+QBahJMGyTnY0FPeXaSIxJCWQR9AjDSzWkE3Zw2ENWiQC7Iay2dnACMdHuscn2VzwWdnFWuf5fnCwAA", "panel": "data:image/webp;base64,UklGRrICAABXRUJQVlA4TKUCAAAvKMAJELegqJEkZXb3mNnAvc/sqVcTyVbzPjmH8lcIYDCBMORS4QE1AYA0bHB/XtYxhv1/CzD/ITmyCZHT/o2aX+jkPKK22r1pA8R7DF5e2O66HE0KAUAEACAAgQCQ/nkMEmTbitsomtBkEGAj73+tkp10r+DeiP5PwPt+UP5LDfs5+GeqF7UL2xnsh7/uR7rhjd1G4DScYQFn+bw4L+q0u07d8PZcYQy9TOt159sFQObFy7TOy9SfjtOfr/My/wwG52UatyD71yzut0z9vMxjN3hqOMP+iH/+2Ebohrf9GTzdY+JIFHK5HqiSiPqY1qkf3oYzOJ2PdBRJmmsTAdGSjqjbOl9Og1s0HblahAsCr2e1pCN9GgPsMeWSLbYKiMDzRcXyBU4ze8x3WhtA5tpEvznXy2Exl6wVaIBcLb9Kl9tKA7JNwHL8TS71Nqs0UDziF+NdqdBAQOQG8YjbcjddjtLq1QtyL3DEbbqb12lPxQoNpKgoTUU94rbenZd2eVYwW8xaGqhymbYw3MVWP+aitkwTBcvltP9Ur/kicIHSFFPc1vBNroXPjdwUVDjuwvB2vtFLM9tQRBFKvIy9n0o6cm1ILrnJHZDTEbd17oc3zsu0xyMd2doEMg1fVgXzkb4Y52mP6SDXL6XxoqLZFBcvduGc9uhBqfCs5BvgyYtWc3RZb07DuMd0RxPICE9e1PY8Utzuws2R8g1NAeQJFUyfcGTaYzrIpVXll5riF/My7dHEkUttfMxqgRaTLvMZuuHGqIlWWn3y+pA4SBEfW3icXqaZfo+a5GsBRfdT7Yc3hn2dx+3x55wGT7vBfl9cx3m7V75eNDzOcGIY7NdlZlxcEZxduFVAPQ2j56Wb1mXup9+PTLcqjDq8/elHf/5tpz/DG/w/AQA=", "tag": "data:image/webp;base64,UklGRsQBAABXRUJQVlA4TLgBAAAvLMAEEL/AKJIkRb3MeHcGmP0ru/fYYBtJkpp9ZjLFzPmnJlNSGslW8zNJZYulBPovCsmf/wCgqqZWvvgJ6tAsHPXqf594oByC0xbbc3xlm5bLkkrAAAhADABwIIgAGJD+FwPE2raaSkNGDCiiY/+t6k8dnBvR/wm4Xrrf8qHkAyTe9EG86Z3e0l8ZP0XvD9a9IT8WopTitzN490JmVCrT/8L87ZIGrHsRxzz9w6nKscOqyk6FnQp7ZZnSoCeZcSj/p7bKuvfWW4fWd2jQ93udxzxYpwvJlDwvddW+re187jS67m1fq5Yp5liCk4WcFuraoJ93Wr9t3LRKWuYYxmKdwliCn29942w6NvXWReunpAb7Wm9gnGwhMFeOtnWapC61o7d+So1OY1tmxQLBXbIBjctxblKHQ5vgYHu5Skedp0AJxl0yoQQ7HvXcpNbVOtC0apPWCguzVAIYdyE/FkKc6kLf1rYDfUeqLHOFRUJTigV7CwUfGGctHwoJIUlTTL4Qbsbic1Icvz/4PHgD7gJJ1g+QxdvipQCScdL1LONTTspK+f0BSSkreeOudyVj7+jLTteH+i0vAQ=="};
@@ -10749,6 +10749,158 @@ dHabitat=function(){const L=typeof town83Layer==='function'?town83Layer(season74
  B('ย้อนกลับ',1080,660,170,48,()=>go('home'),true,'#6a5acd')};
 // ---------- facing on diagonals ----------
 face137=function(vx,vy,prev){if(Math.abs(vx)<.05&&Math.abs(vy)<.05)return prev||'d';return Math.abs(vx)>Math.abs(vy)*PL140.side?'s':(vy>=0?'d':'u')};
+
+// ===== V1.41 (owner, 6 Nov 2026: 'ตรวจสอบอ่างปลา ตู้ปลา ให้ครบถ้วน น่าเล่น เพราะยังไม่ดึงดูดมากพอ และ ขยายห้องให้พอดีจอมือถือ และ
+// เพิ่มห้องน้ำแบบมีฉากกั้น เป็นของที่ซื้อเพิ่มได้'). Data: core/data/play141.json.
+const P141={
+ "_note": "V1.41 (owner, 6 Nov 2026: 'ตรวจสอบอ่างปลา ตู้ปลา ให้ครบถ้วน น่าเล่น เพราะยังไม่ดึงดูดมากพอ และ ขยายห้องให้พอดีจอมือถือ และเพิ่มห้องน้ำแบบมีฉากกั้น เป็นของที่ซื้อเพิ่มได้'). fit = the home view: the house is zoomed to fill the space between the top bar (top game px) and the bottom button (bottom game px), side = margin left + right; levels = extra crisp zoom steps (device px per room-art px) added to V0.79's list so a phone does not drop to a much smaller step; loose = when the best crisp step is smaller than this share of the space, the exact fitting zoom is used instead. bath = the bathroom set: low lattice screens on all sides (so it never hides the room behind it) with a noren doorway, and the pieces (item, along the long wall, along the left wall, turned) inside a W x D corner, sold together for set x the pieces' prices. tank: plants = the planted starter tank of the ready-made home (species, grows %; 3 of the tank's 6 plant places, placed clear of the rocks, wood and each other, so the player still plants their own), lure = seconds the fish swim to where you tap the water, hearts = how close (game px) a fish must come to show hearts. pond: gift = fish (the cheapest pond fish) given the first time the basin opens, so it is never empty. The set goes to a free corner first, then along the front, the right, the left and the back of the room, and only then anywhere free; with no room it goes into the box.",
+ "fit": {
+  "top": 112,
+  "bottom": 96,
+  "side": 70,
+  "levels": [
+   1.25,
+   1.75,
+   2.5
+  ],
+  "loose": 0.88
+ },
+ "bath": {
+  "id": "set_bath141",
+  "name": "ชุดห้องน้ำมีฉากกั้น (อ่างอาบน้ำ ชักโครก อ่างล้าง)",
+  "cat": "ห้องน้ำ",
+  "W": 4.5,
+  "D": 4.5,
+  "set": 0.85,
+  "pieces": [
+   [
+    "pt_lattice",
+    0.25,
+    0
+   ],
+   [
+    "pt_lattice",
+    2.25,
+    0
+   ],
+   [
+    "pt_lattice",
+    0,
+    0.25,
+    1
+   ],
+   [
+    "pt_lattice",
+    0,
+    2.25,
+    1
+   ],
+   [
+    "pt_lattice",
+    0.25,
+    4.25
+   ],
+   [
+    "pt_noren",
+    2.25,
+    4.25
+   ],
+   [
+    "pt_lattice",
+    4.25,
+    0.25,
+    1
+   ],
+   [
+    "pt_lattice",
+    4.25,
+    2.25,
+    1
+   ],
+   [
+    "bathtub",
+    0.35,
+    0.35
+   ],
+   [
+    "toilet",
+    2.15,
+    0.35
+   ],
+   [
+    "sink",
+    2.15,
+    2.1
+   ]
+  ]
+ },
+ "tank": {
+  "plants": [
+   [
+    "vallisneria",
+    72
+   ],
+   [
+    "java_fern",
+    68
+   ],
+   [
+    "java_moss",
+    75
+   ]
+  ],
+  "lure": 3.5,
+  "hearts": 46
+ },
+ "pond": {
+  "gift": 3
+ }
+};
+// ---------- the house fills the screen (a phone showed it at a third of the width) ----------
+(function(){try{for(const v of P141.fit.levels)if(!DEV79.includes(v))DEV79.push(v);DEV79.sort((a,b)=>a-b)}catch(e){}})();
+fitZoom74=(function(prev){return function(){let raw=null;try{const b=houseBox76(),F=P141.fit;raw=Math.min((VW74-F.side)/(b.r-b.l),(H-F.top-F.bottom)/(b.b-b.t))}catch(e){}
+ if(!raw)return prev();const ok=DEV79.map(zOf79).filter(z=>z<=raw+.001),z=ok.length?ok[ok.length-1]:raw;return z<raw*P141.fit.loose?raw*.98:z}})(fitZoom74);
+// ---------- the bathroom set: walls with a noren doorway, bathtub, toilet, sink ----------
+const B141=P141.bath;
+function bathPrice141(){let s=0;for(const q of B141.pieces)s+=R2PRICE[q[0]]||0;return Math.round(s*B141.set/10)*10}
+function bathPlace141(){const W=R2.W,D=R2.D,w=B141.W,d=B141.D,cand=[[W-w,D-d],[0,D-d],[W-w,0],[0,0]];for(let a=W-w;a>=0;a-=.5)cand.push([a,D-d]);for(let b=D-d;b>=0;b-=.5)cand.push([W-w,b]);for(let b=D-d;b>=0;b-=.5)cand.push([0,b]);for(let a=W-w;a>=0;a-=.5)cand.push([a,0]);for(let b=0;b<=D-d;b+=.5)for(let a=0;a<=W-w;a+=.5)cand.push([a,b]);
+ for(const[a0,b0]of cand){const n0=R2LAY.length;let ok=true;for(const q of B141.pieces){const e=[q[0],a0+q[1],b0+q[2],q[3]||0];R2LAY.push(e);const[w,d]=r2dim(e);if(!r2rectOk(R2LAY.length-1,e[1],e[2],w,d)){ok=false;break}}
+  if(ok){R2DIRTY=true;return[a0,b0]}R2LAY.length=n0}return null}
+function bathBuy141(){const p=bathPrice141();if(!DEV_UNLIMITED_GOLD&&S.player.gold<p)return say('Gold ไม่พอ · ชุดห้องน้ำ '+p.toLocaleString()+' G');const at=bathPlace141();
+ if(!DEV_UNLIMITED_GOLD)S.player.gold-=p;if(at){R2.cat=false;try{qp('scape')}catch(e){}save();return say('วางชุดห้องน้ำแล้ว · ผนังกั้น + ประตูผ้าโนเร็น · ลากแต่ละชิ้นเพื่อย้ายได้')}
+ for(const q of B141.pieces)S.room2.inv[q[0]]=(S.room2.inv[q[0]]||0)+1;save();say('ห้องยังไม่มีที่ว่าง '+B141.W+'×'+B141.D+' ช่อง · เก็บชุดห้องน้ำไว้ในกล่องแล้ว ย้ายของแล้ววางทีละชิ้นได้')}
+r2buy=(function(prev){return function(k){if(k===B141.id)return bathBuy141();return prev.apply(this,arguments)}})(r2buy);
+// the set's picture in the catalogue: the pieces drawn together the way the room draws them
+function bathThumb141(){if(typeof document==='undefined')return false;for(const q of B141.pieces){const im=R2SPR[q[0]];if(!im||!(im.naturalWidth||im.width))return false}
+ const ox=R2.ox,oy=R2.oy;let L=[];try{R2.ox=0;R2.oy=0;L=B141.pieces.map(q=>{const e=[q[0],q[1],q[2],q[3]||0];return{e,b:r2box(e)}})}finally{R2.ox=ox;R2.oy=oy}
+ /* the picture spans the set's footprint like every floor piece: (W+D) x 8 room px wide, its bottom on the front corner */
+ let x0=-B141.D*8,x1=B141.W*8,y0=1e9,y1=(B141.W+B141.D)*4;for(const o of L){y0=Math.min(y0,o.b.y);y1=Math.max(y1,o.b.y+o.b.h)}
+ const K=R2K,c=document.createElement('canvas');c.width=Math.ceil((x1-x0)*K);c.height=Math.ceil((y1-y0)*K);const g=c.getContext('2d');g.imageSmoothingEnabled=false;
+ L.sort((p,q)=>(p.e[1]+p.e[2]+(r2dim(p.e)[0]+r2dim(p.e)[1])/2)-(q.e[1]+q.e[2]+(r2dim(q.e)[0]+r2dim(q.e)[1])/2));
+ for(const o of L){const im=R2SPR[o.e[0]],X=(o.b.x-x0)*K,Y=(o.b.y-y0)*K,w=o.b.w*K,h=o.b.h*K;g.save();if(o.b.fl){g.translate(X+w,Y);g.scale(-1,1);g.drawImage(im,0,0,w,h)}else g.drawImage(im,X,Y,w,h);g.restore()}
+ const out=new Image();out.__k=K;out.src=c.toDataURL();R2SPR[B141.id]=out;R2META[B141.id]={n:B141.name,iw:Math.round(x1-x0),ih:Math.round(y1-y0),w:B141.W,d:B141.D,flat:false,deco:1,set:1};R2PRICE[B141.id]=bathPrice141();R2CAT[B141.id]=B141.cat;return true}
+(function(){if(typeof setInterval==='undefined')return;let n=0;const t=setInterval(()=>{n++;try{if(bathThumb141()||n>80)clearInterval(t)}catch(e){if(n>80)clearInterval(t)}},250)})();
+// ---------- the tank: planted from day one ----------
+applyStart87=(function(prev){return function(kind){const r=prev.apply(this,arguments);try{if(kind==='half'&&!Object.keys(S.plants).length){for(const[sp,gr]of P141.tank.plants){if(!DBP[sp])continue;S.inventory['pl_'+sp]=(S.inventory['pl_'+sp]||0)+1;plantFrom(sp,'pl');const q=Object.values(S.plants).find(o=>o.species_id===sp&&o.growth<gr);if(q){q.growth=gr;try{placeNew98(q)}catch(e){}}}aqSel=null;save()}}catch(e){}return r}})(applyStart87);
+// ---------- tap the water: the fish come over to say hello ----------
+const LURE141={on:false,x:0,y:0,until:0,t:null,n:0};
+function lure141(px,py){Object.assign(LURE141,{on:true,x:px,y:py,until:T0+P141.tank.lure,t:null,at:T0});LURE141.n++}
+// while called, the fish behave as at feeding time (quick turns, no schooling) and head for the tapped spot: the step sees
+// one make-believe pellet there (nothing is eaten: pellets are only eaten / dropped by the game's own pellet loop)
+iso58Step=(function(prev){return function(f,d,dt){const L=LURE141;if(L.on&&T0>=L.until)L.on=false;if(!L.on||pellets.length)return prev(f,d,dt);
+ const keep=pellets,h=((f.id||'').split('').reduce((s,c)=>s+c.charCodeAt(0),0)%7)-3;pellets=[{x:L.x+h*7,y:L.y+(h%3)*5,lure141:1}];try{return prev(f,d,dt)}finally{pellets=keep}}})(iso58Step);
+dAq=(function(prev){return function(){const n0=btns.length,r=prev.apply(this,arguments);try{if(!aqEdit)for(let i=n0;i<btns.length;i++){const b=btns[i];if(!b.l&&b.w>600&&b.h>300&&typeof b.fn==='function'){const f0=b.fn;b.fn=(px,py)=>{f0(px,py);if(!R55.sel)lure141(px,py)}}}care141();lureFx141()}catch(e){}return r}})(dAq);
+function lureFx141(){const L=LURE141;if(!L.on&&T0-L.at>1.2)return;const k=Math.min(1,(T0-L.at)/1.2);x.save();x.strokeStyle='rgba(230,250,255,'+(.8*(1-k))+')';x.lineWidth=2;for(let i=0;i<2;i++){const r=8+(k+i*.3)*30;x.beginPath();x.ellipse(L.x,L.y,r,r*.55,0,0,7);x.stroke()}x.restore();
+ if(!L.on)return;try{for(const s of fishSpr){const q=isoFishPos(s),[fx,fy]=isoP(q.a,q.b,q.z);if(Math.hypot(fx-L.x,fy-L.y)<P141.tank.hearts){const ph=(T0*1.6+fx*.01)%1;x.globalAlpha=1-ph;TXs('♥',fx+Math.sin(T0*3+fy)*4,fy-18-ph*22,14,'#ff6a8a','center');x.globalAlpha=1}}}catch(e){}}
+// ---------- today's care, on the tank itself ----------
+function care141(){let q;try{q7Roll();q=q7()}catch(e){return}const L=(q.d||[]).slice(0,4);if(!L.length)return;const X=930,Y=PCTX?146:104,w=320,h=34+L.length*30;
+ rr(X,Y,w,h,14,'rgba(18,34,40,.82)');TXB('🗓 งานวันนี้',X+14,Y+22,15,'#ffe9b8');TXs('ทำครบรับ Gold + EXP',X+w-12,Y+22,11,'#a8c4c8','right');
+ L.forEach((o,i)=>{const r=DAILY.find(z=>z[0]===o.k),lab=o.l||o.t||(r&&r[1])||o.k,p=Math.min(dailyProg(o),o.n),full=p>=o.n,y=Y+38+i*30;TXs(fit((o.done?'✅ ':full?'🎁 ':'▫ ')+lab+' '+p+'/'+o.n,13,w-130),X+14,y+12,13,o.done?'#8fd08a':full?'#ffe08a':'#e2ecee');
+  if(!o.done&&full)chip('รับ +'+(o.g||0)+' G',X+w-110,y-2,98,26,()=>claimDaily(o),true,'#4a9a6a');else if(o.done)TXs('รับแล้ว',X+w-14,y+12,12,'#8fd08a','right')})}
+// ---------- the basin is never empty the first time ----------
+enterPond=(function(prev){return function(id){const r=prev.apply(this,arguments);try{if(PCTX&&!Object.keys(S.fish).length&&!(S.meta.pondGift141||{})[PCTX]){const L=pondFishList().filter(k=>(DB[k].lv||1)<=Math.max(S.player.level,1)),sp=L.sort((a,b)=>DB[a].price-DB[b].price)[0]||pondFishList()[0],t=tank();
+  if(sp){for(let i=0;i<P141.pond.gift;i++){const id='f_'+String(S.meta.next_fish_serial++).padStart(3,'0');S.fish[id]={species_id:sp,name:DB[sp].name,age_days:30,size:1,health:100,hunger:30,stress:0,tank_id:'tank_main',born_ms:Date.now()-30*864e5,sex:i%2?'f':'m'};t.stats.bioload+=DB[sp].bio||1}
+   S.meta.pondGift141=Object.assign(S.meta.pondGift141||{},{[PCTX]:1});try{syncSprites()}catch(e){}save();say('ของขวัญเปิดอ่าง: '+DB[sp].name+' '+P141.pond.gift+' ตัว · แตะน้ำเพื่อเรียกปลามาหา')}}}catch(e){}return r}})(enterPond);
 
 // ===== Environment layer (Phase 0) — injected by client/build/build.py right before the game boots =====
 // development : everything on (team mode via 7 taps on the version line, Sandbox Gold, festival preview)
