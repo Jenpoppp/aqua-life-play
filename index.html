@@ -3169,12 +3169,12 @@ dQuest=function(){q7Roll();const gd=x.createLinearGradient(0,0,0,H);gd.addColorS
  B('ออเดอร์ชาวเมือง',740,604,240,60,()=>go('orders'),true,'#d98b3a');B('ย้อนกลับ',1000,604,190,60,()=>go(R2&&S.opt&&S.opt.room52!==false?'home':'home'),true,'#6a5acd')};
 // ---------- HUD quest tracker (story) ----------
 const _hud67=hud;hud=function(){_hud67();if(LVQ.length||LVSHOW)return;if(!['home','aq','town'].includes(scene))return;if(scene==='aq'&&aqEdit)return;if(scene==='home'&&typeof R2!=='undefined'&&R2.edit)return;if(scene==='town'&&typeof SHOP123!=='undefined'&&SHOP123.in)return;if(typeof SHOW128!=='undefined'&&SHOW128.on||typeof PC129!=='undefined'&&PC129.pick)return;
- const s=storyQ(),y=scene==='home'?150:scene==='town'?184:74,n=qClaimable();rr(16,y,330,58,18,'#0d1b26cc');btns.push({a:16,b:y,w:330,h:58,fn:()=>go('quest'),ui:1});
+ const s=storyQ(),y=scene==='home'?150:scene==='town'?184:74,n=qClaimable();if(!s&&!n)return;rr(16,y,330,58,18,'#0d1b26cc');btns.push({a:16,b:y,w:330,h:58,fn:()=>go('quest'),ui:1});
  if(!s){TXs('เควส · จบเนื้อเรื่องช่วงนี้แล้ว',32,y+29,14,'#ffe7a0')}else{const[a,b]=storyProg(),lock=lvNow()<s.lv;TXs('📜 '+fit(s.t,14,250),32,y+20,14,'#ffe7a0');
   TXs(lock?'เริ่มที่ Lv '+s.lv:(s.g.st==='gold'?a.toLocaleString()+'/'+b.toLocaleString()+' G':a+'/'+b)+(storyReady()?' · พร้อมรับรางวัล':''),32,y+40,12,storyReady()?'#8fe08a':'#cfe6f2')}
  if(n){gc_(338,y+6,12,'#e8504a');TXB(String(n),338,y+6,13,'#fff','center')}};
 
-const GAME_VER='V1.39';
+const GAME_VER='V1.40';
 // ===== V0.68 STEP 8 — UX/UI: main dock (บ้าน / ตู้ / อ่าง / เมือง / เควส), Lv1-5 tutorial pointers tied to the story,
 // one UI skin drawn by the user's ChatGPT (buttons, tags, icons), Demo/dev tools hidden in real play, online save per player. =====
 const UI_IMG={"btn_blue": "data:image/webp;base64,UklGRj4BAABXRUJQVlA4TDIBAAAvIkAEEL/AJgCANLi/HgFy0P8lh82lBpsAAJNML3fcQxCDgiSgn6viSJKSO1zfEAJJkH9C7vMfkPmcXjc1/ElsyWQDAYsn14oZmTJEcwnaLHRUVJHFNUEQQYDgB37wgR8gTMAfUc2kqTFAjG0rChMDCG4fd+2/VcGYDt6N6P8E3EWH/hnoo/u6hG9iR/O1e9B0ClGp+zi4QsSP/cdtIrib0EV/vT7fDzF5R+jjJZ0c1YUNWCUAG1PriGG8jrd7YS3CNhTSdB6wS0txfc6QpVVWOxaYd1HPAkmydasMq2bIABKgsj1rWpVVsPz2MY1tIUymLMszMrJM2arT0MXg+EmMk60m7aYsWXmWJoYQadyNT4Rx+HQkQte6W/hI+mNM1TZI3t0SPqiVeCmeQujXcT/5V0k=", "btn_gray": "data:image/webp;base64,UklGRlABAABXRUJQVlA4TEMBAAAvIkAEELegKrKVijeoISSBoS3J562hNpKtBA0hhNSd/uuhBIbUvuJIUqKF4gmeL4tEDNJUNYFz/kOEZi6OJBvIMZ+pq48rnbSrfCw3b2u5mR0QEADQRwBAHwCEstnTi82fgwFiJNttGwnhgxkMENh/rYBkuoN3Ef2fgLvr0T8Dw+if7uGwub7cG1CXH+V782SEOk/fx+nHMfhb4m01WBqeTRX5W5Qahs/TS6o4jxtt+MDSX9uLbpaK1eAx6bOw7dKyQhaXhHILp43RY2Na9k3S2gFduX+wnqn2tl1au1dmy9IBEogfziPrUpau3IWTVipfKAeQaZv9OAWSihSiPBrjcOpAqAVJoLYozRY8r4oN5ZTKqXJKTdEpFSkZvP2Nq0RLjxrJmPC3cPX72AIIAcQgOX9LuBhiiAqKfwwxCM/d8q+SAAA=", "btn_green": "data:image/webp;base64,UklGRloBAABXRUJQVlA4TE4BAAAvIkAEELegJpKt5mdiT8VgAv89KlCAgmhDaSRbzfuf6GIFWBz9N0MNGRQK2khS7u75Xbx/ccw4/+G9vaWW3ZdWEYrAEdX2ZKBbra6EZh+VBOgDEMSHAMDgfxSdULIzUjK7t95kgBhJctyGxv8LAAUw/1gPUskZ7Eb0fwKeoybxvyTjvPjjE9Xl7nL9Wp/u6aPb798uow8+OUa5vgUBIGwq/YDvruL99cR9nAD8ptK8Upw3MPvn9iKBVggw2W00gzV3/zzYgBfaOZfkl9UMK8zDkK0SspCZQPL7VMRoojKzYlRZkJNfp9RHH+cqR5WDBfDbamK51KWocpCsHAQQnT0gpkMfzJUcMoMAYrhp9MNNF1PJwCuhgZWZCSAi4Ilw6Ydq0zp65+nov3X0LgKT+gFV2B/XeS+5SWeUU/oBqIw1gDWwZ2OlgTX403wk/xUA", "btn_orange": "data:image/webp;base64,UklGRkoBAABXRUJQVlA4TD4BAAAvIkAEELegNJKk6F7UOX4U5B8gCjYNRZEkNXsHz3uRkwA04N9MskCdgjaSlL17Zg3v3x/T/AdL7PaLIiVtYnjit+20N7eRi7m9v7rjJLQOACgQfwIgEAYw4P4nv2pJYXAY21acGHaQ7Jj0XyvoxA7ejej/BNxDi/4MZPH0CDOFrNf0sO2YruyCyvX5Ln5Mxg5CNi4/HBLG3iLL6Hr6ncBYXA66+Jzj4zy2X9VCcpbg3XVq4ziP4XkA6iS1mLwlpHxuVA5Bp26n7mzwpcTzqHPd6QBpH8/b+sNcZ2CncjBX9n4G1vaNNsO6zdRj3mdgZ4ZVaipeXVJpaz/vLNTBurS1SSVcwVleCV+a1qUtTfu8rJLauMSQmeyNSfgQn1VWeDt7CxNJEBOUcVSfwMkIe0sYN/TOj53vnSQmy93zV0k=", "btn_purple": "data:image/webp;base64,UklGRiwBAABXRUJQVlA4TCABAAAvIkAEEJ+gKJKk5nLgmXnhAf+ecIAPtY0kNe//sZEL6YD+mwMxDQAgDdbcMo3MA1zOH/zhMgnzH9xZz0QYVc4vxlFfJNtbdzpQPUmoOvaDLxogRAAgQoAAIrB3cXtmgBhJctzGeH0SwAO//JMFSdMZ7ET0fwLOywj6X8AI8eUrgtJhP2/Hq0PZxPEQPSTFi2yp1N93ZaR4CiN9dm3vtmqEiIzPtgM+JK2S0EJ3abhasRSxxL7BuJ4k+W2vliPF6ubDpZVx7xoX/UFfHHji9zeaLockH/Knvd2UzgJ98eEdSRqu4RLwLflC37722QWgeTC3euQUT4zyaR2a9zbNrUODmk0hngQjl/quDI4cTxGyvS4lhXhKhPzXpHsinDP/KUk=", "btn_rose": "data:image/webp;base64,UklGRj4BAABXRUJQVlA4TDEBAAAvIkAEEK+gNJKk6PbUD3giQJJ/VEjUpqE0kiTl2D1IcOQ+/8xe7lcpjSQpum/UOXB48s+KGH5q/kNTBisqvMJsq/ksfHobO9X50+vXbEWMjgwGwAokhBRYfDwXw34wQLBtq2qTVP5aeEh1/nMVbTKDcyP6PwHn1KEvAxn36RnLTz54/ffNa+ouvI8cUPl7uPJQ3k1ClnhYMmWeiYXFneLIgUP7Z39TYXGELA7tYEL0NjeporbF4h0KfgdMoC67dEO7VGGkEh0qabcGXYboRr+auglGKt4R11RbpYEJ1OdGF4wHrU66TDcYFXgQRwVabV0Y0w6VAZtn4jXqvNXbzqgDtnhk704KcR2Vcb0Z021NIevtTnwhKn00KhOO4E6xxHK7in8GeS3ulFj8F+U4r3xVEgA=", "close": "data:image/webp;base64,UklGRgABAABXRUJQVlA4TPQAAAAvDsADEK/AJgCANLi7l4BI9H9l68KgkSRFx8z4YIJ1vObXRVEbyVbyP+45dVAKFVA+IZHL/AfUNmaUiog9ixooQxU4LjR/TBAUM0YYIj3/36WZK94aPDp3tWJjz2IuidfBvjIwjGSrifoI/8sP5P57hSIi+q+2bRvGTs+mM/beAPbta4pt4fjKVldbbv4HXGoxsYiIZeyNdyV3M1PShI1k7r2o95LlA4pYn73OWYUCXmctY87pLJTwehapc450y1hPzi6SEyCsfXYeszJ9QFQqTvI7pdbCBksmOd9VFza+rHzcVls47EIiorBCq7hhPs9zWEYA", "ic_coin": "data:image/webp;base64,UklGRtwBAABXRUJQVlA4TM8BAAAvHsAHEJfAIACAJHR35wP9v8cRflEV2VbycPl0JwFd6B+CBqY2kq3kKxZ/WqEZ+s80IrL5DwAaMyEGKPpy09trW9jwsVxiYGze/HEQAqn0s/8k3z4eU1QKNFSAYNtK2Gga/SAKgun+N6sknSVE9F+R27aNHAMZ7Wk94vuukvX9p0q5snLj93qiuNcym7V+fiblorjvex1UJ9W/8u56HzXa2qg2fMqbKWVtThUBeYqrvOfup7bRheGqzjve3E56FnURgakCNVE+cd+cVk9v7cCk2pHXlLaiZUeEs5xo6uCa8OWyVrKqvECJQit4rjXjDlWHJFi14SwubXkz2zZTHc7CREy24auUay3q5rGSxxD47CAbDGzqRiUiMr27DmY66/hghuHhLftIIKzKwAMJm/OFARFSbS90sce8jy0IuzoyatylJZ/gMZhfMfMTI0kA2rQ0ycehmy7gPjrAwgCFan3BSHoXoTGQjypM8bgpBV0b5AhA9rRWn/y1MRofRFiEW4QFAfV5C0ff8diFiLnNqFf5PqL3rpNpK2UBnIN8ewG9D9U5T2bTmYHsZ9pEs9zBIqjl1+urnAVw2vGPd11xxFyv61+vv3ySrtfsf7/Gj+wLAA==", "ic_drop": "data:image/webp;base64,UklGRm4BAABXRUJQVlA4TGIBAAAvF8AHEJ+gIACAItvmmv4v6ZDiSJKSE+znEgApeP5B8aJQ0EaScs/MDIrev5M3MP8BQESIBBEUZTXZvfvcN6kvSGKSFZyRlCR44LDGAANatS++3S7RC3I0OIxtpY424gP/Bk3/xUZ0U0JE/xm4bdvIrqDb+z7xHEv0fCtdF32EPX0DCZ8GQeMn0e9WxqsvbgL2P/qHH1oCAEd/cKqtRry66HxEHX30EgHxdOR+mb0UBtjReaMxtdUaGXJYRE5fptZaswDR0cY9dNqUCDAcnZbN0ds7Ehtt7suttSVGZEfW1WIkQDLBaHWMfo53RG5o6WtqmxFBzCYlDe1bUngjNjHN2U8W2RO3NGMJW0IopdTlvEg92SSOMabSsl3bTR7yyhxshVl0luzJvK3MLDv3nGX5WUrMAPNiDOslaI6yCE21JewvmLzPJb0trWT2xw/lcqnWmnOCc+e/hsht/f8vkelh6gE=", "ic_gear": "data:image/webp;base64,UklGRhgCAABXRUJQVlA4TAsCAAAvH8AHEJegoJGk5nulSEAF/jWBGkWRJDUXyRnkUPgXwRsFCFATSYrEDxkmKETgXwUqiO+S+Q8ATwzmCqyPD8fj80Y2pVObnjWnsIDCqg6qvJt3/IfeP3cXg8TYtuO2iYAPfOwEyP6r1RKX8G5E/yfg+T1+1N/jUDzEP+Pc0qqe4gP8ByAxYVFzigRekV8whci/MddQtRTtWjWH+A2/bkzX0kTgdq2pmkP8hN1LOvcaYtKle02E52/Xep99VEl9sgBayhbfeI032rklba+TvmZLpvBBpCWNekvXvjl4HXMkSyE+n0lrtvuwKafscrzNlSzE59tZ47rPpsAu7JNHrzlFPoCvcd2bEjBpA6qtJnsp8ohymO3ah2DiJdtQfCzp9hwirrmohWNBRHidfbA+epsZi/gaVN3aphAfiXPtYrWpj0x4m4x6l2P+pRjqjPZt0Oq1cXvD9qGo9dGVsUhwatMGTCHC2QdPVUlSDvEh4L1qU7Zb0NlQgrdqChAfCV5VOl42t3R2OZ5qT7IIz0e8Ny8bOBQw1daThfh8xleTKAe8YJJ3GFlfeF29iarsBTfl2kdTX9nil06Doeo5QW0aXaimHOKbyIOeqZ1Wm1SdPrqSLD6fyd2ThTRabT2Z5KMmKT7fMaUQX7NJJAuvmBOKz68AYjQ6SSE+vMTz/3iVyIT4CPSXhHeLz9/zUb8DAA==", "ic_heart": "data:image/webp;base64,UklGRpABAABXRUJQVlA4TIQBAAAvHwAHEJegNpKt5GORu6Sk1EH/fVCCt6Emkq3m/dQHkh704gcXtJSgKJKk5nIgK8AGDvDvhR+v+Q8ARBawEz6Kv451P7Kf/ps5FxeDEhFg6jPMGAUhIPSgVrdBlwFiJMlxGxP/Swp0/skSC1DKYDei/wrbtm0cGzDq7vaKfyiLxf0uuCsdWEK3bGKrWCWl8GfnJgxsIm4oEz9DV8tBhxWjhtRKCsYu0jlu6kxyxsp8hqSemYwspu2eNa7yUG3cVJdqUjgspoDrbDWFOnVNZOfnOU1F6SR7Tm2Al2pyDAaAflbN12DXKak4v6D1e1wIcl2gJE/nFwxd50v1uke9+IpWkttARU39RXOWFfGB2HeUSuYU/WHhXQrJulI1M3mS8C6UQZCb2TBlBhCa8rRS61UE77T9GA+gihrXVDJ2++8SgJmQck252FBLTtM4Qpoh3TI+EEmP6Ua7sCRHLbNB+s6cHLQpm532AzJ2wvQrKqcp8N9RQY/d+i8GBE9N/wPJn0RKehMB", "ic_home": "data:image/webp;base64,UklGRuABAABXRUJQVlA4TNQBAAAvH8AGEJegJgBAxr68rr3rKCWaUJsabAIAaMLecM0A64U4NCcAaAa9FEWS1Fy+A1ygCyOo5p2Z/2Ak5/FDDolPwapGn94Q3DNnC7KX/ap/svIDMKskiaSgl6Hmpq0ODgMAaZuioDIj9P9rTTo+iOi/ArdtlIyO+T7x/iBw5P2HgLu7Hv1xFsiMcIQ3AO3V4CfStQPoXoN+wt0V+y1FNBB+4Li9B9GYY46vSTgor0FjzjWJBnxJWXn4psFrzpMak+CT2XWZ+WZsvBfRnHPQIPiIlW9qXZDXOjbm+KBwmZUvQkVWWnuOo7fKZ1ntRRgpLO6817HTqsENO9bEQ0QjZa0xz/DtbnWZLEJxFhFhFuLb1eHj6KGst+Z5k3B318UN8RPVuwQzb89bcGwNBfHZ7dUapzdCTNm8MQk1NiI8gr7aziAXSd9+SYqqb8RHQ2VscnBJvyIlWSUYrZ6IcLiySMrlG5MVUe2q6vAGU27E7sQk6aqiKepaZlXHTJlEVJBF3CMiUtC6Ve8ndrMqJHURRUZDF/VudbhlLjsSmRkoSCSI2quqV69bE7SKCHevKjMjLDSrk3icO+g9bRkel1V4Ve8ffx8AoHYAdwTrAD99YQC4t/s23hs=", "ic_pond": "data:image/webp;base64,UklGRtYBAABXRUJQVlA4TMkBAAAvH0AGEJegNpKtJPuCu2Y/onxaY2iGcQAAhepnm6u1amvhwDYAgCR0N5zG/1OD+oDL/Ach03KAoAaKwgerD/AbVxATwe8ZZ4/AGav/n7C3g5u7GJyVJENiAQi2rYSNIggKTvKB7n+z1Um3ENF/BW7bKOl2zPCJz5vamz6nfpWYr0Pu9rugNYuoylgrIivDx3uiWVYuVWVVVfOVmYvbi0elMRNRl0PDPDOt/fOsYBY8zyOYgEDGsLXtf5ppp577eeacPmWKjJWhbVM16OQBxKqi5IaMDP/SvIoEc6eeB1SVWSGArFwbqxwApgiJiNdXGSSgdQajKgg3cM8dRVamyc7k2GhWrQ65pW+AwQJgRFpvx1hZFQZAnnMwEsDz63ywMqoqfZDc27uMyIzBTAeeKzN3Qa7la2VlLmNmvXYx+C8y4qg6RwlXZWbuR4wbK2J5+PGkzPQQs1I7HVgb+884nDtx+7QO3PT6JPWIOpMQ2zZgDla3deS+GsrMEJDoQVY43zA3dxtnekIApuuLZy5XCPRoMbRDeCogg493E2F6AyBW7cosIpnOInQdQ6mpzhtwumjrmrZc+eqtvf036MXtRcr082v9+o0vi/gAAA==", "ic_quest": "data:image/webp;base64,UklGRtQBAABXRUJQVlA4TMcBAAAvHcAHEJegJpKkqO6iu+h/Qgoj+LeBBVKMKIokqSG/cs5gAf8O8HACkKE0kq3mf7J7FfwKUFRE/waX4/wHkBD559N6/kpnVNVcAo2Nb1AfKgGfYoRYLtouESoOZP9VFwYDxEi22zbmxwdAgAgM/VebrBLeRfR/Aq7fGujnQALjR/wtqfVWF/sJacxeywbRfsDSx5QoecXtG0ikMTUklQzfcHFR50NXitntDdZtddOYGlKH5vEDYd12jqXMl0aO4YPv2w6hTw0JGrW4XW/h1H5IqfQhaFXavgg//Thr20rtNN3DFxFcbd2A0qqkHOz6iO/kRt8gVqn4n10fWYrWvDU2WsyVYFzvkPoUsa0ba/Ms43qH1MfUUM0btByw6yNe+5g3SlxR8BPjhdiHpoYkWgk4pw4FeymKqT5R/NRtP9xueI4qKQ91aMWPU+Fgh2i3mFODNXcatfgpBd/vp91Ukuct01tVWY4T/2PnOP225OLEtKpR5XYe7IuO/TQuSaScIl5zasrGucNi4XC7HjxDUolq1Z/cOMOTiBkoHlu2i7jDaRfolZglj0WLXeSnz3jKkBa7WHaOXf8QuATX7TT9SwKkm3OBfg76DgA=", "ic_tank": "data:image/webp;base64,UklGRvIBAABXRUJQVlA4TOUBAAAvHsAHEJegNrKVCIghJULNro6tytCxDqO7DzYBAKTB3SLwW1SKUcRZgR2KIklqjpzzEzF4RBBK0BAFUPMfBGX1FlAKn1JC9b+CgRPiZzKbaUnYiLCR+nRLtX8YZ9pdWmOrrTNAjG0raCQEkP8R+B/7rzZodjt4L6L/E3A/hu391wFSjWT48Smwt8pGLlytk1QIEMMmQFptpZ7hfVuQcAPBei1sleXpBhCw9CuM1cjKT8olAfgAAcBCqJveuEhcQP9WCE6uRmKz+La2b1xAA+qm16+rcYEkayMJQMtDWzxZMoCTrL2R12pnflW1ZIhnFJJnYa94w6oo2a6UgYKzEO/qpZD6GZaBImdm4bumJ4Q2wOxz9LIrT1UBlyHJ5sAcLD9RAVGfA1hj0ob+ktSnqPQ11sDEyD+owEH7pLGAbuOXcroSQqQ8RxrGnlnTi1OdAoIpJ8kpA+mqyE/FleTUxImYU7bES53pIcOHOaNhevz4R1z7q2LTSQJAJN0c6Cpu527A6LQJxm9A5VK3UXdzANOckR49wtTZIajNYrhDd0aaG0nBHJgc6LRWPTLABEM6AaPvjei1nZE8Asy3RlIwRCEAerPII+AOJA9w63sjBZFHuAGE9we3Hj0G3H8Y9iSPcP9jAHBvAQA=", "ic_town": "data:image/webp;base64,UklGRuQBAABXRUJQVlA4TNcBAAAvH4AGEJfAIADAMrPtBmfe13sGZ2EbyVYbvPdUAR3QApGvXz0o0ihSENs29Bf7ThkR1NZAAAGk8Gf+Q+jcOCStIqvorNEwM9TL7/dWTRYxnmH6lr9fe56Ou53/gcdzNRSDZYAY2W7cJiB4ExBhqf9qr0kJ/0f0fwKuZ/l4/a8crxtyyeM32W/An/xGkBQAL3J83X8/ngQJQuVB9pdd8vn+eyu1M4CsG8gnfi9KykOf5jS3MOzg736S7PlBaqctkh6lpzw6C8mgViSVC2Kz2jpAxoAWIzmA7tGZ5AIkB81pTtShHU6aMyyyPvFYbZYOZkKju43ZPEjNN9nLly9fvnxBYzht0qNHaQ/LF33RuXhsjT7uFmQjk1xyOBYdBIEU5kY/OXhq475pInMhWHfS041ubm4fakaMrm3qUfV0GEE6IjWmh+gxkBsDm8oEzSXXSPc/uaRHb9ZZ2lyt59A5Ss1lKzOTXBDlsUiCJGsOzgWCXSPrTnJJezz2QSIHSUVCr8HGREFuwARQMXrL1Bj3To1EygUZoX0i12mobMq4Y+QBahJMGyTnY0FPeXaSIxJCWQR9AjDSzWkE3Zw2ENWiQC7Iay2dnACMdHuscn2VzwWdnFWuf5fnCwAA", "panel": "data:image/webp;base64,UklGRrICAABXRUJQVlA4TKUCAAAvKMAJELegqJEkZXb3mNnAvc/sqVcTyVbzPjmH8lcIYDCBMORS4QE1AYA0bHB/XtYxhv1/CzD/ITmyCZHT/o2aX+jkPKK22r1pA8R7DF5e2O66HE0KAUAEACAAgQCQ/nkMEmTbitsomtBkEGAj73+tkp10r+DeiP5PwPt+UP5LDfs5+GeqF7UL2xnsh7/uR7rhjd1G4DScYQFn+bw4L+q0u07d8PZcYQy9TOt159sFQObFy7TOy9SfjtOfr/My/wwG52UatyD71yzut0z9vMxjN3hqOMP+iH/+2Ebohrf9GTzdY+JIFHK5HqiSiPqY1qkf3oYzOJ2PdBRJmmsTAdGSjqjbOl9Og1s0HblahAsCr2e1pCN9GgPsMeWSLbYKiMDzRcXyBU4ze8x3WhtA5tpEvznXy2Exl6wVaIBcLb9Kl9tKA7JNwHL8TS71Nqs0UDziF+NdqdBAQOQG8YjbcjddjtLq1QtyL3DEbbqb12lPxQoNpKgoTUU94rbenZd2eVYwW8xaGqhymbYw3MVWP+aitkwTBcvltP9Ur/kicIHSFFPc1vBNroXPjdwUVDjuwvB2vtFLM9tQRBFKvIy9n0o6cm1ILrnJHZDTEbd17oc3zsu0xyMd2doEMg1fVgXzkb4Y52mP6SDXL6XxoqLZFBcvduGc9uhBqfCs5BvgyYtWc3RZb07DuMd0RxPICE9e1PY8Utzuws2R8g1NAeQJFUyfcGTaYzrIpVXll5riF/My7dHEkUttfMxqgRaTLvMZuuHGqIlWWn3y+pA4SBEfW3icXqaZfo+a5GsBRfdT7Yc3hn2dx+3x55wGT7vBfl9cx3m7V75eNDzOcGIY7NdlZlxcEZxduFVAPQ2j56Wb1mXup9+PTLcqjDq8/elHf/5tpz/DG/w/AQA=", "tag": "data:image/webp;base64,UklGRsQBAABXRUJQVlA4TLgBAAAvLMAEEL/AKJIkRb3MeHcGmP0ru/fYYBtJkpp9ZjLFzPmnJlNSGslW8zNJZYulBPovCsmf/wCgqqZWvvgJ6tAsHPXqf594oByC0xbbc3xlm5bLkkrAAAhADABwIIgAGJD+FwPE2raaSkNGDCiiY/+t6k8dnBvR/wm4Xrrf8qHkAyTe9EG86Z3e0l8ZP0XvD9a9IT8WopTitzN490JmVCrT/8L87ZIGrHsRxzz9w6nKscOqyk6FnQp7ZZnSoCeZcSj/p7bKuvfWW4fWd2jQ93udxzxYpwvJlDwvddW+re187jS67m1fq5Yp5liCk4WcFuraoJ93Wr9t3LRKWuYYxmKdwliCn29942w6NvXWReunpAb7Wm9gnGwhMFeOtnWapC61o7d+So1OY1tmxQLBXbIBjctxblKHQ5vgYHu5Skedp0AJxl0yoQQ7HvXcpNbVOtC0apPWCguzVAIYdyE/FkKc6kLf1rYDfUeqLHOFRUJTigV7CwUfGGctHwoJIUlTTL4Qbsbic1Icvz/4PHgD7gJJ1g+QxdvipQCScdL1LONTTspK+f0BSSkreeOudyVj7+jLTteH+i0vAQ=="};
@@ -3289,7 +3289,7 @@ const _p54on69=p54on;p54on=function(){if(PCTX&&!isT2())return!!(S.opt&&S.opt.pon
 const _tutT69=tutTarget;tutTarget=function(){if(PCTX||PBUY)return null;return _tutT69()};
 const _dAq69=dAq;dAq=function(){if(scene==='aq')syncSprites();_dAq69();if(!PCTX||aqEdit||isT2())return;
  if(!S.opt.pondPanel){x.save();x.beginPath();x.rect(926,92,330,510);x.clip();frPaint();x.restore()} // panel hidden: the old status box is painted over with the pond view
- if(!PBUY)chip(S.opt.pondPanel?'ซ่อนแผงสุขภาพ ✕':'แผงสุขภาพอ่าง ▸',1060,74,190,36,()=>{S.opt.pondPanel=!S.opt.pondPanel;save()},true,'#2b8fb8');const D=POND_DEF[S.ponds[PCTX].kind]||POND_DEF.stone;
+ if(!PBUY)chip(S.opt.pondPanel?'ซ่อนแผงสุขภาพ ✕':'แผงสุขภาพอ่าง ▸',1060,104,190,34,()=>{S.opt.pondPanel=!S.opt.pondPanel;save()},true,'#2b8fb8');const D=POND_DEF[S.ponds[PCTX].kind]||POND_DEF.stone;
  if(!PBUY){rr(16,140,330,40,20,'#0d1b26cc');TXs('⛲ '+D.n+(isDay()?' · กลางวัน':' · กลางคืน'),32,160,14,'#ffe7a0');chip('ซื้อปลาลงอ่าง',356,140,150,40,()=>{PBUY={page:0}},true,'#4a9a6a')}
  if(PBUY)pondBuyUI()};
 function pondBuyUI(){const L=pondFishList(),per=12,pages=Math.max(1,Math.ceil(L.length/per));PBUY.page=cm(PBUY.page,0,pages-1);
@@ -4774,7 +4774,7 @@ function newGame86(){try{const cur=localStorage.getItem(KEY);if(cur)localStorage
  S=DEF();try{fix()}catch(e){}last='';save();try{if(typeof cloudPush==='function')cloudPush(true)}catch(e){}TITLE86.step='name';TITLE86.err=''}
 function title86(){const sz=season74(),night=nightNow();btns.push({a:-400,b:0,w:2400,h:900,fn:()=>{},ui:1});
  // background: the town in today's season, dimmed
- const L=typeof town83Layer==='function'?town83Layer(sz):null;if(L&&(L.width||L.naturalWidth)){const s=Math.max(VW74/L.width,H/L.height);x.imageSmoothingEnabled=true;x.drawImage(L,(W-L.width*s)/2,(H-L.height*s)/2,L.width*s,L.height*s);x.imageSmoothingEnabled=false}
+ const L=typeof town83Layer==='function'?town83Layer(sz):null;if(L&&(L.width||L.naturalWidth)){const s=Math.max(VW74/L.width,H/L.height);bgT140(L,s)}
  else{x.fillStyle='#2e4a3a';x.fillRect(-VOX74,0,VW74,H)}
  x.fillStyle=night?'rgba(10,14,30,.55)':'rgba(20,30,24,.35)';x.fillRect(-VOX74,0,VW74,H);try{weather74()}catch(e){}
  const X=W/2-300,w=600,h=TITLE86.step==='name'?470:isNew86()?350:500,Y=Math.round((H-h)/2)-6;nine84(X,Y,w,h,3);
@@ -4828,7 +4828,7 @@ function startCard87(k,x0,y0,w,h){const on=TITLE86.pick87===k;rr(x0-3,y0-3,w+6,h
  L.forEach((t,i)=>{gc_(x0+30,y0+210+i*26,4,'#c9a46a');TXs(fit(t,14,w-60),x0+42,y0+210+i*26,14,'#5a4030')})}
 const _title87=title86;title86=function(){if(TITLE86.step!=='start')return _title87();input86(false);
  btns.push({a:-400,b:0,w:2400,h:900,fn:()=>{},ui:1});const L=typeof town83Layer==='function'?town83Layer(season74()):null;
- if(L&&(L.width||L.naturalWidth)){const s=Math.max(VW74/L.width,H/L.height);x.imageSmoothingEnabled=true;x.drawImage(L,(W-L.width*s)/2,(H-L.height*s)/2,L.width*s,L.height*s);x.imageSmoothingEnabled=false}
+ if(L&&(L.width||L.naturalWidth)){const s=Math.max(VW74/L.width,H/L.height);bgT140(L,s)}
  x.fillStyle=nightNow()?'rgba(10,14,30,.55)':'rgba(20,30,24,.35)';x.fillRect(-VOX74,0,VW74,H);
  const w=900,h=560,X=(W-w)/2,Y=Math.round((H-h)/2)-6;nine84(X,Y,w,h,3);TXB('เริ่มต้นบ้าน "'+houseName86()+'" แบบไหนดี?',W/2,Y+56,24,'#4a3a2a','center');TXs('เริ่มจากห้องเปล่า หรือบ้านแต่งพร้อมอยู่ · ซื้อของแต่งเพิ่มและขยายบ้านได้ตลอด',W/2,Y+90,14,'#8a6a4a','center');
  startCard87('empty',X+44,Y+118,392,300);startCard87('half',X+464,Y+118,392,300);
@@ -7597,10 +7597,10 @@ const DEC113={
 ,FISH113={
   "_note": "V1.13 more tank fish (group 'tank'). Same fields as the old tank fish: price, sell, bio (water load), hpt (hunger per tick), lv (unlock), sc (size), zone (top / mid / bottom), col (shop colour), note. lo = width of the low-res side sprite (HD = 2x/3x/4x). algae = an algae eater: a little less algae in its tank (good effect only).",
   "fish": [
-    { "id": "zebra_danio", "name": "Zebra Danio", "price": 180, "sell": 70, "bio": 1, "hpt": 1.3, "lv": 3, "sc": 0.7, "zone": "top", "col": "#c8d8f0", "lo": 26, "note": "ว่ายเร็ว ชอบผิวน้ำ อยู่ง่าย" },
-    { "id": "platy", "name": "Platy", "price": 220, "sell": 90, "bio": 2, "hpt": 1.3, "lv": 5, "sc": 0.8, "zone": "mid", "col": "#ff7a3a", "lo": 24, "note": "ปลาออกลูกเป็นตัว นิสัยดี" },
-    { "id": "corydoras", "name": "Panda Corydoras", "price": 260, "sell": 100, "bio": 1, "hpt": 1.1, "lv": 6, "sc": 0.7, "zone": "bottom", "col": "#e8e0d0", "lo": 24, "note": "ชอบคุ้ยพื้น เก็บเศษอาหาร" },
-    { "id": "molly", "name": "Dalmatian Molly", "price": 280, "sell": 110, "bio": 2, "hpt": 1.3, "lv": 8, "sc": 0.9, "zone": "mid", "col": "#f0f0f0", "lo": 28, "note": "ลายจุดขาวดำ ออกลูกเป็นตัว" },
+    { "id": "zebra_danio", "name": "Zebra Danio", "price": 180, "sell": 70, "bio": 1, "hpt": 1.3, "lv": 1, "sc": 0.7, "zone": "top", "col": "#c8d8f0", "lo": 26, "note": "ว่ายเร็ว ชอบผิวน้ำ อยู่ง่าย" },
+    { "id": "platy", "name": "Platy", "price": 220, "sell": 90, "bio": 2, "hpt": 1.3, "lv": 1, "sc": 0.8, "zone": "mid", "col": "#ff7a3a", "lo": 24, "note": "ปลาออกลูกเป็นตัว นิสัยดี" },
+    { "id": "corydoras", "name": "Panda Corydoras", "price": 260, "sell": 100, "bio": 1, "hpt": 1.1, "lv": 2, "sc": 0.7, "zone": "bottom", "col": "#e8e0d0", "lo": 24, "note": "ชอบคุ้ยพื้น เก็บเศษอาหาร" },
+    { "id": "molly", "name": "Dalmatian Molly", "price": 280, "sell": 110, "bio": 2, "hpt": 1.3, "lv": 3, "sc": 0.9, "zone": "mid", "col": "#f0f0f0", "lo": 28, "note": "ลายจุดขาวดำ ออกลูกเป็นตัว" },
     { "id": "cardinal_tetra", "name": "Cardinal Tetra", "price": 320, "sell": 130, "bio": 1, "hpt": 1.2, "lv": 10, "sc": 0.6, "zone": "mid", "col": "#e0403a", "lo": 22, "note": "แถบฟ้า-แดงสวย ชอบอยู่เป็นฝูง" },
     { "id": "harlequin", "name": "Harlequin Rasbora", "price": 300, "sell": 120, "bio": 1, "hpt": 1.2, "lv": 12, "sc": 0.65, "zone": "mid", "col": "#f09a6a", "lo": 22, "note": "ตัวส้มมีสามเหลี่ยมดำ ว่ายเป็นฝูง" },
     { "id": "otocinclus", "name": "Otocinclus", "price": 280, "sell": 110, "bio": 1, "hpt": 1, "lv": 14, "sc": 0.6, "zone": "bottom", "col": "#b8a878", "lo": 20, "algae": 0.02, "note": "ปลาเลียตะไคร่ตัวจิ๋ว ช่วยให้ตะไคร่ขึ้นช้าลง" },
@@ -8883,7 +8883,7 @@ const FISH125={
    "sell": 60,
    "bio": 1,
    "hpt": 1.2,
-   "lv": 4,
+   "lv": 1,
    "sc": 0.65,
    "zone": "mid",
    "col": "#e05050",
@@ -9075,7 +9075,7 @@ const FISH125={
    "sell": 80,
    "bio": 1.4,
    "hpt": 1.3,
-   "lv": 5,
+   "lv": 2,
    "sc": 0.8,
    "zone": "mid",
    "col": "#e04030",
@@ -9094,7 +9094,7 @@ const FISH125={
    "sell": 70,
    "bio": 0.6,
    "hpt": 1.1,
-   "lv": 3,
+   "lv": 1,
    "sc": 0.5,
    "zone": "top",
    "col": "#f0a030",
@@ -9132,7 +9132,7 @@ const FISH125={
    "sell": 45,
    "bio": 0.2,
    "hpt": 0.6,
-   "lv": 5,
+   "lv": 1,
    "sc": 0.4,
    "zone": "bottom",
    "col": "#e03030",
@@ -9172,7 +9172,7 @@ const FISH125={
    "sell": 50,
    "bio": 0.3,
    "hpt": 0.5,
-   "lv": 6,
+   "lv": 2,
    "sc": 0.45,
    "zone": "bottom",
    "col": "#c0a060",
@@ -10137,7 +10137,7 @@ function maker134(X,Y,w,h,done){const L=look134(),p=S.profile86;TXB(CU134.title,
  row('สีผม',CU134.hair,L.hair,Y+290,i=>p.hair134=i);row('สีชุด',CU134.cloth,L.cloth,Y+344,i=>p.cloth134=i);
  TXs(CU134.hint,X+w/2,Y+h-86,12,'#8a6a4a','center');if(done)B('ต่อไป',X+w/2-130,Y+h-70,260,56,done,true,'#4a9a6a')}
 title86=(function(prev){return function(){if(!TITLE86.on||TITLE86.step!=='avatar')return prev();input86(false);
- const L=typeof town83Layer==='function'?town83Layer(1):null;if(L&&(L.width||L.naturalWidth)){const s=Math.max(VW74/L.width,H/L.height);x.imageSmoothingEnabled=true;x.drawImage(L,(W-L.width*s)/2,(H-L.height*s)/2,L.width*s,L.height*s);x.imageSmoothingEnabled=false}else{x.fillStyle='#2e4a3a';x.fillRect(-VOX74,0,VW74,H)}
+ const L=typeof town83Layer==='function'?town83Layer(1):null;if(L&&(L.width||L.naturalWidth)){const s=Math.max(VW74/L.width,H/L.height);bgT140(L,s)}else{x.fillStyle='#2e4a3a';x.fillRect(-VOX74,0,VW74,H)}
  x.fillStyle='rgba(20,30,24,.35)';x.fillRect(-VOX74,0,VW74,H);const w=640,h=500,X=W/2-w/2,Y=Math.round((H-h)/2);nine84(X,Y,w,h,3);
  maker134(X,Y,w,h,()=>{TITLE86.step='name';TITLE86.err='';TITLE86.pick87=TITLE86.pick87||'half'})}})(title86);
 // "เริ่มเกม" (new player) goes to the maker first
@@ -10181,7 +10181,7 @@ applyStart87=(function(prev){return function(kind){const r=prev(kind);try{if(kin
 startCard87=(function(prev){return function(k,x0,y0,w,h){if(k!=='half')return prev(k,x0,y0,w,h);const on=TITLE86.pick87===k;rr(x0-3,y0-3,w+6,h+6,20,on?'#2b8fb8':'#c9a46a');rr(x0,y0,w,h,17,on?'#eef7fb':'#fff7e6');btns.push({a:x0,b:y0,w,h,fn:()=>{TITLE86.pick87=k},ui:1,l:'start:half'});
  TXB('บ้านแต่งพร้อมอยู่',x0+w/2,y0+34,21,'#4a3a2a','center');const keys=['sofa_long','jp_andon','aquarium','jp_bonsai','fridge','bathtub'];keys.forEach((q,i)=>{thumb84(q,x0+w/2+(i-(keys.length-1)/2)*58,y0+142,52,62,true)});
  rr(x0+20,y0+156,w-40,30,15,'#f6e6c4');TXB('บ้านแต่งครบ (ของขวัญขึ้นบ้านใหม่)  +  เงิน '+halfCash87().toLocaleString()+' G',x0+w/2,y0+171,14,'#7a5020','center');
- ['นั่งเล่น ครัว ห้องน้ำ มุมทำงาน ตู้ปลา ครบ','สไตล์ญี่ปุ่นอบอุ่น · ย้าย/ขาย/เปลี่ยนแบบได้ตลอด','เหมาะกับคนอยากเลี้ยงปลาเลย บ้านสวยตั้งแต่วันแรก'].forEach((t,i)=>{gc_(x0+30,y0+210+i*26,4,'#c9a46a');TXs(fit(t,14,w-60),x0+42,y0+210+i*26,14,'#5a4030')})}})(startCard87);
+ ['มุมนอน นั่งเล่น ตู้ปลา ครัว แยกเป็นโซน','สไตล์ญี่ปุ่นอบอุ่น · ย้าย/ขาย/เปลี่ยนแบบได้ตลอด','เหมาะกับคนอยากเลี้ยงปลาเลย บ้านสวยตั้งแต่วันแรก'].forEach((t,i)=>{gc_(x0+30,y0+210+i*26,4,'#c9a46a');TXs(fit(t,14,w-60),x0+42,y0+210+i*26,14,'#5a4030')})}})(startCard87);
 
 // ===== V1.35: the town like Stardew Valley (owner, 3 Nov 2026: 'เดินในเมืองยังกดเดินเองอยู่เลย ซูมเข้าแล้วเดินทั่วเมืองหน่อย
 // ให้อารมณ์คล้าย Stardew Valley'). The camera is zoomed in and follows your character; you walk it yourself anywhere on the
@@ -10623,6 +10623,132 @@ function book139(a,b,w,h){const L=wild139().sort((p,q)=>(DB[p].rar==='rare')-(DB
  TXB('📖 สมุดปลาแม่น้ำ · '+Object.keys(m.log).length+'/'+L.length+' ชนิด · จับได้รวม '+(m.total||0)+' ตัว',a,b+14,16,'#4a3a2a');
  L.forEach((id,i)=>{const e=m.log[id],cx=a+(i%cols)*cw,cy=b+32+Math.floor(i/cols)*ch;card84(cx,cy,cw-8,ch-8,e?(DB[id].rar==='rare'?'#fff1c8':'#fff7e6'):'#e8dcc4');fishPic139(id,cx+8,cy+4,cw-24,ch-38,!e);
   TXs(e?DB[id].name:'???',cx+(cw-8)/2,cy+ch-24,11,'#4a3a2a','center');if(e)TXs('×'+e.n+' · '+e.best+' ซม.',cx+(cw-8)/2,cy+ch-12,10,'#8a6a4a','center')})}
+
+// ===== V1.40 (owner, 5 Nov 2026: 'มันยังไม่ได้เลย เดินมั่วไปหมด ... ในบ้านแต่งมาก็แยกไม่ออกว่าอันไหนชิ้นไหน วางเหมาะสมยังไง เช่น โถส้วม
+// วางไม่โอเคเลย บ้านตัวอ่างก็แย่มาก ปลาตัวแรก หรืออะไรก็จำกัดไปหมด หน้า Login เข้าเกมส์ก็แย่มาก ปรับภาพ คุมโทน').
+// Data: core/data/start140.json, core/data/play140.json.
+const ST140={
+ "_note": "V1.40 the decorated start room (owner, 5 Nov 2026: 'ในบ้านแต่งมาก็แยกไม่ออกว่าอันไหนชิ้นไหน วางเหมาะสมยังไง เช่น โถส้วม วางไม่โอเคเลย'). One open room in clear zones, every piece where a person would put it: sleeping corner (bed, reading lamp, paper lantern) in the back-left, the sofa and round coffee table on a rug, the aquarium as the centre of the back wall, the kitchen along the back-right wall (fridge, sink counter, stove) with the dining table in front of it, the shoe cabinet by the front door, a plant in the front corner. No bathroom pieces in the living room (the old start put the bathtub, sink and toilet beside the stove). The middle and the front stay open for walking. [item, along the long back wall (tiles), along the left wall (tiles), turned]. The aquarium stays where the room puts it.",
+ "lay": [
+  ["bed_quilt", 0.2, 0.1], ["lamp_brass", 3.5, 0.2], ["jp_andon", 3.5, 3.6],
+  ["sofa_cream", 4.6, 0.1], ["rug_round", 4.3, 2.4], ["coffee_round", 5.1, 2.9],
+  ["plant_big", 11.95, 0.15], ["fridge_retro", 13.5, 0.1], ["kitchen_sink", 15.6, 0.1], ["stove_kettle", 18.7, 0.1],
+  ["dining_round", 16.0, 4.6],
+  ["jp_getabako", 0.1, 4.8, 1], ["plant_small", 20.0, 8.9]
+ ]
+}
+,PL140={
+ "_note": "V1.40 how it plays (owner, 5 Nov 2026: 'เดินมั่วไปหมด ... ปลาตัวแรก หรืออะไรก็จำกัดไปหมด'). slide = a blocked move along a kerb: turns = angles tried (degrees), max = largest turn (V1.37 went to 90°, so holding one key wiggled left-right), ahead = town px that must stay open in the new direction, stick = preference for turning the same way as last frame. pondLv = level the stone basin (อ่าง) opens (V1.04–V1.39: 31, so a new player only saw a locked button for weeks). starter = unlock levels for the game's first fish (neon tetra) that is not in a data file; V1.40 also opened zebra danio, platy, endler, cherry barb and cherry shrimp at Lv 1 and swordtail / corydoras / nerite snail at Lv 2, molly at Lv 3 in fish_more.json / fish_real.json (V1.39: only the guppy at Lv 1; the rest at Lv 3–8). acc = how a new fish gets used to the tank water: float = seconds the bag floats, gap = seconds between the three times you mix tank water into the bag; tutor = the same for the first fish (V1.39: 90 s / 40 s, first fish 20 s / 10 s). side = how much sideways movement already shows the side walk (sideways speed > side x up/down speed); V1.37 used 1.15, so walking a 45° route showed the front walk sliding sideways (a moonwalk), like a farming life-sim the side walk now shows on diagonals.",
+ "slide": {
+  "turns": [
+   20,
+   30,
+   45,
+   60,
+   75
+  ],
+  "max": 75,
+  "ahead": 14,
+  "stick": 4
+ },
+ "pondLv": 5,
+ "starter": {
+  "neon_tetra": 1
+ },
+ "acc": {
+  "float": 30,
+  "gap": 12,
+  "tutor": {
+   "float": 8,
+   "gap": 4
+  }
+ },
+ "side": 0.75
+};
+// ---------- walking: no more wiggling along the kerbs ----------
+// V1.37's slide tried every turn up to 90° each frame and took whichever had the most room, so holding one key on a
+// slanted street flipped left / right / left (the character wiggled on the spot: holding S at the home gate moved 35 px
+// in 2.5 s). Now a blocked move turns at most PL140.slide.max degrees, only onto ground that stays open for a few
+// steps ahead, and keeps turning the same way while the same direction is held.
+const SL140={a:null,s:0,t:0};
+slide137=function(x0,y0,mx,my){const L=Math.hypot(mx,my);if(!L)return null;const a0=Math.atan2(my,mx),C=PL140.slide;
+ if(SL140.a==null||Math.abs(Math.atan2(Math.sin(a0-SL140.a),Math.cos(a0-SL140.a)))>.35||T0-SL140.t>.4)SL140.s=0;SL140.a=a0;SL140.t=T0;
+ const open=(ux,uy)=>{for(let r=C.ahead/3;r<=C.ahead;r+=C.ahead/3)if(!feetOk135(x0+ux*r,y0+uy*r))return false;return true};
+ let best=null;for(const d of C.turns)for(const s of[1,-1]){if(d>C.max)continue;const a=a0+s*d*Math.PI/180,ux=Math.cos(a),uy=Math.sin(a),k=Math.max(.55,Math.cos(d*Math.PI/180));
+  if(!feetOk135(x0+ux*L*k,y0+uy*L*k)||!open(ux,uy))continue;const sc=-d/15+(SL140.s===s?C.stick:0);if(!best||sc>best[2])best=[x0+ux*L*k,y0+uy*L*k,sc,s]}
+ if(!best)return null;SL140.s=best[3];return[best[0],best[1]]};
+// ---------- the decorated start room ----------
+applyStart87=(function(prev){return function(kind){const r=prev.apply(this,arguments);try{if(kind==='half')start140()}catch(e){}return r}})(applyStart87);
+function start140(){const keep=R2LAY.filter(e=>R2FIXED.has(e[0]));R2LAY.length=0;keep.forEach(e=>R2LAY.push(e));const miss=[];
+ for(const e0 of ST140.lay){const e=e0.slice();R2LAY.push(e);if(e[4])continue;const i=R2LAY.length-1,[w,d]=r2dim(e);if(!r2rectOk(i,e[1],e[2],w,d)){R2LAY.pop();miss.push(e[0])}}
+ R2DIRTY=true;ST140.miss=miss;try{save()}catch(e){}return miss}
+// ---------- the title screen ----------
+// The title is drawn last, over everything (V0.87 drew it inside the HUD, so the top buttons and the gold bar of the
+// game showed through on top of it). The town behind is softly out of focus and drifts; the menu has a real logo,
+// your character on the save card and fish swimming along the bottom.
+let TDEF140=false;
+hud=(function(prev){return function(){const on=typeof TITLE86!=='undefined'&&TITLE86.on;TDEF140=on;let r;try{r=prev.apply(this,arguments)}finally{TDEF140=false}if(on&&TITLE86.on){try{INFO84=null;SET84=false}catch(e){}title86()}return r}})(hud);
+function bgT140(L,s){const k=s*1.1,w=L.width*k,h=L.height*k,dx=Math.sin(T0*.05)*18,dy=Math.cos(T0*.04)*8;const sea=x.createLinearGradient(0,0,0,H);sea.addColorStop(0,'#7cb8cf');sea.addColorStop(1,'#2a6a86');x.fillStyle=sea;x.fillRect(-VOX74,0,VW74,H);/* the town picture is an island with clear corners: the sea fills them (the game's buttons showed through) */
+ x.save();x.imageSmoothingEnabled=true;try{x.filter='blur(2.5px) saturate(1.05)'}catch(e){}
+ x.drawImage(L,(W-w)/2+dx,(H-h)/2+dy,w,h);try{x.filter='none'}catch(e){}x.restore();x.imageSmoothingEnabled=false;
+ const g=x.createLinearGradient(0,0,0,H);g.addColorStop(0,'rgba(40,24,10,.30)');g.addColorStop(.5,'rgba(20,24,20,.18)');g.addColorStop(1,'rgba(6,26,40,.62)');x.fillStyle=g;x.fillRect(-VOX74,0,VW74,H);
+ const v=x.createRadialGradient(W/2,H*.45,H*.35,W/2,H*.45,VW74*.75);v.addColorStop(0,'rgba(0,0,0,0)');v.addColorStop(1,'rgba(10,8,4,.45)');x.fillStyle=v;x.fillRect(-VOX74,0,VW74,H)}
+const PARADE140=[{id:'betta',y:612,v:34,s:1},{id:'guppy',y:646,v:52,s:-1},{id:'neon_tetra',y:626,v:60,s:1},{id:'platy',y:660,v:40,s:-1},{id:'molly',y:598,v:28,s:-1},{id:'neon_tetra',y:640,v:64,s:1}];
+function parade140(){const span=VW74+240;PARADE140.forEach((f,i)=>{const im=(typeof HDF95!=='undefined'&&(HDF95[f.id]||{})[3])||FSPR[f.id];if(!im||!im.naturalWidth)return;const hgt=f.id==='betta'?44:f.id==='neon_tetra'?20:30,w=im.naturalWidth*hgt/im.naturalHeight;
+ const p=((T0*f.v+i*233)%span),xx=f.s>0?-VOX74-120+p:W+VOX74+120-p,yy=f.y+Math.sin(T0*1.6+i)*4;x.save();x.translate(Math.round(xx),Math.round(yy));x.scale(f.s>0?-1:1,1);x.globalAlpha=.95;x.imageSmoothingEnabled=false;x.drawImage(im,-w/2,-hgt/2,w,hgt);x.restore();
+ x.fillStyle='rgba(220,245,255,.55)';for(let b=0;b<2;b++){const t=(T0*.7+i*.37+b*.5)%1;x.fillRect(Math.round(xx-f.s*w*.4),Math.round(yy-8-t*40),3,3)}})}
+function logo140(cx,y){x.save();x.textAlign='center';x.textBaseline='middle';x.font='800 66px '+FONT;x.lineJoin='round';x.shadowColor='rgba(0,0,0,.35)';x.shadowBlur=14;x.shadowOffsetY=6;
+ x.lineWidth=12;x.strokeStyle='#3e2412';x.strokeText('Aqua Life Story',cx,y);x.shadowColor='transparent';const g=x.createLinearGradient(0,y-34,0,y+30);g.addColorStop(0,'#fff8e4');g.addColorStop(1,'#ffd88a');x.fillStyle=g;x.fillText('Aqua Life Story',cx,y);x.restore();
+ const t='บ้านปลาของฉัน · My Aquarium House';x.save();x.font='600 17px '+FONT;const w=x.measureText(t).width+60;x.restore();rr(cx-w/2,y+44,w,36,18,'#5a3a22');rr(cx-w/2+3,y+47,w-6,30,15,'#7a5230');TXs(t,cx,y+62,17,'#ffe9c2','center')}
+title86=(function(prev){return function(){if(TDEF140)return;if(!TITLE86.on||TITLE86.step!=='menu')return prev();menu140()}})(title86);
+function menu140(){btns.push({a:-VOX74-400,b:0,w:VW74+800,h:H+200,fn:()=>{},ui:1});input86(false);
+ const L=typeof town83Layer==='function'?town83Layer(season74()):null;if(L&&(L.width||L.naturalWidth))bgT140(L,Math.max(VW74/L.width,H/L.height));else{x.fillStyle='#2e4a3a';x.fillRect(-VOX74,0,VW74,H)}
+ try{weather74()}catch(e){}logo140(W/2,128);parade140();
+ const w=560,X=W/2-w/2,Y=262,nw=isNew86();
+ if(nw){const h=220;nine84(X,Y,w,h,3);TXB('เลี้ยงปลา แต่งบ้าน ใช้ชีวิตในเมืองริมน้ำ',W/2,Y+56,19,'#5a3a24','center');TXs('สร้างตัวละคร ตั้งชื่อบ้าน แล้วเริ่มได้เลย',W/2,Y+88,14,'#8a6a4a','center');
+  B('เริ่มเกม',W/2-160,Y+122,320,66,()=>{TITLE86.step='name';TITLE86.err=''},true,'#4a9a6a')}
+ else{const h=300;nine84(X,Y,w,h,3);card84(X+30,Y+30,w-60,150,'#fff7e6');
+  try{PREV136.on=true;PREV136.k=24;PREV136.face='d';plDraw129(x,plId129(),'f',0,false,X+108,Y+172,138,null)}catch(e){}finally{PREV136.on=false;PREV136.k=null;PREV136.face=null}
+  const cz=typeof r2cozy==='function'?r2cozy().total:0,nf=Object.keys(S.fish||{}).length;TXB(houseName86()||'บ้านของฉัน',X+190,Y+66,24,'#5a3a24');
+  TXs('Lv '+(S.player.level||1)+'  ·  '+(S.player.gold||0).toLocaleString()+' G',X+190,Y+100,15,'#6a5040');TXs('Cozy '+cz+'  ·  ปลา '+nf+' ตัว',X+190,Y+124,15,'#6a5040');TXs('เล่นล่าสุด '+fmtAgo86(S.meta.last_saved_ms||Date.now()),X+190,Y+152,13,'#a08a70');
+  B('เล่นต่อ',W/2-160,Y+196,320,62,()=>{if(houseName86())TITLE86.on=false;else{TITLE86.step='name';TITLE86.err=''}},true,'#4a9a6a');
+  chip(TITLE86.confirm?'ยืนยันเริ่มใหม่':'เริ่มใหม่',X+w-136,Y+h-34,116,30,()=>{if(TITLE86.confirm){TITLE86.confirm=0;newGame86()}else TITLE86.confirm=1},true,TITLE86.confirm?'#c0503a':'#9a8a6a');
+  if(TITLE86.confirm)TXs('แตะอีกครั้งเพื่อยืนยัน · เซฟเดิมเก็บสำรองไว้ 1 ชุด',X+30,Y+h-19,12,'#c0503a')}
+ const st=typeof CLOUD!=='undefined'&&CLOUD.state==='on'?'☁ เซฟออนไลน์เชื่อมอยู่':'เล่นแบบ Guest · เซฟอยู่ในเครื่องนี้ · ระบบเข้าสู่ระบบจะมาก่อน CBT';
+ x.fillStyle='rgba(8,20,30,.45)';x.fillRect(-VOX74,H-30,VW74,30);TXs(st,W/2,H-15,12,'#d8e6ee','center');TXs(typeof GAME_VER!=='undefined'?GAME_VER:'',W+VOX74-14,H-15,11,'#b8c8d0','right')}
+// ---------- fewer locks at the start ----------
+(function(){try{FEATURE_LV.pond=PL140.pondLv;for(const k in PL140.starter)if(DB[k])DB[k].lv=PL140.starter[k];if(typeof ACC79!=='undefined'){ACC79.float=PL140.acc.float;ACC79.gap=PL140.acc.gap;ACC79.tutor=Object.assign({},ACC79.tutor,PL140.acc.tutor)}}catch(e){}})();
+// ---------- "อ่าง": the basins and special rooms on one tidy screen ----------
+// V0.6x drew three tall flat cards with overlapping lines (the "ยังไม่ปลดล็อก" line on top of the score) and the title
+// under the top buttons. Now: your basins on the left (each with its fish and a big "เข้าไปดู" button), the three
+// special rooms on the right as short cards with one main button each.
+function pondsList140(){const o=[];for(const id in S.ponds||{}){const p=S.ponds[id];if(!p)continue;const nm=(POND_DEF[p.kind]||{}).n||((typeof R2META!=='undefined'&&R2META[p.kind])||{}).n||'อ่างปลา';o.push({id,p,nm,fish:Object.values(p.fish||{}),plants:Object.keys(p.plants||{}).length})}
+ if(!o.length)o.push({id:'pond_1',p:null,nm:POND_DEF.stone.n,fish:[],plants:0});return o}
+dHabitat=function(){const L=typeof town83Layer==='function'?town83Layer(season74()):null;if(L&&(L.width||L.naturalWidth))bgT140(L,Math.max(VW74/L.width,H/L.height));else{x.fillStyle='#2a5560';x.fillRect(-VOX74,0,VW74,H)}
+ x.fillStyle='rgba(10,24,30,.35)';x.fillRect(-VOX74,0,VW74,H);
+ rr(40,76,460,52,16,'#5a3a22');rr(43,79,454,46,13,'#7a5230');TXB('🪴 อ่างและบ่อปลา',62,102,22,'#fff1d6');
+ // basins
+ const P=pondsList140();nine84(40,142,600,500,2);TXB('อ่างของฉัน',66,180,20,'#4a3a2a');TXs('เมดากะและปลาธรรมชาติอยู่ในอ่าง · ตู้ปลาในบ้านอยู่ที่ "ตู้ปลา"',66,206,13,'#8a6a4a');
+ P.slice(0,3).forEach((q,i)=>{const y=226+i*134;card84(62,y,556,122,'#fff7e6');rr(74,y+12,154,98,14,'#8f8a7e');rr(78,y+16,146,90,11,'#b9b2a2');const wg=x.createLinearGradient(0,y+22,0,y+100);wg.addColorStop(0,'#7cc4d8');wg.addColorStop(1,'#2f7f9a');rr(84,y+22,134,78,8,wg);x.fillStyle='rgba(255,255,255,.35)';for(let r_=0;r_<3;r_++)x.fillRect(Math.round(96+((T0*8+r_*40)%110)),y+30+r_*22,18,2);x.fillStyle='#5aa04a';x.beginPath();x.ellipse(200,y+36,10,4,0,0,7);x.fill();
+  q.fish.slice(0,5).forEach((f,j)=>{const im=FSPR[f.sp||f.species_id];if(im&&im.naturalWidth){const h=16,w=im.naturalWidth*h/im.naturalHeight;x.imageSmoothingEnabled=false;x.drawImage(im,Math.round(92+(j%3)*40),Math.round(y+30+Math.floor(j/3)*34+Math.sin(T0*1.5+j)*2),w,h)}});
+  if(!q.fish.length)TXs('ยังว่าง',151,y+61,13,'#e8f6ff','center');
+  TXB(q.nm,244,y+36,18,'#4a3a2a');TXs('ปลา '+q.fish.length+' ตัว · ไม้น้ำ '+q.plants+' ต้น',244,y+64,14,'#6a5040');
+  B(q.fish.length?'เข้าไปดูอ่าง':'เข้าไปเลี้ยงปลา',244,y+76,200,38,()=>enterPond(q.id),true,'#3a8aa0')});
+ if(P.length>3)TXs('และอีก '+(P.length-3)+' อ่าง (แตะอ่างในบ้านเพื่อเข้าไปดู)',66,630,13,'#8a6a4a');
+ if(P.length<3){const y=226+P.length*134+8;card84(62,y,556,108,'#f4ead4');TXB('อยากได้อ่างเพิ่ม?',80,y+28,16,'#5a3a24');TXs('ซื้อ "อ่างเมดากะเซรามิก" หรือ "กล่องเพาะเมดากะ" ที่ แต่งห้อง → เพิ่มของ',80,y+54,13,'#6a5040');TXs('วางในบ้านหรือสวน แล้วแตะอ่างเพื่อเข้าไปดูปลา · บ่อในสวนเปิดที่ Lv '+FEATURE_LV.outdoor,80,y+78,13,'#6a5040')}
+ // special rooms
+ const Hb=S.habitat;nine84(660,142,580,500,2);TXB('ห้องพิเศษ',686,180,20,'#4a3a2a');TXs('ปลดล็อกด้วย Gold หรือ Quest Point · อัปได้ 2 ขั้น',686,206,13,'#8a6a4a');
+ ['aqua','med','br'].forEach((k,i)=>{const h=HAB[k],lv=Hb[k],c=h.lv[Math.min(lv,1)],y=226+i*134;card84(682,y,536,122,lv?'#eef6e8':'#fff7e6');
+  TXB(h.n,700,y+28,17,'#2a4a3a');TXs('ขั้น '+lv+'/2',1200,y+28,13,'#5a7a6a','right');TXs(fit(h.d,13,500),700,y+52,13,'#5a6a5a');
+  let line='';if(k==='aqua')line='คะแนน Aquascape '+aquaRating()+'/100 · ไม้น้ำโต ×'+aquaMul();if(k==='med'){const M=Hb.m,t=medTemp();line='เมดากะ '+M.count+'/'+medCap()+' ตัว · น้ำ '+Math.round(M.water)+'% · '+t.toFixed(1)+'°C'}
+  if(k==='br'){const b=Hb.b,sp=bestPair();line=b.on===2?'ลูกปลาพร้อมแล้ว!':b.on?'กำลังผสมพันธุ์ '+DB[b.sp].name:sp?'คู่ที่พร้อม: '+DB[sp].name:'ยังไม่มีคู่ปลาที่พร้อม (ต้องมี 2 ตัวขึ้นไป)'}
+  TXs(fit(line,13,500),700,y+74,13,'#3a5a4a');
+  if(lv<2){B('ปลดล็อกขั้น '+(lv+1)+' · '+c[0].toLocaleString()+' G',700,y+84,250,32,()=>habUnlock(k,'gold'),true,'#c99735');chip('หรือ '+c[1]+' Quest Point',962,y+86,170,28,()=>habUnlock(k,'quest'),true,'#4a8f5a')}
+  if(lv>0){if(k==='med'){chip('เพิ่มเมดากะ 120 G',1080,y+14,130,24,medAdd,true,'#4a8fa8');if(lv>=2)TXs('',0,0,1,'#000');chip('เติมน้ำ',1144,y+92,66,24,medWater,true,'#49a0c0')}
+   if(k==='br'){const b=Hb.b;chip(b.on===2?'รับลูกปลา':'จับคู่',1134,y+92,76,24,b.on===2?brCollect:brStart,true,b.on===2?'#4a9a6a':'#d98a9a')}}});
+ B('ย้อนกลับ',1080,660,170,48,()=>go('home'),true,'#6a5acd')};
+// ---------- facing on diagonals ----------
+face137=function(vx,vy,prev){if(Math.abs(vx)<.05&&Math.abs(vy)<.05)return prev||'d';return Math.abs(vx)>Math.abs(vy)*PL140.side?'s':(vy>=0?'d':'u')};
 
 // ===== Environment layer (Phase 0) — injected by client/build/build.py right before the game boots =====
 // development : everything on (team mode via 7 taps on the version line, Sandbox Gold, festival preview)
