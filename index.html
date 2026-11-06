@@ -3174,7 +3174,7 @@ const _hud67=hud;hud=function(){_hud67();if(LVQ.length||LVSHOW)return;if(!['home
   TXs(lock?'เริ่มที่ Lv '+s.lv:(s.g.st==='gold'?a.toLocaleString()+'/'+b.toLocaleString()+' G':a+'/'+b)+(storyReady()?' · พร้อมรับรางวัล':''),32,y+40,12,storyReady()?'#8fe08a':'#cfe6f2')}
  if(n){gc_(338,y+6,12,'#e8504a');TXB(String(n),338,y+6,13,'#fff','center')}};
 
-const GAME_VER='V1.41';
+const GAME_VER='V1.42';
 // ===== V0.68 STEP 8 — UX/UI: main dock (บ้าน / ตู้ / อ่าง / เมือง / เควส), Lv1-5 tutorial pointers tied to the story,
 // one UI skin drawn by the user's ChatGPT (buttons, tags, icons), Demo/dev tools hidden in real play, online save per player. =====
 const UI_IMG={"btn_blue": "data:image/webp;base64,UklGRj4BAABXRUJQVlA4TDIBAAAvIkAEEL/AJgCANLi/HgFy0P8lh82lBpsAAJNML3fcQxCDgiSgn6viSJKSO1zfEAJJkH9C7vMfkPmcXjc1/ElsyWQDAYsn14oZmTJEcwnaLHRUVJHFNUEQQYDgB37wgR8gTMAfUc2kqTFAjG0rChMDCG4fd+2/VcGYDt6N6P8E3EWH/hnoo/u6hG9iR/O1e9B0ClGp+zi4QsSP/cdtIrib0EV/vT7fDzF5R+jjJZ0c1YUNWCUAG1PriGG8jrd7YS3CNhTSdB6wS0txfc6QpVVWOxaYd1HPAkmydasMq2bIABKgsj1rWpVVsPz2MY1tIUymLMszMrJM2arT0MXg+EmMk60m7aYsWXmWJoYQadyNT4Rx+HQkQte6W/hI+mNM1TZI3t0SPqiVeCmeQujXcT/5V0k=", "btn_gray": "data:image/webp;base64,UklGRlABAABXRUJQVlA4TEMBAAAvIkAEELegKrKVijeoISSBoS3J562hNpKtBA0hhNSd/uuhBIbUvuJIUqKF4gmeL4tEDNJUNYFz/kOEZi6OJBvIMZ+pq48rnbSrfCw3b2u5mR0QEADQRwBAHwCEstnTi82fgwFiJNttGwnhgxkMENh/rYBkuoN3Ef2fgLvr0T8Dw+if7uGwub7cG1CXH+V782SEOk/fx+nHMfhb4m01WBqeTRX5W5Qahs/TS6o4jxtt+MDSX9uLbpaK1eAx6bOw7dKyQhaXhHILp43RY2Na9k3S2gFduX+wnqn2tl1au1dmy9IBEogfziPrUpau3IWTVipfKAeQaZv9OAWSihSiPBrjcOpAqAVJoLYozRY8r4oN5ZTKqXJKTdEpFSkZvP2Nq0RLjxrJmPC3cPX72AIIAcQgOX9LuBhiiAqKfwwxCM/d8q+SAAA=", "btn_green": "data:image/webp;base64,UklGRloBAABXRUJQVlA4TE4BAAAvIkAEELegJpKt5mdiT8VgAv89KlCAgmhDaSRbzfuf6GIFWBz9N0MNGRQK2khS7u75Xbx/ccw4/+G9vaWW3ZdWEYrAEdX2ZKBbra6EZh+VBOgDEMSHAMDgfxSdULIzUjK7t95kgBhJctyGxv8LAAUw/1gPUskZ7Eb0fwKeoybxvyTjvPjjE9Xl7nL9Wp/u6aPb798uow8+OUa5vgUBIGwq/YDvruL99cR9nAD8ptK8Upw3MPvn9iKBVggw2W00gzV3/zzYgBfaOZfkl9UMK8zDkK0SspCZQPL7VMRoojKzYlRZkJNfp9RHH+cqR5WDBfDbamK51KWocpCsHAQQnT0gpkMfzJUcMoMAYrhp9MNNF1PJwCuhgZWZCSAi4Ilw6Ydq0zp65+nov3X0LgKT+gFV2B/XeS+5SWeUU/oBqIw1gDWwZ2OlgTX403wk/xUA", "btn_orange": "data:image/webp;base64,UklGRkoBAABXRUJQVlA4TD4BAAAvIkAEELegNJKk6F7UOX4U5B8gCjYNRZEkNXsHz3uRkwA04N9MskCdgjaSlL17Zg3v3x/T/AdL7PaLIiVtYnjit+20N7eRi7m9v7rjJLQOACgQfwIgEAYw4P4nv2pJYXAY21acGHaQ7Jj0XyvoxA7ejej/BNxDi/4MZPH0CDOFrNf0sO2YruyCyvX5Ln5Mxg5CNi4/HBLG3iLL6Hr6ncBYXA66+Jzj4zy2X9VCcpbg3XVq4ziP4XkA6iS1mLwlpHxuVA5Bp26n7mzwpcTzqHPd6QBpH8/b+sNcZ2CncjBX9n4G1vaNNsO6zdRj3mdgZ4ZVaipeXVJpaz/vLNTBurS1SSVcwVleCV+a1qUtTfu8rJLauMSQmeyNSfgQn1VWeDt7CxNJEBOUcVSfwMkIe0sYN/TOj53vnSQmy93zV0k=", "btn_purple": "data:image/webp;base64,UklGRiwBAABXRUJQVlA4TCABAAAvIkAEEJ+gKJKk5nLgmXnhAf+ecIAPtY0kNe//sZEL6YD+mwMxDQAgDdbcMo3MA1zOH/zhMgnzH9xZz0QYVc4vxlFfJNtbdzpQPUmoOvaDLxogRAAgQoAAIrB3cXtmgBhJctzGeH0SwAO//JMFSdMZ7ET0fwLOywj6X8AI8eUrgtJhP2/Hq0PZxPEQPSTFi2yp1N93ZaR4CiN9dm3vtmqEiIzPtgM+JK2S0EJ3abhasRSxxL7BuJ4k+W2vliPF6ubDpZVx7xoX/UFfHHji9zeaLockH/Knvd2UzgJ98eEdSRqu4RLwLflC37722QWgeTC3euQUT4zyaR2a9zbNrUODmk0hngQjl/quDI4cTxGyvS4lhXhKhPzXpHsinDP/KUk=", "btn_rose": "data:image/webp;base64,UklGRj4BAABXRUJQVlA4TDEBAAAvIkAEEK+gNJKk6PbUD3giQJJ/VEjUpqE0kiTl2D1IcOQ+/8xe7lcpjSQpum/UOXB48s+KGH5q/kNTBisqvMJsq/ksfHobO9X50+vXbEWMjgwGwAokhBRYfDwXw34wQLBtq2qTVP5aeEh1/nMVbTKDcyP6PwHn1KEvAxn36RnLTz54/ffNa+ouvI8cUPl7uPJQ3k1ClnhYMmWeiYXFneLIgUP7Z39TYXGELA7tYEL0NjeporbF4h0KfgdMoC67dEO7VGGkEh0qabcGXYboRr+auglGKt4R11RbpYEJ1OdGF4wHrU66TDcYFXgQRwVabV0Y0w6VAZtn4jXqvNXbzqgDtnhk704KcR2Vcb0Z021NIevtTnwhKn00KhOO4E6xxHK7in8GeS3ulFj8F+U4r3xVEgA=", "close": "data:image/webp;base64,UklGRgABAABXRUJQVlA4TPQAAAAvDsADEK/AJgCANLi7l4BI9H9l68KgkSRFx8z4YIJ1vObXRVEbyVbyP+45dVAKFVA+IZHL/AfUNmaUiog9ixooQxU4LjR/TBAUM0YYIj3/36WZK94aPDp3tWJjz2IuidfBvjIwjGSrifoI/8sP5P57hSIi+q+2bRvGTs+mM/beAPbta4pt4fjKVldbbv4HXGoxsYiIZeyNdyV3M1PShI1k7r2o95LlA4pYn73OWYUCXmctY87pLJTwehapc450y1hPzi6SEyCsfXYeszJ9QFQqTvI7pdbCBksmOd9VFza+rHzcVls47EIiorBCq7hhPs9zWEYA", "ic_coin": "data:image/webp;base64,UklGRtwBAABXRUJQVlA4TM8BAAAvHsAHEJfAIACAJHR35wP9v8cRflEV2VbycPl0JwFd6B+CBqY2kq3kKxZ/WqEZ+s80IrL5DwAaMyEGKPpy09trW9jwsVxiYGze/HEQAqn0s/8k3z4eU1QKNFSAYNtK2Gga/SAKgun+N6sknSVE9F+R27aNHAMZ7Wk94vuukvX9p0q5snLj93qiuNcym7V+fiblorjvex1UJ9W/8u56HzXa2qg2fMqbKWVtThUBeYqrvOfup7bRheGqzjve3E56FnURgakCNVE+cd+cVk9v7cCk2pHXlLaiZUeEs5xo6uCa8OWyVrKqvECJQit4rjXjDlWHJFi14SwubXkz2zZTHc7CREy24auUay3q5rGSxxD47CAbDGzqRiUiMr27DmY66/hghuHhLftIIKzKwAMJm/OFARFSbS90sce8jy0IuzoyatylJZ/gMZhfMfMTI0kA2rQ0ycehmy7gPjrAwgCFan3BSHoXoTGQjypM8bgpBV0b5AhA9rRWn/y1MRofRFiEW4QFAfV5C0ff8diFiLnNqFf5PqL3rpNpK2UBnIN8ewG9D9U5T2bTmYHsZ9pEs9zBIqjl1+urnAVw2vGPd11xxFyv61+vv3ySrtfsf7/Gj+wLAA==", "ic_drop": "data:image/webp;base64,UklGRm4BAABXRUJQVlA4TGIBAAAvF8AHEJ+gIACAItvmmv4v6ZDiSJKSE+znEgApeP5B8aJQ0EaScs/MDIrev5M3MP8BQESIBBEUZTXZvfvcN6kvSGKSFZyRlCR44LDGAANatS++3S7RC3I0OIxtpY424gP/Bk3/xUZ0U0JE/xm4bdvIrqDb+z7xHEv0fCtdF32EPX0DCZ8GQeMn0e9WxqsvbgL2P/qHH1oCAEd/cKqtRry66HxEHX30EgHxdOR+mb0UBtjReaMxtdUaGXJYRE5fptZaswDR0cY9dNqUCDAcnZbN0ds7Ehtt7suttSVGZEfW1WIkQDLBaHWMfo53RG5o6WtqmxFBzCYlDe1bUngjNjHN2U8W2RO3NGMJW0IopdTlvEg92SSOMabSsl3bTR7yyhxshVl0luzJvK3MLDv3nGX5WUrMAPNiDOslaI6yCE21JewvmLzPJb0trWT2xw/lcqnWmnOCc+e/hsht/f8vkelh6gE=", "ic_gear": "data:image/webp;base64,UklGRhgCAABXRUJQVlA4TAsCAAAvH8AHEJegoJGk5nulSEAF/jWBGkWRJDUXyRnkUPgXwRsFCFATSYrEDxkmKETgXwUqiO+S+Q8ATwzmCqyPD8fj80Y2pVObnjWnsIDCqg6qvJt3/IfeP3cXg8TYtuO2iYAPfOwEyP6r1RKX8G5E/yfg+T1+1N/jUDzEP+Pc0qqe4gP8ByAxYVFzigRekV8whci/MddQtRTtWjWH+A2/bkzX0kTgdq2pmkP8hN1LOvcaYtKle02E52/Xep99VEl9sgBayhbfeI032rklba+TvmZLpvBBpCWNekvXvjl4HXMkSyE+n0lrtvuwKafscrzNlSzE59tZ47rPpsAu7JNHrzlFPoCvcd2bEjBpA6qtJnsp8ohymO3ah2DiJdtQfCzp9hwirrmohWNBRHidfbA+epsZi/gaVN3aphAfiXPtYrWpj0x4m4x6l2P+pRjqjPZt0Oq1cXvD9qGo9dGVsUhwatMGTCHC2QdPVUlSDvEh4L1qU7Zb0NlQgrdqChAfCV5VOl42t3R2OZ5qT7IIz0e8Ny8bOBQw1daThfh8xleTKAe8YJJ3GFlfeF29iarsBTfl2kdTX9nil06Doeo5QW0aXaimHOKbyIOeqZ1Wm1SdPrqSLD6fyd2ThTRabT2Z5KMmKT7fMaUQX7NJJAuvmBOKz68AYjQ6SSE+vMTz/3iVyIT4CPSXhHeLz9/zUb8DAA==", "ic_heart": "data:image/webp;base64,UklGRpABAABXRUJQVlA4TIQBAAAvHwAHEJegNpKt5GORu6Sk1EH/fVCCt6Emkq3m/dQHkh704gcXtJSgKJKk5nIgK8AGDvDvhR+v+Q8ARBawEz6Kv451P7Kf/ps5FxeDEhFg6jPMGAUhIPSgVrdBlwFiJMlxGxP/Swp0/skSC1DKYDei/wrbtm0cGzDq7vaKfyiLxf0uuCsdWEK3bGKrWCWl8GfnJgxsIm4oEz9DV8tBhxWjhtRKCsYu0jlu6kxyxsp8hqSemYwspu2eNa7yUG3cVJdqUjgspoDrbDWFOnVNZOfnOU1F6SR7Tm2Al2pyDAaAflbN12DXKak4v6D1e1wIcl2gJE/nFwxd50v1uke9+IpWkttARU39RXOWFfGB2HeUSuYU/WHhXQrJulI1M3mS8C6UQZCb2TBlBhCa8rRS61UE77T9GA+gihrXVDJ2++8SgJmQck252FBLTtM4Qpoh3TI+EEmP6Ua7sCRHLbNB+s6cHLQpm532AzJ2wvQrKqcp8N9RQY/d+i8GBE9N/wPJn0RKehMB", "ic_home": "data:image/webp;base64,UklGRuABAABXRUJQVlA4TNQBAAAvH8AGEJegJgBAxr68rr3rKCWaUJsabAIAaMLecM0A64U4NCcAaAa9FEWS1Fy+A1ygCyOo5p2Z/2Ak5/FDDolPwapGn94Q3DNnC7KX/ap/svIDMKskiaSgl6Hmpq0ODgMAaZuioDIj9P9rTTo+iOi/ArdtlIyO+T7x/iBw5P2HgLu7Hv1xFsiMcIQ3AO3V4CfStQPoXoN+wt0V+y1FNBB+4Li9B9GYY46vSTgor0FjzjWJBnxJWXn4psFrzpMak+CT2XWZ+WZsvBfRnHPQIPiIlW9qXZDXOjbm+KBwmZUvQkVWWnuOo7fKZ1ntRRgpLO6817HTqsENO9bEQ0QjZa0xz/DtbnWZLEJxFhFhFuLb1eHj6KGst+Z5k3B318UN8RPVuwQzb89bcGwNBfHZ7dUapzdCTNm8MQk1NiI8gr7aziAXSd9+SYqqb8RHQ2VscnBJvyIlWSUYrZ6IcLiySMrlG5MVUe2q6vAGU27E7sQk6aqiKepaZlXHTJlEVJBF3CMiUtC6Ve8ndrMqJHURRUZDF/VudbhlLjsSmRkoSCSI2quqV69bE7SKCHevKjMjLDSrk3icO+g9bRkel1V4Ve8ffx8AoHYAdwTrAD99YQC4t/s23hs=", "ic_pond": "data:image/webp;base64,UklGRtYBAABXRUJQVlA4TMkBAAAvH0AGEJegNpKtJPuCu2Y/onxaY2iGcQAAhepnm6u1amvhwDYAgCR0N5zG/1OD+oDL/Ach03KAoAaKwgerD/AbVxATwe8ZZ4/AGav/n7C3g5u7GJyVJENiAQi2rYSNIggKTvKB7n+z1Um3ENF/BW7bKOl2zPCJz5vamz6nfpWYr0Pu9rugNYuoylgrIivDx3uiWVYuVWVVVfOVmYvbi0elMRNRl0PDPDOt/fOsYBY8zyOYgEDGsLXtf5ppp577eeacPmWKjJWhbVM16OQBxKqi5IaMDP/SvIoEc6eeB1SVWSGArFwbqxwApgiJiNdXGSSgdQajKgg3cM8dRVamyc7k2GhWrQ65pW+AwQJgRFpvx1hZFQZAnnMwEsDz63ywMqoqfZDc27uMyIzBTAeeKzN3Qa7la2VlLmNmvXYx+C8y4qg6RwlXZWbuR4wbK2J5+PGkzPQQs1I7HVgb+884nDtx+7QO3PT6JPWIOpMQ2zZgDla3deS+GsrMEJDoQVY43zA3dxtnekIApuuLZy5XCPRoMbRDeCogg493E2F6AyBW7cosIpnOInQdQ6mpzhtwumjrmrZc+eqtvf036MXtRcr082v9+o0vi/gAAA==", "ic_quest": "data:image/webp;base64,UklGRtQBAABXRUJQVlA4TMcBAAAvHcAHEJegJpKkqO6iu+h/Qgoj+LeBBVKMKIokqSG/cs5gAf8O8HACkKE0kq3mf7J7FfwKUFRE/waX4/wHkBD559N6/kpnVNVcAo2Nb1AfKgGfYoRYLtouESoOZP9VFwYDxEi22zbmxwdAgAgM/VebrBLeRfR/Aq7fGujnQALjR/wtqfVWF/sJacxeywbRfsDSx5QoecXtG0ikMTUklQzfcHFR50NXitntDdZtddOYGlKH5vEDYd12jqXMl0aO4YPv2w6hTw0JGrW4XW/h1H5IqfQhaFXavgg//Thr20rtNN3DFxFcbd2A0qqkHOz6iO/kRt8gVqn4n10fWYrWvDU2WsyVYFzvkPoUsa0ba/Ms43qH1MfUUM0btByw6yNe+5g3SlxR8BPjhdiHpoYkWgk4pw4FeymKqT5R/NRtP9xueI4qKQ91aMWPU+Fgh2i3mFODNXcatfgpBd/vp91Ukuct01tVWY4T/2PnOP225OLEtKpR5XYe7IuO/TQuSaScIl5zasrGucNi4XC7HjxDUolq1Z/cOMOTiBkoHlu2i7jDaRfolZglj0WLXeSnz3jKkBa7WHaOXf8QuATX7TT9SwKkm3OBfg76DgA=", "ic_tank": "data:image/webp;base64,UklGRvIBAABXRUJQVlA4TOUBAAAvHsAHEJegNrKVCIghJULNro6tytCxDqO7DzYBAKTB3SLwW1SKUcRZgR2KIklqjpzzEzF4RBBK0BAFUPMfBGX1FlAKn1JC9b+CgRPiZzKbaUnYiLCR+nRLtX8YZ9pdWmOrrTNAjG0raCQEkP8R+B/7rzZodjt4L6L/E3A/hu391wFSjWT48Smwt8pGLlytk1QIEMMmQFptpZ7hfVuQcAPBei1sleXpBhCw9CuM1cjKT8olAfgAAcBCqJveuEhcQP9WCE6uRmKz+La2b1xAA+qm16+rcYEkayMJQMtDWzxZMoCTrL2R12pnflW1ZIhnFJJnYa94w6oo2a6UgYKzEO/qpZD6GZaBImdm4bumJ4Q2wOxz9LIrT1UBlyHJ5sAcLD9RAVGfA1hj0ob+ktSnqPQ11sDEyD+owEH7pLGAbuOXcroSQqQ8RxrGnlnTi1OdAoIpJ8kpA+mqyE/FleTUxImYU7bES53pIcOHOaNhevz4R1z7q2LTSQJAJN0c6Cpu527A6LQJxm9A5VK3UXdzANOckR49wtTZIajNYrhDd0aaG0nBHJgc6LRWPTLABEM6AaPvjei1nZE8Asy3RlIwRCEAerPII+AOJA9w63sjBZFHuAGE9we3Hj0G3H8Y9iSPcP9jAHBvAQA=", "ic_town": "data:image/webp;base64,UklGRuQBAABXRUJQVlA4TNcBAAAvH4AGEJfAIADAMrPtBmfe13sGZ2EbyVYbvPdUAR3QApGvXz0o0ihSENs29Bf7ThkR1NZAAAGk8Gf+Q+jcOCStIqvorNEwM9TL7/dWTRYxnmH6lr9fe56Ou53/gcdzNRSDZYAY2W7cJiB4ExBhqf9qr0kJ/0f0fwKuZ/l4/a8crxtyyeM32W/An/xGkBQAL3J83X8/ngQJQuVB9pdd8vn+eyu1M4CsG8gnfi9KykOf5jS3MOzg736S7PlBaqctkh6lpzw6C8mgViSVC2Kz2jpAxoAWIzmA7tGZ5AIkB81pTtShHU6aMyyyPvFYbZYOZkKju43ZPEjNN9nLly9fvnxBYzht0qNHaQ/LF33RuXhsjT7uFmQjk1xyOBYdBIEU5kY/OXhq475pInMhWHfS041ubm4fakaMrm3qUfV0GEE6IjWmh+gxkBsDm8oEzSXXSPc/uaRHb9ZZ2lyt59A5Ss1lKzOTXBDlsUiCJGsOzgWCXSPrTnJJezz2QSIHSUVCr8HGREFuwARQMXrL1Bj3To1EygUZoX0i12mobMq4Y+QBahJMGyTnY0FPeXaSIxJCWQR9AjDSzWkE3Zw2ENWiQC7Iay2dnACMdHuscn2VzwWdnFWuf5fnCwAA", "panel": "data:image/webp;base64,UklGRrICAABXRUJQVlA4TKUCAAAvKMAJELegqJEkZXb3mNnAvc/sqVcTyVbzPjmH8lcIYDCBMORS4QE1AYA0bHB/XtYxhv1/CzD/ITmyCZHT/o2aX+jkPKK22r1pA8R7DF5e2O66HE0KAUAEACAAgQCQ/nkMEmTbitsomtBkEGAj73+tkp10r+DeiP5PwPt+UP5LDfs5+GeqF7UL2xnsh7/uR7rhjd1G4DScYQFn+bw4L+q0u07d8PZcYQy9TOt159sFQObFy7TOy9SfjtOfr/My/wwG52UatyD71yzut0z9vMxjN3hqOMP+iH/+2Ebohrf9GTzdY+JIFHK5HqiSiPqY1qkf3oYzOJ2PdBRJmmsTAdGSjqjbOl9Og1s0HblahAsCr2e1pCN9GgPsMeWSLbYKiMDzRcXyBU4ze8x3WhtA5tpEvznXy2Exl6wVaIBcLb9Kl9tKA7JNwHL8TS71Nqs0UDziF+NdqdBAQOQG8YjbcjddjtLq1QtyL3DEbbqb12lPxQoNpKgoTUU94rbenZd2eVYwW8xaGqhymbYw3MVWP+aitkwTBcvltP9Ur/kicIHSFFPc1vBNroXPjdwUVDjuwvB2vtFLM9tQRBFKvIy9n0o6cm1ILrnJHZDTEbd17oc3zsu0xyMd2doEMg1fVgXzkb4Y52mP6SDXL6XxoqLZFBcvduGc9uhBqfCs5BvgyYtWc3RZb07DuMd0RxPICE9e1PY8Utzuws2R8g1NAeQJFUyfcGTaYzrIpVXll5riF/My7dHEkUttfMxqgRaTLvMZuuHGqIlWWn3y+pA4SBEfW3icXqaZfo+a5GsBRfdT7Yc3hn2dx+3x55wGT7vBfl9cx3m7V75eNDzOcGIY7NdlZlxcEZxduFVAPQ2j56Wb1mXup9+PTLcqjDq8/elHf/5tpz/DG/w/AQA=", "tag": "data:image/webp;base64,UklGRsQBAABXRUJQVlA4TLgBAAAvLMAEEL/AKJIkRb3MeHcGmP0ru/fYYBtJkpp9ZjLFzPmnJlNSGslW8zNJZYulBPovCsmf/wCgqqZWvvgJ6tAsHPXqf594oByC0xbbc3xlm5bLkkrAAAhADABwIIgAGJD+FwPE2raaSkNGDCiiY/+t6k8dnBvR/wm4Xrrf8qHkAyTe9EG86Z3e0l8ZP0XvD9a9IT8WopTitzN490JmVCrT/8L87ZIGrHsRxzz9w6nKscOqyk6FnQp7ZZnSoCeZcSj/p7bKuvfWW4fWd2jQ93udxzxYpwvJlDwvddW+re187jS67m1fq5Yp5liCk4WcFuraoJ93Wr9t3LRKWuYYxmKdwliCn29942w6NvXWReunpAb7Wm9gnGwhMFeOtnWapC61o7d+So1OY1tmxQLBXbIBjctxblKHQ5vgYHu5Skedp0AJxl0yoQQ7HvXcpNbVOtC0apPWCguzVAIYdyE/FkKc6kLf1rYDfUeqLHOFRUJTigV7CwUfGGctHwoJIUlTTL4Qbsbic1Icvz/4PHgD7gJJ1g+QxdvipQCScdL1LONTTspK+f0BSSkreeOudyVj7+jLTteH+i0vAQ=="};
@@ -10753,7 +10753,7 @@ face137=function(vx,vy,prev){if(Math.abs(vx)<.05&&Math.abs(vy)<.05)return prev||
 // ===== V1.41 (owner, 6 Nov 2026: 'ตรวจสอบอ่างปลา ตู้ปลา ให้ครบถ้วน น่าเล่น เพราะยังไม่ดึงดูดมากพอ และ ขยายห้องให้พอดีจอมือถือ และ
 // เพิ่มห้องน้ำแบบมีฉากกั้น เป็นของที่ซื้อเพิ่มได้'). Data: core/data/play141.json.
 const P141={
- "_note": "V1.41 (owner, 6 Nov 2026: 'ตรวจสอบอ่างปลา ตู้ปลา ให้ครบถ้วน น่าเล่น เพราะยังไม่ดึงดูดมากพอ และ ขยายห้องให้พอดีจอมือถือ และเพิ่มห้องน้ำแบบมีฉากกั้น เป็นของที่ซื้อเพิ่มได้'). fit = the home view: the house is zoomed to fill the space between the top bar (top game px) and the bottom button (bottom game px), side = margin left + right; levels = extra crisp zoom steps (device px per room-art px) added to V0.79's list so a phone does not drop to a much smaller step; loose = when the best crisp step is smaller than this share of the space, the exact fitting zoom is used instead. bath = the bathroom set: low lattice screens on all sides (so it never hides the room behind it) with a noren doorway, and the pieces (item, along the long wall, along the left wall, turned) inside a W x D corner, sold together for set x the pieces' prices. tank: plants = the planted starter tank of the ready-made home (species, grows %; 3 of the tank's 6 plant places, placed clear of the rocks, wood and each other, so the player still plants their own), lure = seconds the fish swim to where you tap the water, hearts = how close (game px) a fish must come to show hearts. pond: gift = fish (the cheapest pond fish) given the first time the basin opens, so it is never empty. The set goes to a free corner first, then along the front, the right, the left and the back of the room, and only then anywhere free; with no room it goes into the box.",
+ "_note": "V1.41 (owner, 6 Nov 2026: 'ตรวจสอบอ่างปลา ตู้ปลา ให้ครบถ้วน น่าเล่น เพราะยังไม่ดึงดูดมากพอ และ ขยายห้องให้พอดีจอมือถือ และเพิ่มห้องน้ำแบบมีฉากกั้น เป็นของที่ซื้อเพิ่มได้'). fit = the home view: the house is zoomed to fill the space between the top bar (top game px) and the bottom button (bottom game px), side = margin left + right; levels = extra crisp zoom steps (device px per room-art px) added to V0.79's list so a phone does not drop to a much smaller step; loose = when the best crisp step is smaller than this share of the space, the exact fitting zoom is used instead. (V1.42: the bathroom set was removed; the big house has a real walled bathroom: house142.json.)",
  "fit": {
   "top": 112,
   "bottom": 96,
@@ -10764,75 +10764,6 @@ const P141={
    2.5
   ],
   "loose": 0.88
- },
- "bath": {
-  "id": "set_bath141",
-  "name": "ชุดห้องน้ำมีฉากกั้น (อ่างอาบน้ำ ชักโครก อ่างล้าง)",
-  "cat": "ห้องน้ำ",
-  "W": 4.5,
-  "D": 4.5,
-  "set": 0.85,
-  "pieces": [
-   [
-    "pt_lattice",
-    0.25,
-    0
-   ],
-   [
-    "pt_lattice",
-    2.25,
-    0
-   ],
-   [
-    "pt_lattice",
-    0,
-    0.25,
-    1
-   ],
-   [
-    "pt_lattice",
-    0,
-    2.25,
-    1
-   ],
-   [
-    "pt_lattice",
-    0.25,
-    4.25
-   ],
-   [
-    "pt_noren",
-    2.25,
-    4.25
-   ],
-   [
-    "pt_lattice",
-    4.25,
-    0.25,
-    1
-   ],
-   [
-    "pt_lattice",
-    4.25,
-    2.25,
-    1
-   ],
-   [
-    "bathtub",
-    0.35,
-    0.35
-   ],
-   [
-    "toilet",
-    2.15,
-    0.35
-   ],
-   [
-    "sink",
-    2.15,
-    2.1
-   ]
-  ]
  },
  "tank": {
   "plants": [
@@ -10860,26 +10791,8 @@ const P141={
 (function(){try{for(const v of P141.fit.levels)if(!DEV79.includes(v))DEV79.push(v);DEV79.sort((a,b)=>a-b)}catch(e){}})();
 fitZoom74=(function(prev){return function(){let raw=null;try{const b=houseBox76(),F=P141.fit;raw=Math.min((VW74-F.side)/(b.r-b.l),(H-F.top-F.bottom)/(b.b-b.t))}catch(e){}
  if(!raw)return prev();const ok=DEV79.map(zOf79).filter(z=>z<=raw+.001),z=ok.length?ok[ok.length-1]:raw;return z<raw*P141.fit.loose?raw*.98:z}})(fitZoom74);
-// ---------- the bathroom set: walls with a noren doorway, bathtub, toilet, sink ----------
-const B141=P141.bath;
-function bathPrice141(){let s=0;for(const q of B141.pieces)s+=R2PRICE[q[0]]||0;return Math.round(s*B141.set/10)*10}
-function bathPlace141(){const W=R2.W,D=R2.D,w=B141.W,d=B141.D,cand=[[W-w,D-d],[0,D-d],[W-w,0],[0,0]];for(let a=W-w;a>=0;a-=.5)cand.push([a,D-d]);for(let b=D-d;b>=0;b-=.5)cand.push([W-w,b]);for(let b=D-d;b>=0;b-=.5)cand.push([0,b]);for(let a=W-w;a>=0;a-=.5)cand.push([a,0]);for(let b=0;b<=D-d;b+=.5)for(let a=0;a<=W-w;a+=.5)cand.push([a,b]);
- for(const[a0,b0]of cand){const n0=R2LAY.length;let ok=true;for(const q of B141.pieces){const e=[q[0],a0+q[1],b0+q[2],q[3]||0];R2LAY.push(e);const[w,d]=r2dim(e);if(!r2rectOk(R2LAY.length-1,e[1],e[2],w,d)){ok=false;break}}
-  if(ok){R2DIRTY=true;return[a0,b0]}R2LAY.length=n0}return null}
-function bathBuy141(){const p=bathPrice141();if(!DEV_UNLIMITED_GOLD&&S.player.gold<p)return say('Gold ไม่พอ · ชุดห้องน้ำ '+p.toLocaleString()+' G');const at=bathPlace141();
- if(!DEV_UNLIMITED_GOLD)S.player.gold-=p;if(at){R2.cat=false;try{qp('scape')}catch(e){}save();return say('วางชุดห้องน้ำแล้ว · ผนังกั้น + ประตูผ้าโนเร็น · ลากแต่ละชิ้นเพื่อย้ายได้')}
- for(const q of B141.pieces)S.room2.inv[q[0]]=(S.room2.inv[q[0]]||0)+1;save();say('ห้องยังไม่มีที่ว่าง '+B141.W+'×'+B141.D+' ช่อง · เก็บชุดห้องน้ำไว้ในกล่องแล้ว ย้ายของแล้ววางทีละชิ้นได้')}
-r2buy=(function(prev){return function(k){if(k===B141.id)return bathBuy141();return prev.apply(this,arguments)}})(r2buy);
-// the set's picture in the catalogue: the pieces drawn together the way the room draws them
-function bathThumb141(){if(typeof document==='undefined')return false;for(const q of B141.pieces){const im=R2SPR[q[0]];if(!im||!(im.naturalWidth||im.width))return false}
- const ox=R2.ox,oy=R2.oy;let L=[];try{R2.ox=0;R2.oy=0;L=B141.pieces.map(q=>{const e=[q[0],q[1],q[2],q[3]||0];return{e,b:r2box(e)}})}finally{R2.ox=ox;R2.oy=oy}
- /* the picture spans the set's footprint like every floor piece: (W+D) x 8 room px wide, its bottom on the front corner */
- let x0=-B141.D*8,x1=B141.W*8,y0=1e9,y1=(B141.W+B141.D)*4;for(const o of L){y0=Math.min(y0,o.b.y);y1=Math.max(y1,o.b.y+o.b.h)}
- const K=R2K,c=document.createElement('canvas');c.width=Math.ceil((x1-x0)*K);c.height=Math.ceil((y1-y0)*K);const g=c.getContext('2d');g.imageSmoothingEnabled=false;
- L.sort((p,q)=>(p.e[1]+p.e[2]+(r2dim(p.e)[0]+r2dim(p.e)[1])/2)-(q.e[1]+q.e[2]+(r2dim(q.e)[0]+r2dim(q.e)[1])/2));
- for(const o of L){const im=R2SPR[o.e[0]],X=(o.b.x-x0)*K,Y=(o.b.y-y0)*K,w=o.b.w*K,h=o.b.h*K;g.save();if(o.b.fl){g.translate(X+w,Y);g.scale(-1,1);g.drawImage(im,0,0,w,h)}else g.drawImage(im,X,Y,w,h);g.restore()}
- const out=new Image();out.__k=K;out.src=c.toDataURL();R2SPR[B141.id]=out;R2META[B141.id]={n:B141.name,iw:Math.round(x1-x0),ih:Math.round(y1-y0),w:B141.W,d:B141.D,flat:false,deco:1,set:1};R2PRICE[B141.id]=bathPrice141();R2CAT[B141.id]=B141.cat;return true}
-(function(){if(typeof setInterval==='undefined')return;let n=0;const t=setInterval(()=>{n++;try{if(bathThumb141()||n>80)clearInterval(t)}catch(e){if(n>80)clearInterval(t)}},250)})();
+// (V1.41's bathroom set was replaced in V1.42 by the big house's walled bathroom)
+function bathThumb141(){return true}
 // ---------- the tank: planted from day one ----------
 applyStart87=(function(prev){return function(kind){const r=prev.apply(this,arguments);try{if(kind==='half'&&!Object.keys(S.plants).length){for(const[sp,gr]of P141.tank.plants){if(!DBP[sp])continue;S.inventory['pl_'+sp]=(S.inventory['pl_'+sp]||0)+1;plantFrom(sp,'pl');const q=Object.values(S.plants).find(o=>o.species_id===sp&&o.growth<gr);if(q){q.growth=gr;try{placeNew98(q)}catch(e){}}}aqSel=null;save()}}catch(e){}return r}})(applyStart87);
 // ---------- tap the water: the fish come over to say hello ----------
@@ -10901,6 +10814,424 @@ function care141(){let q;try{q7Roll();q=q7()}catch(e){return}const L=(q.d||[]).s
 enterPond=(function(prev){return function(id){const r=prev.apply(this,arguments);try{if(PCTX&&!Object.keys(S.fish).length&&!(S.meta.pondGift141||{})[PCTX]){const L=pondFishList().filter(k=>(DB[k].lv||1)<=Math.max(S.player.level,1)),sp=L.sort((a,b)=>DB[a].price-DB[b].price)[0]||pondFishList()[0],t=tank();
   if(sp){for(let i=0;i<P141.pond.gift;i++){const id='f_'+String(S.meta.next_fish_serial++).padStart(3,'0');S.fish[id]={species_id:sp,name:DB[sp].name,age_days:30,size:1,health:100,hunger:30,stress:0,tank_id:'tank_main',born_ms:Date.now()-30*864e5,sex:i%2?'f':'m'};t.stats.bioload+=DB[sp].bio||1}
    S.meta.pondGift141=Object.assign(S.meta.pondGift141||{},{[PCTX]:1});try{syncSprites()}catch(e){}save();say('ของขวัญเปิดอ่าง: '+DB[sp].name+' '+P141.pond.gift+' ตัว · แตะน้ำเพื่อเรียกปลามาหา')}}}catch(e){}return r}})(enterPond);
+
+// ===== V1.42 (owner, 6 Nov 2026: 'อันนี้ห้องน้ำจริงหรอ ทำไมวางได้น่าทับกันไปหมดมาก ถ้าจะมีหลายห้องเริ่มต้นด้วยห้องใหญ่ไปเลย และค่อยไป
+// ขยายต่อเอาในอนาคต ห้องนั่งเล่น ห้องครัว ห้องนอน อื่นๆ นอกบ้าน และตู้เลี้ยงปลา จัดโซนในที่ซื้อของ และทำฉากให้สามารถทำกั้นห้องต่างๆ ได้ด้วย').
+// Data: core/data/house142.json.
+const H142={
+ "_note": "V1.42 (owner, 6 Nov 2026: 'อันนี้ห้องน้ำจริงหรอ ทำไมวางได้น่าทับกันไปหมดมาก ถ้าจะมีหลายห้องเริ่มต้นด้วยห้องใหญ่ไปเลย และค่อยไปขยายต่อเอาในอนาคต ห้องนั่งเล่น ห้องครัว ห้องนอน อื่นๆ นอกบ้าน และตู้เลี้ยงปลา จัดโซนในที่ซื้อของ และทำฉากให้สามารถทำกั้นห้องต่างๆ ได้ด้วย'). house: a new game starts in the big house: extraW tiles wider than before (25 x 12); the V1.21 expansion ladder (deeper / wider / garden) still adds on top of it. lay = the ready-made rooms, each with real partition walls and a noren doorway: bedroom (back left: bed, bedside table, dressing table, lantern), bathroom (back right: toilet, basin, bathtub, washing machine, room to walk from the door), kitchen along the back wall with the dining table in front, the aquarium on the bedroom's outside wall with a bean bag to watch it, the sofa corner with a round coffee table on a rug, a big plant in the front corner. [item, along the long wall, along the left wall, turned]. offer = an older save is offered the big house once (its furniture goes into the box). walls = the partition walls are drawn cut down to this share of their height ('ผนังเตี้ย', like a dolls' house seen from above) so the rooms behind them show; the ⬆ button puts them back up. tool = the wall tool in แต่งห้อง: drag along the floor to build a straight wall of the chosen kind (pieces are 2 tiles long and cost their catalogue price); tap a wall piece in 'ลบ' mode to put it back in the box. zones = the catalogue tabs by room (each item's room comes from 'items' first, then from its type in 'byCat'; anything else goes to 'ของแต่ง').",
+ "house": {
+  "extraW": 4
+ },
+ "lay": [
+  [
+   "pt_plaster",
+   0,
+   5.75
+  ],
+  [
+   "pt_plaster",
+   2,
+   5.75
+  ],
+  [
+   "pt_plaster",
+   4,
+   5.75
+  ],
+  [
+   "pt_noren",
+   6,
+   5.75
+  ],
+  [
+   "pt_plaster",
+   8,
+   0,
+   1
+  ],
+  [
+   "pt_plaster",
+   8,
+   2,
+   1
+  ],
+  [
+   "pt_plaster",
+   8,
+   4,
+   1
+  ],
+  [
+   "bed_quilt",
+   0.2,
+   0.1
+  ],
+  [
+   "nightstand",
+   3.35,
+   0.1
+  ],
+  [
+   "dresser_mirror",
+   4.95,
+   0.1
+  ],
+  [
+   "jp_andon",
+   3.6,
+   2.2
+  ],
+  [
+   "aquarium",
+   1.3,
+   6.1
+  ],
+  [
+   "bean_bag",
+   2.1,
+   8.7
+  ],
+  [
+   "fridge_retro",
+   8.6,
+   0.1
+  ],
+  [
+   "kitchen_sink",
+   10.7,
+   0.1
+  ],
+  [
+   "stove_kettle",
+   13.8,
+   0.1
+  ],
+  [
+   "plant_big",
+   16.2,
+   0.15
+  ],
+  [
+   "dining_round",
+   10.8,
+   3.8
+  ],
+  [
+   "rug_round",
+   14,
+   7.2
+  ],
+  [
+   "sofa_cream",
+   14.2,
+   6.4
+  ],
+  [
+   "coffee_round",
+   14.9,
+   8.9
+  ],
+  [
+   "floor_lamp",
+   18,
+   6.6
+  ],
+  [
+   "monstera",
+   22.8,
+   9.6
+  ],
+  [
+   "pt_plaster",
+   18.75,
+   0,
+   1
+  ],
+  [
+   "pt_plaster",
+   18.75,
+   2,
+   1
+  ],
+  [
+   "pt_plaster",
+   18.75,
+   4,
+   1
+  ],
+  [
+   "pt_noren",
+   19,
+   5.75
+  ],
+  [
+   "pt_plaster",
+   21,
+   5.75
+  ],
+  [
+   "pt_plaster",
+   23,
+   5.75
+  ],
+  [
+   "toilet",
+   19.2,
+   0.1
+  ],
+  [
+   "sink",
+   21.3,
+   0.1
+  ],
+  [
+   "bathtub",
+   23.4,
+   0.1
+  ],
+  [
+   "washer",
+   21.4,
+   3.5
+  ]
+ ],
+ "offer": true,
+ "walls": {
+  "low": 0.42,
+  "keys": [
+   "pt_shoji",
+   "pt_wood",
+   "pt_plaster",
+   "pt_lattice",
+   "pt_noren"
+  ]
+ },
+ "tool": {
+  "kinds": [
+   [
+    "pt_plaster",
+    "ปูนครีม"
+   ],
+   [
+    "pt_wood",
+    "ไม้ซีดาร์"
+   ],
+   [
+    "pt_shoji",
+    "โชจิ"
+   ],
+   [
+    "pt_lattice",
+    "ระแนงเตี้ย"
+   ],
+   [
+    "pt_noren",
+    "ประตูโนเร็น"
+   ]
+  ],
+  "len": 2
+ },
+ "zones": [
+  "นั่งเล่น",
+  "ครัว & ทานข้าว",
+  "ห้องนอน & ทำงาน",
+  "ห้องน้ำ",
+  "ห้องเลี้ยงปลา",
+  "ผนัง & ประตู",
+  "ของแต่ง",
+  "สวน",
+  "คริสต์มาส"
+ ],
+ "byCat": {
+  "โซฟา": "นั่งเล่น",
+  "เครื่องใช้ไฟฟ้า": "นั่งเล่น",
+  "จัดเก็บ": "นั่งเล่น",
+  "โต๊ะ": "นั่งเล่น",
+  "เก้าอี้": "นั่งเล่น",
+  "ครัว": "ครัว & ทานข้าว",
+  "ห้องนอน": "ห้องนอน & ทำงาน",
+  "ห้องน้ำ": "ห้องน้ำ",
+  "ห้องเลี้ยงปลา": "ห้องเลี้ยงปลา",
+  "ตู้ปลา": "ห้องเลี้ยงปลา",
+  "ผนังกั้นห้อง": "ผนัง & ประตู",
+  "ของตกแต่ง": "ของแต่ง",
+  "พรม": "ของแต่ง",
+  "ต้นไม้": "ของแต่ง",
+  "แสงไฟ": "ของแต่ง",
+  "ญี่ปุ่น": "ของแต่ง",
+  "สวน": "สวน",
+  "คริสต์มาส": "คริสต์มาส"
+ },
+ "items": {
+  "dining_round": "ครัว & ทานข้าว",
+  "dining_chair": "ครัว & ทานข้าว",
+  "table": "ครัว & ทานข้าว",
+  "wardrobe": "ห้องนอน & ทำงาน",
+  "dresser": "ห้องนอน & ทำงาน",
+  "desk": "ห้องนอน & ทำงาน",
+  "desk_set": "ห้องนอน & ทำงาน",
+  "office_chair": "ห้องนอน & ทำงาน",
+  "computer": "ห้องนอน & ทำงาน",
+  "jp_futon": "ห้องนอน & ทำงาน",
+  "jp_tatami": "ห้องนอน & ทำงาน",
+  "jp_tansu": "ห้องนอน & ทำงาน",
+  "jp_zabuton": "นั่งเล่น",
+  "jp_chabudai": "นั่งเล่น",
+  "jp_kotatsu": "นั่งเล่น",
+  "jp_getabako": "นั่งเล่น",
+  "jp_byobu": "ผนัง & ประตู",
+  "medaka_basin": "ห้องเลี้ยงปลา",
+  "breed_box": "ห้องเลี้ยงปลา",
+  "fish_rack": "ห้องเลี้ยงปลา",
+  "goldfish_bowl": "ห้องเลี้ยงปลา",
+  "washer": "ห้องน้ำ"
+ }
+};
+const ZFIRST142='คริสต์มาส';
+// ---------- the V1.41 bathroom set is gone (a bathroom is a room now) ----------
+bathThumb141=function(){return true};(function(){for(const t of[R2PRICE,R2CAT,R2META,R2SPR])try{delete t.set_bath141}catch(e){}})();
+r2buy=(function(prev){return function(k){if(k==='set_bath141')return;return prev.apply(this,arguments)}})(r2buy);
+// ---------- the big house with real rooms ----------
+// the big house is the base size (H142.house.extraW tiles wider than V1.41's first floor): the expansion ladder of V1.21
+// (deeper / wider / garden) still adds on top of it, so there is room to grow later
+const big142=()=>!!(S.room2&&S.room2.home&&S.room2.home.big142);
+cfgFor=(function(prev){return function(f){const c=prev(f);if(f==='f1'&&big142()){const o=H142.house.extraW;c.W+=o;c.bath.a0+=o;c.part.a+=o;c.winB=c.winB.map(([p,n])=>[p+o,n]);c.wallItems=(c.wallItems||[]).map(([k,w,p,hh])=>[k,w,w==='B'?p+o:p,hh])}return c}})(cfgFor);
+function house142(keepOld){const h=home70();h.big142=1;r2apply52();const inv=S.room2.inv=S.room2.inv||{};
+ if(keepOld)for(const e of R2LAY)if(!R2FIXED.has(e[0]))inv[e[0]]=(inv[e[0]]||0)+1;
+ R2LAY.length=0;const sh=R2.W-25,miss=[];for(const e0 of H142.lay){const e=e0.slice();e[1]+=sh;R2LAY.push(e);const i=R2LAY.length-1,[w,d]=r2dim(e);if(!r2rectOk(i,e[1],e[2],w,d)){R2LAY.pop();miss.push(e[0])}}
+ if(!R2LAY.some(e=>e[0]==='aquarium'))R2LAY.push(['aquarium',1.3+sh,6.1,0]);R2DIRTY=true;S.meta.house142=1;H142.miss=miss;try{r2changed()}catch(e){}try{save()}catch(e){}return miss}
+applyStart87=(function(prev){return function(kind){const r=prev.apply(this,arguments);try{if(kind==='half'){house142(false);if(/^ปลูก/.test(toast||''))toast='บ้านใหญ่แบ่งห้องพร้อมแล้ว · มี '+S.player.gold.toLocaleString()+' G ซื้อปลาที่เมือง'}
+ else if(kind==='empty'){home70().big142=1;r2apply52();S.meta.house142=1;R2DIRTY=true;save()}}catch(e){}return r}})(applyStart87);
+// an older save: the big house is offered once (its furniture goes into the box)
+function offer142(){if(!H142.offer||scene!=='home'||R2.edit||R2.cat||(typeof TITLE86!=='undefined'&&TITLE86.on)||S.meta.house142)return;let h;try{h=home70()}catch(e){return}if(h.big142||R2.W>=25){S.meta.house142=1;return}/* already as wide as the big house */
+ const X=W/2-300,Y=150;btns.push({a:X,b:Y,w:600,h:260,fn:()=>{},ui:1});nine84(X,Y,600,260,3);TXB('🏠 บ้านหลังใหญ่แบ่งห้องพร้อมแล้ว',W/2,Y+50,21,'#5a3a24','center');
+ TXs('ห้องนั่งเล่น · ครัว · ห้องนอน · ห้องน้ำ มีผนังและประตูจริง · กว้างขึ้น 4 ช่อง · ยังขยายต่อได้',W/2,Y+84,14,'#6a5040','center');TXs('ของในบ้านเดิมจะเก็บเข้ากล่องทั้งหมด (หยิบมาวางใหม่ได้ที่ แต่งห้อง)',W/2,Y+108,13,'#8a6a4a','center');
+ B('ย้ายเข้าบ้านใหม่',W/2-240,Y+150,250,60,()=>{house142(true);say('ย้ายเข้าบ้านหลังใหญ่แล้ว · ของเดิมอยู่ในกล่องที่ แต่งห้อง → เพิ่มของ')},true,'#4a9a6a');
+ B('ไว้ก่อน',W/2+30,Y+150,200,60,()=>{S.meta.house142='later';save()},true,'#8a7a6a')}
+// ---------- low walls: the rooms behind a partition stay in view ----------
+const WS142={orig:{},low:{}};
+function wallCut142(im){const w=im.naturalWidth||im.width,h=im.naturalHeight||im.height;if(!w||!h||typeof document==='undefined')return null;const c=document.createElement('canvas');c.width=w;c.height=h;const g=c.getContext('2d');g.drawImage(im,0,0);
+ const D=g.getImageData(0,0,w,h),a=D.data;let tall=0;const bot=new Int32Array(w).fill(-1),top=new Int32Array(w).fill(-1);
+ for(let x0=0;x0<w;x0++){for(let y=h-1;y>=0;y--)if(a[(y*w+x0)*4+3]>20){bot[x0]=y;break}for(let y=0;y<h;y++)if(a[(y*w+x0)*4+3]>20){top[x0]=y;break}if(bot[x0]>=0)tall=Math.max(tall,bot[x0]-top[x0])}
+ const keep=Math.max(4,Math.round(tall*H142.walls.low)),cap=Math.max(2,Math.round(h/90));
+ for(let x0=0;x0<w;x0++){if(bot[x0]<0)continue;const cut=bot[x0]-keep;for(let y=0;y<cut;y++)a[(y*w+x0)*4+3]=0;for(let y=Math.max(0,cut);y<Math.max(0,cut)+cap&&y<h;y++){const i=(y*w+x0)*4;if(a[i+3]>20){a[i]=a[i]*.55;a[i+1]=a[i+1]*.5;a[i+2]=a[i+2]*.45}}}
+ g.putImageData(D,0,0);const out=new Image();out.__k=im.__k||R2K;out.src=c.toDataURL();return out}
+function walls142(){const down=!(S.opt&&S.opt.wallsUp142);let ch=false;for(const k of H142.walls.keys){const cur=R2SPR[k];if(!cur)continue;if(!WS142.orig[k]){if(!(cur.naturalWidth||cur.width))continue;WS142.orig[k]=cur}
+  if(down){if(!WS142.low[k]){const lo=wallCut142(WS142.orig[k]);if(!lo)continue;WS142.low[k]=lo;lo.onload=()=>{if(R2SPR[k]===lo){try{delete R2MASK[k]}catch(e){}R2DIRTY=true}}}if(R2SPR[k]!==WS142.low[k]){R2SPR[k]=WS142.low[k];ch=true}}
+  else if(R2SPR[k]!==WS142.orig[k]){R2SPR[k]=WS142.orig[k];ch=true}
+  if(ch){try{delete R2MASK[k]}catch(e){}}}if(ch)R2DIRTY=true}
+// ---------- the wall tool (แต่งห้อง → 🧱 ผนัง) ----------
+const WT142={on:false,kind:'pt_plaster',erase:false,drag:null};
+function abOf142(px,py){const[rx,ry]=r2toRoom(px,py),u=(rx-R2.ox)/8,v=(ry-R2.oy)/4;return[(u+v)/2,(v-u)/2]}
+const q4=v=>Math.round(v*4)/4;
+function plan142(){const D=WT142.drag;if(!D)return[];const L=H142.tool.len,da=D.a1-D.a0,db=D.b1-D.b0,out=[];
+ if(Math.abs(da)>=Math.abs(db)){const s=q4(Math.min(D.a0,D.a1)),e=Math.max(D.a0,D.a1),b=q4(D.b0),n=Math.max(1,Math.round((e-s)/L));for(let i=0;i<n;i++)out.push([WT142.kind,s+i*L,b,0])}
+ else{const s=q4(Math.min(D.b0,D.b1)),e=Math.max(D.b0,D.b1),a=q4(D.a0),n=Math.max(1,Math.round((e-s)/L));for(let i=0;i<n;i++)out.push([WT142.kind,a,s+i*L,1])}return out}
+function build142(){const P=plan142();WT142.drag=null;if(!P.length)return;let n=0,paid=0;for(const e of P){const pr=R2PRICE[e[0]]||0,own=(S.room2.inv[e[0]]||0)>0;if(!own&&!DEV_UNLIMITED_GOLD&&S.player.gold<pr)break;
+  R2LAY.push(e.slice());const i=R2LAY.length-1,[w,d]=r2dim(e);if(e[1]<0||e[2]<0||e[1]+w>R2.W+.01||e[2]+d>R2.D+.01||!r2rectOk(i,e[1],e[2],w,d)){R2LAY.pop();continue}
+  if(own){S.room2.inv[e[0]]--;if(!S.room2.inv[e[0]])delete S.room2.inv[e[0]]}else if(!DEV_UNLIMITED_GOLD){S.player.gold-=pr;paid+=pr}n++}
+ R2DIRTY=true;try{r2changed()}catch(e){}try{qev('scape')}catch(e){}save();say(n?'สร้าง'+(WT142.kind==='pt_noren'?'ประตู':'ผนัง')+' '+n+' ชิ้น'+(paid?' · −'+paid.toLocaleString()+' G':'')+(n<P.length?' · บางช่องมีของวางอยู่ ข้ามไป':''):'ตรงนี้วางผนังไม่ได้ (มีของหรือนอกห้อง)')}
+function erase142(px,py){const i=r2itemAt(px,py,false);if(i<0||!H142.walls.keys.includes(R2LAY[i][0]))return say('แตะที่ผนังหรือประตูที่จะเอาออก');const k=R2LAY[i][0];R2LAY.splice(i,1);S.room2.inv[k]=(S.room2.inv[k]||0)+1;R2DIRTY=true;try{r2changed()}catch(e){}save();say('เก็บ'+R2META[k].n+'เข้ากล่องแล้ว')}
+if(typeof addEventListener==='function'){const gp=e=>{const c=document.querySelector('canvas');if(!c)return null;const r=c.getBoundingClientRect();return[(e.clientX-r.left)*VW74/r.width-VOX74,(e.clientY-r.top)*H/r.height]};
+ addEventListener('pointermove',e=>{if(!WT142.drag)return;const p=gp(e);if(!p)return;const[a,b]=abOf142(p[0],p[1]);WT142.drag.a1=a;WT142.drag.b1=b});
+ addEventListener('pointerup',()=>{if(WT142.drag)build142()});addEventListener('pointercancel',()=>{WT142.drag=null})}
+function tool142(){if(scene!=='home'||!R2.edit||R2.cat)return;if(!WT142.on){B('🧱 ผนัง',1036,630,150,60,()=>{WT142.on=true;R2.sel=-1},true,'#8a6a4a');return}
+ btns.push({a:-VOX74,b:118,w:VW74,h:396,fn:(px,py)=>{if(WT142.erase)return erase142(px,py);const[a,b]=abOf142(px,py);WT142.drag={a0:a,b0:b,a1:a,b1:b}},ui:1});
+ const TY=516;rr(150,TY,980,104,18,'rgba(40,28,18,.88)');TXB(WT142.erase?'แตะผนังหรือประตูที่จะเก็บเข้ากล่อง':'ลากบนพื้นเป็นเส้นตรง เพื่อสร้างผนัง (ชิ้นละ 2 ช่อง)',172,TY+24,15,'#ffe9c2');
+ H142.tool.kinds.forEach(([k,n],i)=>chip(n+' '+(R2PRICE[k]||0)+' G',170+i*150,TY+42,142,34,()=>{WT142.kind=k;WT142.erase=false},true,!WT142.erase&&WT142.kind===k?'#2b8fb8':'#8a7a6a'));
+ chip('🗑 เก็บผนัง',920,TY+42,100,34,()=>{WT142.erase=!WT142.erase},true,WT142.erase?'#c0503a':'#8a7a6a');chip('ปิด',1030,TY+42,84,34,()=>{WT142.on=false;WT142.erase=false;WT142.drag=null},true,'#6a6470');
+ const P=plan142();if(P.length){const s=r2screen(),hh=22*s.z,okP=e=>{R2LAY.push(e.slice());const i=R2LAY.length-1,[w,d]=r2dim(e),ok=e[1]>=0&&e[2]>=0&&e[1]+w<=R2.W+.01&&e[2]+d<=R2.D+.01&&r2rectOk(i,e[1],e[2],w,d);R2LAY.pop();return ok};x.save();
+  for(const e of P){const[w,d]=r2dim(e),Q=[r2P(e[1],e[2]),r2P(e[1]+w,e[2]),r2P(e[1]+w,e[2]+d),r2P(e[1],e[2]+d)].map(p=>[s.x+p[0]*s.z,s.y+p[1]*s.z]),ok=okP(e);
+   const fill=ok?'rgba(255,214,120,.75)':'rgba(230,90,70,.7)',edge=ok?'#7a4a20':'#7a1a10';x.fillStyle=fill;x.strokeStyle=edge;x.lineWidth=2;
+   for(let j=0;j<4;j++){const A=Q[j],C=Q[(j+1)%4];x.beginPath();x.moveTo(A[0],A[1]);x.lineTo(C[0],C[1]);x.lineTo(C[0],C[1]-hh);x.lineTo(A[0],A[1]-hh);x.closePath();x.fill();x.stroke()}
+   x.beginPath();Q.forEach((q,j)=>j?x.lineTo(q[0],q[1]-hh):x.moveTo(q[0],q[1]-hh));x.closePath();x.fill();x.stroke()}x.restore();
+  const own=S.room2.inv[WT142.kind]||0,cost=Math.max(0,P.length-own)*(R2PRICE[WT142.kind]||0);TXs(P.length+' ชิ้น · '+cost.toLocaleString()+' G',1110,TY+24,14,'#ffe08a','right')}}
+// ---------- the catalogue by room ----------
+function zone142(k){return H142.items[k]||H142.byCat[R2CAT[k]]||'ของแต่ง'}
+cats70=function(){const used=new Set(Object.keys(R2PRICE).filter(k=>R2META[k]&&R2SPR[k]&&catOk75(k)).map(zone142)),Z=H142.zones.filter(z=>used.has(z));if(Z.includes(ZFIRST142)){Z.splice(Z.indexOf(ZFIRST142),1);Z.unshift(ZFIRST142)}/* the festival tab right after ทั้งหมด / ใหม่ (V0.86) */return CAT70.concat(Z)};
+r2catalog=(function(prev){return function(){if(R2.catF&&R2.catF!=='ทั้งหมด'&&R2.catF!=='ใหม่'&&!H142.zones.includes(R2.catF))R2.catF='ทั้งหมด';const bak={};
+ for(const k in R2PRICE){bak[k]=R2CAT[k];R2CAT[k]=zone142(k)}try{return prev.apply(this,arguments)}finally{for(const k in bak){if(bak[k]===undefined)delete R2CAT[k];else R2CAT[k]=bak[k]}}}})(r2catalog);
+// ---------- every frame ----------
+const over142=()=>(typeof SET84!=='undefined'&&SET84)||(typeof INFO84!=='undefined'&&INFO84)||(typeof MOODUI!=='undefined'&&MOODUI)||(typeof LVQ!=='undefined'&&LVQ.length)||(typeof R2!=='undefined'&&R2.homeUI)||(typeof MENU76!=='undefined'&&MENU76);
+hud=(function(prev){return function(){const r=prev.apply(this,arguments);try{if(scene==='home'&&!(typeof TITLE86!=='undefined'&&TITLE86.on)){walls142();if(over142())return r;/* nothing of ours over Settings, an info card, a level-up or a menu */
+  if(!R2.cat)chip(S.opt&&S.opt.wallsUp142?'⬇ ผนังเตี้ย':'⬆ ผนังสูง',930,82,150,40,()=>{S.opt=S.opt||{};S.opt.wallsUp142=!S.opt.wallsUp142;save()},true,'#6a5a4a');tool142();offer142()}}catch(e){}return r}})(hud);
+// =================== fishkeeping that pulls you back ===================
+const FI142={
+ "_note": "V1.42 fishkeeping that pulls you back (owner, 6 Nov 2026: 'ตรวจสอบและ Improve ระบบเลี้ยงปลาให้เริสน่าเล่นน่าติดตามมากขึ้น'). Review: a fish grows up in a few hours (V0.82), but breeding and cuttings only opened at Lv 41, so a grown pair just swam about for weeks. Now: feature = the levels these open at (V1.41: 41 / 41; the second tank stays at Lv 41). Every fish gets a pet name (names, shown everywhere its name is shown; 'สุ่มชื่อใหม่' picks another) and a friendship (bond 0-100, a heart per 20): fed while hungry (feed, hungry = hunger at least this), coming over when you tap the water (call, once per call), and saying hello on your first visit of the day (hello). A friend fish (hearts) sells for sellPerHeart more per heart. greet = the first visit to the tank each day: every fish swims over and you get xpPerFish EXP a fish (at most xpMax). The fish card shows how long until its next stage.",
+ "feature": {
+  "breed_fish": 3,
+  "propagate": 6
+ },
+ "names": [
+  "มะลิ",
+  "โมจิ",
+  "ส้มโอ",
+  "ปุยฝ้าย",
+  "ข้าวปั้น",
+  "ทองหยิบ",
+  "บัวลอย",
+  "น้ำผึ้ง",
+  "ซากุระ",
+  "โกโก้",
+  "ลูกชุบ",
+  "วุ้นมะพร้าว",
+  "เมฆขาว",
+  "ดาวเหนือ",
+  "ฟ้าใส",
+  "มิ้นท์",
+  "พุดดิ้ง",
+  "ขนมครก",
+  "กะทิ",
+  "มัทฉะ",
+  "ไข่มุก",
+  "ทับทิม",
+  "มะนาว",
+  "ถั่วแดง",
+  "สายไหม",
+  "แพนเค้ก",
+  "ลาเต้",
+  "ซูชิ",
+  "โดรายากิ",
+  "ทาโกะ"
+ ],
+ "bond": {
+  "feed": 4,
+  "hungry": 25,
+  "call": 3,
+  "hello": 5,
+  "heart": 20,
+  "sellPerHeart": 0.03
+ },
+ "greet": {
+  "xpPerFish": 2,
+  "xpMax": 20
+ }
+};
+(function(){try{Object.assign(FEATURE_LV,FI142.feature)}catch(e){}})();
+// pet names
+function nick142(f){if(!f)return'';if(!f.nick){const used=new Set(Object.values(S.fish).map(o=>o.nick).filter(Boolean)),L=FI142.names.filter(n=>!used.has(n)),pool=L.length?L:FI142.names;f.nick=pool[Math.floor(Math.random()*pool.length)];if(!f.name||(DB[f.species_id]&&f.name===DB[f.species_id].name))f.name=f.nick}return f.nick}
+function bond142(f,n){if(!f)return;f.bond=Math.max(0,Math.min(100,(f.bond||0)+n))}
+const hearts142=f=>Math.floor((f&&f.bond||0)/FI142.bond.heart);
+// fed while hungry -> a little friendship
+feed=(function(prev){return function(){const before={};for(const id in S.fish)before[id]=S.fish[id].hunger;const r=prev.apply(this,arguments);try{for(const id in S.fish){const f=S.fish[id];if(before[id]>=FI142.bond.hungry&&f.hunger<before[id])bond142(f,FI142.bond.feed)}}catch(e){}return r}})(feed);
+// a fish that comes over when called
+dAq=(function(prev){return function(){const r=prev.apply(this,arguments);try{const L=LURE141;if(L.on){L.came=L.came||{};for(const s of fishSpr){if(L.came[s.id+'#'+L.n])continue;const q=isoFishPos(s),[fx,fy]=isoP(q.a,q.b,q.z);if(Math.hypot(fx-L.x,fy-L.y)<P141.tank.hearts){L.came[s.id+'#'+L.n]=1;bond142(S.fish[s.id],FI142.bond.call)}}}for(const id in S.fish)if(!S.fish[id].nick&&!S.fish[id].bag)nick142(S.fish[id]);greet142()}catch(e){}return r}})(dAq);/* every fish in the tank has a pet name (older saves too) */
+// first visit of the day: everyone swims over to say hello
+function greet142(){if(scene!=='aq'||aqEdit||(typeof TITLE86!=='undefined'&&TITLE86.on))return;const day=new Date().toDateString(),ids=Object.keys(S.fish).filter(id=>!S.fish[id].bag);if(!ids.length)return;const key=(typeof PCTX!=='undefined'&&PCTX)||'main';
+ S.meta.greet142=S.meta.greet142||{};if(S.meta.greet142[key]===day)return;S.meta.greet142[key]=day;for(const id of ids)bond142(S.fish[id],FI142.bond.hello);
+ const xp=Math.min(FI142.greet.xpMax,ids.length*FI142.greet.xpPerFish);try{gx(xp)}catch(e){}try{lure141(480,300)}catch(e){}save();say('ปลา '+ids.length+' ตัวว่ายมาทักทาย ดีใจที่คุณกลับมา · +'+xp+' EXP')}
+// a friend sells for a bit more
+fishValue=(function(prev){return function(f){const v=prev.apply(this,arguments);try{return Math.round(v*(1+FI142.bond.sellPerHeart*hearts142(f)))}catch(e){return v}}})(fishValue);
+// the fish card: pet name, hearts, and when it grows next
+function nextStage142(f){try{lifeInit(f);const s=stageOf(f);if(s==='elder')return'';const age=nowMs()-f.birth,fe=fryDays(f.species_id)*(typeof LIFE_U!=='undefined'?LIFE_U:DAY_MS),end=s==='fry'?fe:s==='juv'?LIFE56.adult:LIFE56.elder,left=Math.max(0,end-age),h=left/3600000;
+ return 'เป็น'+STAGE_NEXT[s]+'ในอีก '+(h>=24?(h/24).toFixed(1)+' วัน':h>=1?Math.ceil(h)+' ชม.':Math.max(1,Math.ceil(h*60))+' นาที')}catch(e){return''}}
+fishCard=(function(prev){return function(id){const f=S.fish[id];if(f)nick142(f);const n0=btns.length,r=prev.apply(this,arguments);try{if(!S.fish[id]||!R55.sel)return r;const cl_=btns.slice(n0).filter(q=>q.l==='ปิด').pop(),X=70,Y=cl_?cl_.b+cl_.h+10:332,w=360,h=64,hs=hearts142(f);
+ rr(X,Y,w,h,14,'#0d1b26ee');TXs('♥'.repeat(hs)+'♡'.repeat(5-hs),X+16,Y+20,15,'#ff8aa8');TXs(hs>=5?'เพื่อนรัก!':'มิตรภาพ '+Math.round(f.bond||0)+'/100',X+110,Y+20,12,'#ffd0dc');
+ chip('สุ่มชื่อใหม่',X+w-112,Y+8,98,24,()=>{const old=f.nick;f.nick=null;const keep=f.name;f.name=DB[f.species_id].name;nick142(f);if(f.nick===old){f.nick=null;nick142(f)}save()},true,'#6a7a8a');
+ TXs(fit(nextStage142(f)||'อยู่กับเราไปเรื่อย ๆ',12,w-32),X+16,Y+46,12,'#a9e0c0')}catch(e){}return r}})(fishCard);
+// fish bought from now on get their name at once
+buy=(function(prev){return function(){const before=new Set(Object.keys(S.fish));const r=prev.apply(this,arguments);try{for(const id in S.fish)if(!before.has(id))nick142(S.fish[id])}catch(e){}return r}})(buy);
 
 // ===== Environment layer (Phase 0) — injected by client/build/build.py right before the game boots =====
 // development : everything on (team mode via 7 taps on the version line, Sandbox Gold, festival preview)
