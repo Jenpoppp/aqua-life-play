@@ -3174,7 +3174,7 @@ const _hud67=hud;hud=function(){_hud67();if(LVQ.length||LVSHOW)return;if(!['home
   TXs(lock?'เริ่มที่ Lv '+s.lv:(s.g.st==='gold'?a.toLocaleString()+'/'+b.toLocaleString()+' G':a+'/'+b)+(storyReady()?' · พร้อมรับรางวัล':''),32,y+40,12,storyReady()?'#8fe08a':'#cfe6f2')}
  if(n){gc_(338,y+6,12,'#e8504a');TXB(String(n),338,y+6,13,'#fff','center')}};
 
-const GAME_VER='V1.46';
+const GAME_VER='V1.47';
 // ===== V0.68 STEP 8 — UX/UI: main dock (บ้าน / ตู้ / อ่าง / เมือง / เควส), Lv1-5 tutorial pointers tied to the story,
 // one UI skin drawn by the user's ChatGPT (buttons, tags, icons), Demo/dev tools hidden in real play, online save per player. =====
 const UI_IMG={"btn_blue": "data:image/webp;base64,UklGRj4BAABXRUJQVlA4TDIBAAAvIkAEEL/AJgCANLi/HgFy0P8lh82lBpsAAJNML3fcQxCDgiSgn6viSJKSO1zfEAJJkH9C7vMfkPmcXjc1/ElsyWQDAYsn14oZmTJEcwnaLHRUVJHFNUEQQYDgB37wgR8gTMAfUc2kqTFAjG0rChMDCG4fd+2/VcGYDt6N6P8E3EWH/hnoo/u6hG9iR/O1e9B0ClGp+zi4QsSP/cdtIrib0EV/vT7fDzF5R+jjJZ0c1YUNWCUAG1PriGG8jrd7YS3CNhTSdB6wS0txfc6QpVVWOxaYd1HPAkmydasMq2bIABKgsj1rWpVVsPz2MY1tIUymLMszMrJM2arT0MXg+EmMk60m7aYsWXmWJoYQadyNT4Rx+HQkQte6W/hI+mNM1TZI3t0SPqiVeCmeQujXcT/5V0k=", "btn_gray": "data:image/webp;base64,UklGRlABAABXRUJQVlA4TEMBAAAvIkAEELegKrKVijeoISSBoS3J562hNpKtBA0hhNSd/uuhBIbUvuJIUqKF4gmeL4tEDNJUNYFz/kOEZi6OJBvIMZ+pq48rnbSrfCw3b2u5mR0QEADQRwBAHwCEstnTi82fgwFiJNttGwnhgxkMENh/rYBkuoN3Ef2fgLvr0T8Dw+if7uGwub7cG1CXH+V782SEOk/fx+nHMfhb4m01WBqeTRX5W5Qahs/TS6o4jxtt+MDSX9uLbpaK1eAx6bOw7dKyQhaXhHILp43RY2Na9k3S2gFduX+wnqn2tl1au1dmy9IBEogfziPrUpau3IWTVipfKAeQaZv9OAWSihSiPBrjcOpAqAVJoLYozRY8r4oN5ZTKqXJKTdEpFSkZvP2Nq0RLjxrJmPC3cPX72AIIAcQgOX9LuBhiiAqKfwwxCM/d8q+SAAA=", "btn_green": "data:image/webp;base64,UklGRloBAABXRUJQVlA4TE4BAAAvIkAEELegJpKt5mdiT8VgAv89KlCAgmhDaSRbzfuf6GIFWBz9N0MNGRQK2khS7u75Xbx/ccw4/+G9vaWW3ZdWEYrAEdX2ZKBbra6EZh+VBOgDEMSHAMDgfxSdULIzUjK7t95kgBhJctyGxv8LAAUw/1gPUskZ7Eb0fwKeoybxvyTjvPjjE9Xl7nL9Wp/u6aPb798uow8+OUa5vgUBIGwq/YDvruL99cR9nAD8ptK8Upw3MPvn9iKBVggw2W00gzV3/zzYgBfaOZfkl9UMK8zDkK0SspCZQPL7VMRoojKzYlRZkJNfp9RHH+cqR5WDBfDbamK51KWocpCsHAQQnT0gpkMfzJUcMoMAYrhp9MNNF1PJwCuhgZWZCSAi4Ilw6Ydq0zp65+nov3X0LgKT+gFV2B/XeS+5SWeUU/oBqIw1gDWwZ2OlgTX403wk/xUA", "btn_orange": "data:image/webp;base64,UklGRkoBAABXRUJQVlA4TD4BAAAvIkAEELegNJKk6F7UOX4U5B8gCjYNRZEkNXsHz3uRkwA04N9MskCdgjaSlL17Zg3v3x/T/AdL7PaLIiVtYnjit+20N7eRi7m9v7rjJLQOACgQfwIgEAYw4P4nv2pJYXAY21acGHaQ7Jj0XyvoxA7ejej/BNxDi/4MZPH0CDOFrNf0sO2YruyCyvX5Ln5Mxg5CNi4/HBLG3iLL6Hr6ncBYXA66+Jzj4zy2X9VCcpbg3XVq4ziP4XkA6iS1mLwlpHxuVA5Bp26n7mzwpcTzqHPd6QBpH8/b+sNcZ2CncjBX9n4G1vaNNsO6zdRj3mdgZ4ZVaipeXVJpaz/vLNTBurS1SSVcwVleCV+a1qUtTfu8rJLauMSQmeyNSfgQn1VWeDt7CxNJEBOUcVSfwMkIe0sYN/TOj53vnSQmy93zV0k=", "btn_purple": "data:image/webp;base64,UklGRiwBAABXRUJQVlA4TCABAAAvIkAEEJ+gKJKk5nLgmXnhAf+ecIAPtY0kNe//sZEL6YD+mwMxDQAgDdbcMo3MA1zOH/zhMgnzH9xZz0QYVc4vxlFfJNtbdzpQPUmoOvaDLxogRAAgQoAAIrB3cXtmgBhJctzGeH0SwAO//JMFSdMZ7ET0fwLOywj6X8AI8eUrgtJhP2/Hq0PZxPEQPSTFi2yp1N93ZaR4CiN9dm3vtmqEiIzPtgM+JK2S0EJ3abhasRSxxL7BuJ4k+W2vliPF6ubDpZVx7xoX/UFfHHji9zeaLockH/Knvd2UzgJ98eEdSRqu4RLwLflC37722QWgeTC3euQUT4zyaR2a9zbNrUODmk0hngQjl/quDI4cTxGyvS4lhXhKhPzXpHsinDP/KUk=", "btn_rose": "data:image/webp;base64,UklGRj4BAABXRUJQVlA4TDEBAAAvIkAEEK+gNJKk6PbUD3giQJJ/VEjUpqE0kiTl2D1IcOQ+/8xe7lcpjSQpum/UOXB48s+KGH5q/kNTBisqvMJsq/ksfHobO9X50+vXbEWMjgwGwAokhBRYfDwXw34wQLBtq2qTVP5aeEh1/nMVbTKDcyP6PwHn1KEvAxn36RnLTz54/ffNa+ouvI8cUPl7uPJQ3k1ClnhYMmWeiYXFneLIgUP7Z39TYXGELA7tYEL0NjeporbF4h0KfgdMoC67dEO7VGGkEh0qabcGXYboRr+auglGKt4R11RbpYEJ1OdGF4wHrU66TDcYFXgQRwVabV0Y0w6VAZtn4jXqvNXbzqgDtnhk704KcR2Vcb0Z021NIevtTnwhKn00KhOO4E6xxHK7in8GeS3ulFj8F+U4r3xVEgA=", "close": "data:image/webp;base64,UklGRgABAABXRUJQVlA4TPQAAAAvDsADEK/AJgCANLi7l4BI9H9l68KgkSRFx8z4YIJ1vObXRVEbyVbyP+45dVAKFVA+IZHL/AfUNmaUiog9ixooQxU4LjR/TBAUM0YYIj3/36WZK94aPDp3tWJjz2IuidfBvjIwjGSrifoI/8sP5P57hSIi+q+2bRvGTs+mM/beAPbta4pt4fjKVldbbv4HXGoxsYiIZeyNdyV3M1PShI1k7r2o95LlA4pYn73OWYUCXmctY87pLJTwehapc450y1hPzi6SEyCsfXYeszJ9QFQqTvI7pdbCBksmOd9VFza+rHzcVls47EIiorBCq7hhPs9zWEYA", "ic_coin": "data:image/webp;base64,UklGRtwBAABXRUJQVlA4TM8BAAAvHsAHEJfAIACAJHR35wP9v8cRflEV2VbycPl0JwFd6B+CBqY2kq3kKxZ/WqEZ+s80IrL5DwAaMyEGKPpy09trW9jwsVxiYGze/HEQAqn0s/8k3z4eU1QKNFSAYNtK2Gga/SAKgun+N6sknSVE9F+R27aNHAMZ7Wk94vuukvX9p0q5snLj93qiuNcym7V+fiblorjvex1UJ9W/8u56HzXa2qg2fMqbKWVtThUBeYqrvOfup7bRheGqzjve3E56FnURgakCNVE+cd+cVk9v7cCk2pHXlLaiZUeEs5xo6uCa8OWyVrKqvECJQit4rjXjDlWHJFi14SwubXkz2zZTHc7CREy24auUay3q5rGSxxD47CAbDGzqRiUiMr27DmY66/hghuHhLftIIKzKwAMJm/OFARFSbS90sce8jy0IuzoyatylJZ/gMZhfMfMTI0kA2rQ0ycehmy7gPjrAwgCFan3BSHoXoTGQjypM8bgpBV0b5AhA9rRWn/y1MRofRFiEW4QFAfV5C0ff8diFiLnNqFf5PqL3rpNpK2UBnIN8ewG9D9U5T2bTmYHsZ9pEs9zBIqjl1+urnAVw2vGPd11xxFyv61+vv3ySrtfsf7/Gj+wLAA==", "ic_drop": "data:image/webp;base64,UklGRm4BAABXRUJQVlA4TGIBAAAvF8AHEJ+gIACAItvmmv4v6ZDiSJKSE+znEgApeP5B8aJQ0EaScs/MDIrev5M3MP8BQESIBBEUZTXZvfvcN6kvSGKSFZyRlCR44LDGAANatS++3S7RC3I0OIxtpY424gP/Bk3/xUZ0U0JE/xm4bdvIrqDb+z7xHEv0fCtdF32EPX0DCZ8GQeMn0e9WxqsvbgL2P/qHH1oCAEd/cKqtRry66HxEHX30EgHxdOR+mb0UBtjReaMxtdUaGXJYRE5fptZaswDR0cY9dNqUCDAcnZbN0ds7Ehtt7suttSVGZEfW1WIkQDLBaHWMfo53RG5o6WtqmxFBzCYlDe1bUngjNjHN2U8W2RO3NGMJW0IopdTlvEg92SSOMabSsl3bTR7yyhxshVl0luzJvK3MLDv3nGX5WUrMAPNiDOslaI6yCE21JewvmLzPJb0trWT2xw/lcqnWmnOCc+e/hsht/f8vkelh6gE=", "ic_gear": "data:image/webp;base64,UklGRhgCAABXRUJQVlA4TAsCAAAvH8AHEJegoJGk5nulSEAF/jWBGkWRJDUXyRnkUPgXwRsFCFATSYrEDxkmKETgXwUqiO+S+Q8ATwzmCqyPD8fj80Y2pVObnjWnsIDCqg6qvJt3/IfeP3cXg8TYtuO2iYAPfOwEyP6r1RKX8G5E/yfg+T1+1N/jUDzEP+Pc0qqe4gP8ByAxYVFzigRekV8whci/MddQtRTtWjWH+A2/bkzX0kTgdq2pmkP8hN1LOvcaYtKle02E52/Xep99VEl9sgBayhbfeI032rklba+TvmZLpvBBpCWNekvXvjl4HXMkSyE+n0lrtvuwKafscrzNlSzE59tZ47rPpsAu7JNHrzlFPoCvcd2bEjBpA6qtJnsp8ohymO3ah2DiJdtQfCzp9hwirrmohWNBRHidfbA+epsZi/gaVN3aphAfiXPtYrWpj0x4m4x6l2P+pRjqjPZt0Oq1cXvD9qGo9dGVsUhwatMGTCHC2QdPVUlSDvEh4L1qU7Zb0NlQgrdqChAfCV5VOl42t3R2OZ5qT7IIz0e8Ny8bOBQw1daThfh8xleTKAe8YJJ3GFlfeF29iarsBTfl2kdTX9nil06Doeo5QW0aXaimHOKbyIOeqZ1Wm1SdPrqSLD6fyd2ThTRabT2Z5KMmKT7fMaUQX7NJJAuvmBOKz68AYjQ6SSE+vMTz/3iVyIT4CPSXhHeLz9/zUb8DAA==", "ic_heart": "data:image/webp;base64,UklGRpABAABXRUJQVlA4TIQBAAAvHwAHEJegNpKt5GORu6Sk1EH/fVCCt6Emkq3m/dQHkh704gcXtJSgKJKk5nIgK8AGDvDvhR+v+Q8ARBawEz6Kv451P7Kf/ps5FxeDEhFg6jPMGAUhIPSgVrdBlwFiJMlxGxP/Swp0/skSC1DKYDei/wrbtm0cGzDq7vaKfyiLxf0uuCsdWEK3bGKrWCWl8GfnJgxsIm4oEz9DV8tBhxWjhtRKCsYu0jlu6kxyxsp8hqSemYwspu2eNa7yUG3cVJdqUjgspoDrbDWFOnVNZOfnOU1F6SR7Tm2Al2pyDAaAflbN12DXKak4v6D1e1wIcl2gJE/nFwxd50v1uke9+IpWkttARU39RXOWFfGB2HeUSuYU/WHhXQrJulI1M3mS8C6UQZCb2TBlBhCa8rRS61UE77T9GA+gihrXVDJ2++8SgJmQck252FBLTtM4Qpoh3TI+EEmP6Ua7sCRHLbNB+s6cHLQpm532AzJ2wvQrKqcp8N9RQY/d+i8GBE9N/wPJn0RKehMB", "ic_home": "data:image/webp;base64,UklGRuABAABXRUJQVlA4TNQBAAAvH8AGEJegJgBAxr68rr3rKCWaUJsabAIAaMLecM0A64U4NCcAaAa9FEWS1Fy+A1ygCyOo5p2Z/2Ak5/FDDolPwapGn94Q3DNnC7KX/ap/svIDMKskiaSgl6Hmpq0ODgMAaZuioDIj9P9rTTo+iOi/ArdtlIyO+T7x/iBw5P2HgLu7Hv1xFsiMcIQ3AO3V4CfStQPoXoN+wt0V+y1FNBB+4Li9B9GYY46vSTgor0FjzjWJBnxJWXn4psFrzpMak+CT2XWZ+WZsvBfRnHPQIPiIlW9qXZDXOjbm+KBwmZUvQkVWWnuOo7fKZ1ntRRgpLO6817HTqsENO9bEQ0QjZa0xz/DtbnWZLEJxFhFhFuLb1eHj6KGst+Z5k3B318UN8RPVuwQzb89bcGwNBfHZ7dUapzdCTNm8MQk1NiI8gr7aziAXSd9+SYqqb8RHQ2VscnBJvyIlWSUYrZ6IcLiySMrlG5MVUe2q6vAGU27E7sQk6aqiKepaZlXHTJlEVJBF3CMiUtC6Ve8ndrMqJHURRUZDF/VudbhlLjsSmRkoSCSI2quqV69bE7SKCHevKjMjLDSrk3icO+g9bRkel1V4Ve8ffx8AoHYAdwTrAD99YQC4t/s23hs=", "ic_pond": "data:image/webp;base64,UklGRtYBAABXRUJQVlA4TMkBAAAvH0AGEJegNpKtJPuCu2Y/onxaY2iGcQAAhepnm6u1amvhwDYAgCR0N5zG/1OD+oDL/Ach03KAoAaKwgerD/AbVxATwe8ZZ4/AGav/n7C3g5u7GJyVJENiAQi2rYSNIggKTvKB7n+z1Um3ENF/BW7bKOl2zPCJz5vamz6nfpWYr0Pu9rugNYuoylgrIivDx3uiWVYuVWVVVfOVmYvbi0elMRNRl0PDPDOt/fOsYBY8zyOYgEDGsLXtf5ppp577eeacPmWKjJWhbVM16OQBxKqi5IaMDP/SvIoEc6eeB1SVWSGArFwbqxwApgiJiNdXGSSgdQajKgg3cM8dRVamyc7k2GhWrQ65pW+AwQJgRFpvx1hZFQZAnnMwEsDz63ywMqoqfZDc27uMyIzBTAeeKzN3Qa7la2VlLmNmvXYx+C8y4qg6RwlXZWbuR4wbK2J5+PGkzPQQs1I7HVgb+884nDtx+7QO3PT6JPWIOpMQ2zZgDla3deS+GsrMEJDoQVY43zA3dxtnekIApuuLZy5XCPRoMbRDeCogg493E2F6AyBW7cosIpnOInQdQ6mpzhtwumjrmrZc+eqtvf036MXtRcr082v9+o0vi/gAAA==", "ic_quest": "data:image/webp;base64,UklGRtQBAABXRUJQVlA4TMcBAAAvHcAHEJegJpKkqO6iu+h/Qgoj+LeBBVKMKIokqSG/cs5gAf8O8HACkKE0kq3mf7J7FfwKUFRE/waX4/wHkBD559N6/kpnVNVcAo2Nb1AfKgGfYoRYLtouESoOZP9VFwYDxEi22zbmxwdAgAgM/VebrBLeRfR/Aq7fGujnQALjR/wtqfVWF/sJacxeywbRfsDSx5QoecXtG0ikMTUklQzfcHFR50NXitntDdZtddOYGlKH5vEDYd12jqXMl0aO4YPv2w6hTw0JGrW4XW/h1H5IqfQhaFXavgg//Thr20rtNN3DFxFcbd2A0qqkHOz6iO/kRt8gVqn4n10fWYrWvDU2WsyVYFzvkPoUsa0ba/Ms43qH1MfUUM0btByw6yNe+5g3SlxR8BPjhdiHpoYkWgk4pw4FeymKqT5R/NRtP9xueI4qKQ91aMWPU+Fgh2i3mFODNXcatfgpBd/vp91Ukuct01tVWY4T/2PnOP225OLEtKpR5XYe7IuO/TQuSaScIl5zasrGucNi4XC7HjxDUolq1Z/cOMOTiBkoHlu2i7jDaRfolZglj0WLXeSnz3jKkBa7WHaOXf8QuATX7TT9SwKkm3OBfg76DgA=", "ic_tank": "data:image/webp;base64,UklGRvIBAABXRUJQVlA4TOUBAAAvHsAHEJegNrKVCIghJULNro6tytCxDqO7DzYBAKTB3SLwW1SKUcRZgR2KIklqjpzzEzF4RBBK0BAFUPMfBGX1FlAKn1JC9b+CgRPiZzKbaUnYiLCR+nRLtX8YZ9pdWmOrrTNAjG0raCQEkP8R+B/7rzZodjt4L6L/E3A/hu391wFSjWT48Smwt8pGLlytk1QIEMMmQFptpZ7hfVuQcAPBei1sleXpBhCw9CuM1cjKT8olAfgAAcBCqJveuEhcQP9WCE6uRmKz+La2b1xAA+qm16+rcYEkayMJQMtDWzxZMoCTrL2R12pnflW1ZIhnFJJnYa94w6oo2a6UgYKzEO/qpZD6GZaBImdm4bumJ4Q2wOxz9LIrT1UBlyHJ5sAcLD9RAVGfA1hj0ob+ktSnqPQ11sDEyD+owEH7pLGAbuOXcroSQqQ8RxrGnlnTi1OdAoIpJ8kpA+mqyE/FleTUxImYU7bES53pIcOHOaNhevz4R1z7q2LTSQJAJN0c6Cpu527A6LQJxm9A5VK3UXdzANOckR49wtTZIajNYrhDd0aaG0nBHJgc6LRWPTLABEM6AaPvjei1nZE8Asy3RlIwRCEAerPII+AOJA9w63sjBZFHuAGE9we3Hj0G3H8Y9iSPcP9jAHBvAQA=", "ic_town": "data:image/webp;base64,UklGRuQBAABXRUJQVlA4TNcBAAAvH4AGEJfAIADAMrPtBmfe13sGZ2EbyVYbvPdUAR3QApGvXz0o0ihSENs29Bf7ThkR1NZAAAGk8Gf+Q+jcOCStIqvorNEwM9TL7/dWTRYxnmH6lr9fe56Ou53/gcdzNRSDZYAY2W7cJiB4ExBhqf9qr0kJ/0f0fwKuZ/l4/a8crxtyyeM32W/An/xGkBQAL3J83X8/ngQJQuVB9pdd8vn+eyu1M4CsG8gnfi9KykOf5jS3MOzg736S7PlBaqctkh6lpzw6C8mgViSVC2Kz2jpAxoAWIzmA7tGZ5AIkB81pTtShHU6aMyyyPvFYbZYOZkKju43ZPEjNN9nLly9fvnxBYzht0qNHaQ/LF33RuXhsjT7uFmQjk1xyOBYdBIEU5kY/OXhq475pInMhWHfS041ubm4fakaMrm3qUfV0GEE6IjWmh+gxkBsDm8oEzSXXSPc/uaRHb9ZZ2lyt59A5Ss1lKzOTXBDlsUiCJGsOzgWCXSPrTnJJezz2QSIHSUVCr8HGREFuwARQMXrL1Bj3To1EygUZoX0i12mobMq4Y+QBahJMGyTnY0FPeXaSIxJCWQR9AjDSzWkE3Zw2ENWiQC7Iay2dnACMdHuscn2VzwWdnFWuf5fnCwAA", "panel": "data:image/webp;base64,UklGRrICAABXRUJQVlA4TKUCAAAvKMAJELegqJEkZXb3mNnAvc/sqVcTyVbzPjmH8lcIYDCBMORS4QE1AYA0bHB/XtYxhv1/CzD/ITmyCZHT/o2aX+jkPKK22r1pA8R7DF5e2O66HE0KAUAEACAAgQCQ/nkMEmTbitsomtBkEGAj73+tkp10r+DeiP5PwPt+UP5LDfs5+GeqF7UL2xnsh7/uR7rhjd1G4DScYQFn+bw4L+q0u07d8PZcYQy9TOt159sFQObFy7TOy9SfjtOfr/My/wwG52UatyD71yzut0z9vMxjN3hqOMP+iH/+2Ebohrf9GTzdY+JIFHK5HqiSiPqY1qkf3oYzOJ2PdBRJmmsTAdGSjqjbOl9Og1s0HblahAsCr2e1pCN9GgPsMeWSLbYKiMDzRcXyBU4ze8x3WhtA5tpEvznXy2Exl6wVaIBcLb9Kl9tKA7JNwHL8TS71Nqs0UDziF+NdqdBAQOQG8YjbcjddjtLq1QtyL3DEbbqb12lPxQoNpKgoTUU94rbenZd2eVYwW8xaGqhymbYw3MVWP+aitkwTBcvltP9Ur/kicIHSFFPc1vBNroXPjdwUVDjuwvB2vtFLM9tQRBFKvIy9n0o6cm1ILrnJHZDTEbd17oc3zsu0xyMd2doEMg1fVgXzkb4Y52mP6SDXL6XxoqLZFBcvduGc9uhBqfCs5BvgyYtWc3RZb07DuMd0RxPICE9e1PY8Utzuws2R8g1NAeQJFUyfcGTaYzrIpVXll5riF/My7dHEkUttfMxqgRaTLvMZuuHGqIlWWn3y+pA4SBEfW3icXqaZfo+a5GsBRfdT7Yc3hn2dx+3x55wGT7vBfl9cx3m7V75eNDzOcGIY7NdlZlxcEZxduFVAPQ2j56Wb1mXup9+PTLcqjDq8/elHf/5tpz/DG/w/AQA=", "tag": "data:image/webp;base64,UklGRsQBAABXRUJQVlA4TLgBAAAvLMAEEL/AKJIkRb3MeHcGmP0ru/fYYBtJkpp9ZjLFzPmnJlNSGslW8zNJZYulBPovCsmf/wCgqqZWvvgJ6tAsHPXqf594oByC0xbbc3xlm5bLkkrAAAhADABwIIgAGJD+FwPE2raaSkNGDCiiY/+t6k8dnBvR/wm4Xrrf8qHkAyTe9EG86Z3e0l8ZP0XvD9a9IT8WopTitzN490JmVCrT/8L87ZIGrHsRxzz9w6nKscOqyk6FnQp7ZZnSoCeZcSj/p7bKuvfWW4fWd2jQ93udxzxYpwvJlDwvddW+re187jS67m1fq5Yp5liCk4WcFuraoJ93Wr9t3LRKWuYYxmKdwliCn29942w6NvXWReunpAb7Wm9gnGwhMFeOtnWapC61o7d+So1OY1tmxQLBXbIBjctxblKHQ5vgYHu5Skedp0AJxl0yoQQ7HvXcpNbVOtC0apPWCguzVAIYdyE/FkKc6kLf1rYDfUeqLHOFRUJTigV7CwUfGGctHwoJIUlTTL4Qbsbic1Icvz/4PHgD7gJJ1g+QxdvipQCScdL1LONTTspK+f0BSSkreeOudyVj7+jLTteH+i0vAQ=="};
@@ -4781,7 +4781,7 @@ function title86(){const sz=season74(),night=nightNow();btns.push({a:-400,b:0,w:
  TXB('Aqua Life Story',W/2,Y+70,44,'#5a3a24','center');TXs('My Aquarium House · บ้านปลาของฉัน',W/2,Y+112,16,'#8a6a4a','center');
  if(TITLE86.step==='name'){TXB('ตั้งชื่อบ้านของคุณ',W/2,Y+170,22,'#4a3a2a','center');TXs('ชื่อนี้จะขึ้นในบ้าน สมุดบ้าน และเมื่อเพื่อนมาเยี่ยม · เปลี่ยนได้ภายหลังในตั้งค่า',W/2,Y+204,13,'#8a6a4a','center');
   input86(true);if(TITLE86.err)TXs(TITLE86.err,W/2,Y+318,13,'#c0503a','center');
-  B('ตกลง',W/2-130,Y+340,260,58,nameDone86,true,'#4a9a6a');TXs('ขั้นต่อไป: เลือกแบบบ้าน → เข้าบ้านครั้งแรก',W/2,Y+430,12,'#a08a70','center');return}
+  B('ตกลง',W/2-130,Y+340,260,58,nameDone86,true,'#4a9a6a');TXs('ขั้นต่อไป: เข้าบ้านครั้งแรก · เริ่มด้วย 5,000 G',W/2,Y+430,12,'#a08a70','center');return}
  input86(false);
  if(isNew86()){TXs('เกมเลี้ยงปลาและแต่งบ้านแบบสบาย ๆ',W/2,Y+186,17,'#5a4030','center');B('เริ่มเกม',W/2-150,Y+230,300,64,()=>{TITLE86.step='name';TITLE86.err=''},true,'#4a9a6a')}
  else{card84(X+60,Y+150,w-120,118,'#fff7e6');TXB(houseName86()||'บ้านของฉัน',W/2,Y+184,22,'#5a3a24','center');
@@ -11554,6 +11554,338 @@ const SC146={
 cfgFor=(function(prev){return function(f){const c=prev(f);if(f==='f1'&&S.room2&&S.room2.home){const o=SC146.room.extraW;c.W+=o;c.D+=SC146.room.extraD;c.bath.a0+=o;c.part.a+=o}return c}})(cfgFor);
 // house142() puts its layout at (R2.W - 25), so the bigger floor's layout is stored relative to that
 try{H142.lay=SC146.lay.map(e=>{const q=e.slice();q[1]-=SC146.room.extraW;return q})}catch(e){}
+
+// ===== V1.47 — make your own character (owner, 8 Nov 2026: 'ตัวละครสูงขึ้นอีกนิด เหมือนอย่างเช่นภาพอ้างอิง ก่อนเริ่มเกมส์ Custom แยก
+// ชายหญิง ใบหน้า ทรงผม สีผม เสื้อผ้า สีเสื้อ กางเกง รองเท้า อย่างละ 15 แบบ ... เอาโหมดเลือกเริ่มพร้อมสิ่งของออก สร้างตัวเสร็จ พร้อมเงิน
+// 5000 แต่งห้องเอง และเลือกเลี้ยงปลาได้เลย'):
+// 1. The character is pixel art drawn in code from parts (core/data/avatar147.json): woman / man, 15 faces, 15 hair styles each,
+//    15 hair colours, 15 tops, 15 top colours, 15 bottoms, 15 shoes. Slim, about 5 heads tall, 1-px dark outline, light from
+//    the upper left. It is drawn into the same 28-frame sheet the game already walks with (8 walk toward you, 8 away, 8 to the
+//    side, idle front / back / side, wave), so home, town, the wave and the previews all use it. A bit taller than V1.46.
+// 2. Before the game: the creator (step 'avatar' of the title) with a big turning preview, a tab per part, 15 choices each and
+//    "สุ่ม"; it is the only place to change the look (made once).
+// 3. No more "start with furniture or empty" choice: after the creator and the house name you start with 5,000 G in your own
+//    room (only the aquarium), decorate it yourself, and the fish shop opens so you can choose your first fish at once.
+const AV147={
+ "_note": "V1.47 character creator (owner, 8 Nov 2026: 'ตัวละครสูงขึ้นอีกนิด เหมือนอย่างเช่นภาพอ้างอิง ก่อนเริ่มเกมส์ Custom แยก ชายหญิง ใบหน้า ทรงผม สีผม เสื้อผ้า สีเสื้อ กางเกง รองเท้า อย่างละ 15 แบบ'). The character is drawn from these parts by lib147 (pixel art made in code for this game): slim, about 5 heads tall, 1-px dark outline, light from the upper left. roomH / townH = drawn height of the 32 x 56 frame in room px / town map px (the body is about 50 of the 56 rows).",
+ "roomH": 46,
+ "townH": 39,
+ "genders": [{"id": "f", "n": "หญิง"}, {"id": "m", "n": "ชาย"}],
+ "skins": ["#f7d6bd", "#f1c4a0", "#e3aa80", "#c98b60", "#9f6843", "#6e452c"],
+ "faces": [
+  {"n": "ยิ้มหวาน", "skin": 0, "eye": "dot", "mouth": "smile", "extra": "blush"},
+  {"n": "ตาโต", "skin": 1, "eye": "big", "mouth": "smile", "extra": ""},
+  {"n": "ขนตายาว", "skin": 0, "eye": "lash", "mouth": "small", "extra": "blush"},
+  {"n": "ยิ้มตาปิด", "skin": 2, "eye": "happy", "mouth": "open", "extra": ""},
+  {"n": "ง่วงนิด ๆ", "skin": 1, "eye": "sleepy", "mouth": "small", "extra": ""},
+  {"n": "แว่นกลม", "skin": 0, "eye": "glasses", "mouth": "smile", "extra": ""},
+  {"n": "กระบนแก้ม", "skin": 1, "eye": "dot", "mouth": "grin", "extra": "freckle"},
+  {"n": "ผิวแทน", "skin": 3, "eye": "big", "mouth": "smile", "extra": ""},
+  {"n": "ผิวเข้ม", "skin": 4, "eye": "dot", "mouth": "smile", "extra": ""},
+  {"n": "ผิวเข้มมาก", "skin": 5, "eye": "lash", "mouth": "smile", "extra": ""},
+  {"n": "เขินอาย", "skin": 2, "eye": "happy", "mouth": "small", "extra": "blush"},
+  {"n": "มั่นใจ", "skin": 3, "eye": "sharp", "mouth": "grin", "extra": ""},
+  {"n": "ไฝเสน่ห์", "skin": 1, "eye": "lash", "mouth": "smile", "extra": "mole"},
+  {"n": "แว่นเหลี่ยม", "skin": 4, "eye": "square", "mouth": "small", "extra": ""},
+  {"n": "ใจดี", "skin": 2, "eye": "dot", "mouth": "open", "extra": "blush"}
+ ],
+ "hairF": [
+  {"n": "บ็อบ", "len": 16, "bang": "straight", "vol": 1, "x": ""},
+  {"n": "ยาวตรง", "len": 30, "bang": "straight", "vol": 1, "x": ""},
+  {"n": "หางม้า", "len": 11, "bang": "side", "vol": 1, "x": "pony"},
+  {"n": "แกละสองข้าง", "len": 11, "bang": "straight", "vol": 1, "x": "twin"},
+  {"n": "มวยสูง", "len": 10, "bang": "side", "vol": 1, "x": "bun"},
+  {"n": "เปียข้าง", "len": 12, "bang": "side", "vol": 1, "x": "braid"},
+  {"n": "ประบ่าลอน", "len": 21, "bang": "center", "vol": 2, "x": "wavy"},
+  {"n": "สั้นพิกซี่", "len": 11, "bang": "side", "vol": 0, "x": ""},
+  {"n": "ฮิเมะ", "len": 32, "bang": "straight", "vol": 1, "x": "hime"},
+  {"n": "ยาวลอน", "len": 30, "bang": "center", "vol": 2, "x": "wavy"},
+  {"n": "ครึ่งหัว", "len": 24, "bang": "side", "vol": 1, "x": "halfup"},
+  {"n": "แกละต่ำ", "len": 12, "bang": "center", "vol": 1, "x": "lowtwin"},
+  {"n": "ยาวมาก", "len": 38, "bang": "straight", "vol": 1, "x": ""},
+  {"n": "หมวกเบเร่ต์", "len": 18, "bang": "straight", "vol": 1, "x": "beret"},
+  {"n": "บ็อบลอน", "len": 15, "bang": "center", "vol": 2, "x": "wavy"}
+ ],
+ "hairM": [
+  {"n": "สกินเฮด", "len": 9, "bang": "none", "vol": -1, "x": "buzz"},
+  {"n": "รองทรง", "len": 10, "bang": "straight", "vol": 0, "x": ""},
+  {"n": "ตั้งชี้", "len": 10, "bang": "spiky", "vol": 1, "x": "spiky"},
+  {"n": "แสกข้าง", "len": 10, "bang": "side", "vol": 0, "x": ""},
+  {"n": "ยุ่ง ๆ", "len": 12, "bang": "spiky", "vol": 1, "x": "messy"},
+  {"n": "หยิกสั้น", "len": 11, "bang": "center", "vol": 1, "x": "curly"},
+  {"n": "อันเดอร์คัต", "len": 9, "bang": "side", "vol": 1, "x": "undercut"},
+  {"n": "ปอมปาดัวร์", "len": 10, "bang": "none", "vol": 2, "x": "pomp"},
+  {"n": "ยาวระหู", "len": 14, "bang": "center", "vol": 1, "x": ""},
+  {"n": "มวยผู้ชาย", "len": 10, "bang": "none", "vol": 0, "x": "bun"},
+  {"n": "บ็อบผู้ชาย", "len": 16, "bang": "center", "vol": 1, "x": ""},
+  {"n": "ประบ่า", "len": 20, "bang": "center", "vol": 1, "x": ""},
+  {"n": "หมวกแก๊ป", "len": 11, "bang": "none", "vol": 0, "x": "cap"},
+  {"n": "หมวกไหมพรม", "len": 12, "bang": "none", "vol": 0, "x": "beanie"},
+  {"n": "แอฟโฟร", "len": 12, "bang": "none", "vol": 3, "x": "afro"}
+ ],
+ "hairCols": [
+  {"n": "ดำ", "c": "#2b2327"}, {"n": "น้ำตาลเข้ม", "c": "#4b3025"}, {"n": "น้ำตาล", "c": "#704532"}, {"n": "น้ำตาลแดง", "c": "#8c4a2b"},
+  {"n": "แดงเข้ม", "c": "#9d3a27"}, {"n": "ส้ม", "c": "#c9652d"}, {"n": "น้ำผึ้ง", "c": "#c99b4b"}, {"n": "บลอนด์", "c": "#e6c46b"},
+  {"n": "บลอนด์ขาว", "c": "#eee0b9"}, {"n": "เงิน", "c": "#c8c8d2"}, {"n": "เทา", "c": "#8c8e98"}, {"n": "กรมท่า", "c": "#30396b"},
+  {"n": "เขียวน้ำทะเล", "c": "#2f7e79"}, {"n": "ชมพู", "c": "#e08aa8"}, {"n": "ม่วงลาเวนเดอร์", "c": "#9b80c9"}
+ ],
+ "tops": [
+  {"n": "เสื้อยืด", "sl": "short", "col": "crew", "pat": "", "ov": ""},
+  {"n": "เสื้อกล้าม", "sl": "none", "col": "crew", "pat": "", "ov": ""},
+  {"n": "แขนยาว", "sl": "long", "col": "crew", "pat": "", "ov": ""},
+  {"n": "ลายทาง", "sl": "short", "col": "crew", "pat": "stripe", "ov": ""},
+  {"n": "เชิ้ตกระดุม", "sl": "short", "col": "shirt", "pat": "", "ov": ""},
+  {"n": "โปโล", "sl": "short", "col": "polo", "pat": "", "ov": ""},
+  {"n": "ฮู้ด", "sl": "long", "col": "hood", "pat": "", "ov": ""},
+  {"n": "สเวตเตอร์", "sl": "long", "col": "crew", "pat": "knit", "ov": ""},
+  {"n": "คาร์ดิแกน", "sl": "long", "col": "v", "pat": "", "ov": "open"},
+  {"n": "เสื้อกั๊ก", "sl": "short", "col": "shirt", "pat": "", "ov": "vest"},
+  {"n": "แจ็กเก็ต", "sl": "long", "col": "shirt", "pat": "", "ov": "jacket"},
+  {"n": "ผ้ากันเปื้อน", "sl": "short", "col": "crew", "pat": "", "ov": "apron"},
+  {"n": "คอกะลาสี", "sl": "short", "col": "sailor", "pat": "", "ov": ""},
+  {"n": "ยูกาตะ", "sl": "long", "col": "cross", "pat": "dots", "ov": "obi"},
+  {"n": "ลายสก๊อต", "sl": "long", "col": "shirt", "pat": "check", "ov": ""}
+ ],
+ "topCols": [
+  {"n": "ขาว", "c": "#f1eee5"}, {"n": "ครีม", "c": "#eee0bf"}, {"n": "มินต์", "c": "#9fd6bd"}, {"n": "เขียวเสจ", "c": "#8db287"},
+  {"n": "เขียวมะกอก", "c": "#6f7a3f"}, {"n": "ฟ้า", "c": "#8cc2e6"}, {"n": "กรมท่า", "c": "#30497a"}, {"n": "เขียวหัวเป็ด", "c": "#2f8889"},
+  {"n": "ลาเวนเดอร์", "c": "#b49ad6"}, {"n": "ชมพู", "c": "#efa6b8"}, {"n": "แดง", "c": "#c7443f"}, {"n": "ส้ม", "c": "#e6894b"},
+  {"n": "มัสตาร์ด", "c": "#d6ae4a"}, {"n": "น้ำตาล", "c": "#8a5b3b"}, {"n": "เทาเข้ม", "c": "#4b4b53"}
+ ],
+ "bottoms": [
+  {"n": "ยีนส์", "k": "pants", "c": "#4f6f9f", "pat": "jean"},
+  {"n": "ยีนส์ดำ", "k": "pants", "c": "#3a3a44", "pat": ""},
+  {"n": "ชิโน่", "k": "pants", "c": "#c2a477", "pat": ""},
+  {"n": "ขาสั้นยีนส์", "k": "shorts", "c": "#6386b8", "pat": "jean"},
+  {"n": "คาร์โก้", "k": "pants", "c": "#6f7650", "pat": "cargo"},
+  {"n": "วอร์ม", "k": "pants", "c": "#8a8d96", "pat": "stripe"},
+  {"n": "ขาสั้นน้ำตาล", "k": "shorts", "c": "#8c6646", "pat": ""},
+  {"n": "กระโปรงจีบ", "k": "skirt", "c": "#3c4f7c", "pat": "pleat"},
+  {"n": "กระโปรงแดง", "k": "skirt", "c": "#b94a43", "pat": ""},
+  {"n": "กระโปรงยาว", "k": "long", "c": "#d6c3a0", "pat": ""},
+  {"n": "เอี๊ยมยีนส์", "k": "overall", "c": "#58739f", "pat": "jean"},
+  {"n": "เลกกิ้ง", "k": "tight", "c": "#2f2f38", "pat": ""},
+  {"n": "กางเกงขาบาน", "k": "culotte", "c": "#c99a45", "pat": ""},
+  {"n": "กระโปรงสก๊อต", "k": "skirt", "c": "#4f7a52", "pat": "check"},
+  {"n": "ขาสั้นขาว", "k": "shorts", "c": "#e9e5da", "pat": ""}
+ ],
+ "shoes": [
+  {"n": "ผ้าใบขาว", "k": "low", "c": "#f0eee8", "s": "#c9c3b8"},
+  {"n": "ผ้าใบแดง", "k": "low", "c": "#c8453d", "s": "#f0eee8"},
+  {"n": "ผ้าใบดำ", "k": "low", "c": "#34343c", "s": "#f0eee8"},
+  {"n": "บูทน้ำตาล", "k": "boot", "c": "#7a4b2c", "s": "#3e2618"},
+  {"n": "บูทดำ", "k": "boot", "c": "#2e2a2c", "s": "#151214"},
+  {"n": "บูทยางเหลือง", "k": "boot", "c": "#e2b83a", "s": "#9a7a22"},
+  {"n": "รองเท้าแตะ", "k": "sandal", "c": "#8a5a3a", "s": "#5a3a24"},
+  {"n": "โลฟเฟอร์", "k": "low", "c": "#6b3f27", "s": "#3a2216"},
+  {"n": "สลิปออนกรม", "k": "low", "c": "#34466e", "s": "#f0eee8"},
+  {"n": "แฟลตชมพู", "k": "flat", "c": "#e797ad", "s": "#b8687e"},
+  {"n": "หุ้มข้อเขียว", "k": "high", "c": "#4f8a5a", "s": "#f0eee8"},
+  {"n": "วิ่งเทา", "k": "low", "c": "#8d929c", "s": "#e2604a"},
+  {"n": "เกี๊ยะไม้", "k": "geta", "c": "#b98a56", "s": "#7a5634"},
+  {"n": "แมรี่เจน", "k": "flat", "c": "#2a2426", "s": "#151214"},
+  {"n": "บูทเดินป่า", "k": "boot", "c": "#8a6a44", "s": "#4a3524"}
+ ],
+ "defaults": {
+  "f": {"face": 0, "hair": 2, "hairCol": 2, "top": 0, "topCol": 2, "bottom": 3, "shoes": 1},
+  "m": {"face": 1, "hair": 3, "hairCol": 1, "top": 3, "topCol": 6, "bottom": 0, "shoes": 0}
+ }
+}
+;
+//<R147> the part renderer (also run by the art test in node)
+const FW147=32,FH147=56,OUT147='#2a1b18';let NOHAIR147=false;
+function rgb147(c){c=String(c).replace('#','');return[parseInt(c.slice(0,2),16),parseInt(c.slice(2,4),16),parseInt(c.slice(4,6),16)]}
+function tone147(c,k){const[r,g,b]=rgb147(c);let R,G,B;if(k<0){const m=1+k;R=r*m;G=g*m*.97;B=b*m+(-k)*30}else{R=r+(255-r)*k;G=g+(255-g)*k;B=b+(255-b)*k*.85}
+ return'#'+[R,G,B].map(v=>Math.max(0,Math.min(255,Math.round(v))).toString(16).padStart(2,'0')).join('')}
+function pal147(c){return{b:c,s:tone147(c,-.17),d:tone147(c,-.33),l:tone147(c,.24),x:tone147(c,-.5)}}
+function cfg147(p){p=p||{};const g=p.g==='m'?'m':'f',D=AV147.defaults[g],n=k=>{const v=p[k];return v>=0&&v<15?v|0:D[k]};return{g,face:n('face'),hair:n('hair'),hairCol:n('hairCol'),top:n('top'),topCol:n('topCol'),bottom:n('bottom'),shoes:n('shoes')}}
+// row spans [y,x0,x1]
+const SP147={
+ headF:[[5,14,17],[6,12,19],[7,11,20],[8,11,20],[9,11,20],[10,11,20],[11,11,20],[12,11,20],[13,12,19],[14,12,19],[15,13,18]],
+ headS:[[5,13,17],[6,12,18],[7,11,19],[8,11,19],[9,11,19],[10,11,19],[11,11,20],[12,11,19],[13,12,19],[14,12,18],[15,13,17]],
+ torsoF:[[17,13,18],[18,12,19],[19,12,19],[20,12,19],[21,12,19],[22,13,18],[23,13,18],[24,13,18],[25,12,19],[26,12,19],[27,12,19],[28,12,19],[29,12,19]],
+ torsoM:[[17,12,19],[18,11,20],[19,11,20],[20,11,20],[21,11,20],[22,11,20],[23,12,19],[24,12,19],[25,12,19],[26,12,19],[27,12,19],[28,12,19],[29,12,19]],
+ torsoS:[[17,13,18],[18,12,19],[19,12,19],[20,12,19],[21,12,19],[22,12,19],[23,13,18],[24,13,18],[25,13,18],[26,13,18],[27,13,18],[28,13,19],[29,13,19]]};
+function draw147(g,C,dir,f,walk,wave){
+ const R=(x,y,w,h,c)=>{if(w>0&&h>0&&c){g.fillStyle=c;g.fillRect(x,y,w,h)}},P=(x,y,c)=>R(x,y,1,1,c);
+ const M=C.g==='m',FC=AV147.faces[C.face],SK=pal147(AV147.skins[FC.skin]),HS=(M?AV147.hairM:AV147.hairF)[C.hair],HC=pal147(AV147.hairCols[C.hairCol].c);
+ const TP=AV147.tops[C.top],TC=pal147(AV147.topCols[C.topCol].c),BT=AV147.bottoms[C.bottom],BC=pal147(BT.c),SH=AV147.shoes[C.shoes],SC=pal147(SH.c),SS=SH.s;
+ const ph=f*Math.PI/4,sn=walk?Math.sin(ph):0,dy=walk&&Math.abs(Math.cos(ph))>.7?-1:0,Y=v=>v+dy;
+ const span=(L,c,light,ox)=>{ox=ox||0;for(const[y,a,b]of L){R(a+ox,Y(y),b-a+1,1,c.b);P(b+ox,Y(y),c.s);if(light)P(a+ox,Y(y),c.l)}};
+ const W=BT.k==='culotte',SKT=BT.k==='skirt'||BT.k==='long';
+ // ---- legs (front / back): a leg = [x of the outer edge, lift]; thigh 3 px, shin 3 px, ankle 2 px
+ const legF=(x,l,mir)=>{const bare=y=>BT.k==='skirt'?y>=37:BT.k==='long'?y>=45:BT.k==='shorts'?y>=38:W?y>=42:false,col=y=>bare(y)?SK:BC;
+  for(let y=34;y<=48-l;y++){const th=y<=40,an=y>=46,w=th?4:an?2:3,x0=mir?(th?16:17):(th?12:an?13:12),c=col(y);R(x0,Y(y),w,1,c.b);P(x0+w-1,Y(y),c.s);if(!mir&&!th)P(x0,Y(y),c.l)}
+  if(W){R(mir?16:11,Y(34),5,8,BC.b);P(mir?20:11,Y(41),BC.s)}};
+ const shoe=(x,l,mir,side)=>{const k=SH.k,y=Y(49-l),w=side?5:4,xx=side?x:mir?x:x-1;
+  if(k==='boot'){R(xx,y-4,w,4,SC.b);P(mir?xx+w-1:xx,y-4,SC.l);R(xx,y,w,3,SC.b);R(xx,y+3,w,1,SS)}
+  else if(k==='high'){R(xx,y-2,w,5,SC.b);R(xx,y-2,w,1,SS);R(xx,y+3,w,1,SS);P(xx+1,y,SC.l)}
+  else if(k==='sandal'){R(xx,y,w,3,SK.b);R(xx,y+1,w,1,SC.b);R(xx,y+3,w,1,SS)}
+  else if(k==='geta'){R(xx,y,w,2,SK.b);R(xx,y+2,w,1,SC.b);P(xx,y+3,SS);P(xx+w-1,y+3,SS);P(xx+1,y,'#b8433d')}
+  else if(k==='flat'){R(xx,y,w,1,SK.s);R(xx,y+1,w,2,SC.b);R(xx,y+3,w,1,SS);P(xx+1,y+1,SC.l)}
+  else{R(xx,y,w,3,SC.b);R(xx,y,w,1,SC.s);R(xx,y+3,w,1,SS);P(side?xx+w-1:mir?xx+w-1:xx,y+1,SC.l)}};
+ const pelvis=(x0,x1)=>{if(SKT)return;R(x0,Y(29),x1-x0+1,5,BC.b);for(let y=29;y<34;y++)P(x1,Y(y),BC.s);R(x0,Y(29),x1-x0+1,1,BC.s);if(BT.pat==='jean'){P(x0+1,Y(31),BC.l);P(x1-1,Y(31),BC.l)}};
+ const skirt=(x0,x1,side)=>{if(!SKT)return;const end=BT.k==='long'?46:38;for(let y=29;y<=end;y++){const sp=Math.floor((y-29)/(BT.k==='long'?5:3));R(x0-sp,Y(y),x1-x0+1+sp*2,1,BC.b);P(x1+sp,Y(y),BC.s);P(x0-sp,Y(y),BC.l)}
+  R(x0-Math.floor((end-29)/(BT.k==='long'?5:3)),Y(end),x1-x0+1+Math.floor((end-29)/(BT.k==='long'?5:3))*2,1,BC.s);
+  if(BT.pat==='pleat')for(let x=x0;x<=x1;x+=2)R(x,Y(33),1,5,BC.s);if(BT.pat==='check')for(let y=31;y<end;y+=3)R(x0-2,Y(y),x1-x0+5,1,BC.d)};
+ const trim=(L)=>{ // pants detail lines over the legs
+  if(BT.pat==='stripe'&&!SKT){for(let y=34;y<46;y++){P(L[0],Y(y),'#e9e5da');P(L[1]+2,Y(y),'#e9e5da')}}if(BT.pat==='cargo'&&!SKT){R(L[0],Y(38),2,3,BC.s);R(L[1]+1,Y(38),2,3,BC.s)}};
+ // ---- torso + top
+ const torso=(L,side,back)=>{span(L,TC,!side);const x0=L[0][1],x1=L[0][2];
+  if(TP.pat==='stripe')for(const[y,a,b]of L)if((y-18)%3===0)R(a,Y(y),b-a+1,1,C.topCol<5?'#5a7aa8':'#f1eee5');
+  if(TP.pat==='check')for(const[y,a,b]of L)for(let x=a;x<=b;x++)if(((x>>1)+(y>>1))%2===0)P(x,Y(y),TC.s);
+  if(TP.pat==='dots')for(const[y,a,b]of L)if(y%3===1)for(let x=a+1;x<b;x+=3)P(x+(y%2),Y(y),TC.l);
+  if(TP.pat==='knit'){for(const[y,a,b]of L)if(y>=25)for(let x=a;x<=b;x+=2)P(x,Y(y),TC.s)}
+  if(TP.ov==='obi')for(const[y,a,b]of L)if(y===26||y===27)R(a,Y(y),b-a+1,1,y===26?'#d8645a':'#b8433d');
+  const last=L[L.length-1];R(last[1],Y(last[0]),last[2]-last[1]+1,1,TC.s)};
+ const collar=()=>{const c=TP.col,L=M?SP147.torsoM:SP147.torsoF;
+  if(c==='crew')R(14,Y(17),4,1,TC.d);
+  else if(c==='v'){R(14,Y(17),4,1,SK.b);R(15,Y(18),2,1,SK.b);P(15,Y(19),SK.s)}
+  else if(c==='shirt'||c==='polo'){R(13,Y(17),2,2,TC.l);R(17,Y(17),2,2,TC.l);R(15,Y(17),2,1,SK.s);for(let y=20;y<(c==='polo'?23:27);y+=3)P(15,Y(y),TC.d)}
+  else if(c==='hood'){R(12,Y(16),8,2,TC.s);R(13,Y(17),6,1,TC.d);P(14,Y(19),'#f1eee5');P(14,Y(20),'#f1eee5');P(17,Y(19),'#f1eee5');P(17,Y(20),'#f1eee5')}
+  else if(c==='sailor'){R(12,Y(17),8,2,'#2f3f6e');R(14,Y(19),4,1,'#2f3f6e');R(13,Y(18),6,1,'#f1eee5');R(15,Y(19),2,2,'#c7443f')}
+  else if(c==='cross'){for(let i=0;i<6;i++){P(13+Math.min(i,2),Y(17+i),TC.d);P(18-Math.min(i,2),Y(17+i),TC.d)}R(15,Y(17),2,1,SK.b)}
+  if(TP.ov==='open'){R(14,Y(18),4,11,'#f1eee5');R(14,Y(18),1,11,TC.d);R(17,Y(18),1,11,TC.d)}
+  if(TP.ov==='vest'){for(const[y,a,b]of L){R(a,Y(y),2,1,'#4b3a30');R(b-1,Y(y),2,1,'#3a2c24')}P(15,Y(21),'#e6c46b');P(15,Y(25),'#e6c46b')}
+  if(TP.ov==='jacket'){R(14,Y(18),4,11,'#f1eee5');R(13,Y(17),2,3,TC.d);R(17,Y(17),2,3,TC.d)}
+  if(TP.ov==='apron'){R(13,Y(20),6,12,'#efe6d0');R(13,Y(20),6,1,'#d8ccb0');R(13,Y(17),1,3,'#d8ccb0');R(18,Y(17),1,3,'#d8ccb0');R(12,Y(23),8,1,'#d8ccb0')}
+  if(BT.k==='overall'){R(13,Y(21),6,9,BC.b);R(13,Y(21),6,1,BC.s);R(13,Y(17),1,4,BC.s);R(18,Y(17),1,4,BC.s);P(13,Y(21),'#e6c46b');P(18,Y(21),'#e6c46b')}};
+ // ---- arms (front / back): x = the arm's 2 columns, swing moves the hand 1 px
+ const arm=(x,sw,outR)=>{const yb=27+sw,sl=TP.sl,se=sl==='none'?18:sl==='short'?21:yb;
+  for(let y=18;y<=yb;y++){const sk=y>=se,c=sk?SK:TC;R(x,Y(y),2,1,c.b);P(outR?x+1:x,Y(y),c.s)}if(sl!=='none')R(x,Y(se-1),2,1,TC.s);if(sl==='long')R(x,Y(yb),2,1,TC.d);
+  R(x,Y(yb+1),2,2,SK.b);P(outR?x+1:x,Y(yb+2),SK.s)};
+ // ---- head + face
+ const head=(side)=>{span(side?SP147.headS:SP147.headF,SK,false);if(!side){R(20,Y(8),1,6,SK.s);P(10,Y(10),SK.s);P(10,Y(11),SK.s);P(21,Y(10),SK.s);P(21,Y(11),SK.s);R(13,Y(15),6,1,SK.s)}else{P(20,Y(11),SK.b);P(13,Y(10),SK.s);P(13,Y(11),SK.d);P(14,Y(11),SK.s);R(12,Y(14),3,1,SK.s)}};
+ const face=(side)=>{const E='#2b1e22',e=FC.eye,m=FC.mouth,MC='#8a3b35',F='#3a3036';
+  if(side){if(e==='happy'||e==='sleepy')R(17,Y(11),2,1,E);else{R(17,Y(10),1,2,E);if(e==='big'){P(18,Y(10),E);P(17,Y(10),'#fff')}if(e==='lash'||e==='sharp')P(18,Y(9),E)}
+   if(e==='glasses'||e==='square'){R(16,Y(9),4,1,F);R(16,Y(12),4,1,F);P(19,Y(10),F);P(19,Y(11),F);P(16,Y(10),F)}
+   if(m==='open'||m==='grin')R(18,Y(13),2,1,MC);else P(18,Y(13),MC);if(FC.extra==='blush')P(16,Y(12),'#ec9a94');if(FC.extra==='freckle'){P(16,Y(12),SK.d);P(17,Y(13),SK.d)}return}
+  const eye=(x,o)=>{if(e==='big'){R(x-o,Y(10),2,2,E);P(x-o+(o?0:1),Y(10),'#fff')}else if(e==='lash'){R(x,Y(10),1,2,E);P(o?x-1:x+1,Y(9),E)}
+   else if(e==='happy'){P(o?x-1:x,Y(11),E);P(o?x:x+1,Y(10),E);P(o?x+1:x-1,Y(11),E)}else if(e==='sleepy'){R(o?x-1:x,Y(11),2,1,E);R(o?x-1:x,Y(10),2,1,SK.s)}
+   else if(e==='sharp'){R(o?x-1:x,Y(11),2,1,E);P(x,Y(10),E);P(o?x-1:x+1,Y(9),E)}else R(x,Y(10),1,2,E)};
+  eye(14,1);eye(17,0);
+  if(e==='glasses'||e==='square'){R(12,Y(9),4,1,F);R(16,Y(9),4,1,F);R(12,Y(12),4,1,F);R(16,Y(12),4,1,F);P(12,Y(10),F);P(12,Y(11),F);P(19,Y(10),F);P(19,Y(11),F);P(15,Y(10),F);P(16,Y(10),F);if(e==='square'){P(15,Y(11),F);P(16,Y(11),F)}}
+  if(m==='smile'){R(15,Y(13),2,1,MC);P(14,Y(12),SK.s);P(17,Y(12),SK.s)}else if(m==='small')P(15,Y(13),MC);else if(m==='open'){R(15,Y(13),2,1,'#5a2426');R(15,Y(14),2,1,'#d9707a')}else if(m==='grin'){R(14,Y(13),4,1,MC);R(15,Y(13),2,1,'#fff6ee')}
+  if(FC.extra==='blush'){R(12,Y(12),2,1,'#ec9a94');R(18,Y(12),2,1,'#ec9a94')}if(FC.extra==='freckle'){P(13,Y(12),SK.d);P(12,Y(13),SK.d);P(18,Y(12),SK.d);P(19,Y(13),SK.d)}if(FC.extra==='mole')P(18,Y(13),'#4a2f2a')};
+ // ---- hair
+ const H=HS,L=H.len,V=H.vol,xx=H.x,hb=HC.b,hs=HC.s,hd=HC.d,hl=HC.l,sw=walk?Math.round(sn):0;
+ const top=V>=3?1:V>=2?2:V>=1?3:V>=0?4:5,wv=V>=2?1:0;
+ const crown=(o)=>{o=o||0;for(let y=top;y<=8;y++){const t=y-top,a=t===0?13-wv:t===1?11-wv:10-wv,b=t===0?18+wv:t===1?20+wv:21+wv;R(a+o,Y(y),b-a+1,1,hb);P(b+o,Y(y),hs);if(t>=2)P(a+o,Y(y),hb)}R(13+o,Y(top+1),4,1,hl);R(14+o,Y(top+2),2,1,hl);P(18+o,Y(top+1),hl)};
+ const strand=(x,y0,y1,c)=>{for(let y=y0;y<=y1;y++)if((y-y0)%3===1)P(x,Y(y),c)};
+ const tail=(x,y0,y1,ph2)=>{for(let y=y0;y<=y1;y++){const o=Math.round(Math.sin((y-y0)/3+ph2)*.7),w=y>y1-2?1:2;R(x+o+(w===1?0:0),Y(y),w,1,(y-y0)%3===2?hs:hb)}R(x,Y(y0),2,1,'#c7443f')};
+ const hat=()=>{if(xx==='beret'){R(10,Y(3),12,3,'#b8433d');R(11,Y(2),10,1,'#b8433d');R(10,Y(5),12,1,'#8a2f2b');P(16,Y(1),'#8a2f2b');R(12,Y(3),3,1,'#d8645a');return true}
+  if(xx==='cap'){R(12,Y(3),8,4,'#3d5a8a');R(13,Y(2),6,1,'#3d5a8a');R(13,Y(3),3,1,'#5d7aaa');if(dir==='d')R(11,Y(7),10,1,'#2c4570');else if(dir==='s')R(18,Y(6),5,1,'#2c4570');else R(12,Y(7),8,1,'#2c4570');return true}
+  if(xx==='beanie'){R(11,Y(3),10,4,'#c6863c');R(10,Y(6),12,2,'#a86a2c');R(15,Y(1),2,2,'#efe6d0');for(let x=12;x<20;x+=2)P(x,Y(4),'#a86a2c');return true}return false};
+ const afro=(o)=>{for(let y=0;y<14;y++){const r=Math.round(Math.sqrt(Math.max(0,42-(y-7)*(y-7)))*1.05);R(16-r+o,Y(y),r*2,1,hb);P(15+r+o,Y(y),hs);P(16-r+o,Y(y),hs)}for(let i=0;i<10;i++)P(11+((i*7)%11)+o,Y(1+((i*5)%9)),i%2?hl:hd)};
+ const sides=()=>{if(xx==='buzz'||xx==='afro'||xx==='pomp'||xx==='undercut'||xx==='bun'&&M)return;const end=L>=17?Math.min(L,22):L<=11?11:L;
+  for(let y=8;y<=end;y++){const fl=xx==='wavy'&&y%4<2?1:0,flare=L>=14&&L<=17&&y>=end-1?1:0;R(10-fl-flare,Y(y),2+flare,1,hb);P(10-fl-flare,Y(y),hs);R(20+fl,Y(y),2+flare,1,hs)}
+  if(L>=12)R(10,Y(end),2,1,hd),R(20,Y(end),2,1,hd)};
+ const bangs=()=>{const b=H.bang;
+  if(b==='straight'){R(11,Y(8),10,1,hb);for(let x=11;x<=20;x++)if(x%3!==1)P(x,Y(9),x>17?hs:hb);if(xx==='hime'){R(10,Y(9),2,7,hb);R(20,Y(9),2,7,hs)}}
+  else if(b==='side'){R(11,Y(8),10,1,hb);R(11,Y(9),6,1,hb);R(11,Y(10),2,1,hb);P(11,Y(11),hb);P(18,Y(8),hl)}
+  else if(b==='center'){R(11,Y(8),4,1,hb);R(17,Y(8),4,1,hs);R(11,Y(9),3,1,hb);R(18,Y(9),3,1,hs);P(11,Y(10),hb);P(20,Y(10),hs)}
+  else if(b==='spiky'){R(11,Y(8),10,1,hb);for(let x=11;x<=20;x+=2)P(x,Y(9),hb);P(12,Y(10),hb);P(17,Y(10),hb)}};
+ const front=()=>{if(xx==='buzz'){for(const[y,a,b]of[[5,13,18],[6,12,19],[7,11,20]])R(a,Y(y),b-a+1,1,hs);R(13,Y(5),3,1,hb);return}
+  if(xx==='afro'){afro(0);R(11,Y(8),10,1,hd);return}
+  crown(0);if(xx==='pomp'){R(13,Y(1),7,3,hb);R(14,Y(0),4,1,hb);R(14,Y(1),3,1,hl);P(19,Y(2),hs)}
+  if(xx==='spiky'||xx==='messy'){for(let x=11;x<=20;x+=2){P(x,Y(top-1),hb);P(x+1,Y(top-2),x%4===1?hb:null)}if(xx==='messy'){P(9,Y(8),hb);P(22,Y(9),hs)}}
+  if(xx==='curly')for(let x=10;x<=21;x+=2){P(x,Y(top),hl);P(x+1,Y(top+3),hs)}
+  if(xx==='undercut'){R(11,Y(8),1,3,hd);R(20,Y(8),1,3,hd)}
+  sides();bangs();
+  if(xx==='twin'){tail(8,8,24,0);tail(22,8,24,2)}if(xx==='lowtwin'){tail(9,13,23,0);tail(21,13,23,2)}
+  if(xx==='braid'){for(let y=12;y<26;y++)R(9+(y%2),Y(y),2,1,y%2?hs:hb);R(9,Y(26),2,1,'#c7443f')}
+  if(xx==='bun'){R(14,Y(top-3),4,3,hb);P(14,Y(top-3),hl);P(17,Y(top-1),hs)}if(xx==='halfup'){R(14,Y(top),4,1,hd)}};
+ const behind=()=>{ // long hair hanging behind the body (front view) / over the back (back view)
+  if(L<17||xx==='afro')return;const w0=V>=2?9:10,w1=V>=2?22:21;for(let y=12;y<=L;y++){const tp=y>L-2?1:0,wvv=xx==='wavy'&&y%5<2?1:0;R(w0+tp-wvv,Y(y),w1-w0+1-tp*2,1,hb);P(w1-tp+wvv,Y(y),hs);P(w0+tp-wvv,Y(y),hs)}
+  for(let x=w0+2;x<w1;x+=3)strand(x,13,L-1,hs);R(w0+1,Y(L),w1-w0-1,1,hd)};
+ const back=()=>{if(xx==='buzz'){for(const[y,a,b]of[[5,13,18],[6,12,19],[7,11,20],[8,11,20],[9,11,20],[10,11,20],[11,12,19]])R(a,Y(y),b-a+1,1,y>8?hd:hs);return}
+  if(xx==='afro'){afro(0);return}
+  crown(0);const end=Math.max(12,Math.min(L,15));for(let y=9;y<=end;y++){R(10-wv,Y(y),12+wv*2,1,hb);P(21+wv,Y(y),hs)}for(let x=12;x<20;x+=3)strand(x,9,end,hs);
+  if(xx==='undercut'||xx==='pomp')R(11,Y(11),10,3,hd);
+  behind();if(xx==='pony'){R(14,Y(8),4,2,hb);tail(15,9,23,sw*.5)}if(xx==='twin'){tail(8,8,24,0);tail(22,8,24,2)}if(xx==='lowtwin'){tail(9,13,23,0);tail(21,13,23,2)}
+  if(xx==='bun'){R(14,Y(top-2),4,4,hb);P(14,Y(top-2),hl)}if(xx==='halfup'){R(14,Y(6),4,3,hb);P(15,Y(6),hl)}if(xx==='braid')for(let y=12;y<26;y++)R(9+(y%2),Y(y),2,1,y%2?hs:hb)};
+ const sideHair=()=>{if(xx==='afro'){afro(-1);return}if(xx==='buzz'){R(12,Y(5),6,3,hs);R(11,Y(8),3,3,hd);return}
+  for(let y=top;y<=8;y++){const t=y-top,a=t===0?13:t===1?11:10,b=t===0?17:19;R(a-wv,Y(y),b-a+1+wv,1,hb);P(b,Y(y),hs)}R(13,Y(top+1),4,1,hl);
+  const end=L>=17?L:L<=11?12:Math.min(L,15);for(let y=8;y<=end;y++){const w=y<=13?4:3;R(10-wv,Y(y),w,1,hb);P(10-wv,Y(y),hs)}strand(11,9,end,hs);
+  if(H.bang!=='none'){R(16,Y(8),4,1,hb);if(H.bang!=='center')R(17,Y(9),3,1,hb)}if(xx==='pomp'){R(14,Y(1),6,3,hb);R(17,Y(1),3,1,hl)}
+  if(xx==='spiky'||xx==='messy')for(let x=11;x<=18;x+=2)P(x,Y(top-1),hb);if(xx==='undercut')R(12,Y(8),3,3,hd);
+  if(xx==='pony'){R(9,Y(7),2,3,hb);for(let y=9;y<22;y++)R(8-Math.round((y-9)/5)+Math.round(sw*.5),Y(y),2,1,y%3===2?hs:hb);R(9,Y(8),2,1,'#c7443f')}
+  if(xx==='twin'||xx==='lowtwin')for(let y=(xx==='twin'?8:13);y<(xx==='twin'?24:23);y++)R(12+(y%3===0?1:0),Y(y),2,1,y%3===2?hs:hb);
+  if(xx==='bun')R(10,Y(top-1),4,3,hb);if(xx==='halfup')R(10,Y(6),3,3,hb);if(xx==='braid')for(let y=12;y<26;y++)R(13,Y(y),2,1,y%2?hs:hb)};
+ // ================= draw
+ if(dir==='s'){const s=walk?Math.round(sn*4):0,ba=walk?-Math.round(sn*3):0,fa=-ba;
+  const legS=(o,dark)=>{const c=dark?{b:BC.s,s:BC.d}:BC,k=SK,sk=dark?{b:SK.s,s:SK.d}:SK;for(let y=34;y<=48;y++){const xo=14+Math.round(o*(y-34)/14)+(y>=46?1:0),w=y>=46?2:y<=40?4:3,bare=(BT.k==='shorts'&&y>=38)||(W&&y>=42)||BT.k==='skirt'&&y>=37||BT.k==='long'&&y>=45;R(xo,Y(y),w,1,bare?sk.b:c.b);P(xo+w-1,Y(y),bare?sk.s:c.s)}shoe(14+o,0,false,true)};
+  const armS=(sw2,dark)=>{const sl=TP.sl;for(let y=18;y<=30;y++){const xo=15+Math.round(sw2*(y-18)/12),sk=sl==='none'||(sl==='short'&&y>=21)||y>=29;R(xo,Y(y),2,1,sk?(dark?SK.s:SK.b):(dark?TC.s:TC.b));P(xo+1,Y(y),sk?SK.s:TC.s)}};
+  if(L>=17)for(let y=12;y<=L;y++)R(10-wv,Y(y),4,1,y%3===1?hs:hb);
+  armS(ba,true);legS(-s,true);if(!SKT){R(13,Y(29),7,5,BC.b);P(19,Y(29),BC.s)}legS(s,false);skirt(13,19,true);trim([14,14]);
+  span(SP147.torsoS,TC,false);if(TP.pat==='stripe')for(const[y,a,b]of SP147.torsoS)if((y-18)%3===0)R(a,Y(y),b-a+1,1,C.topCol<5?'#5a7aa8':'#f1eee5');if(TP.ov==='obi')R(13,Y(26),7,2,'#b8433d');
+  if(TP.ov==='apron')R(18,Y(20),2,14,'#efe6d0');if(BT.k==='overall'){R(16,Y(21),4,9,BC.b);R(16,Y(17),1,4,BC.s)}if(TP.col==='hood')R(12,Y(16),3,3,TC.s);if(TP.col==='sailor')R(12,Y(17),3,3,'#2f3f6e');
+  R(14,Y(16),3,1,SK.s);head(true);face(true);if(!hat())sideHair();else{sideHair();hat()}armS(fa,false);return}
+ const lifts=walk?[Math.round(Math.max(0,sn)*2),Math.round(Math.max(0,-sn)*2)]:[0,0],TL=M?SP147.torsoM:SP147.torsoF,a0=M?9:10,a1=M?21:20;
+ if(dir==='u'){if(L>=17&&!(xx==='beret'||xx==='cap'||xx==='beanie'))0;pelvis(12,19);legF(12,lifts[0],false);legF(16,lifts[1],true);shoe(12,lifts[0],false);shoe(17,lifts[1],true);skirt(12,19);trim([12,17]);
+  torso(TL,false,true);if(BT.k==='overall'){R(13,Y(17),1,12,BC.s);R(18,Y(17),1,12,BC.s)}arm(a0,walk?Math.round(sn):0,false);arm(a1,walk?-Math.round(sn):0,true);R(15,Y(16),2,1,SK.s);head(false);if(!hat())back();else{back();hat()}return}
+ if(!NOHAIR147){behind();if(xx==='pony')R(20,Y(9),2,5,hs)}
+ pelvis(12,19);legF(12,lifts[0],false);legF(16,lifts[1],true);shoe(12,lifts[0],false);shoe(17,lifts[1],true);skirt(12,19);trim([12,17]);
+ torso(TL,false,false);R(15,Y(16),2,1,SK.s);collar();
+ if(wave){arm(a1,0,true);for(let y=9;y<18;y++)R(a0-(y<12?1:0),Y(y),2,1,TP.sl==='long'||TP.sl==='short'&&y>=14?TC.b:SK.b);R(a0-1,Y(7),2,2,SK.b)}
+ else{arm(a0,walk?-Math.round(sn):0,false);arm(a1,walk?Math.round(sn):0,true)}
+ head(false);face(false);if(NOHAIR147)return;if(!hat())front();else{front();hat()}}
+// outline + the 28-frame sheet
+function outline147(c){const g=c.getContext('2d'),W=c.width,H=c.height,d=g.getImageData(0,0,W,H),a=d.data,o=new Uint8ClampedArray(a),[r,gg,b]=rgb147(OUT147);
+ for(let y=0;y<H;y++)for(let x=0;x<W;x++){const i=(y*W+x)*4;if(a[i+3]>0)continue;const n=(x>0&&a[i-1]>0)||(x<W-1&&a[i+7]>0)||(y>0&&a[i-W*4+3]>0)||(y<H-1&&a[i+W*4+3]>0);if(n){o[i]=r;o[i+1]=gg;o[i+2]=b;o[i+3]=255}}
+ d.data.set(o);g.putImageData(d,0,0)}
+function sheet147(C,mk){const N=28,c=mk(FW147*N,FH147),g=c.getContext('2d');g.imageSmoothingEnabled=false;
+ const one=(k,dir,f,walk,wave)=>{const t=mk(FW147,FH147),tg=t.getContext('2d');draw147(tg,C,dir,f,walk,wave);outline147(t);if(dir==='s'){g.save();g.translate((k+1)*FW147,0);g.scale(-1,1);g.drawImage(t,0,0);g.restore()}else g.drawImage(t,k*FW147,0)}; // the game's side frames face left (it mirrors them for walking right)
+ for(let f=0;f<8;f++){one(f,'d',f,true,false);one(8+f,'u',f,true,false);one(16+f,'s',f,true,false)}one(24,'d',0,false,false);one(25,'u',0,false,false);one(26,'s',0,false,false);one(27,'d',0,false,true);return c}
+//</R147>
+
+// ---------- in the game: the sheet replaces the old picture for a character made in the creator
+const AVC147={},MK147={tab:0,thumb:{},rot:0};
+function mk147(w,h){const c=document.createElement('canvas');c.width=w;c.height=h;return c}
+function on147(){const p=S&&S.profile86;return!!(p&&p.av147)}
+function sheetFor147(C){const k=JSON.stringify(C);if(!AVC147[k]){const ks=Object.keys(AVC147);if(ks.length>24)delete AVC147[ks[0]];AVC147[k]=sheet147(C,mk147)}return AVC147[k]}
+function cur147(){return cfg147(S.profile86.av147)}
+plFrame129=(function(prev){return function(id){try{if(on147())return{im:sheetFor147(cur147()),fw:FW147,fh:FH147,n:28,av:1}}catch(e){}return prev(id)}})(plFrame129);
+// a bit taller than V1.46 (avatar147.json roomH / townH; the old pictures keep their size)
+plDraw129=(function(prev){return function(g,id,dir,i,flip,cx,by,h,tint){if(on147()&&!(typeof PREV136!=='undefined'&&PREV136.on))h*=scene==='town'?AV147.townH/PL129.townH:AV147.roomH/PL129.roomH;return prev.call(this,g,id,dir,i,flip,cx,by,h,tint)}})(plDraw129);
+// ---------- the creator
+const TABS147=[['g','เพศ'],['face','ใบหน้า'],['hair','ทรงผม'],['hairCol','สีผม'],['top','เสื้อ'],['topCol','สีเสื้อ'],['bottom','กางเกง'],['shoes','รองเท้า']];
+const CROP147={g:[0,0,32,56],face:[9,3,14,15],hair:[5,0,22,24],top:[6,14,20,18],bottom:[5,27,22,24],shoes:[7,42,18,13]};
+function prof147(){const p=S.profile86=S.profile86||{};if(!p.av147)p.av147=cfg147({g:'f'});return p.av147}
+function one147(C,k,bare){const key=JSON.stringify(C)+'#'+k+(bare?'b':'');let c=MK147.thumb[key];if(c)return c;if(Object.keys(MK147.thumb).length>240)MK147.thumb={};c=mk147(FW147,FH147);NOHAIR147=!!bare;try{draw147(c.getContext('2d'),C,k===25?'u':k===26?'s':'d',0,false,false)}finally{NOHAIR147=false}outline147(c);MK147.thumb[key]=c;return c}
+function blit147(im,sx,sy,sw,sh,dx,dy,sc,flip){x.save();x.imageSmoothingEnabled=false;if(flip){x.translate(Math.round(dx+sw*sc),Math.round(dy));x.scale(-1,1);x.drawImage(im,sx,sy,sw,sh,0,0,sw*sc,sh*sc)}else x.drawImage(im,sx,sy,sw,sh,Math.round(dx),Math.round(dy),sw*sc,sh*sc);x.restore()}
+function names147(k,C){const A=AV147;return k==='g'?A.genders.map(q=>q.n):k==='face'?A.faces.map(q=>q.n):k==='hair'?(C.g==='m'?A.hairM:A.hairF).map(q=>q.n):k==='hairCol'?A.hairCols.map(q=>q.n):k==='top'?A.tops.map(q=>q.n):k==='topCol'?A.topCols.map(q=>q.n):k==='bottom'?A.bottoms.map(q=>q.n):A.shoes.map(q=>q.n)}
+function rand147(){const C=prof147(),r=n=>Math.floor(Math.random()*n);Object.assign(C,{face:r(15),hair:r(15),hairCol:r(15),top:r(15),topCol:r(15),bottom:r(15),shoes:r(15)});try{save()}catch(e){}}
+function maker147(X,Y,w,h,done){const C=prof147(),k0=TABS147[MK147.tab][0];
+ TXB('สร้างตัวละครของคุณ',X+w/2,Y+40,26,'#4a3a2a','center');TXs('เลือกได้ครั้งเดียวตอนเริ่ม · แต่ละหมวดมี 15 แบบ',X+w/2,Y+64,13,'#8a6a4a','center');
+ // the turning, walking preview
+ const pw=Math.min(300,Math.round(w*.3)),ph=h-170,px=X+26,py=Y+82;card84(px,py,pw,ph,'#eef4ea');
+ const sc=Math.max(3,Math.min(6,Math.floor(Math.min((pw-20)/FW147,(ph-20)/FH147)))),S0=sheetFor147(cfg147(C)),st=Math.floor(T0/1.6)%4,base=[0,16,8,16][st],fr=base+(Math.floor(T0*8)%8);
+ x.fillStyle='rgba(60,80,60,.18)';x.beginPath();x.ellipse(px+pw/2,py+ph-24,FW147*sc*.32,6,0,0,6.283);x.fill();
+ blit147(S0,fr*FW147,0,FW147,FH147,px+pw/2-FW147*sc/2,py+ph-24-53*sc,sc,st===3);
+ B('🎲 สุ่ม',px,py+ph+10,pw,48,()=>rand147(),false,'#8a7a5a');
+ // tabs
+ const rx=px+pw+22,rw=X+w-26-rx,tw=Math.floor((rw-7*6)/8);TABS147.forEach(([k,n],i)=>{chip(n,rx+i*(tw+6),py,tw,40,()=>{MK147.tab=i},true,i===MK147.tab?'#4d8a68':'#8a7a5a');btns[btns.length-1].l='แท็บ:'+n});
+ // 15 choices (2 for เพศ)
+ const gy=py+52,gh=Y+h-74-gy,N=k0==='g'?2:15,cols=k0==='g'?2:5,rows=Math.ceil(N/cols),cw=Math.floor((rw-(cols-1)*8)/cols),chh=Math.floor((gh-(rows-1)*8)/rows),nm=names147(k0,C);
+ for(let i=0;i<N;i++){const a=rx+(i%cols)*(cw+8),b=gy+Math.floor(i/cols)*(chh+8),on=k0==='g'?C.g===['f','m'][i]:C[k0]===i;card84(a,b,cw,chh,on?'#e4f0dc':'#fff7e6');if(on){x.strokeStyle='#4d8a68';x.lineWidth=3;x.strokeRect(a+1.5,b+1.5,cw-3,chh-3)}
+  if(k0==='hairCol'||k0==='topCol'){const col=(k0==='hairCol'?AV147.hairCols:AV147.topCols)[i].c;rr(a+cw/2-22,b+10,44,chh-38,10,col);x.strokeStyle='rgba(40,30,20,.5)';x.lineWidth=2;x.strokeRect(a+cw/2-22,b+10,44,chh-38)}
+  else{const T=Object.assign({},C);if(k0==='g'){T.g=['f','m'][i];Object.assign(T,AV147.defaults[T.g],{hairCol:C.hairCol,topCol:C.topCol})}else T[k0]=i;const im=one147(cfg147(T),24,k0==='top'||k0==='bottom'||k0==='shoes'),cr=CROP147[k0]||CROP147.g,s2=Math.max(1,Math.floor(Math.min((cw-10)/cr[2],(chh-30)/cr[3])));blit147(im,cr[0],cr[1],cr[2],cr[3],a+cw/2-cr[2]*s2/2,b+6,s2,false)}
+  TXs(nm[i],a+cw/2,b+chh-10,12,on?'#2f5a40':'#5a4636','center');
+  btns.push({a,b,w:cw,h:chh,ui:1,l:'แบบ:'+k0+':'+i,fn:()=>{if(k0==='g'){if(C.g!==['f','m'][i]){C.g=['f','m'][i];Object.assign(C,{hair:AV147.defaults[C.g].hair})}}else C[k0]=i;try{save()}catch(e){}}})}
+ if(done)B('ต่อไป ▶',X+w/2-140,Y+h-62,280,52,()=>{prof147();try{save()}catch(e){}done()},true,'#4a9a6a')}
+title86=(function(prev){return function(){if(!TITLE86.on||TITLE86.step!=='avatar')return prev();input86(false);
+ const LT=typeof town83Layer==='function'?town83Layer(1):null;if(LT&&(LT.width||LT.naturalWidth)&&typeof bgT140==='function')bgT140(LT,Math.max(VW74/LT.width,H/LT.height));else{x.fillStyle='#2e4a3a';x.fillRect(-VOX74,0,VW74,H)}
+ x.fillStyle='rgba(20,30,24,.42)';x.fillRect(-VOX74,0,VW74,H);const w=Math.min(1120,VW74-40),h=Math.min(680,H-24),X=W/2-w/2,Y=Math.round((H-h)/2);nine84(X,Y,w,h,3);
+ maker147(X,Y,w,h,()=>{TITLE86.step='name';TITLE86.err=''})}})(title86);
+// ---------- the new start: no start chooser; 5,000 G, your own room with the aquarium, then choose your first fish
+const START147={gold:5000};
+title86=(function(prev){return function(){if(TITLE86.on&&TITLE86.step==='start'){start147();return}return prev()}})(title86);
+function start147(){try{input86(false)}catch(e){}applyStart87('empty');S.player.gold=START147.gold;try{const e=R2LAY.find(q=>q[0]==='aquarium');if(e){const[w]=r2dim(e);const old=e[1];e[1]=Math.round((R2.W-w)/2*2)/2;const i=R2LAY.indexOf(e),[w2,d2]=r2dim(e);if(!r2rectOk(i,e[1],e[2],w2,d2))e[1]=old}}catch(e){}
+ S.meta=S.meta||{};S.meta.first147=1;R2DIRTY=true;try{r2changed()}catch(e){}try{save()}catch(e){}toast='ยินดีต้อนรับ! มี 5,000 G · แต่งห้องเองได้เลย';toastT=4}
+hud=(function(prev){return function(){const r=prev.apply(this,arguments);try{if(scene==='home'&&S.meta&&S.meta.first147===1&&!(typeof TITLE86!=='undefined'&&TITLE86.on)&&!R2.edit&&!R2.cat&&!MENU76){
+  const w=560,h=150,X0=W/2-w/2,Y0=H-h-96;nine84(X0,Y0,w,h,3);TXB('บ้านของคุณพร้อมแล้ว',W/2,Y0+38,20,'#4a3a2a','center');TXs('มี '+S.player.gold.toLocaleString()+' G · แต่งห้องเอง หรือเลือกปลาตัวแรกลงตู้ได้เลย',W/2,Y0+64,14,'#6a5040','center');
+  B('🐟 เลือกปลาตัวแรก',X0+24,Y0+82,w/2-36,50,()=>{S.meta.first147=2;save();go('shop')},true,'#4a9a6a');B('🪑 แต่งห้องก่อน',X0+w/2+12,Y0+82,w/2-36,50,()=>{S.meta.first147=2;save();R2.edit=true},true,'#8a7a5a')}}catch(e){}return r}})(hud);
 
 // ===== Environment layer (Phase 0) — injected by client/build/build.py right before the game boots =====
 // development : everything on (team mode via 7 taps on the version line, Sandbox Gold, festival preview)
