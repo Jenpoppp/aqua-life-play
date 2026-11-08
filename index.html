@@ -3174,7 +3174,7 @@ const _hud67=hud;hud=function(){_hud67();if(LVQ.length||LVSHOW)return;if(!['home
   TXs(lock?'เริ่มที่ Lv '+s.lv:(s.g.st==='gold'?a.toLocaleString()+'/'+b.toLocaleString()+' G':a+'/'+b)+(storyReady()?' · พร้อมรับรางวัล':''),32,y+40,12,storyReady()?'#8fe08a':'#cfe6f2')}
  if(n){gc_(338,y+6,12,'#e8504a');TXB(String(n),338,y+6,13,'#fff','center')}};
 
-const GAME_VER='V1.45';
+const GAME_VER='V1.46';
 // ===== V0.68 STEP 8 — UX/UI: main dock (บ้าน / ตู้ / อ่าง / เมือง / เควส), Lv1-5 tutorial pointers tied to the story,
 // one UI skin drawn by the user's ChatGPT (buttons, tags, icons), Demo/dev tools hidden in real play, online save per player. =====
 const UI_IMG={"btn_blue": "data:image/webp;base64,UklGRj4BAABXRUJQVlA4TDIBAAAvIkAEEL/AJgCANLi/HgFy0P8lh82lBpsAAJNML3fcQxCDgiSgn6viSJKSO1zfEAJJkH9C7vMfkPmcXjc1/ElsyWQDAYsn14oZmTJEcwnaLHRUVJHFNUEQQYDgB37wgR8gTMAfUc2kqTFAjG0rChMDCG4fd+2/VcGYDt6N6P8E3EWH/hnoo/u6hG9iR/O1e9B0ClGp+zi4QsSP/cdtIrib0EV/vT7fDzF5R+jjJZ0c1YUNWCUAG1PriGG8jrd7YS3CNhTSdB6wS0txfc6QpVVWOxaYd1HPAkmydasMq2bIABKgsj1rWpVVsPz2MY1tIUymLMszMrJM2arT0MXg+EmMk60m7aYsWXmWJoYQadyNT4Rx+HQkQte6W/hI+mNM1TZI3t0SPqiVeCmeQujXcT/5V0k=", "btn_gray": "data:image/webp;base64,UklGRlABAABXRUJQVlA4TEMBAAAvIkAEELegKrKVijeoISSBoS3J562hNpKtBA0hhNSd/uuhBIbUvuJIUqKF4gmeL4tEDNJUNYFz/kOEZi6OJBvIMZ+pq48rnbSrfCw3b2u5mR0QEADQRwBAHwCEstnTi82fgwFiJNttGwnhgxkMENh/rYBkuoN3Ef2fgLvr0T8Dw+if7uGwub7cG1CXH+V782SEOk/fx+nHMfhb4m01WBqeTRX5W5Qahs/TS6o4jxtt+MDSX9uLbpaK1eAx6bOw7dKyQhaXhHILp43RY2Na9k3S2gFduX+wnqn2tl1au1dmy9IBEogfziPrUpau3IWTVipfKAeQaZv9OAWSihSiPBrjcOpAqAVJoLYozRY8r4oN5ZTKqXJKTdEpFSkZvP2Nq0RLjxrJmPC3cPX72AIIAcQgOX9LuBhiiAqKfwwxCM/d8q+SAAA=", "btn_green": "data:image/webp;base64,UklGRloBAABXRUJQVlA4TE4BAAAvIkAEELegJpKt5mdiT8VgAv89KlCAgmhDaSRbzfuf6GIFWBz9N0MNGRQK2khS7u75Xbx/ccw4/+G9vaWW3ZdWEYrAEdX2ZKBbra6EZh+VBOgDEMSHAMDgfxSdULIzUjK7t95kgBhJctyGxv8LAAUw/1gPUskZ7Eb0fwKeoybxvyTjvPjjE9Xl7nL9Wp/u6aPb798uow8+OUa5vgUBIGwq/YDvruL99cR9nAD8ptK8Upw3MPvn9iKBVggw2W00gzV3/zzYgBfaOZfkl9UMK8zDkK0SspCZQPL7VMRoojKzYlRZkJNfp9RHH+cqR5WDBfDbamK51KWocpCsHAQQnT0gpkMfzJUcMoMAYrhp9MNNF1PJwCuhgZWZCSAi4Ilw6Ydq0zp65+nov3X0LgKT+gFV2B/XeS+5SWeUU/oBqIw1gDWwZ2OlgTX403wk/xUA", "btn_orange": "data:image/webp;base64,UklGRkoBAABXRUJQVlA4TD4BAAAvIkAEELegNJKk6F7UOX4U5B8gCjYNRZEkNXsHz3uRkwA04N9MskCdgjaSlL17Zg3v3x/T/AdL7PaLIiVtYnjit+20N7eRi7m9v7rjJLQOACgQfwIgEAYw4P4nv2pJYXAY21acGHaQ7Jj0XyvoxA7ejej/BNxDi/4MZPH0CDOFrNf0sO2YruyCyvX5Ln5Mxg5CNi4/HBLG3iLL6Hr6ncBYXA66+Jzj4zy2X9VCcpbg3XVq4ziP4XkA6iS1mLwlpHxuVA5Bp26n7mzwpcTzqHPd6QBpH8/b+sNcZ2CncjBX9n4G1vaNNsO6zdRj3mdgZ4ZVaipeXVJpaz/vLNTBurS1SSVcwVleCV+a1qUtTfu8rJLauMSQmeyNSfgQn1VWeDt7CxNJEBOUcVSfwMkIe0sYN/TOj53vnSQmy93zV0k=", "btn_purple": "data:image/webp;base64,UklGRiwBAABXRUJQVlA4TCABAAAvIkAEEJ+gKJKk5nLgmXnhAf+ecIAPtY0kNe//sZEL6YD+mwMxDQAgDdbcMo3MA1zOH/zhMgnzH9xZz0QYVc4vxlFfJNtbdzpQPUmoOvaDLxogRAAgQoAAIrB3cXtmgBhJctzGeH0SwAO//JMFSdMZ7ET0fwLOywj6X8AI8eUrgtJhP2/Hq0PZxPEQPSTFi2yp1N93ZaR4CiN9dm3vtmqEiIzPtgM+JK2S0EJ3abhasRSxxL7BuJ4k+W2vliPF6ubDpZVx7xoX/UFfHHji9zeaLockH/Knvd2UzgJ98eEdSRqu4RLwLflC37722QWgeTC3euQUT4zyaR2a9zbNrUODmk0hngQjl/quDI4cTxGyvS4lhXhKhPzXpHsinDP/KUk=", "btn_rose": "data:image/webp;base64,UklGRj4BAABXRUJQVlA4TDEBAAAvIkAEEK+gNJKk6PbUD3giQJJ/VEjUpqE0kiTl2D1IcOQ+/8xe7lcpjSQpum/UOXB48s+KGH5q/kNTBisqvMJsq/ksfHobO9X50+vXbEWMjgwGwAokhBRYfDwXw34wQLBtq2qTVP5aeEh1/nMVbTKDcyP6PwHn1KEvAxn36RnLTz54/ffNa+ouvI8cUPl7uPJQ3k1ClnhYMmWeiYXFneLIgUP7Z39TYXGELA7tYEL0NjeporbF4h0KfgdMoC67dEO7VGGkEh0qabcGXYboRr+auglGKt4R11RbpYEJ1OdGF4wHrU66TDcYFXgQRwVabV0Y0w6VAZtn4jXqvNXbzqgDtnhk704KcR2Vcb0Z021NIevtTnwhKn00KhOO4E6xxHK7in8GeS3ulFj8F+U4r3xVEgA=", "close": "data:image/webp;base64,UklGRgABAABXRUJQVlA4TPQAAAAvDsADEK/AJgCANLi7l4BI9H9l68KgkSRFx8z4YIJ1vObXRVEbyVbyP+45dVAKFVA+IZHL/AfUNmaUiog9ixooQxU4LjR/TBAUM0YYIj3/36WZK94aPDp3tWJjz2IuidfBvjIwjGSrifoI/8sP5P57hSIi+q+2bRvGTs+mM/beAPbta4pt4fjKVldbbv4HXGoxsYiIZeyNdyV3M1PShI1k7r2o95LlA4pYn73OWYUCXmctY87pLJTwehapc450y1hPzi6SEyCsfXYeszJ9QFQqTvI7pdbCBksmOd9VFza+rHzcVls47EIiorBCq7hhPs9zWEYA", "ic_coin": "data:image/webp;base64,UklGRtwBAABXRUJQVlA4TM8BAAAvHsAHEJfAIACAJHR35wP9v8cRflEV2VbycPl0JwFd6B+CBqY2kq3kKxZ/WqEZ+s80IrL5DwAaMyEGKPpy09trW9jwsVxiYGze/HEQAqn0s/8k3z4eU1QKNFSAYNtK2Gga/SAKgun+N6sknSVE9F+R27aNHAMZ7Wk94vuukvX9p0q5snLj93qiuNcym7V+fiblorjvex1UJ9W/8u56HzXa2qg2fMqbKWVtThUBeYqrvOfup7bRheGqzjve3E56FnURgakCNVE+cd+cVk9v7cCk2pHXlLaiZUeEs5xo6uCa8OWyVrKqvECJQit4rjXjDlWHJFi14SwubXkz2zZTHc7CREy24auUay3q5rGSxxD47CAbDGzqRiUiMr27DmY66/hghuHhLftIIKzKwAMJm/OFARFSbS90sce8jy0IuzoyatylJZ/gMZhfMfMTI0kA2rQ0ycehmy7gPjrAwgCFan3BSHoXoTGQjypM8bgpBV0b5AhA9rRWn/y1MRofRFiEW4QFAfV5C0ff8diFiLnNqFf5PqL3rpNpK2UBnIN8ewG9D9U5T2bTmYHsZ9pEs9zBIqjl1+urnAVw2vGPd11xxFyv61+vv3ySrtfsf7/Gj+wLAA==", "ic_drop": "data:image/webp;base64,UklGRm4BAABXRUJQVlA4TGIBAAAvF8AHEJ+gIACAItvmmv4v6ZDiSJKSE+znEgApeP5B8aJQ0EaScs/MDIrev5M3MP8BQESIBBEUZTXZvfvcN6kvSGKSFZyRlCR44LDGAANatS++3S7RC3I0OIxtpY424gP/Bk3/xUZ0U0JE/xm4bdvIrqDb+z7xHEv0fCtdF32EPX0DCZ8GQeMn0e9WxqsvbgL2P/qHH1oCAEd/cKqtRry66HxEHX30EgHxdOR+mb0UBtjReaMxtdUaGXJYRE5fptZaswDR0cY9dNqUCDAcnZbN0ds7Ehtt7suttSVGZEfW1WIkQDLBaHWMfo53RG5o6WtqmxFBzCYlDe1bUngjNjHN2U8W2RO3NGMJW0IopdTlvEg92SSOMabSsl3bTR7yyhxshVl0luzJvK3MLDv3nGX5WUrMAPNiDOslaI6yCE21JewvmLzPJb0trWT2xw/lcqnWmnOCc+e/hsht/f8vkelh6gE=", "ic_gear": "data:image/webp;base64,UklGRhgCAABXRUJQVlA4TAsCAAAvH8AHEJegoJGk5nulSEAF/jWBGkWRJDUXyRnkUPgXwRsFCFATSYrEDxkmKETgXwUqiO+S+Q8ATwzmCqyPD8fj80Y2pVObnjWnsIDCqg6qvJt3/IfeP3cXg8TYtuO2iYAPfOwEyP6r1RKX8G5E/yfg+T1+1N/jUDzEP+Pc0qqe4gP8ByAxYVFzigRekV8whci/MddQtRTtWjWH+A2/bkzX0kTgdq2pmkP8hN1LOvcaYtKle02E52/Xep99VEl9sgBayhbfeI032rklba+TvmZLpvBBpCWNekvXvjl4HXMkSyE+n0lrtvuwKafscrzNlSzE59tZ47rPpsAu7JNHrzlFPoCvcd2bEjBpA6qtJnsp8ohymO3ah2DiJdtQfCzp9hwirrmohWNBRHidfbA+epsZi/gaVN3aphAfiXPtYrWpj0x4m4x6l2P+pRjqjPZt0Oq1cXvD9qGo9dGVsUhwatMGTCHC2QdPVUlSDvEh4L1qU7Zb0NlQgrdqChAfCV5VOl42t3R2OZ5qT7IIz0e8Ny8bOBQw1daThfh8xleTKAe8YJJ3GFlfeF29iarsBTfl2kdTX9nil06Doeo5QW0aXaimHOKbyIOeqZ1Wm1SdPrqSLD6fyd2ThTRabT2Z5KMmKT7fMaUQX7NJJAuvmBOKz68AYjQ6SSE+vMTz/3iVyIT4CPSXhHeLz9/zUb8DAA==", "ic_heart": "data:image/webp;base64,UklGRpABAABXRUJQVlA4TIQBAAAvHwAHEJegNpKt5GORu6Sk1EH/fVCCt6Emkq3m/dQHkh704gcXtJSgKJKk5nIgK8AGDvDvhR+v+Q8ARBawEz6Kv451P7Kf/ps5FxeDEhFg6jPMGAUhIPSgVrdBlwFiJMlxGxP/Swp0/skSC1DKYDei/wrbtm0cGzDq7vaKfyiLxf0uuCsdWEK3bGKrWCWl8GfnJgxsIm4oEz9DV8tBhxWjhtRKCsYu0jlu6kxyxsp8hqSemYwspu2eNa7yUG3cVJdqUjgspoDrbDWFOnVNZOfnOU1F6SR7Tm2Al2pyDAaAflbN12DXKak4v6D1e1wIcl2gJE/nFwxd50v1uke9+IpWkttARU39RXOWFfGB2HeUSuYU/WHhXQrJulI1M3mS8C6UQZCb2TBlBhCa8rRS61UE77T9GA+gihrXVDJ2++8SgJmQck252FBLTtM4Qpoh3TI+EEmP6Ua7sCRHLbNB+s6cHLQpm532AzJ2wvQrKqcp8N9RQY/d+i8GBE9N/wPJn0RKehMB", "ic_home": "data:image/webp;base64,UklGRuABAABXRUJQVlA4TNQBAAAvH8AGEJegJgBAxr68rr3rKCWaUJsabAIAaMLecM0A64U4NCcAaAa9FEWS1Fy+A1ygCyOo5p2Z/2Ak5/FDDolPwapGn94Q3DNnC7KX/ap/svIDMKskiaSgl6Hmpq0ODgMAaZuioDIj9P9rTTo+iOi/ArdtlIyO+T7x/iBw5P2HgLu7Hv1xFsiMcIQ3AO3V4CfStQPoXoN+wt0V+y1FNBB+4Li9B9GYY46vSTgor0FjzjWJBnxJWXn4psFrzpMak+CT2XWZ+WZsvBfRnHPQIPiIlW9qXZDXOjbm+KBwmZUvQkVWWnuOo7fKZ1ntRRgpLO6817HTqsENO9bEQ0QjZa0xz/DtbnWZLEJxFhFhFuLb1eHj6KGst+Z5k3B318UN8RPVuwQzb89bcGwNBfHZ7dUapzdCTNm8MQk1NiI8gr7aziAXSd9+SYqqb8RHQ2VscnBJvyIlWSUYrZ6IcLiySMrlG5MVUe2q6vAGU27E7sQk6aqiKepaZlXHTJlEVJBF3CMiUtC6Ve8ndrMqJHURRUZDF/VudbhlLjsSmRkoSCSI2quqV69bE7SKCHevKjMjLDSrk3icO+g9bRkel1V4Ve8ffx8AoHYAdwTrAD99YQC4t/s23hs=", "ic_pond": "data:image/webp;base64,UklGRtYBAABXRUJQVlA4TMkBAAAvH0AGEJegNpKtJPuCu2Y/onxaY2iGcQAAhepnm6u1amvhwDYAgCR0N5zG/1OD+oDL/Ach03KAoAaKwgerD/AbVxATwe8ZZ4/AGav/n7C3g5u7GJyVJENiAQi2rYSNIggKTvKB7n+z1Um3ENF/BW7bKOl2zPCJz5vamz6nfpWYr0Pu9rugNYuoylgrIivDx3uiWVYuVWVVVfOVmYvbi0elMRNRl0PDPDOt/fOsYBY8zyOYgEDGsLXtf5ppp577eeacPmWKjJWhbVM16OQBxKqi5IaMDP/SvIoEc6eeB1SVWSGArFwbqxwApgiJiNdXGSSgdQajKgg3cM8dRVamyc7k2GhWrQ65pW+AwQJgRFpvx1hZFQZAnnMwEsDz63ywMqoqfZDc27uMyIzBTAeeKzN3Qa7la2VlLmNmvXYx+C8y4qg6RwlXZWbuR4wbK2J5+PGkzPQQs1I7HVgb+884nDtx+7QO3PT6JPWIOpMQ2zZgDla3deS+GsrMEJDoQVY43zA3dxtnekIApuuLZy5XCPRoMbRDeCogg493E2F6AyBW7cosIpnOInQdQ6mpzhtwumjrmrZc+eqtvf036MXtRcr082v9+o0vi/gAAA==", "ic_quest": "data:image/webp;base64,UklGRtQBAABXRUJQVlA4TMcBAAAvHcAHEJegJpKkqO6iu+h/Qgoj+LeBBVKMKIokqSG/cs5gAf8O8HACkKE0kq3mf7J7FfwKUFRE/waX4/wHkBD559N6/kpnVNVcAo2Nb1AfKgGfYoRYLtouESoOZP9VFwYDxEi22zbmxwdAgAgM/VebrBLeRfR/Aq7fGujnQALjR/wtqfVWF/sJacxeywbRfsDSx5QoecXtG0ikMTUklQzfcHFR50NXitntDdZtddOYGlKH5vEDYd12jqXMl0aO4YPv2w6hTw0JGrW4XW/h1H5IqfQhaFXavgg//Thr20rtNN3DFxFcbd2A0qqkHOz6iO/kRt8gVqn4n10fWYrWvDU2WsyVYFzvkPoUsa0ba/Ms43qH1MfUUM0btByw6yNe+5g3SlxR8BPjhdiHpoYkWgk4pw4FeymKqT5R/NRtP9xueI4qKQ91aMWPU+Fgh2i3mFODNXcatfgpBd/vp91Ukuct01tVWY4T/2PnOP225OLEtKpR5XYe7IuO/TQuSaScIl5zasrGucNi4XC7HjxDUolq1Z/cOMOTiBkoHlu2i7jDaRfolZglj0WLXeSnz3jKkBa7WHaOXf8QuATX7TT9SwKkm3OBfg76DgA=", "ic_tank": "data:image/webp;base64,UklGRvIBAABXRUJQVlA4TOUBAAAvHsAHEJegNrKVCIghJULNro6tytCxDqO7DzYBAKTB3SLwW1SKUcRZgR2KIklqjpzzEzF4RBBK0BAFUPMfBGX1FlAKn1JC9b+CgRPiZzKbaUnYiLCR+nRLtX8YZ9pdWmOrrTNAjG0raCQEkP8R+B/7rzZodjt4L6L/E3A/hu391wFSjWT48Smwt8pGLlytk1QIEMMmQFptpZ7hfVuQcAPBei1sleXpBhCw9CuM1cjKT8olAfgAAcBCqJveuEhcQP9WCE6uRmKz+La2b1xAA+qm16+rcYEkayMJQMtDWzxZMoCTrL2R12pnflW1ZIhnFJJnYa94w6oo2a6UgYKzEO/qpZD6GZaBImdm4bumJ4Q2wOxz9LIrT1UBlyHJ5sAcLD9RAVGfA1hj0ob+ktSnqPQ11sDEyD+owEH7pLGAbuOXcroSQqQ8RxrGnlnTi1OdAoIpJ8kpA+mqyE/FleTUxImYU7bES53pIcOHOaNhevz4R1z7q2LTSQJAJN0c6Cpu527A6LQJxm9A5VK3UXdzANOckR49wtTZIajNYrhDd0aaG0nBHJgc6LRWPTLABEM6AaPvjei1nZE8Asy3RlIwRCEAerPII+AOJA9w63sjBZFHuAGE9we3Hj0G3H8Y9iSPcP9jAHBvAQA=", "ic_town": "data:image/webp;base64,UklGRuQBAABXRUJQVlA4TNcBAAAvH4AGEJfAIADAMrPtBmfe13sGZ2EbyVYbvPdUAR3QApGvXz0o0ihSENs29Bf7ThkR1NZAAAGk8Gf+Q+jcOCStIqvorNEwM9TL7/dWTRYxnmH6lr9fe56Ou53/gcdzNRSDZYAY2W7cJiB4ExBhqf9qr0kJ/0f0fwKuZ/l4/a8crxtyyeM32W/An/xGkBQAL3J83X8/ngQJQuVB9pdd8vn+eyu1M4CsG8gnfi9KykOf5jS3MOzg736S7PlBaqctkh6lpzw6C8mgViSVC2Kz2jpAxoAWIzmA7tGZ5AIkB81pTtShHU6aMyyyPvFYbZYOZkKju43ZPEjNN9nLly9fvnxBYzht0qNHaQ/LF33RuXhsjT7uFmQjk1xyOBYdBIEU5kY/OXhq475pInMhWHfS041ubm4fakaMrm3qUfV0GEE6IjWmh+gxkBsDm8oEzSXXSPc/uaRHb9ZZ2lyt59A5Ss1lKzOTXBDlsUiCJGsOzgWCXSPrTnJJezz2QSIHSUVCr8HGREFuwARQMXrL1Bj3To1EygUZoX0i12mobMq4Y+QBahJMGyTnY0FPeXaSIxJCWQR9AjDSzWkE3Zw2ENWiQC7Iay2dnACMdHuscn2VzwWdnFWuf5fnCwAA", "panel": "data:image/webp;base64,UklGRrICAABXRUJQVlA4TKUCAAAvKMAJELegqJEkZXb3mNnAvc/sqVcTyVbzPjmH8lcIYDCBMORS4QE1AYA0bHB/XtYxhv1/CzD/ITmyCZHT/o2aX+jkPKK22r1pA8R7DF5e2O66HE0KAUAEACAAgQCQ/nkMEmTbitsomtBkEGAj73+tkp10r+DeiP5PwPt+UP5LDfs5+GeqF7UL2xnsh7/uR7rhjd1G4DScYQFn+bw4L+q0u07d8PZcYQy9TOt159sFQObFy7TOy9SfjtOfr/My/wwG52UatyD71yzut0z9vMxjN3hqOMP+iH/+2Ebohrf9GTzdY+JIFHK5HqiSiPqY1qkf3oYzOJ2PdBRJmmsTAdGSjqjbOl9Og1s0HblahAsCr2e1pCN9GgPsMeWSLbYKiMDzRcXyBU4ze8x3WhtA5tpEvznXy2Exl6wVaIBcLb9Kl9tKA7JNwHL8TS71Nqs0UDziF+NdqdBAQOQG8YjbcjddjtLq1QtyL3DEbbqb12lPxQoNpKgoTUU94rbenZd2eVYwW8xaGqhymbYw3MVWP+aitkwTBcvltP9Ur/kicIHSFFPc1vBNroXPjdwUVDjuwvB2vtFLM9tQRBFKvIy9n0o6cm1ILrnJHZDTEbd17oc3zsu0xyMd2doEMg1fVgXzkb4Y52mP6SDXL6XxoqLZFBcvduGc9uhBqfCs5BvgyYtWc3RZb07DuMd0RxPICE9e1PY8Utzuws2R8g1NAeQJFUyfcGTaYzrIpVXll5riF/My7dHEkUttfMxqgRaTLvMZuuHGqIlWWn3y+pA4SBEfW3icXqaZfo+a5GsBRfdT7Yc3hn2dx+3x55wGT7vBfl9cx3m7V75eNDzOcGIY7NdlZlxcEZxduFVAPQ2j56Wb1mXup9+PTLcqjDq8/elHf/5tpz/DG/w/AQA=", "tag": "data:image/webp;base64,UklGRsQBAABXRUJQVlA4TLgBAAAvLMAEEL/AKJIkRb3MeHcGmP0ru/fYYBtJkpp9ZjLFzPmnJlNSGslW8zNJZYulBPovCsmf/wCgqqZWvvgJ6tAsHPXqf594oByC0xbbc3xlm5bLkkrAAAhADABwIIgAGJD+FwPE2raaSkNGDCiiY/+t6k8dnBvR/wm4Xrrf8qHkAyTe9EG86Z3e0l8ZP0XvD9a9IT8WopTitzN490JmVCrT/8L87ZIGrHsRxzz9w6nKscOqyk6FnQp7ZZnSoCeZcSj/p7bKuvfWW4fWd2jQ93udxzxYpwvJlDwvddW+re187jS67m1fq5Yp5liCk4WcFuraoJ93Wr9t3LRKWuYYxmKdwliCn29942w6NvXWReunpAb7Wm9gnGwhMFeOtnWapC61o7d+So1OY1tmxQLBXbIBjctxblKHQ5vgYHu5Skedp0AJxl0yoQQ7HvXcpNbVOtC0apPWCguzVAIYdyE/FkKc6kLf1rYDfUeqLHOFRUJTigV7CwUfGGctHwoJIUlTTL4Qbsbic1Icvz/4PHgD7gJJ1g+QxdvipQCScdL1LONTTspK+f0BSSkreeOudyVj7+jLTteH+i0vAQ=="};
@@ -4020,7 +4020,7 @@ const MENU76_ITEMS=()=>{const r=S.room2,f=(r&&r.cur)||'f1',m=lightMode(),sm=S.op
  f==='f1'&&(typeof gardenOn88!=='function'||gardenOn88())?['🌳 '+(isYard()?'กลับแต่งในบ้าน':'แต่งสวนหน้าบ้าน'),()=>{MENU76=false;R2.yard=!isYard();R2.edit=true;R2.sel=null;r2apply52()}]:null,
  ['✨ เปลี่ยน Mood บ้าน',()=>{MENU76=false;MOODUI={first:false,pick:null}}],
  [clockLabel120()+' (ตามเวลาจริง)',()=>{say(clockSay120())}],
- koiMenu77(),['👕 แต่งตัวละคร',()=>{MENU76=false;if(typeof maker143==='function')maker143()}],['📷 ดูบ้านเต็มจอ',()=>{MENU76=false;R2.z=fitZoom74();clampCam74()}]].filter(Boolean)};
+ koiMenu77(),['📷 ดูบ้านเต็มจอ',()=>{MENU76=false;R2.z=fitZoom74();clampCam74()}]].filter(Boolean)};
 function homeUI76(){const r=S.room2,h=home70(),f=r.cur||'f1';
  // floor switcher (only floors you own) + menu button
  const own=FLOOR_ORDER.filter(k=>h.own[k]);let x0=VW74-VOX74-24;
@@ -9564,7 +9564,7 @@ const PL129={
   { "id": "a", "n": "ผ้ากันเปื้อนฟ้า" },
   { "id": "b", "n": "เสื้อกั๊กเขียว" }
  ],
- "speedRoom": 3.2, "speedTown": 340, "roomH": 42, "townH": 46, "frameMs": 140, "wander": [7, 14],
+ "speedRoom": 3.2, "speedTown": 240, "roomH": 38, "townH": 32, "frameMs": 140, "wander": [7, 14],
  "town": {
   "start": "H",
   "nodes": { "H": [1262, 262], "h1": [1165, 302], "h2": [1092, 362], "h3": [1040, 440], "E": [962, 500], "C": [936, 488], "L": [1148, 474],
@@ -9667,8 +9667,8 @@ dTown=(function(prev){return function(){const r=prev();try{if(!townOk129())retur
 // 5. The Pet & Care adopt screen is redrawn: the new pets with their coats, and the shop's goods as cards with pictures.
 const P130={
  "_note": "V1.30 the pets, redrawn and living in the decorated home (owner, 28 Oct 2026: 'หมา แมวที่ Adopt มา วาดใหม่ทั้งหมด'). Before V1.30 the adopted dog and cat were drawn with code and only walked in the old home view, so in the current home they did not show at all. Art: client/build/art/art130.py (ChatGPT sheets from the owner's account). hd = frame height in HD px (room x3), roomH = height in room px, speed = floor tiles per second. recolour = how each shop coat (same order as the shop's colour picker) is made from the drawn coat (null = as drawn). Items are room pieces (footprint w x d tiles, catalogue tab ของตกแต่ง, so the tabs stay two rows); the food bag is the shop icon. Behaviour: hungry (≥ 60) and a bowl with food in the room → walks to it and eats; night or tired → sleeps (on a pet bed if there is one); sometimes plays with a toy ball; otherwise wanders and sits. Tap a pet: feeds it from the pet food you have when it is hungry, otherwise pets it (hearts).",
- "dog": { "hd": 66, "roomH": 22, "speed": 1.5, "recolour": [null, "white", "black", "gray"] },
- "cat": { "hd": 66, "roomH": 19, "speed": 1.2, "recolour": ["black", null, "white", "gray"] },
+ "dog": { "hd": 66, "roomH": 20, "speed": 1.5, "recolour": [null, "white", "black", "gray"] },
+ "cat": { "hd": 66, "roomH": 17, "speed": 1.2, "recolour": ["black", null, "white", "gray"] },
  "items": [
   { "id": "pet_bed", "n": "เบาะนอนสัตว์เลี้ยง", "price": 160, "w": 1, "d": 1, "flat": true, "kind": "bed" },
   { "id": "pet_bowl", "n": "ชามอาหารสัตว์เลี้ยง", "price": 80, "w": 0.5, "d": 0.5, "flat": true, "kind": "bowl", "fill": 1.3 },
@@ -9842,7 +9842,7 @@ function townPeople131(){const now=T0,dt=Math.min(.05,Math.max(0,now-(TP131.t||n
  P.push({k:'cat',u:C.a[0]+(C.b[0]-C.a[0])*ct,v:C.a[1]+(C.b[1]-C.a[1])*ct-Math.abs(Math.sin(C.t*37.5))*1.6*Math.abs(Math.cos(C.t)),fl:Math.cos(C.t)>0,i:99});
  P.sort((a,b)=>a.v-b.v);const tf=x.getTransform();TP131.boxes=[];
  for(const p of P){const lo=TOWN83.npc[p.k];if(!lo||!lo.width)continue;const hop=TP131.hop[p.k]>0?Math.sin((1-TP131.hop[p.k]/T.hop)*Math.PI)*8:0;if(TP131.hop[p.k]>0)TP131.hop[p.k]-=dt;
-  const dw=Math.max(1,Math.round(lo.width*tf.a)),dh=Math.max(1,Math.round(lo.height*tf.d)),dx=Math.round(tf.a*p.u+tf.e),dy=Math.round(tf.d*(p.v-hop)+tf.f),sy=Math.round(tf.d*p.v+tf.f);
+  const k146=typeof SC146!=='undefined'?SC146.town.npcK:1,dw=Math.max(1,Math.round(lo.width*tf.a*k146)),dh=Math.max(1,Math.round(lo.height*tf.d*k146)),dx=Math.round(tf.a*p.u+tf.e),dy=Math.round(tf.d*(p.v-hop)+tf.f),sy=Math.round(tf.d*p.v+tf.f);
   x.save();x.setTransform({a:1,b:0,c:0,d:1,e:0,f:0});/* device pixels (the number form is scaled by the phone wrapper) */x.globalAlpha=.25;x.fillStyle='#000';x.beginPath();x.ellipse(dx,sy,dw*.32,3*tf.d,0,0,6.283);x.fill();x.globalAlpha=1;
   const im=tpSized131(p.k,dw,dh);if(im){if(p.fl){x.translate(dx,0);x.scale(-1,1);x.drawImage(im,-Math.round(dw/2),dy-dh)}else x.drawImage(im,dx-Math.round(dw/2),dy-dh)}x.restore();
   const H_=typeof HDS74==='number'&&HDS74||1,VO=typeof VOX74==='number'?VOX74:0;TP131.boxes.push({k:p.k,a:(dx-dw*.28)/H_-VO,b:(dy-dh*.9)/H_,w:dw*.56/H_,h:dh*.9/H_})/* the body only, so two people side by side do not share a tap */}}
@@ -10192,7 +10192,7 @@ startCard87=(function(prev){return function(k,x0,y0,w,h){if(k!=='half')return pr
 const TG135={"_note": "made by client/build/art/town135.py from town135_shape.json \u2014 do not edit by hand", "cell": 4, "w": 384, "h": 256, "rows": ["384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "294,2,88", "294,2,14,6,68", "291,5,10,15,63", "287,9,5,25,58", "287,9,1,34,53", "288,49,47", "289,1,3,49,42", "293,54,37", "279,3,4,66,32", "278,80,26", "181,2,96,81,24", "179,6,95,79,25", "175,10,98,74,27", "175,10,98,73,28", "177,8,98,72,29", "178,8,98,70,30", "178,9,98,67,32", "178,9,98,17,7,42,33", "177,9,99,15,84", "175,9,99,15,86", "156,3,15,10,99,12,89", "156,2,13,13,99,10,91", "156,2,11,15,15,1,81,11,92", "156,2,9,4,7,8,13,1,80,10,94", "153,6,6,6,12,5,11,1,79,10,95", "154,16,15,5,8,2,78,10,96", "155,14,16,7,6,2,77,10,97", "159,10,17,14,76,10,98", "159,9,19,13,74,10,100", "160,8,19,13,73,10,101", "162,6,23,9,71,11,102", "164,5,23,10,68,11,103", "166,6,22,10,65,10,105", "169,3,25,9,6,3,54,9,106", "198,17,53,9,107", "199,12,56,9,108", "200,11,56,9,108", "200,11,55,9,109", "83,2,95,2,17,12,54,9,110", "85,2,93,4,13,13,55,9,110", "85,4,91,12,4,9,59,9,111", "85,4,91,25,58,9,112", "86,5,6,2,85,21,58,9,112", "86,4,7,2,10,2,73,21,57,9,113", "86,3,8,4,7,3,73,21,56,9,114", "88,1,8,7,4,5,71,20,57,9,114", "88,17,3,7,69,19,17,1,39,9,115", "88,28,68,10,7,2,13,6,37,9,116", "88,31,15,2,48,9,23,6,37,9,116", "87,12,4,19,12,5,44,8,25,7,35,9,117", "88,8,9,18,10,7,43,8,25,8,33,9,118", "90,5,13,15,10,9,35,3,3,8,13,6,6,6,35,9,118", "91,2,16,14,10,14,1,3,26,13,15,5,6,3,37,13,115", "109,15,9,19,25,13,15,12,37,18,112", "113,13,5,25,20,14,15,11,37,22,109", "113,48,12,8,4,5,16,10,36,26,106", "119,47,6,8,26,10,34,31,103", "119,61,28,8,33,11,4,25,95", "119,59,31,7,32,10,9,23,94", "119,19,6,37,28,7,9,4,18,10,13,21,93", "119,17,11,5,2,28,27,10,5,7,14,11,17,18,93", "119,16,13,35,26,28,7,10,22,16,92", "119,15,14,35,29,26,5,10,18,21,92", "119,14,17,17,2,15,29,25,3,11,7,3,9,20,93", "116,11,3,3,18,15,5,13,29,38,6,4,11,19,93", "116,10,4,3,18,13,8,11,30,36,6,6,11,17,95", "110,14,28,12,9,10,31,34,5,7,11,16,97", "110,10,32,12,9,11,30,33,3,10,11,15,98", "110,10,32,12,10,10,29,45,13,13,100", "104,2,4,7,35,12,11,9,21,51,15,11,102", "104,9,39,14,10,9,13,57,17,9,103", "104,9,39,3,3,13,5,9,5,64,19,10,101", "104,9,46,12,6,55,6,4,3,8,23,9,99", "101,5,4,1,55,6,5,51,20,5,25,12,94", "99,6,61,51,1,10,21,4,26,13,92", "97,7,62,43,4,2,3,10,21,6,24,14,91", "96,8,63,34,11,15,23,7,23,5,5,4,90", "94,3,71,26,15,13,30,10,19,3,9,3,88", "90,6,70,22,19,9,3,3,30,10,19,3,9,2,89", "33,1,55,6,68,26,15,12,36,10,19,3,100", "31,5,50,9,65,31,8,16,38,10,18,3,100", "33,6,44,11,63,55,43,7,20,3,99", "35,6,41,10,62,19,3,35,46,4,22,2,99", "37,5,40,4,65,20,5,32,176", "39,6,33,7,62,21,14,23,179", "41,6,28,10,59,21,17,2,1,17,182", "43,5,26,9,58,21,21,1,2,8,3,5,182", "43,7,23,5,60,21,27,9,2,4,183", "43,8,18,8,57,22,31,10,1,3,183", "43,8,16,9,55,22,31,14,186", "46,5,14,10,53,21,33,18,184", "46,5,12,7,56,20,33,23,182", "46,7,6,11,53,20,33,27,181", "47,21,52,20,35,30,179", "48,2,4,13,51,18,41,29,178", "55,11,49,18,45,30,176", "58,8,22,1,23,18,49,31,174", "58,9,21,2,17,20,53,31,173", "61,7,20,2,10,25,56,32,171", "64,7,17,2,5,27,61,32,169", "65,8,14,3,3,26,68,29,168", "67,11,9,3,1,26,74,28,165", "67,11,9,30,78,26,163", "71,7,9,30,82,24,161", "71,8,5,32,87,22,159", "71,9,3,31,91,7,1,14,157", "71,9,3,31,91,8,1,16,154", "71,9,3,32,95,5,2,15,152", "71,9,4,31,95,6,3,15,150", "71,10,4,31,95,7,3,15,148", "72,9,5,17,5,8,95,8,4,15,146", "72,9,5,17,3,11,95,9,4,19,140", "72,9,4,10,2,6,3,11,98,9,4,17,139", "73,9,2,10,4,20,97,11,4,16,138", "73,9,1,10,5,20,99,11,4,14,138", "73,19,8,4,5,11,100,10,4,13,137", "74,16,10,4,6,13,97,13,3,11,137", "74,15,12,3,7,15,94,13,3,10,138", "74,14,14,2,7,18,32,3,56,27,137", "75,12,16,1,8,20,25,8,49,3,3,1,5,18,2,2,136", "75,10,18,1,8,22,20,13,47,7,8,14,3,3,135", "74,10,29,23,14,19,49,3,10,12,3,3,135", "74,10,32,22,9,23,48,2,13,15,136", "73,10,36,22,4,27,47,1,15,13,136", "73,10,39,21,2,29,63,11,136", "72,10,43,50,63,12,134", "72,10,46,47,72,5,4,2,126", "71,10,49,45,73,10,62,5,59", "71,10,52,42,75,8,59,9,58", "70,10,55,40,75,8,56,13,57", "70,10,57,37,76,10,53,14,57", "69,10,61,34,77,10,49,17,57", "69,10,63,32,79,8,47,19,57", "36,4,28,10,65,31,80,7,45,20,58", "34,8,25,10,68,29,80,7,42,22,59", "33,11,22,11,69,27,81,9,38,23,60", "33,14,18,11,72,26,81,12,31,23,63", "33,16,15,12,74,27,80,13,26,23,65", "33,18,11,13,76,28,79,15,21,23,67", "33,20,8,14,78,11,1,17,78,16,15,23,70", "33,23,4,13,82,2,8,20,76,18,10,23,72", "34,24,1,12,94,23,73,22,3,23,75", "35,35,95,25,71,46,77", "37,31,98,27,69,43,79", "39,28,100,29,67,39,82", "42,25,101,31,67,34,84", "44,25,102,30,68,29,86", "46,25,103,29,69,23,89", "48,26,103,29,70,17,91", "51,25,103,29,71,11,94", "53,25,104,28,72,8,94", "55,25,105,28,69,8,94", "57,26,105,27,67,8,94", "60,25,105,27,66,8,93", "62,24,107,26,64,8,93", "64,23,109,23,63,9,93", "66,21,111,22,60,11,93", "69,19,113,19,59,12,93", "71,17,115,17,59,12,93", "73,14,118,15,60,1,3,8,92", "75,12,121,12,60,1,3,9,91", "78,8,124,9,66,9,90", "80,5,127,6,72,7,87", "293,7,84", "293,9,82", "296,7,81", "297,9,78", "300,7,77", "303,2,79", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384", "384"]},TC135={
  "_note": "V1.35 Stardew-style town (owner, 3 Nov 2026: 'เดินในเมืองยังกดเดินเองอยู่เลย ซูมเข้าแล้วเดินทั่วเมืองหน่อยให้อารมณ์คล้าย Stardew Valley'). The camera is zoomed in and follows your character; you walk yourself: on a phone drag anywhere (a joystick appears where the finger went down), on a computer WASD or the arrow keys. A tap still walks to the tapped spot (a sign: walks to its door and goes in). Near a door a big button 'เข้า …' appears (E / Enter / Space on a computer). zooms = game px per town-picture px for − / +, zoom = the starting step. speed = town px per second, stride = town px per walk frame, joyR = joystick radius in game px, door = how near a door (town px) the button appears, follow = how fast the camera catches up (per second), feet = town px around the feet that must be street.",
  "zooms": [1.5, 2.0, 2.6],
- "zoom": 1,
+ "zoom": 0,
  "speed": 150,
  "stride": 10,
  "joyR": 70,
@@ -11111,7 +11111,7 @@ function house142(keepOld){const h=home70();h.big142=1;r2apply52();const inv=S.r
 applyStart87=(function(prev){return function(kind){const r=prev.apply(this,arguments);try{if(kind==='half'){house142(false);if(/^ปลูก/.test(toast||''))toast='บ้านใหญ่แบ่งห้องพร้อมแล้ว · มี '+S.player.gold.toLocaleString()+' G ซื้อปลาที่เมือง'}
  else if(kind==='empty'){home70().big142=1;r2apply52();S.meta.house142=1;R2DIRTY=true;save()}}catch(e){}return r}})(applyStart87);
 // an older save: the big house is offered once (its furniture goes into the box)
-function offer142(){if(!H142.offer||scene!=='home'||R2.edit||R2.cat||(typeof TITLE86!=='undefined'&&TITLE86.on)||S.meta.house142)return;let h;try{h=home70()}catch(e){return}if(h.big142||R2.W>=25){S.meta.house142=1;return}/* already as wide as the big house */
+function offer142(){if(!H142.offer||scene!=='home'||R2.edit||R2.cat||(typeof TITLE86!=='undefined'&&TITLE86.on)||S.meta.house142)return;let h;try{h=home70()}catch(e){return}if(h.big142||R2.W-(typeof SC146!=='undefined'?SC146.room.extraW:0)>=25){S.meta.house142=1;return}/* already as wide as the big house */
  const X=W/2-300,Y=150;btns.push({a:X,b:Y,w:600,h:260,fn:()=>{},ui:1});nine84(X,Y,600,260,3);TXB('🏠 บ้านหลังใหญ่แบ่งห้องพร้อมแล้ว',W/2,Y+50,21,'#5a3a24','center');
  TXs('ห้องนั่งเล่น · ครัว · ห้องนอน · ห้องน้ำ มีผนังและประตูจริง · กว้างขึ้น 4 ช่อง · ยังขยายต่อได้',W/2,Y+84,14,'#6a5040','center');TXs('ของในบ้านเดิมจะเก็บเข้ากล่องทั้งหมด (หยิบมาวางใหม่ได้ที่ แต่งห้อง)',W/2,Y+108,13,'#8a6a4a','center');
  B('ย้ายเข้าบ้านใหม่',W/2-240,Y+150,250,60,()=>{house142(true);say('ย้ายเข้าบ้านหลังใหญ่แล้ว · ของเดิมอยู่ในกล่องที่ แต่งห้อง → เพิ่มของ')},true,'#4a9a6a');
@@ -11315,6 +11315,245 @@ const R145={
 (function(){for(const k of R145.species){const d=typeof DB!=='undefined'&&DB[k];if(!d)continue;d.grp='retired';d.lv=0}})();
 // the tank art has no painted fish now, so the old "paint water over the goldfish" pass (V0.92) has nothing to do
 tankScan92=(function(prev){return function(){const r=prev.apply(this,arguments);try{for(const t of HT92.tanks)t.patch=null}catch(e){}return r}})(tankScan92);
+
+// ===== V1.46 — everything smaller, a finer grid (owner, 8 Nov 2026: 'อย่าลืมว่าเราเป็น Pixel isometric 2d อย่าปรับภาพเยอะ อิงจากที่ผม
+// ส่งให้ ปรับขนาดทุกอย่างให้เล็กลง เพื่อให้ตัวละครและสิ่งของดูเข้ากันเหมือนภาพตัวอย่าง 1 ตัวละครต่อ 1 Grid custom ครั้งเดียว ในตอนแรกที่เลือก
+// ตัวละคร สิ่งของก็ต้องลดขนาดลง'; picked 'ตารางละเอียดขึ้น'). No new pictures — the same art, drawn smaller:
+// 1. Home: the floor has more tiles (core/data/scale146.json room.extraW x extraD), so the camera that fits the house draws every
+//    piece, pet and person smaller; the character stands on about one tile (player129.json roomH 42 → 38, pets ×0.9).
+//    The ready-made house is laid out again for the bigger floor (bathroom at the far right, living room in the new middle).
+// 2. Town: opens one zoom step out (town135_play.json zoom 1 → 0; still a whole number of screen pixels per picture pixel, so it
+//    stays crisp: ~0.94 on a computer, ~1.23 on a phone, was 1.875), the player 46 → 32 map px and town people ×0.7,
+//    so a person is about one path tile wide.
+// 3. The character is made once, on the first screen: the ☰ "แต่งตัวละคร" item is gone (build.py), a tap on her still waves.
+const SC146={
+ "_note": "V1.46 finer grid (owner, 8 Nov 2026: 'ปรับขนาดทุกอย่างให้เล็กลง ... 1 ตัวละครต่อ 1 Grid ... สิ่งของก็ต้องลดขนาดลง'; picked 'ตารางละเอียดขึ้น'). The home floor gets extraW x extraD more tiles, so the camera fits more floor and every piece and person is drawn smaller; the character stands on about one tile (player129.json roomH). lay = the ready-made house for the bigger floor (base width 25 + extraW). Town: town135_play.json zooms, player129.json townH/speedTown, npcK = town people drawn this much smaller.",
+ "room": {
+  "extraW": 16,
+  "extraD": 7
+ },
+ "town": {
+  "npcK": 0.7
+ },
+ "lay": [
+  [
+   "pt_plaster",
+   0,
+   5.75
+  ],
+  [
+   "pt_plaster",
+   2,
+   5.75
+  ],
+  [
+   "pt_plaster",
+   4,
+   5.75
+  ],
+  [
+   "pt_plaster",
+   6,
+   5.75
+  ],
+  [
+   "pt_noren",
+   8,
+   5.75
+  ],
+  [
+   "pt_plaster",
+   10,
+   0,
+   1
+  ],
+  [
+   "pt_plaster",
+   10,
+   2,
+   1
+  ],
+  [
+   "pt_plaster",
+   10,
+   4,
+   1
+  ],
+  [
+   "bed_quilt",
+   0.2,
+   0.1
+  ],
+  [
+   "nightstand",
+   3.9,
+   0.1
+  ],
+  [
+   "dresser_mirror",
+   6.2,
+   0.1
+  ],
+  [
+   "jp_andon",
+   4.4,
+   3.3
+  ],
+  [
+   "aquarium",
+   1.3,
+   9.4
+  ],
+  [
+   "bean_bag",
+   2.1,
+   12.0
+  ],
+  [
+   "fridge_retro",
+   10.7,
+   0.1
+  ],
+  [
+   "kitchen_sink",
+   13.3,
+   0.1
+  ],
+  [
+   "stove_kettle",
+   16.7,
+   0.1
+  ],
+  [
+   "dining_round",
+   12.9,
+   3.5
+  ],
+  [
+   "rug_round",
+   21.6,
+   10.9
+  ],
+  [
+   "sofa_cream",
+   21.8,
+   10.4
+  ],
+  [
+   "coffee_round",
+   22.4,
+   12.8
+  ],
+  [
+   "floor_lamp",
+   25.8,
+   10.7
+  ],
+  [
+   "monstera",
+   28.8,
+   13.1
+  ],
+  [
+   "plant_big",
+   12.6,
+   14.8
+  ],
+  [
+   "pt_plaster",
+   35,
+   0,
+   1
+  ],
+  [
+   "pt_plaster",
+   35,
+   2,
+   1
+  ],
+  [
+   "pt_plaster",
+   35,
+   4,
+   1
+  ],
+  [
+   "pt_plaster",
+   35,
+   6
+  ],
+  [
+   "pt_noren",
+   37,
+   6
+  ],
+  [
+   "pt_plaster",
+   39,
+   6
+  ],
+  [
+   "bathtub",
+   35.3,
+   0.1,
+   1
+  ],
+  [
+   "toilet",
+   39.0,
+   0.0
+  ],
+  [
+   "sink",
+   35.3,
+   3.7,
+   1
+  ],
+  [
+   "plant_small",
+   40.0,
+   4.7
+  ],
+  [
+   "rug_plaid",
+   1.2,
+   2.6
+  ],
+  [
+   "rug_fish",
+   0.8,
+   12.0
+  ],
+  [
+   "fish_shelf",
+   5.2,
+   9.6
+  ],
+  [
+   "bookshelf_plant",
+   20.5,
+   0.1
+  ],
+  [
+   "armchair_sage",
+   27.0,
+   9.0
+  ],
+  [
+   "side_table",
+   19.6,
+   12.4
+  ],
+  [
+   "plant_small",
+   31.5,
+   0.3
+  ]
+ ]
+};
+cfgFor=(function(prev){return function(f){const c=prev(f);if(f==='f1'&&S.room2&&S.room2.home){const o=SC146.room.extraW;c.W+=o;c.D+=SC146.room.extraD;c.bath.a0+=o;c.part.a+=o}return c}})(cfgFor);
+// house142() puts its layout at (R2.W - 25), so the bigger floor's layout is stored relative to that
+try{H142.lay=SC146.lay.map(e=>{const q=e.slice();q[1]-=SC146.room.extraW;return q})}catch(e){}
 
 // ===== Environment layer (Phase 0) — injected by client/build/build.py right before the game boots =====
 // development : everything on (team mode via 7 taps on the version line, Sandbox Gold, festival preview)
