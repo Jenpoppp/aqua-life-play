@@ -11926,6 +11926,9 @@ function start147(){try{input86(false)}catch(e){}applyStart87('empty');S.player.
 hud=(function(prev){return function(){const r=prev.apply(this,arguments);try{if(scene==='home'&&S.meta&&S.meta.first147===1&&!(typeof TITLE86!=='undefined'&&TITLE86.on)&&!R2.edit&&!R2.cat&&!MENU76){
   const w=560,h=150,X0=W/2-w/2,Y0=H-h-96;nine84(X0,Y0,w,h,3);TXB('บ้านของคุณพร้อมแล้ว',W/2,Y0+38,20,'#4a3a2a','center');TXs('มี '+S.player.gold.toLocaleString()+' G · แต่งห้องเอง หรือเลือกปลาตัวแรกลงตู้ได้เลย',W/2,Y0+64,14,'#6a5040','center');
   B('🐟 เลือกปลาตัวแรก',X0+24,Y0+82,w/2-36,50,()=>{S.meta.first147=2;save();go('shop')},true,'#4a9a6a');B('🪑 แต่งห้องก่อน',X0+w/2+12,Y0+82,w/2-36,50,()=>{S.meta.first147=2;save();R2.edit=true},true,'#8a7a5a')}}catch(e){}return r}})(hud);
+// "เริ่มใหม่" (a fresh game over an old save) went straight to the house name, so the old character stayed: it starts at the
+// creator too (owner, 9 Nov 2026: 'เริ่มเกมส์ใหม่แล้วตัวละครยังเป็นแบบเดิม')
+newGame86=(function(prev){return function(){const r=prev.apply(this,arguments);try{S.profile86=S.profile86||{};delete S.profile86.av147;MK147.tab=0;TITLE86.step='avatar'}catch(e){}return r}})(newGame86);
 
 // ===== Environment layer (Phase 0) — injected by client/build/build.py right before the game boots =====
 // development : everything on (team mode via 7 taps on the version line, Sandbox Gold, festival preview)
