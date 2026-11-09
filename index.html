@@ -3174,7 +3174,7 @@ const _hud67=hud;hud=function(){_hud67();if(LVQ.length||LVSHOW)return;if(!['home
   TXs(lock?'เริ่มที่ Lv '+s.lv:(s.g.st==='gold'?a.toLocaleString()+'/'+b.toLocaleString()+' G':a+'/'+b)+(storyReady()?' · พร้อมรับรางวัล':''),32,y+40,12,storyReady()?'#8fe08a':'#cfe6f2')}
  if(n){gc_(338,y+6,12,'#e8504a');TXB(String(n),338,y+6,13,'#fff','center')}};
 
-const GAME_VER='V1.49';
+const GAME_VER='V1.50';
 // ===== V0.68 STEP 8 — UX/UI: main dock (บ้าน / ตู้ / อ่าง / เมือง / เควส), Lv1-5 tutorial pointers tied to the story,
 // one UI skin drawn by the user's ChatGPT (buttons, tags, icons), Demo/dev tools hidden in real play, online save per player. =====
 const UI_IMG={"btn_blue": "data:image/webp;base64,UklGRj4BAABXRUJQVlA4TDIBAAAvIkAEEL/AJgCANLi/HgFy0P8lh82lBpsAAJNML3fcQxCDgiSgn6viSJKSO1zfEAJJkH9C7vMfkPmcXjc1/ElsyWQDAYsn14oZmTJEcwnaLHRUVJHFNUEQQYDgB37wgR8gTMAfUc2kqTFAjG0rChMDCG4fd+2/VcGYDt6N6P8E3EWH/hnoo/u6hG9iR/O1e9B0ClGp+zi4QsSP/cdtIrib0EV/vT7fDzF5R+jjJZ0c1YUNWCUAG1PriGG8jrd7YS3CNhTSdB6wS0txfc6QpVVWOxaYd1HPAkmydasMq2bIABKgsj1rWpVVsPz2MY1tIUymLMszMrJM2arT0MXg+EmMk60m7aYsWXmWJoYQadyNT4Rx+HQkQte6W/hI+mNM1TZI3t0SPqiVeCmeQujXcT/5V0k=", "btn_gray": "data:image/webp;base64,UklGRlABAABXRUJQVlA4TEMBAAAvIkAEELegKrKVijeoISSBoS3J562hNpKtBA0hhNSd/uuhBIbUvuJIUqKF4gmeL4tEDNJUNYFz/kOEZi6OJBvIMZ+pq48rnbSrfCw3b2u5mR0QEADQRwBAHwCEstnTi82fgwFiJNttGwnhgxkMENh/rYBkuoN3Ef2fgLvr0T8Dw+if7uGwub7cG1CXH+V782SEOk/fx+nHMfhb4m01WBqeTRX5W5Qahs/TS6o4jxtt+MDSX9uLbpaK1eAx6bOw7dKyQhaXhHILp43RY2Na9k3S2gFduX+wnqn2tl1au1dmy9IBEogfziPrUpau3IWTVipfKAeQaZv9OAWSihSiPBrjcOpAqAVJoLYozRY8r4oN5ZTKqXJKTdEpFSkZvP2Nq0RLjxrJmPC3cPX72AIIAcQgOX9LuBhiiAqKfwwxCM/d8q+SAAA=", "btn_green": "data:image/webp;base64,UklGRloBAABXRUJQVlA4TE4BAAAvIkAEELegJpKt5mdiT8VgAv89KlCAgmhDaSRbzfuf6GIFWBz9N0MNGRQK2khS7u75Xbx/ccw4/+G9vaWW3ZdWEYrAEdX2ZKBbra6EZh+VBOgDEMSHAMDgfxSdULIzUjK7t95kgBhJctyGxv8LAAUw/1gPUskZ7Eb0fwKeoybxvyTjvPjjE9Xl7nL9Wp/u6aPb798uow8+OUa5vgUBIGwq/YDvruL99cR9nAD8ptK8Upw3MPvn9iKBVggw2W00gzV3/zzYgBfaOZfkl9UMK8zDkK0SspCZQPL7VMRoojKzYlRZkJNfp9RHH+cqR5WDBfDbamK51KWocpCsHAQQnT0gpkMfzJUcMoMAYrhp9MNNF1PJwCuhgZWZCSAi4Ilw6Ydq0zp65+nov3X0LgKT+gFV2B/XeS+5SWeUU/oBqIw1gDWwZ2OlgTX403wk/xUA", "btn_orange": "data:image/webp;base64,UklGRkoBAABXRUJQVlA4TD4BAAAvIkAEELegNJKk6F7UOX4U5B8gCjYNRZEkNXsHz3uRkwA04N9MskCdgjaSlL17Zg3v3x/T/AdL7PaLIiVtYnjit+20N7eRi7m9v7rjJLQOACgQfwIgEAYw4P4nv2pJYXAY21acGHaQ7Jj0XyvoxA7ejej/BNxDi/4MZPH0CDOFrNf0sO2YruyCyvX5Ln5Mxg5CNi4/HBLG3iLL6Hr6ncBYXA66+Jzj4zy2X9VCcpbg3XVq4ziP4XkA6iS1mLwlpHxuVA5Bp26n7mzwpcTzqHPd6QBpH8/b+sNcZ2CncjBX9n4G1vaNNsO6zdRj3mdgZ4ZVaipeXVJpaz/vLNTBurS1SSVcwVleCV+a1qUtTfu8rJLauMSQmeyNSfgQn1VWeDt7CxNJEBOUcVSfwMkIe0sYN/TOj53vnSQmy93zV0k=", "btn_purple": "data:image/webp;base64,UklGRiwBAABXRUJQVlA4TCABAAAvIkAEEJ+gKJKk5nLgmXnhAf+ecIAPtY0kNe//sZEL6YD+mwMxDQAgDdbcMo3MA1zOH/zhMgnzH9xZz0QYVc4vxlFfJNtbdzpQPUmoOvaDLxogRAAgQoAAIrB3cXtmgBhJctzGeH0SwAO//JMFSdMZ7ET0fwLOywj6X8AI8eUrgtJhP2/Hq0PZxPEQPSTFi2yp1N93ZaR4CiN9dm3vtmqEiIzPtgM+JK2S0EJ3abhasRSxxL7BuJ4k+W2vliPF6ubDpZVx7xoX/UFfHHji9zeaLockH/Knvd2UzgJ98eEdSRqu4RLwLflC37722QWgeTC3euQUT4zyaR2a9zbNrUODmk0hngQjl/quDI4cTxGyvS4lhXhKhPzXpHsinDP/KUk=", "btn_rose": "data:image/webp;base64,UklGRj4BAABXRUJQVlA4TDEBAAAvIkAEEK+gNJKk6PbUD3giQJJ/VEjUpqE0kiTl2D1IcOQ+/8xe7lcpjSQpum/UOXB48s+KGH5q/kNTBisqvMJsq/ksfHobO9X50+vXbEWMjgwGwAokhBRYfDwXw34wQLBtq2qTVP5aeEh1/nMVbTKDcyP6PwHn1KEvAxn36RnLTz54/ffNa+ouvI8cUPl7uPJQ3k1ClnhYMmWeiYXFneLIgUP7Z39TYXGELA7tYEL0NjeporbF4h0KfgdMoC67dEO7VGGkEh0qabcGXYboRr+auglGKt4R11RbpYEJ1OdGF4wHrU66TDcYFXgQRwVabV0Y0w6VAZtn4jXqvNXbzqgDtnhk704KcR2Vcb0Z021NIevtTnwhKn00KhOO4E6xxHK7in8GeS3ulFj8F+U4r3xVEgA=", "close": "data:image/webp;base64,UklGRgABAABXRUJQVlA4TPQAAAAvDsADEK/AJgCANLi7l4BI9H9l68KgkSRFx8z4YIJ1vObXRVEbyVbyP+45dVAKFVA+IZHL/AfUNmaUiog9ixooQxU4LjR/TBAUM0YYIj3/36WZK94aPDp3tWJjz2IuidfBvjIwjGSrifoI/8sP5P57hSIi+q+2bRvGTs+mM/beAPbta4pt4fjKVldbbv4HXGoxsYiIZeyNdyV3M1PShI1k7r2o95LlA4pYn73OWYUCXmctY87pLJTwehapc450y1hPzi6SEyCsfXYeszJ9QFQqTvI7pdbCBksmOd9VFza+rHzcVls47EIiorBCq7hhPs9zWEYA", "ic_coin": "data:image/webp;base64,UklGRtwBAABXRUJQVlA4TM8BAAAvHsAHEJfAIACAJHR35wP9v8cRflEV2VbycPl0JwFd6B+CBqY2kq3kKxZ/WqEZ+s80IrL5DwAaMyEGKPpy09trW9jwsVxiYGze/HEQAqn0s/8k3z4eU1QKNFSAYNtK2Gga/SAKgun+N6sknSVE9F+R27aNHAMZ7Wk94vuukvX9p0q5snLj93qiuNcym7V+fiblorjvex1UJ9W/8u56HzXa2qg2fMqbKWVtThUBeYqrvOfup7bRheGqzjve3E56FnURgakCNVE+cd+cVk9v7cCk2pHXlLaiZUeEs5xo6uCa8OWyVrKqvECJQit4rjXjDlWHJFi14SwubXkz2zZTHc7CREy24auUay3q5rGSxxD47CAbDGzqRiUiMr27DmY66/hghuHhLftIIKzKwAMJm/OFARFSbS90sce8jy0IuzoyatylJZ/gMZhfMfMTI0kA2rQ0ycehmy7gPjrAwgCFan3BSHoXoTGQjypM8bgpBV0b5AhA9rRWn/y1MRofRFiEW4QFAfV5C0ff8diFiLnNqFf5PqL3rpNpK2UBnIN8ewG9D9U5T2bTmYHsZ9pEs9zBIqjl1+urnAVw2vGPd11xxFyv61+vv3ySrtfsf7/Gj+wLAA==", "ic_drop": "data:image/webp;base64,UklGRm4BAABXRUJQVlA4TGIBAAAvF8AHEJ+gIACAItvmmv4v6ZDiSJKSE+znEgApeP5B8aJQ0EaScs/MDIrev5M3MP8BQESIBBEUZTXZvfvcN6kvSGKSFZyRlCR44LDGAANatS++3S7RC3I0OIxtpY424gP/Bk3/xUZ0U0JE/xm4bdvIrqDb+z7xHEv0fCtdF32EPX0DCZ8GQeMn0e9WxqsvbgL2P/qHH1oCAEd/cKqtRry66HxEHX30EgHxdOR+mb0UBtjReaMxtdUaGXJYRE5fptZaswDR0cY9dNqUCDAcnZbN0ds7Ehtt7suttSVGZEfW1WIkQDLBaHWMfo53RG5o6WtqmxFBzCYlDe1bUngjNjHN2U8W2RO3NGMJW0IopdTlvEg92SSOMabSsl3bTR7yyhxshVl0luzJvK3MLDv3nGX5WUrMAPNiDOslaI6yCE21JewvmLzPJb0trWT2xw/lcqnWmnOCc+e/hsht/f8vkelh6gE=", "ic_gear": "data:image/webp;base64,UklGRhgCAABXRUJQVlA4TAsCAAAvH8AHEJegoJGk5nulSEAF/jWBGkWRJDUXyRnkUPgXwRsFCFATSYrEDxkmKETgXwUqiO+S+Q8ATwzmCqyPD8fj80Y2pVObnjWnsIDCqg6qvJt3/IfeP3cXg8TYtuO2iYAPfOwEyP6r1RKX8G5E/yfg+T1+1N/jUDzEP+Pc0qqe4gP8ByAxYVFzigRekV8whci/MddQtRTtWjWH+A2/bkzX0kTgdq2pmkP8hN1LOvcaYtKle02E52/Xep99VEl9sgBayhbfeI032rklba+TvmZLpvBBpCWNekvXvjl4HXMkSyE+n0lrtvuwKafscrzNlSzE59tZ47rPpsAu7JNHrzlFPoCvcd2bEjBpA6qtJnsp8ohymO3ah2DiJdtQfCzp9hwirrmohWNBRHidfbA+epsZi/gaVN3aphAfiXPtYrWpj0x4m4x6l2P+pRjqjPZt0Oq1cXvD9qGo9dGVsUhwatMGTCHC2QdPVUlSDvEh4L1qU7Zb0NlQgrdqChAfCV5VOl42t3R2OZ5qT7IIz0e8Ny8bOBQw1daThfh8xleTKAe8YJJ3GFlfeF29iarsBTfl2kdTX9nil06Doeo5QW0aXaimHOKbyIOeqZ1Wm1SdPrqSLD6fyd2ThTRabT2Z5KMmKT7fMaUQX7NJJAuvmBOKz68AYjQ6SSE+vMTz/3iVyIT4CPSXhHeLz9/zUb8DAA==", "ic_heart": "data:image/webp;base64,UklGRpABAABXRUJQVlA4TIQBAAAvHwAHEJegNpKt5GORu6Sk1EH/fVCCt6Emkq3m/dQHkh704gcXtJSgKJKk5nIgK8AGDvDvhR+v+Q8ARBawEz6Kv451P7Kf/ps5FxeDEhFg6jPMGAUhIPSgVrdBlwFiJMlxGxP/Swp0/skSC1DKYDei/wrbtm0cGzDq7vaKfyiLxf0uuCsdWEK3bGKrWCWl8GfnJgxsIm4oEz9DV8tBhxWjhtRKCsYu0jlu6kxyxsp8hqSemYwspu2eNa7yUG3cVJdqUjgspoDrbDWFOnVNZOfnOU1F6SR7Tm2Al2pyDAaAflbN12DXKak4v6D1e1wIcl2gJE/nFwxd50v1uke9+IpWkttARU39RXOWFfGB2HeUSuYU/WHhXQrJulI1M3mS8C6UQZCb2TBlBhCa8rRS61UE77T9GA+gihrXVDJ2++8SgJmQck252FBLTtM4Qpoh3TI+EEmP6Ua7sCRHLbNB+s6cHLQpm532AzJ2wvQrKqcp8N9RQY/d+i8GBE9N/wPJn0RKehMB", "ic_home": "data:image/webp;base64,UklGRuABAABXRUJQVlA4TNQBAAAvH8AGEJegJgBAxr68rr3rKCWaUJsabAIAaMLecM0A64U4NCcAaAa9FEWS1Fy+A1ygCyOo5p2Z/2Ak5/FDDolPwapGn94Q3DNnC7KX/ap/svIDMKskiaSgl6Hmpq0ODgMAaZuioDIj9P9rTTo+iOi/ArdtlIyO+T7x/iBw5P2HgLu7Hv1xFsiMcIQ3AO3V4CfStQPoXoN+wt0V+y1FNBB+4Li9B9GYY46vSTgor0FjzjWJBnxJWXn4psFrzpMak+CT2XWZ+WZsvBfRnHPQIPiIlW9qXZDXOjbm+KBwmZUvQkVWWnuOo7fKZ1ntRRgpLO6817HTqsENO9bEQ0QjZa0xz/DtbnWZLEJxFhFhFuLb1eHj6KGst+Z5k3B318UN8RPVuwQzb89bcGwNBfHZ7dUapzdCTNm8MQk1NiI8gr7aziAXSd9+SYqqb8RHQ2VscnBJvyIlWSUYrZ6IcLiySMrlG5MVUe2q6vAGU27E7sQk6aqiKepaZlXHTJlEVJBF3CMiUtC6Ve8ndrMqJHURRUZDF/VudbhlLjsSmRkoSCSI2quqV69bE7SKCHevKjMjLDSrk3icO+g9bRkel1V4Ve8ffx8AoHYAdwTrAD99YQC4t/s23hs=", "ic_pond": "data:image/webp;base64,UklGRtYBAABXRUJQVlA4TMkBAAAvH0AGEJegNpKtJPuCu2Y/onxaY2iGcQAAhepnm6u1amvhwDYAgCR0N5zG/1OD+oDL/Ach03KAoAaKwgerD/AbVxATwe8ZZ4/AGav/n7C3g5u7GJyVJENiAQi2rYSNIggKTvKB7n+z1Um3ENF/BW7bKOl2zPCJz5vamz6nfpWYr0Pu9rugNYuoylgrIivDx3uiWVYuVWVVVfOVmYvbi0elMRNRl0PDPDOt/fOsYBY8zyOYgEDGsLXtf5ppp577eeacPmWKjJWhbVM16OQBxKqi5IaMDP/SvIoEc6eeB1SVWSGArFwbqxwApgiJiNdXGSSgdQajKgg3cM8dRVamyc7k2GhWrQ65pW+AwQJgRFpvx1hZFQZAnnMwEsDz63ywMqoqfZDc27uMyIzBTAeeKzN3Qa7la2VlLmNmvXYx+C8y4qg6RwlXZWbuR4wbK2J5+PGkzPQQs1I7HVgb+884nDtx+7QO3PT6JPWIOpMQ2zZgDla3deS+GsrMEJDoQVY43zA3dxtnekIApuuLZy5XCPRoMbRDeCogg493E2F6AyBW7cosIpnOInQdQ6mpzhtwumjrmrZc+eqtvf036MXtRcr082v9+o0vi/gAAA==", "ic_quest": "data:image/webp;base64,UklGRtQBAABXRUJQVlA4TMcBAAAvHcAHEJegJpKkqO6iu+h/Qgoj+LeBBVKMKIokqSG/cs5gAf8O8HACkKE0kq3mf7J7FfwKUFRE/waX4/wHkBD559N6/kpnVNVcAo2Nb1AfKgGfYoRYLtouESoOZP9VFwYDxEi22zbmxwdAgAgM/VebrBLeRfR/Aq7fGujnQALjR/wtqfVWF/sJacxeywbRfsDSx5QoecXtG0ikMTUklQzfcHFR50NXitntDdZtddOYGlKH5vEDYd12jqXMl0aO4YPv2w6hTw0JGrW4XW/h1H5IqfQhaFXavgg//Thr20rtNN3DFxFcbd2A0qqkHOz6iO/kRt8gVqn4n10fWYrWvDU2WsyVYFzvkPoUsa0ba/Ms43qH1MfUUM0btByw6yNe+5g3SlxR8BPjhdiHpoYkWgk4pw4FeymKqT5R/NRtP9xueI4qKQ91aMWPU+Fgh2i3mFODNXcatfgpBd/vp91Ukuct01tVWY4T/2PnOP225OLEtKpR5XYe7IuO/TQuSaScIl5zasrGucNi4XC7HjxDUolq1Z/cOMOTiBkoHlu2i7jDaRfolZglj0WLXeSnz3jKkBa7WHaOXf8QuATX7TT9SwKkm3OBfg76DgA=", "ic_tank": "data:image/webp;base64,UklGRvIBAABXRUJQVlA4TOUBAAAvHsAHEJegNrKVCIghJULNro6tytCxDqO7DzYBAKTB3SLwW1SKUcRZgR2KIklqjpzzEzF4RBBK0BAFUPMfBGX1FlAKn1JC9b+CgRPiZzKbaUnYiLCR+nRLtX8YZ9pdWmOrrTNAjG0raCQEkP8R+B/7rzZodjt4L6L/E3A/hu391wFSjWT48Smwt8pGLlytk1QIEMMmQFptpZ7hfVuQcAPBei1sleXpBhCw9CuM1cjKT8olAfgAAcBCqJveuEhcQP9WCE6uRmKz+La2b1xAA+qm16+rcYEkayMJQMtDWzxZMoCTrL2R12pnflW1ZIhnFJJnYa94w6oo2a6UgYKzEO/qpZD6GZaBImdm4bumJ4Q2wOxz9LIrT1UBlyHJ5sAcLD9RAVGfA1hj0ob+ktSnqPQ11sDEyD+owEH7pLGAbuOXcroSQqQ8RxrGnlnTi1OdAoIpJ8kpA+mqyE/FleTUxImYU7bES53pIcOHOaNhevz4R1z7q2LTSQJAJN0c6Cpu527A6LQJxm9A5VK3UXdzANOckR49wtTZIajNYrhDd0aaG0nBHJgc6LRWPTLABEM6AaPvjei1nZE8Asy3RlIwRCEAerPII+AOJA9w63sjBZFHuAGE9we3Hj0G3H8Y9iSPcP9jAHBvAQA=", "ic_town": "data:image/webp;base64,UklGRuQBAABXRUJQVlA4TNcBAAAvH4AGEJfAIADAMrPtBmfe13sGZ2EbyVYbvPdUAR3QApGvXz0o0ihSENs29Bf7ThkR1NZAAAGk8Gf+Q+jcOCStIqvorNEwM9TL7/dWTRYxnmH6lr9fe56Ou53/gcdzNRSDZYAY2W7cJiB4ExBhqf9qr0kJ/0f0fwKuZ/l4/a8crxtyyeM32W/An/xGkBQAL3J83X8/ngQJQuVB9pdd8vn+eyu1M4CsG8gnfi9KykOf5jS3MOzg736S7PlBaqctkh6lpzw6C8mgViSVC2Kz2jpAxoAWIzmA7tGZ5AIkB81pTtShHU6aMyyyPvFYbZYOZkKju43ZPEjNN9nLly9fvnxBYzht0qNHaQ/LF33RuXhsjT7uFmQjk1xyOBYdBIEU5kY/OXhq475pInMhWHfS041ubm4fakaMrm3qUfV0GEE6IjWmh+gxkBsDm8oEzSXXSPc/uaRHb9ZZ2lyt59A5Ss1lKzOTXBDlsUiCJGsOzgWCXSPrTnJJezz2QSIHSUVCr8HGREFuwARQMXrL1Bj3To1EygUZoX0i12mobMq4Y+QBahJMGyTnY0FPeXaSIxJCWQR9AjDSzWkE3Zw2ENWiQC7Iay2dnACMdHuscn2VzwWdnFWuf5fnCwAA", "panel": "data:image/webp;base64,UklGRrICAABXRUJQVlA4TKUCAAAvKMAJELegqJEkZXb3mNnAvc/sqVcTyVbzPjmH8lcIYDCBMORS4QE1AYA0bHB/XtYxhv1/CzD/ITmyCZHT/o2aX+jkPKK22r1pA8R7DF5e2O66HE0KAUAEACAAgQCQ/nkMEmTbitsomtBkEGAj73+tkp10r+DeiP5PwPt+UP5LDfs5+GeqF7UL2xnsh7/uR7rhjd1G4DScYQFn+bw4L+q0u07d8PZcYQy9TOt159sFQObFy7TOy9SfjtOfr/My/wwG52UatyD71yzut0z9vMxjN3hqOMP+iH/+2Ebohrf9GTzdY+JIFHK5HqiSiPqY1qkf3oYzOJ2PdBRJmmsTAdGSjqjbOl9Og1s0HblahAsCr2e1pCN9GgPsMeWSLbYKiMDzRcXyBU4ze8x3WhtA5tpEvznXy2Exl6wVaIBcLb9Kl9tKA7JNwHL8TS71Nqs0UDziF+NdqdBAQOQG8YjbcjddjtLq1QtyL3DEbbqb12lPxQoNpKgoTUU94rbenZd2eVYwW8xaGqhymbYw3MVWP+aitkwTBcvltP9Ur/kicIHSFFPc1vBNroXPjdwUVDjuwvB2vtFLM9tQRBFKvIy9n0o6cm1ILrnJHZDTEbd17oc3zsu0xyMd2doEMg1fVgXzkb4Y52mP6SDXL6XxoqLZFBcvduGc9uhBqfCs5BvgyYtWc3RZb07DuMd0RxPICE9e1PY8Utzuws2R8g1NAeQJFUyfcGTaYzrIpVXll5riF/My7dHEkUttfMxqgRaTLvMZuuHGqIlWWn3y+pA4SBEfW3icXqaZfo+a5GsBRfdT7Yc3hn2dx+3x55wGT7vBfl9cx3m7V75eNDzOcGIY7NdlZlxcEZxduFVAPQ2j56Wb1mXup9+PTLcqjDq8/elHf/5tpz/DG/w/AQA=", "tag": "data:image/webp;base64,UklGRsQBAABXRUJQVlA4TLgBAAAvLMAEEL/AKJIkRb3MeHcGmP0ru/fYYBtJkpp9ZjLFzPmnJlNSGslW8zNJZYulBPovCsmf/wCgqqZWvvgJ6tAsHPXqf594oByC0xbbc3xlm5bLkkrAAAhADABwIIgAGJD+FwPE2raaSkNGDCiiY/+t6k8dnBvR/wm4Xrrf8qHkAyTe9EG86Z3e0l8ZP0XvD9a9IT8WopTitzN490JmVCrT/8L87ZIGrHsRxzz9w6nKscOqyk6FnQp7ZZnSoCeZcSj/p7bKuvfWW4fWd2jQ93udxzxYpwvJlDwvddW+re187jS67m1fq5Yp5liCk4WcFuraoJ93Wr9t3LRKWuYYxmKdwliCn29942w6NvXWReunpAb7Wm9gnGwhMFeOtnWapC61o7d+So1OY1tmxQLBXbIBjctxblKHQ5vgYHu5Skedp0AJxl0yoQQ7HvXcpNbVOtC0apPWCguzVAIYdyE/FkKc6kLf1rYDfUeqLHOFRUJTigV7CwUfGGctHwoJIUlTTL4Qbsbic1Icvz/4PHgD7gJJ1g+QxdvipQCScdL1LONTTspK+f0BSSkreeOudyVj7+jLTteH+i0vAQ=="};
@@ -12315,15 +12315,29 @@ const SP149={
    ],
    "shoes": [
     24,
+    0.87,
     0.93,
-    0.99,
     0.3,
     0.7
    ],
    "yw": 60
   },
-  "f12": {
-   "yw": 60
+  "m3": {
+   "top": [
+    24,
+    0.36,
+    0.5,
+    0.42,
+    0.58
+   ],
+   "bottom": [
+    24,
+    0.62,
+    0.86,
+    0.3,
+    0.45
+   ],
+   "yw": 70
   }
  },
  "pose": {
@@ -12443,6 +12457,64 @@ const IN149={pier:false};
 scene139=(function(prev){return function(){IN149.pier=true;try{return prev.apply(this,arguments)}finally{IN149.pier=false}}})(scene139);
 plDraw129=(function(prev){return function(g,id,dir,i,flip,cx,by,h,tint){if(IN149.pier&&PREV136.on&&typeof FISH139!=='undefined'&&FISH139.st==='got'&&sp148()){const k0=PREV136.k,f0=PREV136.face;PREV136.k=PO149.net;PREV136.face='s';
   try{return prev.call(this,g,id,dir,i,!faceR149(sp148(),PO149.net)?true:false,cx,by,h,tint)}finally{PREV136.k=k0;PREV136.face=f0}}return prev.apply(this,arguments)}})(plDraw129);
+
+// ===== V1.50 (owner, 9 Nov 2026: 'แก้การแยกสีของ 4 ตัว ... ปรับสมดุลห้องให้เข้ากับของที่ย่อขนาดลง ... ใช้ท่าใหม่เพิ่ม เช่น นั่งที่
+// โต๊ะกินข้าว หรือยืนดูตู้ปลา'). Data: core/data/room150.json.
+// 1. Colour separation: f12 and m3 were drawn again in ChatGPT with clothes apart from hair and skin; m11 and m15 needed only
+//    better part maps (art149.py: the head of every figure, measured from its own top, is never trousers or shoes).
+// 2. Room balance: a new game starts in a smaller room (33 x 13 instead of 41 x 19) drawn at the same small scale as V1.46, so
+//    the few things bought with the first 5,000 G fill it; each "ขยายบ้าน" step adds the same rows / tiles as before, and the
+//    four room steps end at the full 41 x 19. Saves from before keep their size.
+// 3. Poses: tap a table → she sits at it (on a chair next to it, or on the floor at a low table); now and then, when idle, she
+//    walks to the aquarium and stands watching it for a while.
+const R150={
+ "_note": "V1.50 (owner, 9 Nov 2026: 'ปรับสมดุลห้องให้เข้ากับของที่ย่อขนาดลง ... ใช้ท่าใหม่เพิ่ม เช่น นั่งที่โต๊ะกินข้าว หรือยืนดูตู้ปลา'). room: a new game's first room is lessW x lessD smaller than the V1.46 floor (41 x 19 → 33 x 13); the two 'ห้องกว้างขึ้น' (+4) and two 'ห้องลึกขึ้น' (+3) steps end at fullW x fullD, and the camera draws it at the scale of the full room. pose.tables: tapping one makes her sit at it (a chair within chairGap tiles, else on the floor in front); pose.watch: when idle she walks to the aquarium (gap tiles in front) and watches it for sec seconds, first after `first` s, then every `every` s.",
+ "room": {"lessW": 8, "lessD": 6, "fullW": 41, "fullD": 19},
+ "pose": {
+  "tables": ["table", "dining_round", "coffee_table", "jp_kotatsu", "desk", "aquarist_desk"],
+  "chairGap": 1.2,
+  "watch": {"gap": 0.9, "sec": 7, "first": 25, "every": [35, 70]}
+ }
+}
+;
+// ---------- 2. the smaller first room
+const START150={on:false};
+function small150(){try{return!!(S.room2&&S.room2.home&&S.room2.home.s150)}catch(e){return false}}
+cfgFor=(function(prev){return function(f){const c=prev(f);if(f==='f1'&&small150()){c.W-=R150.room.lessW;c.D-=R150.room.lessD;c.part.a-=R150.room.lessW;c.bath.a0-=R150.room.lessW;
+  c.winB=(c.winB||[]).map(([p,n])=>[p,n]).filter(([p,n])=>p+n<=c.W-1)}return c}})(cfgFor);
+start147=(function(prev){return function(){START150.on=true;try{return prev.apply(this,arguments)}finally{START150.on=false}}})(start147);
+applyStart87=(function(prev){return function(kind){const r=prev.apply(this,arguments);try{if(START150.on&&kind==='empty'){home70().s150=1;r2apply52();
+  for(const e of R2LAY){const[w,d]=r2dim(e);e[1]=Math.max(0,Math.min(e[1],R2.W-w));e[2]=Math.max(0,Math.min(e[2],R2.D-d))}R2DIRTY=true}}catch(e){}return r}})(applyStart87);
+// the camera keeps the V1.46 scale: the fit of a small room is scaled down to what the full 41 x 19 room gets, so a tile, a
+// sofa and the character are the same size on screen as before — the room just takes less of the screen
+fitZoom74=(function(prev){return function(){try{if(small150()&&!(S.room2&&S.room2.cur&&S.room2.cur!=='f1')&&R2.W+R2.D<R150.room.fullW+R150.room.fullD){
+  const w0=R2.W,d0=R2.D;R2.W=R150.room.fullW;R2.D=R150.room.fullD;try{return prev()}finally{R2.W=w0;R2.D=d0}}}catch(e){}return prev()}})(fitZoom74);
+// ---------- 3a. sit at a table
+function table150(e){return!!e&&R150.pose.tables.some(t=>e[0]===t||e[0].indexOf(t+'_')===0)}
+function seatNear150(i){const e=R2LAY[i],[w,d]=r2dim(e),cx=e[1]+w/2,cy=e[2]+d/2;let best=-1,bd=1e9;
+ R2LAY.forEach((q,j)=>{if(j===i||!seat149(q)||r2flat(q[0]))return;const[w2,d2]=r2dim(q),dx=Math.max(0,Math.abs(q[1]+w2/2-cx)-(w+w2)/2),dy=Math.max(0,Math.abs(q[2]+d2/2-cy)-(d+d2)/2),g=Math.hypot(dx,dy);if(g<=R150.pose.chairGap&&g<bd){bd=g;best=j}});return best}
+function sitAt150(i){const e=R2LAY[i];if(!e)return false;const j=seatNear150(i);let tgt,cu,cv,lift;
+ if(j>=0){const q=R2LAY[j],[w,d]=r2dim(q);tgt=j;cu=q[1]+w/2;cv=q[2]+d/2;lift=PO149.sit.lift}
+ else{const[w,d]=r2dim(e);tgt=i;cu=e[1]+w/2;cv=Math.min(R2.D-.3,e[2]+d+.35);lift=0}
+ const q=R2LAY[tgt];SIT149.user=true;try{stand149();if(!walkTo129(cu,cv))return false}finally{SIT149.user=false}
+ SIT149.pend={i:tgt,key:q[0]+'@'+q[1]+','+q[2],cu,cv};SIT149.lift150=lift;W150.on=false;return true}
+dragEnd=(function(prev){return function(){try{const p=panDrag,bg=!tapPend||(tapPend.b&&tapPend.b.w>=1200&&tapPend.b.h>=700);
+  if(p&&bg&&!panMoved&&homeOk129()&&!PC129.pick&&!(typeof SHOW128!=='undefined'&&SHOW128.on)&&sp148()){const b=PC129.box;
+   if(!(b&&p.px>=b.x&&p.px<=b.x+b.w&&p.py>=b.y&&p.py<=b.y+b.h)){const hit=r2itemAt(p.px,p.py,true),e=hit>=0&&R2LAY[hit];
+    if(e&&table150(e)&&!seat149(e)&&sitAt150(hit)){panDrag=null;panMoved=false;tapPend=null;return}}}}catch(e){}return prev.apply(this,arguments)}})(dragEnd);
+// a sofa keeps the V1.49 seat height; the floor by a low table has none
+plDraw129=(function(prev){return function(){if(SIT149.on&&SIT149.lift150!=null){const l0=PO149.sit.lift;PO149.sit.lift=SIT149.lift150;try{return prev.apply(this,arguments)}finally{PO149.sit.lift=l0}}return prev.apply(this,arguments)}})(plDraw129);
+stand149=(function(prev){return function(){const r=prev.apply(this,arguments);SIT149.lift150=null;return r}})(stand149);
+// ---------- 3b. stand and watch the aquarium
+const W150={on:false,go:false,until:0,next:0};
+function tank150(){return R2LAY.findIndex(e=>/^aquarium/.test(e[0])||/(^|_)aq_?tank|fish_tank/.test(e[0]))}
+function watch150(){const i=tank150();if(i<0||SIT149.on||SIT149.pend)return false;const e=R2LAY[i],[w,d]=r2dim(e);const u=e[1]+w/2,v=Math.min(R2.D-.3,e[2]+d+R150.pose.watch.gap);
+ SIT149.user=true;try{if(!walkTo129(u,v))return false}finally{SIT149.user=false}W150.go=true;W150.on=false;W150.tank=i;return true}
+drawR2C79=(function(prev){return function(s){try{if(homeOk129()&&sp148()){const P=R150.pose.watch;if(!W150.next)W150.next=T0+P.first;
+  if(W150.go&&!PC129.mv){W150.go=false;W150.on=true;W150.until=T0+P.sec}
+  if(W150.on){if(PC129.mv||SIT149.on||T0>=W150.until){W150.on=false;W150.next=T0+P.every[0]+Math.random()*(P.every[1]-P.every[0])}else{PC129.idle=0;F137.home='u'}}
+  else if(!W150.go&&!PC129.mv&&!SIT149.on&&!SIT149.pend&&!PC129.pick&&T0>=W150.next){if(!watch150())W150.next=T0+10}}}catch(e){}return prev.apply(this,arguments)}})(drawR2C79);
+// a tap on the floor cancels the watch (the walk itself ends it)
 
 // ===== Environment layer (Phase 0) — injected by client/build/build.py right before the game boots =====
 // development : everything on (team mode via 7 taps on the version line, Sandbox Gold, festival preview)
