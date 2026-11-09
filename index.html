@@ -3174,7 +3174,7 @@ const _hud67=hud;hud=function(){_hud67();if(LVQ.length||LVSHOW)return;if(!['home
   TXs(lock?'เริ่มที่ Lv '+s.lv:(s.g.st==='gold'?a.toLocaleString()+'/'+b.toLocaleString()+' G':a+'/'+b)+(storyReady()?' · พร้อมรับรางวัล':''),32,y+40,12,storyReady()?'#8fe08a':'#cfe6f2')}
  if(n){gc_(338,y+6,12,'#e8504a');TXB(String(n),338,y+6,13,'#fff','center')}};
 
-const GAME_VER='V1.50';
+const GAME_VER='V1.51';
 // ===== V0.68 STEP 8 — UX/UI: main dock (บ้าน / ตู้ / อ่าง / เมือง / เควส), Lv1-5 tutorial pointers tied to the story,
 // one UI skin drawn by the user's ChatGPT (buttons, tags, icons), Demo/dev tools hidden in real play, online save per player. =====
 const UI_IMG={"btn_blue": "data:image/webp;base64,UklGRj4BAABXRUJQVlA4TDIBAAAvIkAEEL/AJgCANLi/HgFy0P8lh82lBpsAAJNML3fcQxCDgiSgn6viSJKSO1zfEAJJkH9C7vMfkPmcXjc1/ElsyWQDAYsn14oZmTJEcwnaLHRUVJHFNUEQQYDgB37wgR8gTMAfUc2kqTFAjG0rChMDCG4fd+2/VcGYDt6N6P8E3EWH/hnoo/u6hG9iR/O1e9B0ClGp+zi4QsSP/cdtIrib0EV/vT7fDzF5R+jjJZ0c1YUNWCUAG1PriGG8jrd7YS3CNhTSdB6wS0txfc6QpVVWOxaYd1HPAkmydasMq2bIABKgsj1rWpVVsPz2MY1tIUymLMszMrJM2arT0MXg+EmMk60m7aYsWXmWJoYQadyNT4Rx+HQkQte6W/hI+mNM1TZI3t0SPqiVeCmeQujXcT/5V0k=", "btn_gray": "data:image/webp;base64,UklGRlABAABXRUJQVlA4TEMBAAAvIkAEELegKrKVijeoISSBoS3J562hNpKtBA0hhNSd/uuhBIbUvuJIUqKF4gmeL4tEDNJUNYFz/kOEZi6OJBvIMZ+pq48rnbSrfCw3b2u5mR0QEADQRwBAHwCEstnTi82fgwFiJNttGwnhgxkMENh/rYBkuoN3Ef2fgLvr0T8Dw+if7uGwub7cG1CXH+V782SEOk/fx+nHMfhb4m01WBqeTRX5W5Qahs/TS6o4jxtt+MDSX9uLbpaK1eAx6bOw7dKyQhaXhHILp43RY2Na9k3S2gFduX+wnqn2tl1au1dmy9IBEogfziPrUpau3IWTVipfKAeQaZv9OAWSihSiPBrjcOpAqAVJoLYozRY8r4oN5ZTKqXJKTdEpFSkZvP2Nq0RLjxrJmPC3cPX72AIIAcQgOX9LuBhiiAqKfwwxCM/d8q+SAAA=", "btn_green": "data:image/webp;base64,UklGRloBAABXRUJQVlA4TE4BAAAvIkAEELegJpKt5mdiT8VgAv89KlCAgmhDaSRbzfuf6GIFWBz9N0MNGRQK2khS7u75Xbx/ccw4/+G9vaWW3ZdWEYrAEdX2ZKBbra6EZh+VBOgDEMSHAMDgfxSdULIzUjK7t95kgBhJctyGxv8LAAUw/1gPUskZ7Eb0fwKeoybxvyTjvPjjE9Xl7nL9Wp/u6aPb798uow8+OUa5vgUBIGwq/YDvruL99cR9nAD8ptK8Upw3MPvn9iKBVggw2W00gzV3/zzYgBfaOZfkl9UMK8zDkK0SspCZQPL7VMRoojKzYlRZkJNfp9RHH+cqR5WDBfDbamK51KWocpCsHAQQnT0gpkMfzJUcMoMAYrhp9MNNF1PJwCuhgZWZCSAi4Ilw6Ydq0zp65+nov3X0LgKT+gFV2B/XeS+5SWeUU/oBqIw1gDWwZ2OlgTX403wk/xUA", "btn_orange": "data:image/webp;base64,UklGRkoBAABXRUJQVlA4TD4BAAAvIkAEELegNJKk6F7UOX4U5B8gCjYNRZEkNXsHz3uRkwA04N9MskCdgjaSlL17Zg3v3x/T/AdL7PaLIiVtYnjit+20N7eRi7m9v7rjJLQOACgQfwIgEAYw4P4nv2pJYXAY21acGHaQ7Jj0XyvoxA7ejej/BNxDi/4MZPH0CDOFrNf0sO2YruyCyvX5Ln5Mxg5CNi4/HBLG3iLL6Hr6ncBYXA66+Jzj4zy2X9VCcpbg3XVq4ziP4XkA6iS1mLwlpHxuVA5Bp26n7mzwpcTzqHPd6QBpH8/b+sNcZ2CncjBX9n4G1vaNNsO6zdRj3mdgZ4ZVaipeXVJpaz/vLNTBurS1SSVcwVleCV+a1qUtTfu8rJLauMSQmeyNSfgQn1VWeDt7CxNJEBOUcVSfwMkIe0sYN/TOj53vnSQmy93zV0k=", "btn_purple": "data:image/webp;base64,UklGRiwBAABXRUJQVlA4TCABAAAvIkAEEJ+gKJKk5nLgmXnhAf+ecIAPtY0kNe//sZEL6YD+mwMxDQAgDdbcMo3MA1zOH/zhMgnzH9xZz0QYVc4vxlFfJNtbdzpQPUmoOvaDLxogRAAgQoAAIrB3cXtmgBhJctzGeH0SwAO//JMFSdMZ7ET0fwLOywj6X8AI8eUrgtJhP2/Hq0PZxPEQPSTFi2yp1N93ZaR4CiN9dm3vtmqEiIzPtgM+JK2S0EJ3abhasRSxxL7BuJ4k+W2vliPF6ubDpZVx7xoX/UFfHHji9zeaLockH/Knvd2UzgJ98eEdSRqu4RLwLflC37722QWgeTC3euQUT4zyaR2a9zbNrUODmk0hngQjl/quDI4cTxGyvS4lhXhKhPzXpHsinDP/KUk=", "btn_rose": "data:image/webp;base64,UklGRj4BAABXRUJQVlA4TDEBAAAvIkAEEK+gNJKk6PbUD3giQJJ/VEjUpqE0kiTl2D1IcOQ+/8xe7lcpjSQpum/UOXB48s+KGH5q/kNTBisqvMJsq/ksfHobO9X50+vXbEWMjgwGwAokhBRYfDwXw34wQLBtq2qTVP5aeEh1/nMVbTKDcyP6PwHn1KEvAxn36RnLTz54/ffNa+ouvI8cUPl7uPJQ3k1ClnhYMmWeiYXFneLIgUP7Z39TYXGELA7tYEL0NjeporbF4h0KfgdMoC67dEO7VGGkEh0qabcGXYboRr+auglGKt4R11RbpYEJ1OdGF4wHrU66TDcYFXgQRwVabV0Y0w6VAZtn4jXqvNXbzqgDtnhk704KcR2Vcb0Z021NIevtTnwhKn00KhOO4E6xxHK7in8GeS3ulFj8F+U4r3xVEgA=", "close": "data:image/webp;base64,UklGRgABAABXRUJQVlA4TPQAAAAvDsADEK/AJgCANLi7l4BI9H9l68KgkSRFx8z4YIJ1vObXRVEbyVbyP+45dVAKFVA+IZHL/AfUNmaUiog9ixooQxU4LjR/TBAUM0YYIj3/36WZK94aPDp3tWJjz2IuidfBvjIwjGSrifoI/8sP5P57hSIi+q+2bRvGTs+mM/beAPbta4pt4fjKVldbbv4HXGoxsYiIZeyNdyV3M1PShI1k7r2o95LlA4pYn73OWYUCXmctY87pLJTwehapc450y1hPzi6SEyCsfXYeszJ9QFQqTvI7pdbCBksmOd9VFza+rHzcVls47EIiorBCq7hhPs9zWEYA", "ic_coin": "data:image/webp;base64,UklGRtwBAABXRUJQVlA4TM8BAAAvHsAHEJfAIACAJHR35wP9v8cRflEV2VbycPl0JwFd6B+CBqY2kq3kKxZ/WqEZ+s80IrL5DwAaMyEGKPpy09trW9jwsVxiYGze/HEQAqn0s/8k3z4eU1QKNFSAYNtK2Gga/SAKgun+N6sknSVE9F+R27aNHAMZ7Wk94vuukvX9p0q5snLj93qiuNcym7V+fiblorjvex1UJ9W/8u56HzXa2qg2fMqbKWVtThUBeYqrvOfup7bRheGqzjve3E56FnURgakCNVE+cd+cVk9v7cCk2pHXlLaiZUeEs5xo6uCa8OWyVrKqvECJQit4rjXjDlWHJFi14SwubXkz2zZTHc7CREy24auUay3q5rGSxxD47CAbDGzqRiUiMr27DmY66/hghuHhLftIIKzKwAMJm/OFARFSbS90sce8jy0IuzoyatylJZ/gMZhfMfMTI0kA2rQ0ycehmy7gPjrAwgCFan3BSHoXoTGQjypM8bgpBV0b5AhA9rRWn/y1MRofRFiEW4QFAfV5C0ff8diFiLnNqFf5PqL3rpNpK2UBnIN8ewG9D9U5T2bTmYHsZ9pEs9zBIqjl1+urnAVw2vGPd11xxFyv61+vv3ySrtfsf7/Gj+wLAA==", "ic_drop": "data:image/webp;base64,UklGRm4BAABXRUJQVlA4TGIBAAAvF8AHEJ+gIACAItvmmv4v6ZDiSJKSE+znEgApeP5B8aJQ0EaScs/MDIrev5M3MP8BQESIBBEUZTXZvfvcN6kvSGKSFZyRlCR44LDGAANatS++3S7RC3I0OIxtpY424gP/Bk3/xUZ0U0JE/xm4bdvIrqDb+z7xHEv0fCtdF32EPX0DCZ8GQeMn0e9WxqsvbgL2P/qHH1oCAEd/cKqtRry66HxEHX30EgHxdOR+mb0UBtjReaMxtdUaGXJYRE5fptZaswDR0cY9dNqUCDAcnZbN0ds7Ehtt7suttSVGZEfW1WIkQDLBaHWMfo53RG5o6WtqmxFBzCYlDe1bUngjNjHN2U8W2RO3NGMJW0IopdTlvEg92SSOMabSsl3bTR7yyhxshVl0luzJvK3MLDv3nGX5WUrMAPNiDOslaI6yCE21JewvmLzPJb0trWT2xw/lcqnWmnOCc+e/hsht/f8vkelh6gE=", "ic_gear": "data:image/webp;base64,UklGRhgCAABXRUJQVlA4TAsCAAAvH8AHEJegoJGk5nulSEAF/jWBGkWRJDUXyRnkUPgXwRsFCFATSYrEDxkmKETgXwUqiO+S+Q8ATwzmCqyPD8fj80Y2pVObnjWnsIDCqg6qvJt3/IfeP3cXg8TYtuO2iYAPfOwEyP6r1RKX8G5E/yfg+T1+1N/jUDzEP+Pc0qqe4gP8ByAxYVFzigRekV8whci/MddQtRTtWjWH+A2/bkzX0kTgdq2pmkP8hN1LOvcaYtKle02E52/Xep99VEl9sgBayhbfeI032rklba+TvmZLpvBBpCWNekvXvjl4HXMkSyE+n0lrtvuwKafscrzNlSzE59tZ47rPpsAu7JNHrzlFPoCvcd2bEjBpA6qtJnsp8ohymO3ah2DiJdtQfCzp9hwirrmohWNBRHidfbA+epsZi/gaVN3aphAfiXPtYrWpj0x4m4x6l2P+pRjqjPZt0Oq1cXvD9qGo9dGVsUhwatMGTCHC2QdPVUlSDvEh4L1qU7Zb0NlQgrdqChAfCV5VOl42t3R2OZ5qT7IIz0e8Ny8bOBQw1daThfh8xleTKAe8YJJ3GFlfeF29iarsBTfl2kdTX9nil06Doeo5QW0aXaimHOKbyIOeqZ1Wm1SdPrqSLD6fyd2ThTRabT2Z5KMmKT7fMaUQX7NJJAuvmBOKz68AYjQ6SSE+vMTz/3iVyIT4CPSXhHeLz9/zUb8DAA==", "ic_heart": "data:image/webp;base64,UklGRpABAABXRUJQVlA4TIQBAAAvHwAHEJegNpKt5GORu6Sk1EH/fVCCt6Emkq3m/dQHkh704gcXtJSgKJKk5nIgK8AGDvDvhR+v+Q8ARBawEz6Kv451P7Kf/ps5FxeDEhFg6jPMGAUhIPSgVrdBlwFiJMlxGxP/Swp0/skSC1DKYDei/wrbtm0cGzDq7vaKfyiLxf0uuCsdWEK3bGKrWCWl8GfnJgxsIm4oEz9DV8tBhxWjhtRKCsYu0jlu6kxyxsp8hqSemYwspu2eNa7yUG3cVJdqUjgspoDrbDWFOnVNZOfnOU1F6SR7Tm2Al2pyDAaAflbN12DXKak4v6D1e1wIcl2gJE/nFwxd50v1uke9+IpWkttARU39RXOWFfGB2HeUSuYU/WHhXQrJulI1M3mS8C6UQZCb2TBlBhCa8rRS61UE77T9GA+gihrXVDJ2++8SgJmQck252FBLTtM4Qpoh3TI+EEmP6Ua7sCRHLbNB+s6cHLQpm532AzJ2wvQrKqcp8N9RQY/d+i8GBE9N/wPJn0RKehMB", "ic_home": "data:image/webp;base64,UklGRuABAABXRUJQVlA4TNQBAAAvH8AGEJegJgBAxr68rr3rKCWaUJsabAIAaMLecM0A64U4NCcAaAa9FEWS1Fy+A1ygCyOo5p2Z/2Ak5/FDDolPwapGn94Q3DNnC7KX/ap/svIDMKskiaSgl6Hmpq0ODgMAaZuioDIj9P9rTTo+iOi/ArdtlIyO+T7x/iBw5P2HgLu7Hv1xFsiMcIQ3AO3V4CfStQPoXoN+wt0V+y1FNBB+4Li9B9GYY46vSTgor0FjzjWJBnxJWXn4psFrzpMak+CT2XWZ+WZsvBfRnHPQIPiIlW9qXZDXOjbm+KBwmZUvQkVWWnuOo7fKZ1ntRRgpLO6817HTqsENO9bEQ0QjZa0xz/DtbnWZLEJxFhFhFuLb1eHj6KGst+Z5k3B318UN8RPVuwQzb89bcGwNBfHZ7dUapzdCTNm8MQk1NiI8gr7aziAXSd9+SYqqb8RHQ2VscnBJvyIlWSUYrZ6IcLiySMrlG5MVUe2q6vAGU27E7sQk6aqiKepaZlXHTJlEVJBF3CMiUtC6Ve8ndrMqJHURRUZDF/VudbhlLjsSmRkoSCSI2quqV69bE7SKCHevKjMjLDSrk3icO+g9bRkel1V4Ve8ffx8AoHYAdwTrAD99YQC4t/s23hs=", "ic_pond": "data:image/webp;base64,UklGRtYBAABXRUJQVlA4TMkBAAAvH0AGEJegNpKtJPuCu2Y/onxaY2iGcQAAhepnm6u1amvhwDYAgCR0N5zG/1OD+oDL/Ach03KAoAaKwgerD/AbVxATwe8ZZ4/AGav/n7C3g5u7GJyVJENiAQi2rYSNIggKTvKB7n+z1Um3ENF/BW7bKOl2zPCJz5vamz6nfpWYr0Pu9rugNYuoylgrIivDx3uiWVYuVWVVVfOVmYvbi0elMRNRl0PDPDOt/fOsYBY8zyOYgEDGsLXtf5ppp577eeacPmWKjJWhbVM16OQBxKqi5IaMDP/SvIoEc6eeB1SVWSGArFwbqxwApgiJiNdXGSSgdQajKgg3cM8dRVamyc7k2GhWrQ65pW+AwQJgRFpvx1hZFQZAnnMwEsDz63ywMqoqfZDc27uMyIzBTAeeKzN3Qa7la2VlLmNmvXYx+C8y4qg6RwlXZWbuR4wbK2J5+PGkzPQQs1I7HVgb+884nDtx+7QO3PT6JPWIOpMQ2zZgDla3deS+GsrMEJDoQVY43zA3dxtnekIApuuLZy5XCPRoMbRDeCogg493E2F6AyBW7cosIpnOInQdQ6mpzhtwumjrmrZc+eqtvf036MXtRcr082v9+o0vi/gAAA==", "ic_quest": "data:image/webp;base64,UklGRtQBAABXRUJQVlA4TMcBAAAvHcAHEJegJpKkqO6iu+h/Qgoj+LeBBVKMKIokqSG/cs5gAf8O8HACkKE0kq3mf7J7FfwKUFRE/waX4/wHkBD559N6/kpnVNVcAo2Nb1AfKgGfYoRYLtouESoOZP9VFwYDxEi22zbmxwdAgAgM/VebrBLeRfR/Aq7fGujnQALjR/wtqfVWF/sJacxeywbRfsDSx5QoecXtG0ikMTUklQzfcHFR50NXitntDdZtddOYGlKH5vEDYd12jqXMl0aO4YPv2w6hTw0JGrW4XW/h1H5IqfQhaFXavgg//Thr20rtNN3DFxFcbd2A0qqkHOz6iO/kRt8gVqn4n10fWYrWvDU2WsyVYFzvkPoUsa0ba/Ms43qH1MfUUM0btByw6yNe+5g3SlxR8BPjhdiHpoYkWgk4pw4FeymKqT5R/NRtP9xueI4qKQ91aMWPU+Fgh2i3mFODNXcatfgpBd/vp91Ukuct01tVWY4T/2PnOP225OLEtKpR5XYe7IuO/TQuSaScIl5zasrGucNi4XC7HjxDUolq1Z/cOMOTiBkoHlu2i7jDaRfolZglj0WLXeSnz3jKkBa7WHaOXf8QuATX7TT9SwKkm3OBfg76DgA=", "ic_tank": "data:image/webp;base64,UklGRvIBAABXRUJQVlA4TOUBAAAvHsAHEJegNrKVCIghJULNro6tytCxDqO7DzYBAKTB3SLwW1SKUcRZgR2KIklqjpzzEzF4RBBK0BAFUPMfBGX1FlAKn1JC9b+CgRPiZzKbaUnYiLCR+nRLtX8YZ9pdWmOrrTNAjG0raCQEkP8R+B/7rzZodjt4L6L/E3A/hu391wFSjWT48Smwt8pGLlytk1QIEMMmQFptpZ7hfVuQcAPBei1sleXpBhCw9CuM1cjKT8olAfgAAcBCqJveuEhcQP9WCE6uRmKz+La2b1xAA+qm16+rcYEkayMJQMtDWzxZMoCTrL2R12pnflW1ZIhnFJJnYa94w6oo2a6UgYKzEO/qpZD6GZaBImdm4bumJ4Q2wOxz9LIrT1UBlyHJ5sAcLD9RAVGfA1hj0ob+ktSnqPQ11sDEyD+owEH7pLGAbuOXcroSQqQ8RxrGnlnTi1OdAoIpJ8kpA+mqyE/FleTUxImYU7bES53pIcOHOaNhevz4R1z7q2LTSQJAJN0c6Cpu527A6LQJxm9A5VK3UXdzANOckR49wtTZIajNYrhDd0aaG0nBHJgc6LRWPTLABEM6AaPvjei1nZE8Asy3RlIwRCEAerPII+AOJA9w63sjBZFHuAGE9we3Hj0G3H8Y9iSPcP9jAHBvAQA=", "ic_town": "data:image/webp;base64,UklGRuQBAABXRUJQVlA4TNcBAAAvH4AGEJfAIADAMrPtBmfe13sGZ2EbyVYbvPdUAR3QApGvXz0o0ihSENs29Bf7ThkR1NZAAAGk8Gf+Q+jcOCStIqvorNEwM9TL7/dWTRYxnmH6lr9fe56Ou53/gcdzNRSDZYAY2W7cJiB4ExBhqf9qr0kJ/0f0fwKuZ/l4/a8crxtyyeM32W/An/xGkBQAL3J83X8/ngQJQuVB9pdd8vn+eyu1M4CsG8gnfi9KykOf5jS3MOzg736S7PlBaqctkh6lpzw6C8mgViSVC2Kz2jpAxoAWIzmA7tGZ5AIkB81pTtShHU6aMyyyPvFYbZYOZkKju43ZPEjNN9nLly9fvnxBYzht0qNHaQ/LF33RuXhsjT7uFmQjk1xyOBYdBIEU5kY/OXhq475pInMhWHfS041ubm4fakaMrm3qUfV0GEE6IjWmh+gxkBsDm8oEzSXXSPc/uaRHb9ZZ2lyt59A5Ss1lKzOTXBDlsUiCJGsOzgWCXSPrTnJJezz2QSIHSUVCr8HGREFuwARQMXrL1Bj3To1EygUZoX0i12mobMq4Y+QBahJMGyTnY0FPeXaSIxJCWQR9AjDSzWkE3Zw2ENWiQC7Iay2dnACMdHuscn2VzwWdnFWuf5fnCwAA", "panel": "data:image/webp;base64,UklGRrICAABXRUJQVlA4TKUCAAAvKMAJELegqJEkZXb3mNnAvc/sqVcTyVbzPjmH8lcIYDCBMORS4QE1AYA0bHB/XtYxhv1/CzD/ITmyCZHT/o2aX+jkPKK22r1pA8R7DF5e2O66HE0KAUAEACAAgQCQ/nkMEmTbitsomtBkEGAj73+tkp10r+DeiP5PwPt+UP5LDfs5+GeqF7UL2xnsh7/uR7rhjd1G4DScYQFn+bw4L+q0u07d8PZcYQy9TOt159sFQObFy7TOy9SfjtOfr/My/wwG52UatyD71yzut0z9vMxjN3hqOMP+iH/+2Ebohrf9GTzdY+JIFHK5HqiSiPqY1qkf3oYzOJ2PdBRJmmsTAdGSjqjbOl9Og1s0HblahAsCr2e1pCN9GgPsMeWSLbYKiMDzRcXyBU4ze8x3WhtA5tpEvznXy2Exl6wVaIBcLb9Kl9tKA7JNwHL8TS71Nqs0UDziF+NdqdBAQOQG8YjbcjddjtLq1QtyL3DEbbqb12lPxQoNpKgoTUU94rbenZd2eVYwW8xaGqhymbYw3MVWP+aitkwTBcvltP9Ur/kicIHSFFPc1vBNroXPjdwUVDjuwvB2vtFLM9tQRBFKvIy9n0o6cm1ILrnJHZDTEbd17oc3zsu0xyMd2doEMg1fVgXzkb4Y52mP6SDXL6XxoqLZFBcvduGc9uhBqfCs5BvgyYtWc3RZb07DuMd0RxPICE9e1PY8Utzuws2R8g1NAeQJFUyfcGTaYzrIpVXll5riF/My7dHEkUttfMxqgRaTLvMZuuHGqIlWWn3y+pA4SBEfW3icXqaZfo+a5GsBRfdT7Yc3hn2dx+3x55wGT7vBfl9cx3m7V75eNDzOcGIY7NdlZlxcEZxduFVAPQ2j56Wb1mXup9+PTLcqjDq8/elHf/5tpz/DG/w/AQA=", "tag": "data:image/webp;base64,UklGRsQBAABXRUJQVlA4TLgBAAAvLMAEEL/AKJIkRb3MeHcGmP0ru/fYYBtJkpp9ZjLFzPmnJlNSGslW8zNJZYulBPovCsmf/wCgqqZWvvgJ6tAsHPXqf594oByC0xbbc3xlm5bLkkrAAAhADABwIIgAGJD+FwPE2raaSkNGDCiiY/+t6k8dnBvR/wm4Xrrf8qHkAyTe9EG86Z3e0l8ZP0XvD9a9IT8WopTitzN490JmVCrT/8L87ZIGrHsRxzz9w6nKscOqyk6FnQp7ZZnSoCeZcSj/p7bKuvfWW4fWd2jQ93udxzxYpwvJlDwvddW+re187jS67m1fq5Yp5liCk4WcFuraoJ93Wr9t3LRKWuYYxmKdwliCn29942w6NvXWReunpAb7Wm9gnGwhMFeOtnWapC61o7d+So1OY1tmxQLBXbIBjctxblKHQ5vgYHu5Skedp0AJxl0yoQQ7HvXcpNbVOtC0apPWCguzVAIYdyE/FkKc6kLf1rYDfUeqLHOFRUJTigV7CwUfGGctHwoJIUlTTL4Qbsbic1Icvz/4PHgD7gJJ1g+QxdvipQCScdL1LONTTspK+f0BSSkreeOudyVj7+jLTteH+i0vAQ=="};
@@ -10367,7 +10367,7 @@ plDraw129=(function(prev){return function(g,id,dir,i,flip,cx,by,h,tint){const F=
  const sc=h/F.fh,w=dp131(F.fw*sc),hh=dp131(F.fh*sc),X0=dpx131(cx-w/2),Y0=dp131(by-hh);const c2=PD136.c||(PD136.c=document.createElement('canvas'));const cw=Math.ceil(F.fw),ch=Math.ceil(F.fh);if(c2.width!==cw||c2.height!==ch){c2.width=cw;c2.height=ch}
  const t=c2.getContext('2d');t.clearRect(0,0,cw,ch);t.imageSmoothingEnabled=false;if(fl){t.save();t.translate(cw,0);t.scale(-1,1)}t.drawImage(F.im,k*F.fw,0,F.fw,F.fh,0,0,F.fw,F.fh);if(fl)t.restore();
  if(tint){t.globalCompositeOperation='source-atop';t.fillStyle=tint;t.fillRect(0,0,cw,ch);t.globalCompositeOperation='source-over'}const H_=typeof HDS74==='number'&&HDS74||1,small=hh*H_<ch;
- g.imageSmoothingEnabled=small;if(small)g.imageSmoothingQuality='high';g.drawImage(c2,0,0,cw,ch,X0,Y0,w,hh);g.imageSmoothingEnabled=false;const box={x:X0,y:Y0,w,h:hh};PD136.k=k;PD136.face=face;PD136.fl=fl;if(!PREV136.on){if(scene==='town')PC129.tw.box=box;else PC129.box=box}return box}})(plDraw129);
+ if(!(typeof draw151==='function'&&draw151(g,c2,cw,ch,X0,Y0,w,hh,F,k,fl,tint))){g.imageSmoothingEnabled=small;if(small)g.imageSmoothingQuality='high';g.drawImage(c2,0,0,cw,ch,X0,Y0,w,hh);g.imageSmoothingEnabled=false}const box={x:X0,y:Y0,w,h:hh};PD136.k=k;PD136.face=face;PD136.fl=fl;if(!PREV136.on){if(scene==='town')PC129.tw.box=box;else PC129.box=box}return box}})(plDraw129);
 // which way the player faces: town from the last movement, home from the walk step
 dTown=(function(prev){return function(){const T=PC129.tw,ox=T.x,oy=T.y;const r=prev();try{if(T.x!=null&&ox!=null){const K=F135.keys||{};let ix=0,iy=0;if(K.a||K.arrowleft)ix-=1;if(K.d||K.arrowright)ix+=1;if(K.w||K.arrowup)iy-=1;if(K.s||K.arrowdown)iy+=1;if(F135.joy){ix=F135.joy.dx;iy=F135.joy.dy}
  const vx=T.x-ox,vy=T.y-oy;if(ix||iy){F137.face=face137(ix,iy,F137.face);if(F137.face==='s')T.flip=ix>0}else if(Math.hypot(vx,vy)>.01){F137.face=face137(vx,vy,F137.face);if(F137.face==='s')T.flip=vx>0}}}catch(e){}return r}})(dTown);/* the player faces the way you push (keys / joystick), like a farming life-sim, also while sliding along a kerb */
@@ -12140,7 +12140,7 @@ newGame86=(function(prev){return function(){const r=prev.apply(this,arguments);t
 //    folds, outlines and highlights stay. The recoloured sheet is made once per choice and cached.
 // 3. Poses: wave alternates its two frames; tap a sofa / chair / stool → walk there and sit until you walk again; after
 //    "ให้อาหาร" she kneels by the tank for a moment; at the pier she holds up the net when a fish is landed.
-const SP149={
+const OLA151={},SP149={
  "_note": "V1.49 (owner, 9 Nov 2026: 'ต่อข้อ 1 และ 2 และ 3' = more sheet characters toward 15 + 15, recolour hair / skin / top / bottom / shoes 15 colours each, use the sit / net / feed poses). cols: the 15 colours of each part (the creator also offers 'สีเดิม', the sheet's own colours). partBox: per character, where client/build/art/art149.py samples a part in the idle frames ([frame, y0, y1, x0, x1] as fractions of the body height / frame width) when the default boxes miss it. pose: feed = kneel by the tank while the food falls (seconds, where on the aquarium screen); sit = which pieces are seats and how high the seat is (share of the character's height); net = the pose when a fish is landed at the pier.",
  "cols": {
   "hair": [
@@ -12338,6 +12338,25 @@ const SP149={
     0.45
    ],
    "yw": 70
+  },
+  "f7": {
+   "top": [
+    24,
+    0.42,
+    0.52,
+    0.33,
+    0.39
+   ],
+   "bottom": [
+    24,
+    0.7,
+    0.85,
+    0.3,
+    0.45
+   ]
+  },
+  "m5": {
+   "shoePose": 4
   }
  },
  "pose": {
@@ -12369,7 +12388,7 @@ const SP149={
 const PARTS149=['skin','hair','top','bottom','shoes'];
 (function(){if(typeof Image==='undefined')return;for(const k in PMA149){const im=new Image();im.src=PMA149[k];PM149[k.replace(/^pm_/,'')]=im}})();
 function pm149(id){if(PMD149[id])return PMD149[id];const im=PM149[id];if(!im||!im.naturalWidth)return null;const c=document.createElement('canvas');c.width=im.naturalWidth;c.height=im.naturalHeight;
- const g=c.getContext('2d');g.drawImage(im,0,0);const d=g.getImageData(0,0,c.width,c.height).data,p=new Uint8Array(c.width*c.height);for(let i=0;i<p.length;i++)p[i]=Math.round(d[i*4]/40);return PMD149[id]=p}
+ const g=c.getContext('2d');g.drawImage(im,0,0);const d=g.getImageData(0,0,c.width,c.height).data,p=new Uint8Array(c.width*c.height);const ol=OLA151[id]=new Uint8Array(p.length);for(let i=0;i<p.length;i++){const v=d[i*4];p[i]=Math.floor((v+5)/40);if(v%40>=10)ol[i]=1};return PMD149[id]=p}
 function cols149(){const p=typeof S!=='undefined'&&S&&S.profile86;return(p&&p.col149)||{}}
 function any149(c){return PARTS149.some(q=>c[q]!=null&&c[q]>=0)}
 // colour helpers (0..1)
@@ -12387,8 +12406,8 @@ function rc149(id,c){c=c||cols149();if(!any149(c))return null;let key=id;for(con
  const pm=pm149(id),img=src149(id);if(!pm||!img||pm.length!==img.width*img.height)return null;const d=img.data,R=ref149(id,d,pm),T={},K=SP149.shade||1.1;
  PARTS149.forEach((q,i)=>{const j=c[q];if(j!=null&&j>=0&&SP149.cols[q][j])T[i+1]=hex149(SP149.cols[q][j])});
  for(let i=0;i<pm.length;i++){const k=pm[i],t=T[k];if(!t||!d[i*4+3])continue;const[,s,l]=hsl149(d[i*4]/255,d[i*4+1]/255,d[i*4+2]/255),rf=R[k];
-  const nl=Math.max(.02,Math.min(.98,t[2]+(l-rf.l)*K)),ns=Math.max(0,Math.min(1,rf.s>.12?t[1]*Math.max(.55,Math.min(1.35,s/rf.s)):t[1]*(.75+.25*Math.min(1,s/.12))));
-  const[r,g,b]=rgb149(t[0],ns,nl);d[i*4]=r*255;d[i*4+1]=g*255;d[i*4+2]=b*255}
+  const nl=Math.max(.02,Math.min(.98,typeof lit151==='function'?lit151(l,rf.l,t[2]):t[2]+(l-rf.l)*K)),ns=Math.max(0,Math.min(1,rf.s>.12?t[1]*Math.max(.55,Math.min(1.35,s/rf.s)):t[1]*(.75+.25*Math.min(1,s/.12))));
+  const nl2=OLA151[id]&&OLA151[id][i]?Math.min(nl,Math.max(l,t[2]*.5)):nl;const[r,g,b]=rgb149(t[0],ns,nl2);d[i*4]=r*255;d[i*4+1]=g*255;d[i*4+2]=b*255}
  const cv=document.createElement('canvas');cv.width=img.width;cv.height=img.height;cv.getContext('2d').putImageData(img,0,0);cv.naturalWidth=img.width;cv.naturalHeight=img.height;
  if(RC149.size>=6)RC149.delete(RC149.keys().next().value);RC149.set(key,cv);return cv}
 // which way a pose frame faces (skin of the head on the right of the head = facing right)
@@ -12515,6 +12534,149 @@ drawR2C79=(function(prev){return function(s){try{if(homeOk129()&&sp148()){const 
   if(W150.on){if(PC129.mv||SIT149.on||T0>=W150.until){W150.on=false;W150.next=T0+P.every[0]+Math.random()*(P.every[1]-P.every[0])}else{PC129.idle=0;F137.home='u'}}
   else if(!W150.go&&!PC129.mv&&!SIT149.on&&!SIT149.pend&&!PC129.pick&&T0>=W150.next){if(!watch150())W150.next=T0+10}}}catch(e){}return prev.apply(this,arguments)}})(drawR2C79);
 // a tap on the floor cancels the watch (the walk itself ends it)
+
+// ===== V1.51 (owner, 9 Nov 2026: 'ไม่ต้องควบคุมตัวละคร ... ปล่อยให้ตัวละครที่เราสร้างมา เดินเอง ทำเอง ... กลางคืนนอน เที่ยงหาข้าวใน
+// ตู้เย็นกิน ... เหมือนเราได้ดู เรียลลิตี้ แต่ทุกอย่างขึ้นอยู่ที่เราจัดสรร' → 'เริ่ม V1.51 และดู Pixel สีชุด ตัวละครให้คมชัด การเดิน ท่าทาง
+// ต่างๆ ให้ไม่ผิดเพี้ยน สีคม ไม่กระตุก สีไม่หลุด ตอนเลือกตัวไม่ตกเฟรม'). Data: core/data/life151.json.
+// 1. Crisp frames: a sheet character's frame is scaled once to the exact screen pixels it covers (area-averaged, then the edge is
+//    cut to whole pixels) and kept; every later frame draws it 1:1 with no smoothing. The creator's big preview enlarges by a whole
+//    number only, so every picture pixel stays square. Before, the creator re-scaled the 3,200 px sheet for every card every frame
+//    (~6 frames a second); now it draws cached frames.
+// 2. Daily life by the real clock: night → to bed (hidden under the quilt, 💤); morning → feeds the fish if they are hungry; noon →
+//    fridge, then eats at a table; evening → fridge, stove, eats; free time → rests on a seat now and then, watches the tank (V1.50).
+//    The player arranges, she lives: a tap on the floor no longer walks her; a tap on a bed / seat / table invites her there; a
+//    tap on her says hello (and wakes / stands her up).
+const LF151={
+ "_note": "V1.51 (owner, 9 Nov 2026: 'ไม่ต้องควบคุมตัวละคร ... ปล่อยให้ตัวละครที่เราสร้างมา เดินเอง ทำเอง ... กลางคืนนอน เที่ยงหาข้าวในตู้เย็นกิน ... เหมือนเราได้ดู เรียลลิตี้ แต่ทุกอย่างขึ้นอยู่ที่เราจัดสรร'; agreed plan 'เริ่ม V1.51'). The character lives by the real clock (minutes after midnight, local time). sleep: from..to (crosses midnight) — walks to a bed and sleeps in it (hidden, Zz over the bed); no bed → dozes sitting. feed: once a day in the window, if the fish are hungry (mean hunger >= hungry) and there is food: walks to the aquarium, waits standSec, feeds (the same food the player picked). meals: once a day each, walks to the fridge (and the stove for dinner), then sits at a table (or sofa / floor) and eats for eatSec. free: when nothing is due she rests on a seat now and then (every restEvery s, for restSec). invite: a tap on a seat / table / bed asks her to go there; she stays inviteSec. Pieces are found by name: any key containing one of the words. force: what a forced test phase (CLOCK120.force.phase) means in minutes. bubble: the emoji shown over her head for each act.",
+ "sleep": {"from": 1350, "to": 390},
+ "feed": {"from": 390, "to": 600, "hungry": 25, "standSec": 2.5},
+ "meals": [
+  {"id": "lunch", "from": 720, "to": 810, "stove": false},
+  {"id": "dinner", "from": 1110, "to": 1230, "stove": true}
+ ],
+ "eatSec": 22, "fridgeSec": 2.2, "stoveSec": 4,
+ "free": {"restEvery": [45, 90], "restSec": [18, 32]},
+ "inviteSec": 40,
+ "startDelay": 3,
+ "pieces": {
+  "bed": ["bed_quilt", "daybed", "jp_futon", "bed"],
+  "fridge": ["fridge"],
+  "stove": ["stove"],
+  "seat": ["sofa", "armchair", "bean_bag", "chair", "stool", "zabuton", "bench"]
+ },
+ "notPieces": ["pet_bed"],
+ "force": {"night": 120, "dawn": 400, "day": 900, "golden": 1020, "dusk": 1140},
+ "bubble": {"sleep": "💤", "feed": "🐟", "fridge": "🧊", "cook": "🍳", "eat": "🍙", "rest": "☕", "watch": "✨"},
+ "hint": "ปล่อยให้เขาใช้ชีวิตเองนะ · แตะเตียง โซฟา หรือโต๊ะ เพื่อชวนไป · แตะตัวเขาเพื่อทักทาย",
+ "px": {"alphaCut": 110}
+}
+;
+// ---------- 1. crisp, cached frames
+const FID151=new WeakMap();let FIDN151=0;
+function fid151(im){let v=FID151.get(im);if(!v){v=++FIDN151;FID151.set(im,v)}return v}
+const FC151=new Map(),FCMAX151=600,FT151={c:null};
+function scaled151(key,make,DW,DH){let c=FC151.get(key);if(c){FC151.delete(key);FC151.set(key,c);return c}
+ const src=make();c=document.createElement('canvas');c.width=DW;c.height=DH;const g=c.getContext('2d');
+ if(DH<src.height){g.imageSmoothingEnabled=true;g.imageSmoothingQuality='high';g.drawImage(src,0,0,src.width,src.height,0,0,DW,DH);
+  const id=g.getImageData(0,0,DW,DH),d=id.data,cut=LF151.px.alphaCut;for(let i=3;i<d.length;i+=4)d[i]=d[i]<cut?0:255;g.putImageData(id,0,0)}
+ else{g.imageSmoothingEnabled=false;g.drawImage(src,0,0,src.width,src.height,0,0,DW,DH)}
+ FC151.set(key,c);if(FC151.size>FCMAX151)FC151.delete(FC151.keys().next().value);return c}
+// called by lib137's frame drawing (build.py patch) for sheet characters: c2 holds the frame (flipped, tinted) at 100 x 150
+function draw151(g,c2,cw,ch,X0,Y0,w,hh,F,k,fl,tint){if(!F||F.av!==2||!F.im)return false;const H_=typeof HDS74==='number'&&HDS74||1,DW=Math.max(1,Math.round(w*H_)),DH=Math.max(1,Math.round(hh*H_));
+ const c=scaled151(fid151(F.im)+'|'+k+'|'+(fl?1:0)+'|'+(tint||'')+'|'+DW+'x'+DH,()=>c2,DW,DH);g.imageSmoothingEnabled=false;g.drawImage(c,X0,Y0,w,hh);return true}
+frame148=function(id,k,X,Y,h,flip){const p=S.profile86||{},src=(id===p.sp148&&rc149(id))||PI148[id];if(!src||!(src.naturalWidth||src.width))return;const fw=SP148.fw,fh=SP148.fh,H_=typeof HDS74==='number'&&HDS74||1;
+ let DH=Math.max(1,Math.round(h*H_));if(DH>=fh)DH=Math.floor(DH/fh)*fh;const DW=Math.round(DH*fw/fh),hh=DH/H_,w=DW/H_,top=Y+h-hh;
+ const c=scaled151(fid151(src)+'|'+k+'|'+(flip?1:0)+'||'+DW+'x'+DH,()=>{const t=FT151.c||(FT151.c=document.createElement('canvas'));t.width=fw;t.height=fh;const g=t.getContext('2d');g.clearRect(0,0,fw,fh);
+  if(flip){g.save();g.translate(fw,0);g.scale(-1,1)}g.drawImage(src,k*fw,0,fw,fh,0,0,fw,fh);if(flip)g.restore();return t},DW,DH);
+ x.imageSmoothingEnabled=false;x.drawImage(c,dpx131(X-w/2),dp131(top),w,hh)};
+// ---------- 2. daily life
+const LIFE151={act:null,hide:false,bub:null,bubT:0,enter:0,restAt:0,forceMin:null,hint:false};
+function min151(){if(LIFE151.forceMin!=null)return LIFE151.forceMin;const F=typeof CLOCK120!=='undefined'&&CLOCK120.force;if(F&&F.phase&&LF151.force[F.phase]!=null)return LF151.force[F.phase];const d=new Date();return d.getHours()*60+d.getMinutes()}
+function win151(m,a,b){return a<=b?m>=a&&m<b:m>=a||m<b}
+function done151(){S.meta=S.meta||{};const q=S.meta.life151||(S.meta.life151={}),d=new Date(),k=d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate();if(q.day!==k){q.day=k;q.feed=0;q.lunch=0;q.dinner=0}return q}
+function is151(e,kind){return!!e&&!LF151.notPieces.includes(e[0])&&LF151.pieces[kind].some(w=>e[0].indexOf(w)>=0)}
+function key151(e){return e[0]+'@'+e[1]+','+e[2]}
+function find151(kind){let best=-1,bd=1e9;R2LAY.forEach((e,i)=>{if(!is151(e,kind)||r2flat(e[0]))return;const[w,d]=r2dim(e),dd=Math.hypot(e[1]+w/2-PC129.u,e[2]+d/2-PC129.v);if(dd<bd){bd=dd;best=i}});return best}
+function at151(key){return key?R2LAY.findIndex(e=>e&&key151(e)===key):-1}
+function front151(i){const e=R2LAY[i],[w,d]=r2dim(e);return[e[1]+w/2,Math.min(R2.D-.3,e[2]+d+.45)]}
+function walk151(u,v){SIT149.user=true;try{stand149();return walkTo129(u,v)}finally{SIT149.user=false}}
+function sitOn151(i){const e=R2LAY[i];if(!e)return false;const[w,d]=r2dim(e),cu=e[1]+w/2,cv=e[2]+d/2;if(!walk151(cu,cv))return false;SIT149.pend={i,key:key151(e),cu,cv};return true}
+function bubble151(s,sec){LIFE151.bub=s;LIFE151.bubT=T0+(sec||2.5)}
+function end151(){LIFE151.hide=false;if(SIT149.on||SIT149.pend)stand149();LIFE151.act=null;PC129.idle=0}
+function hungry151(){const F=Object.values(S.fish||{});if(!F.length)return false;if(typeof PCTX!=='undefined'&&PCTX)return false;const m=F.reduce((s,f)=>s+(f.hunger||0),0)/F.length;let f=null;try{f=foodSel110()}catch(e){}return m>=LF151.feed.hungry&&f&&foodN110(f)>0}
+// what is due now (null = free time)
+function due151(){const m=min151(),D=done151();if(win151(m,LF151.sleep.from,LF151.sleep.to))return{kind:'sleep'};
+ if(win151(m,LF151.feed.from,LF151.feed.to)&&!D.feed&&tank150()>=0&&hungry151())return{kind:'feed'};
+ for(const M of LF151.meals)if(win151(m,M.from,M.to)&&!D[M.id])return{kind:'meal',meal:M};return null}
+function start151(A){LIFE151.act=Object.assign({step:'go',t:T0},A);W150.on=false;W150.go=false;const k=A.kind;
+ if(k==='sleep'||k==='nap'){const i=A.bed!=null?A.bed:find151('bed');if(i>=0){LIFE151.act.bedKey=key151(R2LAY[i]);const[u,v]=front151(i);walk151(u,v)}else{const s=find151('seat');if(s>=0){LIFE151.act.seat=1;sitOn151(s)}}return}
+ if(k==='feed'){const[u,v]=front151(tank150());walk151(u,v);return}
+ if(k==='meal'){const i=find151('fridge');if(i<0){bubble151('🍽️?',4);done151()[A.meal.id]=1;LIFE151.act=null;return}LIFE151.act.fridge=key151(R2LAY[i]);const[u,v]=front151(i);walk151(u,v);return}
+ if(k==='rest'||k==='invite'){return}}
+function eat151(){const A=LIFE151.act;A.step='eat';A.until=0;let t=-1;R2LAY.forEach((e,i)=>{if(t<0&&typeof table150==='function'&&table150(e))t=i});
+ if(t>=0&&sitAt150(t)){A.sat=1;return}const s=find151('seat');if(s>=0&&sitOn151(s)){A.sat=1;return}A.sat=0;A.until=T0+LF151.eatSec}
+function tick151(){const A=LIFE151.act,arrived=!PC129.mv&&!SIT149.pend;
+ if(!A){if(T0<LIFE151.enter+LF151.startDelay)return;const d=due151();if(d){start151(d);return}
+  if(!LIFE151.restAt)LIFE151.restAt=T0+LF151.free.restEvery[0];if(T0>=LIFE151.restAt&&!W150.on&&!W150.go&&!SIT149.on&&!PC129.mv){const R=LF151.free;LIFE151.restAt=T0+R.restEvery[0]+Math.random()*(R.restEvery[1]-R.restEvery[0]);
+   const s=find151('seat');if(s>=0&&sitOn151(s))LIFE151.act={kind:'rest',step:'go',t:T0,len:R.restSec[0]+Math.random()*(R.restSec[1]-R.restSec[0])}}return}
+ PC129.idle=0;W150.next=Math.max(W150.next||0,T0+20);const k=A.kind;
+ if(k==='sleep'||k==='nap'){const bi=at151(A.bedKey);
+  if(k==='sleep'&&!win151(min151(),LF151.sleep.from,LF151.sleep.to)){end151();bubble151('☀️',3);return}
+  if(k==='nap'&&A.step==='in'&&T0>=A.until){end151();return}
+  if(A.bedKey&&bi<0){end151();return}
+  if(A.step==='go'&&arrived&&(A.bedKey||!A.seat||SIT149.on)){A.step='in';A.until=T0+LF151.inviteSec;if(A.bedKey){LIFE151.hide=true;PC129.mv=false;PC129.path=[]}}
+  if(A.step==='in'&&!A.bedKey&&A.seat&&!SIT149.on&&!SIT149.pend){end151();return}
+  return}
+ if(k==='feed'){if(A.step==='go'&&arrived){A.step='stand';A.until=T0+LF151.feed.standSec}
+  if(A.step!=='go')F137.home='u';
+  if(A.step==='stand'&&T0>=A.until){try{if(hungry151())feedWith110(foodSel110(),true)}catch(e){}done151().feed=1;try{save()}catch(e){}bubble151(LF151.bubble.feed,3);LIFE151.act=null}
+  return}
+ if(k==='meal'){const M=A.meal;
+  if(A.step==='go'&&arrived){if(at151(A.fridge)<0){end151();return}A.step='fridge';A.until=T0+LF151.fridgeSec}
+  if(A.step==='fridge'){F137.home='u';if(T0>=A.until){const st=M.stove?find151('stove'):-1;if(st>=0){A.step='tostove';const[u,v]=front151(st);walk151(u,v)}else eat151()}return}
+  if(A.step==='tostove'&&arrived){A.step='cook';A.until=T0+LF151.stoveSec}
+  if(A.step==='cook'){F137.home='u';if(T0>=A.until)eat151();return}
+  if(A.step==='eat'){const fin=()=>{done151()[M.id]=1;try{save()}catch(e){}end151();bubble151('😋',2.5)};
+   if(A.sat){if(SIT149.on&&!A.until)A.until=T0+LF151.eatSec;if(!SIT149.on&&!SIT149.pend){fin();return}}
+   if(A.until&&T0>=A.until)fin()}
+  return}
+ if(k==='rest'||k==='invite'){if(SIT149.on&&!A.until)A.until=T0+(A.len||LF151.inviteSec);if(!SIT149.on&&!SIT149.pend){LIFE151.act=null;return}if(A.until&&T0>=A.until)end151();return}}
+function bubbleOf151(){const A=LIFE151.act,B=LF151.bubble;if(T0<LIFE151.bubT&&LIFE151.bub)return LIFE151.bub;if(!A)return W150.on?B.watch:null;
+ if(A.kind==='sleep'||A.kind==='nap')return A.step==='in'?B.sleep:null;if(A.kind==='feed')return A.step==='stand'?B.feed:null;
+ if(A.kind==='meal')return A.step==='fridge'?B.fridge:A.step==='cook'?B.cook:(A.step==='eat'&&(SIT149.on||(!A.sat&&A.until)))?B.eat:null;if(A.kind==='rest')return SIT149.on?B.rest:null;return null}
+function drawBubble151(s){const b=bubbleOf151();if(!b)return;let cx,cy;
+ if(LIFE151.hide){const i=at151(LIFE151.act&&LIFE151.act.bedKey);if(i<0)return;const bx=r2box(R2LAY[i]);cx=s.x+(bx.x+bx.w/2)*s.z;cy=s.y+bx.y*s.z+4}
+ else{const B=PC129.box;if(!B)return;cx=B.x+B.w/2;cy=B.y-2}
+ const bob=Math.sin(T0*2.4)*2,w=Math.max(30,b.length*13+12);x.save();rr(cx-w/2,cy-30+bob,w,26,11,'#fffaf0ee');x.fillStyle='#fffaf0ee';x.beginPath();x.moveTo(cx-5,cy-5+bob);x.lineTo(cx+5,cy-5+bob);x.lineTo(cx,cy+1+bob);x.fill();
+ TXs(b,cx,cy-12+bob,15,'#4a3a2a','center');x.restore()}
+drawR2C79=(function(prev){return function(s){let on=false;try{on=homeOk129()&&!!sp148()&&!(typeof TITLE86!=='undefined'&&TITLE86.on);if(!on){if(LIFE151.act||LIFE151.hide)end151();LIFE151.enter=T0}else tick151()}catch(e){}
+ const r=prev.apply(this,arguments);try{if(on)drawBubble151(s)}catch(e){}return r}})(drawR2C79);
+// asleep in bed: not drawn (under the quilt)
+plDraw129=(function(prev){return function(g){if(LIFE151.hide&&scene==='home'&&!(typeof PREV136!=='undefined'&&PREV136.on))return PC129.box||null;return prev.apply(this,arguments)}})(plDraw129);
+// taps: floor → no walking (a hint once); bed / seat / table → invite; her (or her bed while asleep) → hello
+dragEnd=(function(prev){return function(){try{const p=panDrag,bg=!tapPend||(tapPend.b&&tapPend.b.w>=1200&&tapPend.b.h>=700);
+  if(p&&bg&&!panMoved&&homeOk129()&&!PC129.pick&&!(typeof SHOW128!=='undefined'&&SHOW128.on)&&sp148()){const B=PC129.box,hit=r2itemAt(p.px,p.py,true),e=hit>=0&&R2LAY[hit];
+   const onHer=!LIFE151.hide&&B&&p.px>=B.x&&p.px<=B.x+B.w&&p.py>=B.y&&p.py<=B.y+B.h,onBed=LIFE151.hide&&e&&LIFE151.act&&key151(e)===LIFE151.act.bedKey;
+   const eat=()=>{panDrag=null;panMoved=false;tapPend=null};
+   if(onHer||onBed){if(LIFE151.act)end151();try{wave143()}catch(err){}eat();return}
+   if(e&&is151(e,'bed')&&!r2flat(e[0])){end151();start151({kind:'nap',bed:hit});eat();return}
+   if(!e||r2flat(e[0])){if(!LIFE151.hint){LIFE151.hint=true;say(LF151.hint)}eat();return}
+   if(e&&(seat149(e)||(typeof table150==='function'&&table150(e)))){if(LIFE151.act)end151();const r=prev.apply(this,arguments);if(SIT149.pend)LIFE151.act={kind:'invite',step:'go',t:T0};return r}}}catch(err){}return prev.apply(this,arguments)}})(dragEnd);
+// ---------- 3. the blurred town behind the title / creator: blurred once, then only moved (before: a 2.5 px blur of the whole
+// 1,536 x 1,024 picture every frame — 150 ms a frame on a computer, ~480 ms on a phone)
+const BG151={key:'',pic:null,mx:24,my:12};
+bgT140=function(L,s){const H_=typeof HDS74==='number'&&HDS74||1,key=fid151(L)+'|'+s.toFixed(4)+'|'+VW74+'|'+H+'|'+H_+'|'+VOX74,B=BG151;
+ if(B.key!==key){B.key=key;const mk=(mx,my)=>{const c=document.createElement('canvas');c.width=Math.round((VW74+2*mx)*H_);c.height=Math.round((H+2*my)*H_);const g=c.getContext('2d');g.scale(H_,H_);g.translate(VOX74+mx,my);return[c,g]};
+  const k=s*1.1,w=L.width*k,h=L.height*k;let[c,g]=mk(B.mx,B.my);const sea=g.createLinearGradient(0,0,0,H);sea.addColorStop(0,'#7cb8cf');sea.addColorStop(1,'#2a6a86');g.fillStyle=sea;g.fillRect(-VOX74-B.mx,-B.my,VW74+2*B.mx,H+2*B.my);
+  g.imageSmoothingEnabled=true;try{g.filter='blur(2.5px) saturate(1.05)'}catch(e){}g.drawImage(L,(W-w)/2,(H-h)/2,w,h);try{g.filter='none'}catch(e){}
+  const a=g.createLinearGradient(0,0,0,H);a.addColorStop(0,'rgba(40,24,10,.30)');a.addColorStop(.5,'rgba(20,24,20,.18)');a.addColorStop(1,'rgba(6,26,40,.62)');g.fillStyle=a;g.fillRect(-VOX74-B.mx,-B.my,VW74+2*B.mx,H+2*B.my);
+  const v=g.createRadialGradient(W/2,H*.45,H*.35,W/2,H*.45,VW74*.75);v.addColorStop(0,'rgba(0,0,0,0)');v.addColorStop(1,'rgba(10,8,4,.45)');g.fillStyle=v;g.fillRect(-VOX74-B.mx,-B.my,VW74+2*B.mx,H+2*B.my);B.pic=c}
+ const dx=Math.round(Math.sin(T0*.05)*18*H_)/H_,dy=Math.round(Math.cos(T0*.04)*8*H_)/H_;x.save();x.imageSmoothingEnabled=false;
+ x.drawImage(B.pic,-VOX74-B.mx+dx,-B.my+dy,VW74+2*B.mx,H+2*B.my);x.restore()};
+// ---------- 4. recolour light: below the part's mean light a pixel scales towards black, above it towards white, so outlines stay
+// dark and highlights stay light whatever colour is picked (V1.49 shifted every pixel by the same amount: a pale skin turned
+// its dark outline orange)
+function lit151(l,ref,t){return l<=ref?l*t/Math.max(.02,ref):t+(l-ref)*(1-t)/Math.max(.02,1-ref)}
 
 // ===== Environment layer (Phase 0) — injected by client/build/build.py right before the game boots =====
 // development : everything on (team mode via 7 taps on the version line, Sandbox Gold, festival preview)
