@@ -3174,7 +3174,7 @@ const _hud67=hud;hud=function(){_hud67();if(LVQ.length||LVSHOW)return;if(!['home
   TXs(lock?'เริ่มที่ Lv '+s.lv:(s.g.st==='gold'?a.toLocaleString()+'/'+b.toLocaleString()+' G':a+'/'+b)+(storyReady()?' · พร้อมรับรางวัล':''),32,y+40,12,storyReady()?'#8fe08a':'#cfe6f2')}
  if(n){gc_(338,y+6,12,'#e8504a');TXB(String(n),338,y+6,13,'#fff','center')}};
 
-const GAME_VER='V1.51';
+const GAME_VER='V1.52';
 // ===== V0.68 STEP 8 — UX/UI: main dock (บ้าน / ตู้ / อ่าง / เมือง / เควส), Lv1-5 tutorial pointers tied to the story,
 // one UI skin drawn by the user's ChatGPT (buttons, tags, icons), Demo/dev tools hidden in real play, online save per player. =====
 const UI_IMG={"btn_blue": "data:image/webp;base64,UklGRj4BAABXRUJQVlA4TDIBAAAvIkAEEL/AJgCANLi/HgFy0P8lh82lBpsAAJNML3fcQxCDgiSgn6viSJKSO1zfEAJJkH9C7vMfkPmcXjc1/ElsyWQDAYsn14oZmTJEcwnaLHRUVJHFNUEQQYDgB37wgR8gTMAfUc2kqTFAjG0rChMDCG4fd+2/VcGYDt6N6P8E3EWH/hnoo/u6hG9iR/O1e9B0ClGp+zi4QsSP/cdtIrib0EV/vT7fDzF5R+jjJZ0c1YUNWCUAG1PriGG8jrd7YS3CNhTSdB6wS0txfc6QpVVWOxaYd1HPAkmydasMq2bIABKgsj1rWpVVsPz2MY1tIUymLMszMrJM2arT0MXg+EmMk60m7aYsWXmWJoYQadyNT4Rx+HQkQte6W/hI+mNM1TZI3t0SPqiVeCmeQujXcT/5V0k=", "btn_gray": "data:image/webp;base64,UklGRlABAABXRUJQVlA4TEMBAAAvIkAEELegKrKVijeoISSBoS3J562hNpKtBA0hhNSd/uuhBIbUvuJIUqKF4gmeL4tEDNJUNYFz/kOEZi6OJBvIMZ+pq48rnbSrfCw3b2u5mR0QEADQRwBAHwCEstnTi82fgwFiJNttGwnhgxkMENh/rYBkuoN3Ef2fgLvr0T8Dw+if7uGwub7cG1CXH+V782SEOk/fx+nHMfhb4m01WBqeTRX5W5Qahs/TS6o4jxtt+MDSX9uLbpaK1eAx6bOw7dKyQhaXhHILp43RY2Na9k3S2gFduX+wnqn2tl1au1dmy9IBEogfziPrUpau3IWTVipfKAeQaZv9OAWSihSiPBrjcOpAqAVJoLYozRY8r4oN5ZTKqXJKTdEpFSkZvP2Nq0RLjxrJmPC3cPX72AIIAcQgOX9LuBhiiAqKfwwxCM/d8q+SAAA=", "btn_green": "data:image/webp;base64,UklGRloBAABXRUJQVlA4TE4BAAAvIkAEELegJpKt5mdiT8VgAv89KlCAgmhDaSRbzfuf6GIFWBz9N0MNGRQK2khS7u75Xbx/ccw4/+G9vaWW3ZdWEYrAEdX2ZKBbra6EZh+VBOgDEMSHAMDgfxSdULIzUjK7t95kgBhJctyGxv8LAAUw/1gPUskZ7Eb0fwKeoybxvyTjvPjjE9Xl7nL9Wp/u6aPb798uow8+OUa5vgUBIGwq/YDvruL99cR9nAD8ptK8Upw3MPvn9iKBVggw2W00gzV3/zzYgBfaOZfkl9UMK8zDkK0SspCZQPL7VMRoojKzYlRZkJNfp9RHH+cqR5WDBfDbamK51KWocpCsHAQQnT0gpkMfzJUcMoMAYrhp9MNNF1PJwCuhgZWZCSAi4Ilw6Ydq0zp65+nov3X0LgKT+gFV2B/XeS+5SWeUU/oBqIw1gDWwZ2OlgTX403wk/xUA", "btn_orange": "data:image/webp;base64,UklGRkoBAABXRUJQVlA4TD4BAAAvIkAEELegNJKk6F7UOX4U5B8gCjYNRZEkNXsHz3uRkwA04N9MskCdgjaSlL17Zg3v3x/T/AdL7PaLIiVtYnjit+20N7eRi7m9v7rjJLQOACgQfwIgEAYw4P4nv2pJYXAY21acGHaQ7Jj0XyvoxA7ejej/BNxDi/4MZPH0CDOFrNf0sO2YruyCyvX5Ln5Mxg5CNi4/HBLG3iLL6Hr6ncBYXA66+Jzj4zy2X9VCcpbg3XVq4ziP4XkA6iS1mLwlpHxuVA5Bp26n7mzwpcTzqHPd6QBpH8/b+sNcZ2CncjBX9n4G1vaNNsO6zdRj3mdgZ4ZVaipeXVJpaz/vLNTBurS1SSVcwVleCV+a1qUtTfu8rJLauMSQmeyNSfgQn1VWeDt7CxNJEBOUcVSfwMkIe0sYN/TOj53vnSQmy93zV0k=", "btn_purple": "data:image/webp;base64,UklGRiwBAABXRUJQVlA4TCABAAAvIkAEEJ+gKJKk5nLgmXnhAf+ecIAPtY0kNe//sZEL6YD+mwMxDQAgDdbcMo3MA1zOH/zhMgnzH9xZz0QYVc4vxlFfJNtbdzpQPUmoOvaDLxogRAAgQoAAIrB3cXtmgBhJctzGeH0SwAO//JMFSdMZ7ET0fwLOywj6X8AI8eUrgtJhP2/Hq0PZxPEQPSTFi2yp1N93ZaR4CiN9dm3vtmqEiIzPtgM+JK2S0EJ3abhasRSxxL7BuJ4k+W2vliPF6ubDpZVx7xoX/UFfHHji9zeaLockH/Knvd2UzgJ98eEdSRqu4RLwLflC37722QWgeTC3euQUT4zyaR2a9zbNrUODmk0hngQjl/quDI4cTxGyvS4lhXhKhPzXpHsinDP/KUk=", "btn_rose": "data:image/webp;base64,UklGRj4BAABXRUJQVlA4TDEBAAAvIkAEEK+gNJKk6PbUD3giQJJ/VEjUpqE0kiTl2D1IcOQ+/8xe7lcpjSQpum/UOXB48s+KGH5q/kNTBisqvMJsq/ksfHobO9X50+vXbEWMjgwGwAokhBRYfDwXw34wQLBtq2qTVP5aeEh1/nMVbTKDcyP6PwHn1KEvAxn36RnLTz54/ffNa+ouvI8cUPl7uPJQ3k1ClnhYMmWeiYXFneLIgUP7Z39TYXGELA7tYEL0NjeporbF4h0KfgdMoC67dEO7VGGkEh0qabcGXYboRr+auglGKt4R11RbpYEJ1OdGF4wHrU66TDcYFXgQRwVabV0Y0w6VAZtn4jXqvNXbzqgDtnhk704KcR2Vcb0Z021NIevtTnwhKn00KhOO4E6xxHK7in8GeS3ulFj8F+U4r3xVEgA=", "close": "data:image/webp;base64,UklGRgABAABXRUJQVlA4TPQAAAAvDsADEK/AJgCANLi7l4BI9H9l68KgkSRFx8z4YIJ1vObXRVEbyVbyP+45dVAKFVA+IZHL/AfUNmaUiog9ixooQxU4LjR/TBAUM0YYIj3/36WZK94aPDp3tWJjz2IuidfBvjIwjGSrifoI/8sP5P57hSIi+q+2bRvGTs+mM/beAPbta4pt4fjKVldbbv4HXGoxsYiIZeyNdyV3M1PShI1k7r2o95LlA4pYn73OWYUCXmctY87pLJTwehapc450y1hPzi6SEyCsfXYeszJ9QFQqTvI7pdbCBksmOd9VFza+rHzcVls47EIiorBCq7hhPs9zWEYA", "ic_coin": "data:image/webp;base64,UklGRtwBAABXRUJQVlA4TM8BAAAvHsAHEJfAIACAJHR35wP9v8cRflEV2VbycPl0JwFd6B+CBqY2kq3kKxZ/WqEZ+s80IrL5DwAaMyEGKPpy09trW9jwsVxiYGze/HEQAqn0s/8k3z4eU1QKNFSAYNtK2Gga/SAKgun+N6sknSVE9F+R27aNHAMZ7Wk94vuukvX9p0q5snLj93qiuNcym7V+fiblorjvex1UJ9W/8u56HzXa2qg2fMqbKWVtThUBeYqrvOfup7bRheGqzjve3E56FnURgakCNVE+cd+cVk9v7cCk2pHXlLaiZUeEs5xo6uCa8OWyVrKqvECJQit4rjXjDlWHJFi14SwubXkz2zZTHc7CREy24auUay3q5rGSxxD47CAbDGzqRiUiMr27DmY66/hghuHhLftIIKzKwAMJm/OFARFSbS90sce8jy0IuzoyatylJZ/gMZhfMfMTI0kA2rQ0ycehmy7gPjrAwgCFan3BSHoXoTGQjypM8bgpBV0b5AhA9rRWn/y1MRofRFiEW4QFAfV5C0ff8diFiLnNqFf5PqL3rpNpK2UBnIN8ewG9D9U5T2bTmYHsZ9pEs9zBIqjl1+urnAVw2vGPd11xxFyv61+vv3ySrtfsf7/Gj+wLAA==", "ic_drop": "data:image/webp;base64,UklGRm4BAABXRUJQVlA4TGIBAAAvF8AHEJ+gIACAItvmmv4v6ZDiSJKSE+znEgApeP5B8aJQ0EaScs/MDIrev5M3MP8BQESIBBEUZTXZvfvcN6kvSGKSFZyRlCR44LDGAANatS++3S7RC3I0OIxtpY424gP/Bk3/xUZ0U0JE/xm4bdvIrqDb+z7xHEv0fCtdF32EPX0DCZ8GQeMn0e9WxqsvbgL2P/qHH1oCAEd/cKqtRry66HxEHX30EgHxdOR+mb0UBtjReaMxtdUaGXJYRE5fptZaswDR0cY9dNqUCDAcnZbN0ds7Ehtt7suttSVGZEfW1WIkQDLBaHWMfo53RG5o6WtqmxFBzCYlDe1bUngjNjHN2U8W2RO3NGMJW0IopdTlvEg92SSOMabSsl3bTR7yyhxshVl0luzJvK3MLDv3nGX5WUrMAPNiDOslaI6yCE21JewvmLzPJb0trWT2xw/lcqnWmnOCc+e/hsht/f8vkelh6gE=", "ic_gear": "data:image/webp;base64,UklGRhgCAABXRUJQVlA4TAsCAAAvH8AHEJegoJGk5nulSEAF/jWBGkWRJDUXyRnkUPgXwRsFCFATSYrEDxkmKETgXwUqiO+S+Q8ATwzmCqyPD8fj80Y2pVObnjWnsIDCqg6qvJt3/IfeP3cXg8TYtuO2iYAPfOwEyP6r1RKX8G5E/yfg+T1+1N/jUDzEP+Pc0qqe4gP8ByAxYVFzigRekV8whci/MddQtRTtWjWH+A2/bkzX0kTgdq2pmkP8hN1LOvcaYtKle02E52/Xep99VEl9sgBayhbfeI032rklba+TvmZLpvBBpCWNekvXvjl4HXMkSyE+n0lrtvuwKafscrzNlSzE59tZ47rPpsAu7JNHrzlFPoCvcd2bEjBpA6qtJnsp8ohymO3ah2DiJdtQfCzp9hwirrmohWNBRHidfbA+epsZi/gaVN3aphAfiXPtYrWpj0x4m4x6l2P+pRjqjPZt0Oq1cXvD9qGo9dGVsUhwatMGTCHC2QdPVUlSDvEh4L1qU7Zb0NlQgrdqChAfCV5VOl42t3R2OZ5qT7IIz0e8Ny8bOBQw1daThfh8xleTKAe8YJJ3GFlfeF29iarsBTfl2kdTX9nil06Doeo5QW0aXaimHOKbyIOeqZ1Wm1SdPrqSLD6fyd2ThTRabT2Z5KMmKT7fMaUQX7NJJAuvmBOKz68AYjQ6SSE+vMTz/3iVyIT4CPSXhHeLz9/zUb8DAA==", "ic_heart": "data:image/webp;base64,UklGRpABAABXRUJQVlA4TIQBAAAvHwAHEJegNpKt5GORu6Sk1EH/fVCCt6Emkq3m/dQHkh704gcXtJSgKJKk5nIgK8AGDvDvhR+v+Q8ARBawEz6Kv451P7Kf/ps5FxeDEhFg6jPMGAUhIPSgVrdBlwFiJMlxGxP/Swp0/skSC1DKYDei/wrbtm0cGzDq7vaKfyiLxf0uuCsdWEK3bGKrWCWl8GfnJgxsIm4oEz9DV8tBhxWjhtRKCsYu0jlu6kxyxsp8hqSemYwspu2eNa7yUG3cVJdqUjgspoDrbDWFOnVNZOfnOU1F6SR7Tm2Al2pyDAaAflbN12DXKak4v6D1e1wIcl2gJE/nFwxd50v1uke9+IpWkttARU39RXOWFfGB2HeUSuYU/WHhXQrJulI1M3mS8C6UQZCb2TBlBhCa8rRS61UE77T9GA+gihrXVDJ2++8SgJmQck252FBLTtM4Qpoh3TI+EEmP6Ua7sCRHLbNB+s6cHLQpm532AzJ2wvQrKqcp8N9RQY/d+i8GBE9N/wPJn0RKehMB", "ic_home": "data:image/webp;base64,UklGRuABAABXRUJQVlA4TNQBAAAvH8AGEJegJgBAxr68rr3rKCWaUJsabAIAaMLecM0A64U4NCcAaAa9FEWS1Fy+A1ygCyOo5p2Z/2Ak5/FDDolPwapGn94Q3DNnC7KX/ap/svIDMKskiaSgl6Hmpq0ODgMAaZuioDIj9P9rTTo+iOi/ArdtlIyO+T7x/iBw5P2HgLu7Hv1xFsiMcIQ3AO3V4CfStQPoXoN+wt0V+y1FNBB+4Li9B9GYY46vSTgor0FjzjWJBnxJWXn4psFrzpMak+CT2XWZ+WZsvBfRnHPQIPiIlW9qXZDXOjbm+KBwmZUvQkVWWnuOo7fKZ1ntRRgpLO6817HTqsENO9bEQ0QjZa0xz/DtbnWZLEJxFhFhFuLb1eHj6KGst+Z5k3B318UN8RPVuwQzb89bcGwNBfHZ7dUapzdCTNm8MQk1NiI8gr7aziAXSd9+SYqqb8RHQ2VscnBJvyIlWSUYrZ6IcLiySMrlG5MVUe2q6vAGU27E7sQk6aqiKepaZlXHTJlEVJBF3CMiUtC6Ve8ndrMqJHURRUZDF/VudbhlLjsSmRkoSCSI2quqV69bE7SKCHevKjMjLDSrk3icO+g9bRkel1V4Ve8ffx8AoHYAdwTrAD99YQC4t/s23hs=", "ic_pond": "data:image/webp;base64,UklGRtYBAABXRUJQVlA4TMkBAAAvH0AGEJegNpKtJPuCu2Y/onxaY2iGcQAAhepnm6u1amvhwDYAgCR0N5zG/1OD+oDL/Ach03KAoAaKwgerD/AbVxATwe8ZZ4/AGav/n7C3g5u7GJyVJENiAQi2rYSNIggKTvKB7n+z1Um3ENF/BW7bKOl2zPCJz5vamz6nfpWYr0Pu9rugNYuoylgrIivDx3uiWVYuVWVVVfOVmYvbi0elMRNRl0PDPDOt/fOsYBY8zyOYgEDGsLXtf5ppp577eeacPmWKjJWhbVM16OQBxKqi5IaMDP/SvIoEc6eeB1SVWSGArFwbqxwApgiJiNdXGSSgdQajKgg3cM8dRVamyc7k2GhWrQ65pW+AwQJgRFpvx1hZFQZAnnMwEsDz63ywMqoqfZDc27uMyIzBTAeeKzN3Qa7la2VlLmNmvXYx+C8y4qg6RwlXZWbuR4wbK2J5+PGkzPQQs1I7HVgb+884nDtx+7QO3PT6JPWIOpMQ2zZgDla3deS+GsrMEJDoQVY43zA3dxtnekIApuuLZy5XCPRoMbRDeCogg493E2F6AyBW7cosIpnOInQdQ6mpzhtwumjrmrZc+eqtvf036MXtRcr082v9+o0vi/gAAA==", "ic_quest": "data:image/webp;base64,UklGRtQBAABXRUJQVlA4TMcBAAAvHcAHEJegJpKkqO6iu+h/Qgoj+LeBBVKMKIokqSG/cs5gAf8O8HACkKE0kq3mf7J7FfwKUFRE/waX4/wHkBD559N6/kpnVNVcAo2Nb1AfKgGfYoRYLtouESoOZP9VFwYDxEi22zbmxwdAgAgM/VebrBLeRfR/Aq7fGujnQALjR/wtqfVWF/sJacxeywbRfsDSx5QoecXtG0ikMTUklQzfcHFR50NXitntDdZtddOYGlKH5vEDYd12jqXMl0aO4YPv2w6hTw0JGrW4XW/h1H5IqfQhaFXavgg//Thr20rtNN3DFxFcbd2A0qqkHOz6iO/kRt8gVqn4n10fWYrWvDU2WsyVYFzvkPoUsa0ba/Ms43qH1MfUUM0btByw6yNe+5g3SlxR8BPjhdiHpoYkWgk4pw4FeymKqT5R/NRtP9xueI4qKQ91aMWPU+Fgh2i3mFODNXcatfgpBd/vp91Ukuct01tVWY4T/2PnOP225OLEtKpR5XYe7IuO/TQuSaScIl5zasrGucNi4XC7HjxDUolq1Z/cOMOTiBkoHlu2i7jDaRfolZglj0WLXeSnz3jKkBa7WHaOXf8QuATX7TT9SwKkm3OBfg76DgA=", "ic_tank": "data:image/webp;base64,UklGRvIBAABXRUJQVlA4TOUBAAAvHsAHEJegNrKVCIghJULNro6tytCxDqO7DzYBAKTB3SLwW1SKUcRZgR2KIklqjpzzEzF4RBBK0BAFUPMfBGX1FlAKn1JC9b+CgRPiZzKbaUnYiLCR+nRLtX8YZ9pdWmOrrTNAjG0raCQEkP8R+B/7rzZodjt4L6L/E3A/hu391wFSjWT48Smwt8pGLlytk1QIEMMmQFptpZ7hfVuQcAPBei1sleXpBhCw9CuM1cjKT8olAfgAAcBCqJveuEhcQP9WCE6uRmKz+La2b1xAA+qm16+rcYEkayMJQMtDWzxZMoCTrL2R12pnflW1ZIhnFJJnYa94w6oo2a6UgYKzEO/qpZD6GZaBImdm4bumJ4Q2wOxz9LIrT1UBlyHJ5sAcLD9RAVGfA1hj0ob+ktSnqPQ11sDEyD+owEH7pLGAbuOXcroSQqQ8RxrGnlnTi1OdAoIpJ8kpA+mqyE/FleTUxImYU7bES53pIcOHOaNhevz4R1z7q2LTSQJAJN0c6Cpu527A6LQJxm9A5VK3UXdzANOckR49wtTZIajNYrhDd0aaG0nBHJgc6LRWPTLABEM6AaPvjei1nZE8Asy3RlIwRCEAerPII+AOJA9w63sjBZFHuAGE9we3Hj0G3H8Y9iSPcP9jAHBvAQA=", "ic_town": "data:image/webp;base64,UklGRuQBAABXRUJQVlA4TNcBAAAvH4AGEJfAIADAMrPtBmfe13sGZ2EbyVYbvPdUAR3QApGvXz0o0ihSENs29Bf7ThkR1NZAAAGk8Gf+Q+jcOCStIqvorNEwM9TL7/dWTRYxnmH6lr9fe56Ou53/gcdzNRSDZYAY2W7cJiB4ExBhqf9qr0kJ/0f0fwKuZ/l4/a8crxtyyeM32W/An/xGkBQAL3J83X8/ngQJQuVB9pdd8vn+eyu1M4CsG8gnfi9KykOf5jS3MOzg736S7PlBaqctkh6lpzw6C8mgViSVC2Kz2jpAxoAWIzmA7tGZ5AIkB81pTtShHU6aMyyyPvFYbZYOZkKju43ZPEjNN9nLly9fvnxBYzht0qNHaQ/LF33RuXhsjT7uFmQjk1xyOBYdBIEU5kY/OXhq475pInMhWHfS041ubm4fakaMrm3qUfV0GEE6IjWmh+gxkBsDm8oEzSXXSPc/uaRHb9ZZ2lyt59A5Ss1lKzOTXBDlsUiCJGsOzgWCXSPrTnJJezz2QSIHSUVCr8HGREFuwARQMXrL1Bj3To1EygUZoX0i12mobMq4Y+QBahJMGyTnY0FPeXaSIxJCWQR9AjDSzWkE3Zw2ENWiQC7Iay2dnACMdHuscn2VzwWdnFWuf5fnCwAA", "panel": "data:image/webp;base64,UklGRrICAABXRUJQVlA4TKUCAAAvKMAJELegqJEkZXb3mNnAvc/sqVcTyVbzPjmH8lcIYDCBMORS4QE1AYA0bHB/XtYxhv1/CzD/ITmyCZHT/o2aX+jkPKK22r1pA8R7DF5e2O66HE0KAUAEACAAgQCQ/nkMEmTbitsomtBkEGAj73+tkp10r+DeiP5PwPt+UP5LDfs5+GeqF7UL2xnsh7/uR7rhjd1G4DScYQFn+bw4L+q0u07d8PZcYQy9TOt159sFQObFy7TOy9SfjtOfr/My/wwG52UatyD71yzut0z9vMxjN3hqOMP+iH/+2Ebohrf9GTzdY+JIFHK5HqiSiPqY1qkf3oYzOJ2PdBRJmmsTAdGSjqjbOl9Og1s0HblahAsCr2e1pCN9GgPsMeWSLbYKiMDzRcXyBU4ze8x3WhtA5tpEvznXy2Exl6wVaIBcLb9Kl9tKA7JNwHL8TS71Nqs0UDziF+NdqdBAQOQG8YjbcjddjtLq1QtyL3DEbbqb12lPxQoNpKgoTUU94rbenZd2eVYwW8xaGqhymbYw3MVWP+aitkwTBcvltP9Ur/kicIHSFFPc1vBNroXPjdwUVDjuwvB2vtFLM9tQRBFKvIy9n0o6cm1ILrnJHZDTEbd17oc3zsu0xyMd2doEMg1fVgXzkb4Y52mP6SDXL6XxoqLZFBcvduGc9uhBqfCs5BvgyYtWc3RZb07DuMd0RxPICE9e1PY8Utzuws2R8g1NAeQJFUyfcGTaYzrIpVXll5riF/My7dHEkUttfMxqgRaTLvMZuuHGqIlWWn3y+pA4SBEfW3icXqaZfo+a5GsBRfdT7Yc3hn2dx+3x55wGT7vBfl9cx3m7V75eNDzOcGIY7NdlZlxcEZxduFVAPQ2j56Wb1mXup9+PTLcqjDq8/elHf/5tpz/DG/w/AQA=", "tag": "data:image/webp;base64,UklGRsQBAABXRUJQVlA4TLgBAAAvLMAEEL/AKJIkRb3MeHcGmP0ru/fYYBtJkpp9ZjLFzPmnJlNSGslW8zNJZYulBPovCsmf/wCgqqZWvvgJ6tAsHPXqf594oByC0xbbc3xlm5bLkkrAAAhADABwIIgAGJD+FwPE2raaSkNGDCiiY/+t6k8dnBvR/wm4Xrrf8qHkAyTe9EG86Z3e0l8ZP0XvD9a9IT8WopTitzN490JmVCrT/8L87ZIGrHsRxzz9w6nKscOqyk6FnQp7ZZnSoCeZcSj/p7bKuvfWW4fWd2jQ93udxzxYpwvJlDwvddW+re187jS67m1fq5Yp5liCk4WcFuraoJ93Wr9t3LRKWuYYxmKdwliCn29942w6NvXWReunpAb7Wm9gnGwhMFeOtnWapC61o7d+So1OY1tmxQLBXbIBjctxblKHQ5vgYHu5Skedp0AJxl0yoQQ7HvXcpNbVOtC0apPWCguzVAIYdyE/FkKc6kLf1rYDfUeqLHOFRUJTigV7CwUfGGctHwoJIUlTTL4Qbsbic1Icvz/4PHgD7gJJ1g+QxdvipQCScdL1LONTTspK+f0BSSkreeOudyVj7+jLTteH+i0vAQ=="};
@@ -5467,7 +5467,7 @@ const BUF96={cv:null,g:null},PIX96=new WeakMap();
 function pix96(hd,w,h){let p=PIX96.get(hd);if(p&&p.w===w&&p.h===h)return p;const c=document.createElement('canvas');c.width=w;c.height=h;const g=c.getContext('2d');g.drawImage(hd,0,0,w,h);
  p={w,h,u:new Uint32Array(g.getImageData(0,0,w,h).data.buffer)};PIX96.set(hd,p);return p}
 drawFishSprite=(function(prev){return function(f,d){const im=FSPR[d.species_id];if(!im||!im.__pl||!im.naturalWidth)return prev(f,d);
- const k=(isoOn&&isoOn()&&!aqEdit)?PLF_SCALE(d):Math.max(2,PLF_SCALE(d)+1),hd=k>1?hd93(im,k):im;if(!hd||!(hd.width||hd.naturalWidth))return prev(f,d);
+ const k=(isoOn&&isoOn()&&!aqEdit)?(typeof k152==='function'?k152(d):PLF_SCALE(d)):Math.max(2,PLF_SCALE(d)+1),hd=k>1?hd93(im,k):im;if(!hd||!(hd.width||hd.naturalWidth))return prev(f,d);
  const F=fin96(d),w=im.naturalWidth*k,h=(hd!==im&&(hd.height||hd.naturalHeight))?(hd.height||hd.naturalHeight):im.naturalHeight*k,S=pix96(hd,w,h),P=Math.ceil(h*.25)+4,BW=w+P*2,BH=h+P*2;
  if(!BUF96.cv){BUF96.cv=document.createElement('canvas');BUF96.g=BUF96.cv.getContext('2d')}if(BUF96.cv.width!==BW||BUF96.cv.height!==BH){BUF96.cv.width=BW;BUF96.cv.height=BH}
  const g=BUF96.g,img=g.createImageData(BW,BH),o=new Uint32Array(img.data.buffer),src=S.u;
@@ -12677,6 +12677,184 @@ bgT140=function(L,s){const H_=typeof HDS74==='number'&&HDS74||1,key=fid151(L)+'|
 // dark and highlights stay light whatever colour is picked (V1.49 shifted every pixel by the same amount: a pale skin turned
 // its dark outline orange)
 function lit151(l,ref,t){return l<=ref?l*t/Math.max(.02,ref):t+(l-ref)*(1-t)/Math.max(.02,1-ref)}
+
+// ===== V1.52 (owner, 9 Nov 2026: 'ลองตรวจเช็คขนาดตัวปลา อาหาร ไม้น้ำ อุปกรณ์ตู้ปลา ไฟ ของตกแต่งให้สมมาตร สวยงาม หน่อย เพราะปลาบางตัว
+// เล็ก บางตัวใหญ่ และระบบบ้าน เริ่มต้นควรมีพื้นที่นอกบ้านมาให้เห็นบ้าง เพื่อจะได้เลือกเลี้ยงตู้ จัดในบ้าน หรือเลี้ยงอ่าง จัดนอกบ้าน และจะได้ทำ
+// บท Pilot แนะนำการเล่น'). Data: core/data/start152.json.
+// 1. Fish by their real length: a grown fish is base x (cm/5)^exp px long (angelfish 15 cm ≈ 136 px, guppy 60, neon 45, ember 29),
+//    on the same scale as the rocks, wood and plants (~12 px a cm). Big fish use the 4x pixel-art step so they stay sharp.
+// 2. A new house has its garden open from the start, with a few plants, a lantern, a tree and a medaka basin outside.
+// 3. Pilot chapter ("บทนำ") after the house name: choose where the first fish live (the tank inside or the basin outside),
+//    get them, feed them once, then the "let her live" explanation. Each step has one card and an arrow; a small reward at the end.
+const ST152={
+ "_note": "V1.52 (owner, 9 Nov 2026: 'ลองตรวจเช็คขนาดตัวปลา อาหาร ไม้น้ำ อุปกรณ์ตู้ปลา ไฟ ของตกแต่งให้สมมาตร สวยงาม หน่อย เพราะปลาบางตัวเล็ก บางตัวใหญ่ ... และระบบบ้าน เริ่มต้นควรมีพื้นที่นอกบ้านมาให้เห็นบ้าง ... ทำบท Pilot แนะนำการเล่น'). fish: a grown tank fish is drawn px = base x (cm / 5) ^ exp long (cm = real adult length; guppy 5 cm = base px). V1.43 sized fish by the shop's 'sc' only, so a 15 cm angelfish and a 5 cm guppy were both 64 px while the rocks and driftwood are drawn at about 12 px a cm. Young fish keep their smaller step (fry 1/3, young 2/3). maxK = largest pixel-art enlargement of the small sprite (4 = the sharpest big step). yard: the garden around a new house is open from the start with these pieces (a = along the house width, b = depth; b > D = in front of the house); the medaka basin outside is a real basin you can go into. pilot: the first-session chapter after the house name (texts in the layer).",
+ "fish": {
+  "base": 60,
+  "exp": 0.8,
+  "maxK": 4,
+  "cm": {
+   "guppy": 5,
+   "neon_tetra": 3.5,
+   "betta": 6.5,
+   "koi_guppy": 5,
+   "grass_guppy": 5,
+   "mosaic_guppy": 5,
+   "tuxedo_guppy": 5,
+   "half_black_guppy": 5,
+   "leopard_guppy": 5,
+   "zebra_danio": 5,
+   "platy": 6,
+   "corydoras": 5.5,
+   "molly": 9,
+   "cardinal_tetra": 4.5,
+   "harlequin": 4.5,
+   "otocinclus": 4,
+   "honey_gourami": 5,
+   "pearl_gourami": 11,
+   "cherry_barb": 5,
+   "ember_tetra": 2,
+   "rummy_nose": 5,
+   "black_neon": 4,
+   "kuhli_loach": 8,
+   "bristlenose_pleco": 12,
+   "siamese_algae_eater": 14,
+   "dwarf_gourami": 8,
+   "german_blue_ram": 6,
+   "angelfish": 15,
+   "swordtail": 10,
+   "endler": 2.5,
+   "plakat_betta": 6,
+   "cherry_shrimp": 2.5,
+   "amano_shrimp": 5,
+   "nerite_snail": 2.5,
+   "blue_dream_shrimp": 2.5,
+   "electric_blue_ram": 6,
+   "black_angelfish": 15,
+   "royal_plakat": 6,
+   "orange_sakura_shrimp": 2.5,
+   "golden_rummy": 5
+  }
+ },
+ "yard": [
+  [
+   "medaka_basin",
+   4.6,
+   "D+1.3"
+  ],
+  [
+   "g_flower",
+   1.2,
+   "D+2.6"
+  ],
+  [
+   "g_lantern",
+   8.6,
+   "D+1.6"
+  ],
+  [
+   "g_planter",
+   11.5,
+   "D+1.3"
+  ],
+  [
+   "g_hydrangea",
+   17,
+   "D+2.4"
+  ],
+  [
+   "g_bush",
+   "W-4.2",
+   "D+2.2"
+  ],
+  [
+   "g_tree",
+   "W+0.8",
+   "D+1.2"
+  ],
+  [
+   "g_stones",
+   -4,
+   "D-3.6"
+  ]
+ ],
+ "pondLv": 1,
+ "reward": 300
+};
+// ---------- 1. fish sizes
+function cm152(id){const v=ST152.fish.cm[id];if(v)return v;const d=DB[id];return d&&d.cm?d.cm:5*((d&&d.sc)||1)}
+function len152(d){const F=ST152.fish,st=(typeof stageOf==='function'&&d.species_id)?stageOf(d):'adult',sf=st==='fry'?1/3:st==='juv'?2/3:1;return F.base*Math.pow(cm152(d.species_id)/5,F.exp)*sf}
+// pixel-art step for the drawing buffer (lib95 via build.py): the sharpest step that does not go past the wanted length
+function k152(d){const k0=PLF_SCALE(d),im=FSPR[d.species_id];if(!im||!im.naturalWidth)return k0;const want=len152(d),max=ST152.fish.maxK;let k=k0;while(k<max&&im.naturalWidth*(k+1)<=want*1.08)k++;return k}
+fz143=function(d,w){try{if(!(w>0)){const im=FSPR[d.species_id];w=(im&&im.naturalWidth||30)*3}const want=len152(d);return Math.max(.2,Math.min(1,want/Math.max(1,w)))}catch(e){return 1}};
+// ---------- 2. the garden around a new house
+const PIL152={};
+function yardStart152(){const r=S.room2;if(!r)return;r.yard=ST152.yard.map(([k,ea,eb])=>{const f=v=>typeof v==='string'?Function('W','D','return '+v)(R2.W,R2.D):v;return[k,+f(ea).toFixed(1),+f(eb).toFixed(1),0]})}
+start147=(function(prev){return function(){const r=prev.apply(this,arguments);try{S.start87=S.start87||{};S.start87.garden=Date.now();yardStart152();R2DIRTY=true;r2apply52();
+  S.meta.pilot152={step:'choose',t:Date.now()};S.meta.first147=2;save()}catch(e){}return r}})(start147);
+// the basin outside opens from Lv 1 for a player who starts there (otherwise from play140.json pondLv)
+const PONDLV152=FEATURE_LV.pond;
+function pondLv152(){try{FEATURE_LV.pond=S.meta&&S.meta.pilot152&&S.meta.pilot152.where==='pond'?Math.min(PONDLV152,ST152.pondLv):PONDLV152}catch(e){}}
+// a tap on a basin in the garden goes in (lib151 would read it as a floor tap)
+dragEnd=(function(prev){return function(){try{const p=panDrag;if(p&&!panMoved&&typeof houseView104==='function'&&houseView104()&&r2itemAt(p.px,p.py,true)<0){const c=yardHit104(p.px,p.py);
+  if(c){panDrag=null;panMoved=false;tapPend=null;editTap=null;pilotGo152(c.k);return enterInst78(c.k,c.n)}}}catch(e){}return prev.apply(this,arguments)}})(dragEnd);
+// ---------- 3. the pilot chapter
+const PT152={
+ choose:{t:'บทนำ · บ้านหลังแรก',d:['ในบ้านมีตู้ปลา นอกบ้านมีอ่างเมดากะ','เลือกที่เลี้ยงปลาตัวแรก · อีกที่ทำทีหลังได้เสมอ']},
+ tank:{t:'บทนำ · ปลาตัวแรกในตู้',d:['ไปร้านปลาในเมือง เลือกปลาที่ชอบ 1 ตัว','ปลาใหม่ต้องปรับน้ำก่อน ทำตามขั้นในเกมได้เลย']},
+ pond:{t:'บทนำ · อ่างนอกบ้าน',d:['แตะอ่างเมดากะหน้าบ้านเพื่อเข้าไปดู','เปิดอ่างครั้งแรกได้เมดากะ 3 ตัวเป็นของขวัญ']},
+ feed:{t:'บทนำ · มื้อแรก',d:['ปลาหิวแล้ว ลองให้อาหาร 1 ครั้ง']},
+ live:{t:'บทนำ · ปล่อยให้เขาใช้ชีวิต',d:['ต่อจากนี้เขาใช้ชีวิตเองตามเวลาจริง: กลางคืนนอน เช้าให้อาหารปลา','เที่ยงหาของกินในตู้เย็น ว่าง ๆ นั่งพักหรือยืนดูตู้ปลา','คุณจัดบ้าน แต่งตู้ หาปลาหายาก · แตะเตียง โซฟา โต๊ะ เพื่อชวนไป']}
+};
+function pil152(){return S.meta&&S.meta.pilot152&&!S.meta.pilot152.done?S.meta.pilot152:null}
+function step152(s){const P=pil152();if(!P||P.step===s)return;P.step=s;P.t=Date.now();if(s==='feed')P.food=S.inventory.food_basic||0;try{save()}catch(e){}}
+function pilotGo152(k){const P=pil152();if(P&&P.step==='choose'&&k==='medaka_basin')choose152('pond')}   // a tap on the basin is the same as choosing it
+function choose152(w){const P=pil152();if(!P)return;P.where=w;pondLv152();if(w==='tank'){step152('tank')}else{step152('pond')}}
+function hasFish152(){return Object.keys(S.fish||{}).length>0}   // the tank route (the basin route moves on in openPond)
+function fed152(){const P=pil152();if(!P)return false;return(S.inventory.food_basic||0)<(P.food==null?1e9:P.food)||!!PIL152.fed}
+qev=(function(prev){return function(k){if(k==='feed'){PIL152.fed=1}return prev.apply(this,arguments)}})(qev);
+function tick152(){const P=pil152();if(!P)return;
+ if(P.step==='tank'&&hasFish152())step152('feed');
+ if(P.step==='feed'&&fed152()&&scene==='home')step152('live')}
+function done152(){const P=pil152();if(!P)return;P.done=1;S.player.gold+=ST152.reward;try{save()}catch(e){}say('จบบทนำ · ได้ '+ST152.reward+' G · ขอให้สนุกกับบ้านใหม่นะ');try{if(typeof LIFE151!=='undefined')LIFE151.enter=T0-60}catch(e){}}
+// the arrow over a piece in the house view (room or garden)
+function arrowAt152(e){try{const s=r2screen(),b=r2box(e);if(!b)return;const cx=s.x+(b.x+b.w/2)*s.z,cy=s.y+b.y*s.z-34+Math.sin(T0*5)*5;x.save();x.fillStyle='#ffd34d';x.strokeStyle='#5a3a1a';x.lineWidth=3;
+ x.beginPath();x.moveTo(cx,cy);x.lineTo(cx-13,cy-18);x.lineTo(cx-5,cy-18);x.lineTo(cx-5,cy-34);x.lineTo(cx+5,cy-34);x.lineTo(cx+5,cy-18);x.lineTo(cx+13,cy-18);x.closePath();x.fill();x.stroke();x.restore()}catch(err){}}
+function card152(P,top){const T=PT152[P.step];if(!T)return;const lines=T.d,w=Math.min(640,VW74-40),h=58+lines.length*22+(P.step==='choose'||P.step==='tank'||P.step==='live'?62:0),X0=W/2-w/2,Y0=top?146:H-h-96;
+ nine84(X0,Y0,w,h,3);TXB(T.t,W/2,Y0+34,19,'#4a3a2a','center');lines.forEach((l,i)=>TXs(l,W/2,Y0+58+i*22,14,'#6a5040','center'));const by=Y0+h-58;
+ if(P.step==='choose'){B('🐠 ตู้ปลาในบ้าน',X0+24,by,w/2-36,46,()=>choose152('tank'),true,'#2b8fb8');btns[btns.length-1].l='บทนำ:ตู้';B('🪴 อ่างนอกบ้าน',X0+w/2+12,by,w/2-36,46,()=>choose152('pond'),true,'#4a9a6a');btns[btns.length-1].l='บทนำ:อ่าง'}
+ if(P.step==='tank'){B('🐟 ไปร้านปลา',W/2-130,by,260,46,()=>go('shop'),true,'#4a9a6a');btns[btns.length-1].l='บทนำ:ร้านปลา'}
+ if(P.step==='live'){B('เริ่มใช้ชีวิต ✨',W/2-130,by,260,46,done152,true,'#4a9a6a');btns[btns.length-1].l='บทนำ:เริ่ม'}}
+hud=(function(prev){return function(){const r=prev.apply(this,arguments);try{if(!PIL152.lv){PIL152.lv=1;pondLv152()}const P=pil152();if(!P||(typeof TITLE86!=='undefined'&&TITLE86.on)||(typeof LVQ!=='undefined'&&LVQ.length))return r;tick152();
+  if(scene==='home'&&!R2.edit&&!R2.cat&&!MENU76){const lay=R2LAY,yard=(S.room2&&S.room2.yard)||[];
+   if(P.step==='choose'||P.step==='tank'){const e=lay.find(q=>q[0]==='aquarium');if(e)arrowAt152(e)}
+   if(P.step==='choose'||P.step==='pond'){const e=yard.find(q=>q[0]==='medaka_basin');if(e)arrowAt152(e)}
+   if(['choose','tank','pond','live'].includes(P.step))card152(P,false);
+   if(P.step==='feed'){const T={step:'feed'};PT152.feed.d=[P.where==='pond'?'แตะอ่างหน้าบ้าน แล้วให้อาหารปลา 1 ครั้ง':'แตะตู้ปลาในบ้าน แล้วกด "ให้อาหาร" 1 ครั้ง'];card152(T,false)}}
+  else if((scene==='aq'||scene==='pond')&&P.step==='feed'){PT152.feed.d=[scene==='pond'?'แตะ "ให้อาหาร" แล้วแตะผิวน้ำ 1 ครั้ง · เสร็จแล้วกลับบ้าน':'ปลาหิวแล้ว ลองให้อาหาร 1 ครั้ง · เสร็จแล้วกลับบ้าน'];if(fed152())PT152.feed.d=['เยี่ยม! ปลาได้กินแล้ว · กด "บ้าน" เพื่อกลับไปดูเขา'];card152({step:'feed'},true)}}catch(e){}return r}})(hud);
+// the V1.47 welcome card is replaced by the chapter for new games
+// the basin in the garden is its own basin ('medaka_basin#9', "อ่างหน้าบ้าน"), with the same name tag as the basins inside
+const YC152={koiOnly:false};
+yardConts104=(function(prev){return function(){const L=prev().map(c=>c.k==='medaka_basin'?Object.assign({},c,{n:9}):c);return YC152.koiOnly?L.filter(c=>c.k==='g_koi'):L}})(yardConts104);
+label78=(function(prev){return function(k,n){if(k==='medaka_basin'&&n===9)return'อ่างหน้าบ้าน';return prev(k,n)}})(label78);
+tags78=(function(prev){return function(){YC152.koiOnly=true;try{prev()}finally{YC152.koiOnly=false}try{if(!houseView104())return;const s=r2screen();
+  for(const c of yardConts104()){if(c.k==='g_koi')continue;const b=r2box(c.e);if(!b)continue;const PP=pil152(),lk=lockOf78(c.k)&&!(PP&&(PP.step==='choose'||PP.step==='pond')),uid=(S.room2.top76||{})[c.k+'#'+c.n],pe=uid&&S.home_layout&&S.home_layout.starter_room.find(q=>q.uid76===uid);
+   const t=(lk?'🔒 ':'')+label78(c.k,c.n)+(lk?' · Lv '+FEATURE_LV.pond:' · 🐟'+(pe?pe.pond.length:0)),w=Math.max(62,t.length*7+14),cx=s.x+(b.x+b.w/2)*s.z,yy=s.y+b.y*s.z-16;
+   x.globalAlpha=.92;rr(cx-w/2,yy-10,w,20,10,'#2e5a3a');x.globalAlpha=1;TXs(t,cx,yy+1,11,'#fff','center')}}catch(e){}}})(tags78);
+// while the chapter runs, its own arrows lead (the quest pointer would point somewhere else)
+tutTarget=(function(prev){return function(){if(pil152())return null;return prev.apply(this,arguments)}})(tutTarget);
+// every tank fish takes the same pixel-art path (sharp enlargement, fin and tail motion, real length). The 31 species added from
+// V1.13 on had no pixel-art mark, so they fell back to the oldest drawing: 0.56 x their small picture, about 18 px long whatever
+// the fish — an angelfish was drawn smaller than a guppy.
+drawFishSprite=(function(prev){return function(f,d){try{const im=FSPR[d.species_id];if(im&&im.naturalWidth&&!im.__pl&&DB[d.species_id]&&DB[d.species_id].grp==='tank'&&!HEAD_RIGHT.has(d.species_id))im.__pl=1}catch(e){}return prev.apply(this,arguments)}})(drawFishSprite);
+// the basin route: the basin outside is a top-view basin (scene 'pond', its fish in the basin's own list): the first visit puts
+// 3 grown medaka in it (like the first stone basin), then the chapter asks for the first meal
+openPond=(function(prev){return function(e){const r=prev.apply(this,arguments);try{const P=pil152();if(P&&P.step==='pond'&&e&&e.key78==='medaka_basin#9'){const L=pondFish(e);
+  if(!L.length){const ids=(typeof MEDAKA_SPECIES!=='undefined'?MEDAKA_SPECIES.map(q=>q.speciesId):[]).sort((a,b)=>{const A=DB[a.replace(/^medaka_/,'')]||{},B=DB[b.replace(/^medaka_/,'')]||{};return(A.lv||1)-(B.lv||1)||(A.price||0)-(B.price||0)}),pick=[];for(let i=0;i<3&&ids.length;i++)pick.push(ids[i%ids.length]);
+   pick.slice(0,3).forEach((sp,i)=>L.push({id:'p'+(Date.now()%1e7)+'_'+i,sp,hunger:55,health:100,size:1,age:400}));say('ของขวัญบ้านใหม่: เมดากะ 3 ตัวในอ่างหน้าบ้าน · ลองให้อาหารดูนะ');try{save()}catch(err){}}
+  step152('feed')}}catch(err){}return r}})(openPond);
+// the camera keeps the V1.46 / V1.50 scale with the garden open: the fit is worked out without the garden ring (the small first
+// room at the full room's zoom leaves about the ring's room around it)
+fitZoom74=(function(prev){return function(){try{if(typeof small150==='function'&&small150()&&!(S.room2&&S.room2.cur&&S.room2.cur!=='f1')){const g=gardenOn88;gardenOn88=()=>false;try{return prev()}finally{gardenOn88=g}}}catch(e){}return prev()}})(fitZoom74);
 
 // ===== Environment layer (Phase 0) — injected by client/build/build.py right before the game boots =====
 // development : everything on (team mode via 7 taps on the version line, Sandbox Gold, festival preview)
