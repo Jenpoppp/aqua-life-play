@@ -3174,7 +3174,7 @@ const _hud67=hud;hud=function(){_hud67();if(LVQ.length||LVSHOW)return;if(!['home
   TXs(lock?'เริ่มที่ Lv '+s.lv:(s.g.st==='gold'?a.toLocaleString()+'/'+b.toLocaleString()+' G':a+'/'+b)+(storyReady()?' · พร้อมรับรางวัล':''),32,y+40,12,storyReady()?'#8fe08a':'#cfe6f2')}
  if(n){gc_(338,y+6,12,'#e8504a');TXB(String(n),338,y+6,13,'#fff','center')}};
 
-const GAME_VER='V1.56';
+const GAME_VER='V1.58';
 // ===== V0.68 STEP 8 — UX/UI: main dock (บ้าน / ตู้ / อ่าง / เมือง / เควส), Lv1-5 tutorial pointers tied to the story,
 // one UI skin drawn by the user's ChatGPT (buttons, tags, icons), Demo/dev tools hidden in real play, online save per player. =====
 const UI_IMG={"btn_blue": "data:image/webp;base64,UklGRj4BAABXRUJQVlA4TDIBAAAvIkAEEL/AJgCANLi/HgFy0P8lh82lBpsAAJNML3fcQxCDgiSgn6viSJKSO1zfEAJJkH9C7vMfkPmcXjc1/ElsyWQDAYsn14oZmTJEcwnaLHRUVJHFNUEQQYDgB37wgR8gTMAfUc2kqTFAjG0rChMDCG4fd+2/VcGYDt6N6P8E3EWH/hnoo/u6hG9iR/O1e9B0ClGp+zi4QsSP/cdtIrib0EV/vT7fDzF5R+jjJZ0c1YUNWCUAG1PriGG8jrd7YS3CNhTSdB6wS0txfc6QpVVWOxaYd1HPAkmydasMq2bIABKgsj1rWpVVsPz2MY1tIUymLMszMrJM2arT0MXg+EmMk60m7aYsWXmWJoYQadyNT4Rx+HQkQte6W/hI+mNM1TZI3t0SPqiVeCmeQujXcT/5V0k=", "btn_gray": "data:image/webp;base64,UklGRlABAABXRUJQVlA4TEMBAAAvIkAEELegKrKVijeoISSBoS3J562hNpKtBA0hhNSd/uuhBIbUvuJIUqKF4gmeL4tEDNJUNYFz/kOEZi6OJBvIMZ+pq48rnbSrfCw3b2u5mR0QEADQRwBAHwCEstnTi82fgwFiJNttGwnhgxkMENh/rYBkuoN3Ef2fgLvr0T8Dw+if7uGwub7cG1CXH+V782SEOk/fx+nHMfhb4m01WBqeTRX5W5Qahs/TS6o4jxtt+MDSX9uLbpaK1eAx6bOw7dKyQhaXhHILp43RY2Na9k3S2gFduX+wnqn2tl1au1dmy9IBEogfziPrUpau3IWTVipfKAeQaZv9OAWSihSiPBrjcOpAqAVJoLYozRY8r4oN5ZTKqXJKTdEpFSkZvP2Nq0RLjxrJmPC3cPX72AIIAcQgOX9LuBhiiAqKfwwxCM/d8q+SAAA=", "btn_green": "data:image/webp;base64,UklGRloBAABXRUJQVlA4TE4BAAAvIkAEELegJpKt5mdiT8VgAv89KlCAgmhDaSRbzfuf6GIFWBz9N0MNGRQK2khS7u75Xbx/ccw4/+G9vaWW3ZdWEYrAEdX2ZKBbra6EZh+VBOgDEMSHAMDgfxSdULIzUjK7t95kgBhJctyGxv8LAAUw/1gPUskZ7Eb0fwKeoybxvyTjvPjjE9Xl7nL9Wp/u6aPb798uow8+OUa5vgUBIGwq/YDvruL99cR9nAD8ptK8Upw3MPvn9iKBVggw2W00gzV3/zzYgBfaOZfkl9UMK8zDkK0SspCZQPL7VMRoojKzYlRZkJNfp9RHH+cqR5WDBfDbamK51KWocpCsHAQQnT0gpkMfzJUcMoMAYrhp9MNNF1PJwCuhgZWZCSAi4Ilw6Ydq0zp65+nov3X0LgKT+gFV2B/XeS+5SWeUU/oBqIw1gDWwZ2OlgTX403wk/xUA", "btn_orange": "data:image/webp;base64,UklGRkoBAABXRUJQVlA4TD4BAAAvIkAEELegNJKk6F7UOX4U5B8gCjYNRZEkNXsHz3uRkwA04N9MskCdgjaSlL17Zg3v3x/T/AdL7PaLIiVtYnjit+20N7eRi7m9v7rjJLQOACgQfwIgEAYw4P4nv2pJYXAY21acGHaQ7Jj0XyvoxA7ejej/BNxDi/4MZPH0CDOFrNf0sO2YruyCyvX5Ln5Mxg5CNi4/HBLG3iLL6Hr6ncBYXA66+Jzj4zy2X9VCcpbg3XVq4ziP4XkA6iS1mLwlpHxuVA5Bp26n7mzwpcTzqHPd6QBpH8/b+sNcZ2CncjBX9n4G1vaNNsO6zdRj3mdgZ4ZVaipeXVJpaz/vLNTBurS1SSVcwVleCV+a1qUtTfu8rJLauMSQmeyNSfgQn1VWeDt7CxNJEBOUcVSfwMkIe0sYN/TOj53vnSQmy93zV0k=", "btn_purple": "data:image/webp;base64,UklGRiwBAABXRUJQVlA4TCABAAAvIkAEEJ+gKJKk5nLgmXnhAf+ecIAPtY0kNe//sZEL6YD+mwMxDQAgDdbcMo3MA1zOH/zhMgnzH9xZz0QYVc4vxlFfJNtbdzpQPUmoOvaDLxogRAAgQoAAIrB3cXtmgBhJctzGeH0SwAO//JMFSdMZ7ET0fwLOywj6X8AI8eUrgtJhP2/Hq0PZxPEQPSTFi2yp1N93ZaR4CiN9dm3vtmqEiIzPtgM+JK2S0EJ3abhasRSxxL7BuJ4k+W2vliPF6ubDpZVx7xoX/UFfHHji9zeaLockH/Knvd2UzgJ98eEdSRqu4RLwLflC37722QWgeTC3euQUT4zyaR2a9zbNrUODmk0hngQjl/quDI4cTxGyvS4lhXhKhPzXpHsinDP/KUk=", "btn_rose": "data:image/webp;base64,UklGRj4BAABXRUJQVlA4TDEBAAAvIkAEEK+gNJKk6PbUD3giQJJ/VEjUpqE0kiTl2D1IcOQ+/8xe7lcpjSQpum/UOXB48s+KGH5q/kNTBisqvMJsq/ksfHobO9X50+vXbEWMjgwGwAokhBRYfDwXw34wQLBtq2qTVP5aeEh1/nMVbTKDcyP6PwHn1KEvAxn36RnLTz54/ffNa+ouvI8cUPl7uPJQ3k1ClnhYMmWeiYXFneLIgUP7Z39TYXGELA7tYEL0NjeporbF4h0KfgdMoC67dEO7VGGkEh0qabcGXYboRr+auglGKt4R11RbpYEJ1OdGF4wHrU66TDcYFXgQRwVabV0Y0w6VAZtn4jXqvNXbzqgDtnhk704KcR2Vcb0Z021NIevtTnwhKn00KhOO4E6xxHK7in8GeS3ulFj8F+U4r3xVEgA=", "close": "data:image/webp;base64,UklGRgABAABXRUJQVlA4TPQAAAAvDsADEK/AJgCANLi7l4BI9H9l68KgkSRFx8z4YIJ1vObXRVEbyVbyP+45dVAKFVA+IZHL/AfUNmaUiog9ixooQxU4LjR/TBAUM0YYIj3/36WZK94aPDp3tWJjz2IuidfBvjIwjGSrifoI/8sP5P57hSIi+q+2bRvGTs+mM/beAPbta4pt4fjKVldbbv4HXGoxsYiIZeyNdyV3M1PShI1k7r2o95LlA4pYn73OWYUCXmctY87pLJTwehapc450y1hPzi6SEyCsfXYeszJ9QFQqTvI7pdbCBksmOd9VFza+rHzcVls47EIiorBCq7hhPs9zWEYA", "ic_coin": "data:image/webp;base64,UklGRtwBAABXRUJQVlA4TM8BAAAvHsAHEJfAIACAJHR35wP9v8cRflEV2VbycPl0JwFd6B+CBqY2kq3kKxZ/WqEZ+s80IrL5DwAaMyEGKPpy09trW9jwsVxiYGze/HEQAqn0s/8k3z4eU1QKNFSAYNtK2Gga/SAKgun+N6sknSVE9F+R27aNHAMZ7Wk94vuukvX9p0q5snLj93qiuNcym7V+fiblorjvex1UJ9W/8u56HzXa2qg2fMqbKWVtThUBeYqrvOfup7bRheGqzjve3E56FnURgakCNVE+cd+cVk9v7cCk2pHXlLaiZUeEs5xo6uCa8OWyVrKqvECJQit4rjXjDlWHJFi14SwubXkz2zZTHc7CREy24auUay3q5rGSxxD47CAbDGzqRiUiMr27DmY66/hghuHhLftIIKzKwAMJm/OFARFSbS90sce8jy0IuzoyatylJZ/gMZhfMfMTI0kA2rQ0ycehmy7gPjrAwgCFan3BSHoXoTGQjypM8bgpBV0b5AhA9rRWn/y1MRofRFiEW4QFAfV5C0ff8diFiLnNqFf5PqL3rpNpK2UBnIN8ewG9D9U5T2bTmYHsZ9pEs9zBIqjl1+urnAVw2vGPd11xxFyv61+vv3ySrtfsf7/Gj+wLAA==", "ic_drop": "data:image/webp;base64,UklGRm4BAABXRUJQVlA4TGIBAAAvF8AHEJ+gIACAItvmmv4v6ZDiSJKSE+znEgApeP5B8aJQ0EaScs/MDIrev5M3MP8BQESIBBEUZTXZvfvcN6kvSGKSFZyRlCR44LDGAANatS++3S7RC3I0OIxtpY424gP/Bk3/xUZ0U0JE/xm4bdvIrqDb+z7xHEv0fCtdF32EPX0DCZ8GQeMn0e9WxqsvbgL2P/qHH1oCAEd/cKqtRry66HxEHX30EgHxdOR+mb0UBtjReaMxtdUaGXJYRE5fptZaswDR0cY9dNqUCDAcnZbN0ds7Ehtt7suttSVGZEfW1WIkQDLBaHWMfo53RG5o6WtqmxFBzCYlDe1bUngjNjHN2U8W2RO3NGMJW0IopdTlvEg92SSOMabSsl3bTR7yyhxshVl0luzJvK3MLDv3nGX5WUrMAPNiDOslaI6yCE21JewvmLzPJb0trWT2xw/lcqnWmnOCc+e/hsht/f8vkelh6gE=", "ic_gear": "data:image/webp;base64,UklGRhgCAABXRUJQVlA4TAsCAAAvH8AHEJegoJGk5nulSEAF/jWBGkWRJDUXyRnkUPgXwRsFCFATSYrEDxkmKETgXwUqiO+S+Q8ATwzmCqyPD8fj80Y2pVObnjWnsIDCqg6qvJt3/IfeP3cXg8TYtuO2iYAPfOwEyP6r1RKX8G5E/yfg+T1+1N/jUDzEP+Pc0qqe4gP8ByAxYVFzigRekV8whci/MddQtRTtWjWH+A2/bkzX0kTgdq2pmkP8hN1LOvcaYtKle02E52/Xep99VEl9sgBayhbfeI032rklba+TvmZLpvBBpCWNekvXvjl4HXMkSyE+n0lrtvuwKafscrzNlSzE59tZ47rPpsAu7JNHrzlFPoCvcd2bEjBpA6qtJnsp8ohymO3ah2DiJdtQfCzp9hwirrmohWNBRHidfbA+epsZi/gaVN3aphAfiXPtYrWpj0x4m4x6l2P+pRjqjPZt0Oq1cXvD9qGo9dGVsUhwatMGTCHC2QdPVUlSDvEh4L1qU7Zb0NlQgrdqChAfCV5VOl42t3R2OZ5qT7IIz0e8Ny8bOBQw1daThfh8xleTKAe8YJJ3GFlfeF29iarsBTfl2kdTX9nil06Doeo5QW0aXaimHOKbyIOeqZ1Wm1SdPrqSLD6fyd2ThTRabT2Z5KMmKT7fMaUQX7NJJAuvmBOKz68AYjQ6SSE+vMTz/3iVyIT4CPSXhHeLz9/zUb8DAA==", "ic_heart": "data:image/webp;base64,UklGRpABAABXRUJQVlA4TIQBAAAvHwAHEJegNpKt5GORu6Sk1EH/fVCCt6Emkq3m/dQHkh704gcXtJSgKJKk5nIgK8AGDvDvhR+v+Q8ARBawEz6Kv451P7Kf/ps5FxeDEhFg6jPMGAUhIPSgVrdBlwFiJMlxGxP/Swp0/skSC1DKYDei/wrbtm0cGzDq7vaKfyiLxf0uuCsdWEK3bGKrWCWl8GfnJgxsIm4oEz9DV8tBhxWjhtRKCsYu0jlu6kxyxsp8hqSemYwspu2eNa7yUG3cVJdqUjgspoDrbDWFOnVNZOfnOU1F6SR7Tm2Al2pyDAaAflbN12DXKak4v6D1e1wIcl2gJE/nFwxd50v1uke9+IpWkttARU39RXOWFfGB2HeUSuYU/WHhXQrJulI1M3mS8C6UQZCb2TBlBhCa8rRS61UE77T9GA+gihrXVDJ2++8SgJmQck252FBLTtM4Qpoh3TI+EEmP6Ua7sCRHLbNB+s6cHLQpm532AzJ2wvQrKqcp8N9RQY/d+i8GBE9N/wPJn0RKehMB", "ic_home": "data:image/webp;base64,UklGRuABAABXRUJQVlA4TNQBAAAvH8AGEJegJgBAxr68rr3rKCWaUJsabAIAaMLecM0A64U4NCcAaAa9FEWS1Fy+A1ygCyOo5p2Z/2Ak5/FDDolPwapGn94Q3DNnC7KX/ap/svIDMKskiaSgl6Hmpq0ODgMAaZuioDIj9P9rTTo+iOi/ArdtlIyO+T7x/iBw5P2HgLu7Hv1xFsiMcIQ3AO3V4CfStQPoXoN+wt0V+y1FNBB+4Li9B9GYY46vSTgor0FjzjWJBnxJWXn4psFrzpMak+CT2XWZ+WZsvBfRnHPQIPiIlW9qXZDXOjbm+KBwmZUvQkVWWnuOo7fKZ1ntRRgpLO6817HTqsENO9bEQ0QjZa0xz/DtbnWZLEJxFhFhFuLb1eHj6KGst+Z5k3B318UN8RPVuwQzb89bcGwNBfHZ7dUapzdCTNm8MQk1NiI8gr7aziAXSd9+SYqqb8RHQ2VscnBJvyIlWSUYrZ6IcLiySMrlG5MVUe2q6vAGU27E7sQk6aqiKepaZlXHTJlEVJBF3CMiUtC6Ve8ndrMqJHURRUZDF/VudbhlLjsSmRkoSCSI2quqV69bE7SKCHevKjMjLDSrk3icO+g9bRkel1V4Ve8ffx8AoHYAdwTrAD99YQC4t/s23hs=", "ic_pond": "data:image/webp;base64,UklGRtYBAABXRUJQVlA4TMkBAAAvH0AGEJegNpKtJPuCu2Y/onxaY2iGcQAAhepnm6u1amvhwDYAgCR0N5zG/1OD+oDL/Ach03KAoAaKwgerD/AbVxATwe8ZZ4/AGav/n7C3g5u7GJyVJENiAQi2rYSNIggKTvKB7n+z1Um3ENF/BW7bKOl2zPCJz5vamz6nfpWYr0Pu9rugNYuoylgrIivDx3uiWVYuVWVVVfOVmYvbi0elMRNRl0PDPDOt/fOsYBY8zyOYgEDGsLXtf5ppp577eeacPmWKjJWhbVM16OQBxKqi5IaMDP/SvIoEc6eeB1SVWSGArFwbqxwApgiJiNdXGSSgdQajKgg3cM8dRVamyc7k2GhWrQ65pW+AwQJgRFpvx1hZFQZAnnMwEsDz63ywMqoqfZDc27uMyIzBTAeeKzN3Qa7la2VlLmNmvXYx+C8y4qg6RwlXZWbuR4wbK2J5+PGkzPQQs1I7HVgb+884nDtx+7QO3PT6JPWIOpMQ2zZgDla3deS+GsrMEJDoQVY43zA3dxtnekIApuuLZy5XCPRoMbRDeCogg493E2F6AyBW7cosIpnOInQdQ6mpzhtwumjrmrZc+eqtvf036MXtRcr082v9+o0vi/gAAA==", "ic_quest": "data:image/webp;base64,UklGRtQBAABXRUJQVlA4TMcBAAAvHcAHEJegJpKkqO6iu+h/Qgoj+LeBBVKMKIokqSG/cs5gAf8O8HACkKE0kq3mf7J7FfwKUFRE/waX4/wHkBD559N6/kpnVNVcAo2Nb1AfKgGfYoRYLtouESoOZP9VFwYDxEi22zbmxwdAgAgM/VebrBLeRfR/Aq7fGujnQALjR/wtqfVWF/sJacxeywbRfsDSx5QoecXtG0ikMTUklQzfcHFR50NXitntDdZtddOYGlKH5vEDYd12jqXMl0aO4YPv2w6hTw0JGrW4XW/h1H5IqfQhaFXavgg//Thr20rtNN3DFxFcbd2A0qqkHOz6iO/kRt8gVqn4n10fWYrWvDU2WsyVYFzvkPoUsa0ba/Ms43qH1MfUUM0btByw6yNe+5g3SlxR8BPjhdiHpoYkWgk4pw4FeymKqT5R/NRtP9xueI4qKQ91aMWPU+Fgh2i3mFODNXcatfgpBd/vp91Ukuct01tVWY4T/2PnOP225OLEtKpR5XYe7IuO/TQuSaScIl5zasrGucNi4XC7HjxDUolq1Z/cOMOTiBkoHlu2i7jDaRfolZglj0WLXeSnz3jKkBa7WHaOXf8QuATX7TT9SwKkm3OBfg76DgA=", "ic_tank": "data:image/webp;base64,UklGRvIBAABXRUJQVlA4TOUBAAAvHsAHEJegNrKVCIghJULNro6tytCxDqO7DzYBAKTB3SLwW1SKUcRZgR2KIklqjpzzEzF4RBBK0BAFUPMfBGX1FlAKn1JC9b+CgRPiZzKbaUnYiLCR+nRLtX8YZ9pdWmOrrTNAjG0raCQEkP8R+B/7rzZodjt4L6L/E3A/hu391wFSjWT48Smwt8pGLlytk1QIEMMmQFptpZ7hfVuQcAPBei1sleXpBhCw9CuM1cjKT8olAfgAAcBCqJveuEhcQP9WCE6uRmKz+La2b1xAA+qm16+rcYEkayMJQMtDWzxZMoCTrL2R12pnflW1ZIhnFJJnYa94w6oo2a6UgYKzEO/qpZD6GZaBImdm4bumJ4Q2wOxz9LIrT1UBlyHJ5sAcLD9RAVGfA1hj0ob+ktSnqPQ11sDEyD+owEH7pLGAbuOXcroSQqQ8RxrGnlnTi1OdAoIpJ8kpA+mqyE/FleTUxImYU7bES53pIcOHOaNhevz4R1z7q2LTSQJAJN0c6Cpu527A6LQJxm9A5VK3UXdzANOckR49wtTZIajNYrhDd0aaG0nBHJgc6LRWPTLABEM6AaPvjei1nZE8Asy3RlIwRCEAerPII+AOJA9w63sjBZFHuAGE9we3Hj0G3H8Y9iSPcP9jAHBvAQA=", "ic_town": "data:image/webp;base64,UklGRuQBAABXRUJQVlA4TNcBAAAvH4AGEJfAIADAMrPtBmfe13sGZ2EbyVYbvPdUAR3QApGvXz0o0ihSENs29Bf7ThkR1NZAAAGk8Gf+Q+jcOCStIqvorNEwM9TL7/dWTRYxnmH6lr9fe56Ou53/gcdzNRSDZYAY2W7cJiB4ExBhqf9qr0kJ/0f0fwKuZ/l4/a8crxtyyeM32W/An/xGkBQAL3J83X8/ngQJQuVB9pdd8vn+eyu1M4CsG8gnfi9KykOf5jS3MOzg736S7PlBaqctkh6lpzw6C8mgViSVC2Kz2jpAxoAWIzmA7tGZ5AIkB81pTtShHU6aMyyyPvFYbZYOZkKju43ZPEjNN9nLly9fvnxBYzht0qNHaQ/LF33RuXhsjT7uFmQjk1xyOBYdBIEU5kY/OXhq475pInMhWHfS041ubm4fakaMrm3qUfV0GEE6IjWmh+gxkBsDm8oEzSXXSPc/uaRHb9ZZ2lyt59A5Ss1lKzOTXBDlsUiCJGsOzgWCXSPrTnJJezz2QSIHSUVCr8HGREFuwARQMXrL1Bj3To1EygUZoX0i12mobMq4Y+QBahJMGyTnY0FPeXaSIxJCWQR9AjDSzWkE3Zw2ENWiQC7Iay2dnACMdHuscn2VzwWdnFWuf5fnCwAA", "panel": "data:image/webp;base64,UklGRrICAABXRUJQVlA4TKUCAAAvKMAJELegqJEkZXb3mNnAvc/sqVcTyVbzPjmH8lcIYDCBMORS4QE1AYA0bHB/XtYxhv1/CzD/ITmyCZHT/o2aX+jkPKK22r1pA8R7DF5e2O66HE0KAUAEACAAgQCQ/nkMEmTbitsomtBkEGAj73+tkp10r+DeiP5PwPt+UP5LDfs5+GeqF7UL2xnsh7/uR7rhjd1G4DScYQFn+bw4L+q0u07d8PZcYQy9TOt159sFQObFy7TOy9SfjtOfr/My/wwG52UatyD71yzut0z9vMxjN3hqOMP+iH/+2Ebohrf9GTzdY+JIFHK5HqiSiPqY1qkf3oYzOJ2PdBRJmmsTAdGSjqjbOl9Og1s0HblahAsCr2e1pCN9GgPsMeWSLbYKiMDzRcXyBU4ze8x3WhtA5tpEvznXy2Exl6wVaIBcLb9Kl9tKA7JNwHL8TS71Nqs0UDziF+NdqdBAQOQG8YjbcjddjtLq1QtyL3DEbbqb12lPxQoNpKgoTUU94rbenZd2eVYwW8xaGqhymbYw3MVWP+aitkwTBcvltP9Ur/kicIHSFFPc1vBNroXPjdwUVDjuwvB2vtFLM9tQRBFKvIy9n0o6cm1ILrnJHZDTEbd17oc3zsu0xyMd2doEMg1fVgXzkb4Y52mP6SDXL6XxoqLZFBcvduGc9uhBqfCs5BvgyYtWc3RZb07DuMd0RxPICE9e1PY8Utzuws2R8g1NAeQJFUyfcGTaYzrIpVXll5riF/My7dHEkUttfMxqgRaTLvMZuuHGqIlWWn3y+pA4SBEfW3icXqaZfo+a5GsBRfdT7Yc3hn2dx+3x55wGT7vBfl9cx3m7V75eNDzOcGIY7NdlZlxcEZxduFVAPQ2j56Wb1mXup9+PTLcqjDq8/elHf/5tpz/DG/w/AQA=", "tag": "data:image/webp;base64,UklGRsQBAABXRUJQVlA4TLgBAAAvLMAEEL/AKJIkRb3MeHcGmP0ru/fYYBtJkpp9ZjLFzPmnJlNSGslW8zNJZYulBPovCsmf/wCgqqZWvvgJ6tAsHPXqf594oByC0xbbc3xlm5bLkkrAAAhADABwIIgAGJD+FwPE2raaSkNGDCiiY/+t6k8dnBvR/wm4Xrrf8qHkAyTe9EG86Z3e0l8ZP0XvD9a9IT8WopTitzN490JmVCrT/8L87ZIGrHsRxzz9w6nKscOqyk6FnQp7ZZnSoCeZcSj/p7bKuvfWW4fWd2jQ93udxzxYpwvJlDwvddW+re187jS67m1fq5Yp5liCk4WcFuraoJ93Wr9t3LRKWuYYxmKdwliCn29942w6NvXWReunpAb7Wm9gnGwhMFeOtnWapC61o7d+So1OY1tmxQLBXbIBjctxblKHQ5vgYHu5Skedp0AJxl0yoQQ7HvXcpNbVOtC0apPWCguzVAIYdyE/FkKc6kLf1rYDfUeqLHOFRUJTigV7CwUfGGctHwoJIUlTTL4Qbsbic1Icvz/4PHgD7gJJ1g+QxdvipQCScdL1LONTTspK+f0BSSkreeOudyVj7+jLTteH+i0vAQ=="};
@@ -13410,6 +13410,549 @@ function bookPanel156(){const L=WD156.events,BK=book156(),dl=daily156(),w=Math.m
  L.forEach((E,i)=>{const q=BK[E.id],y=Y+96+i*40;x.save();x.fillStyle=E.id===dl?'rgba(255,214,120,.35)':'rgba(255,255,255,.25)';x.fillRect(X+24,y-14,w-48,34);x.restore();
   TXB((q?'✨ '+E.n:'❔ ???'),X+40,y+4,15,q?'#3a5a3a':'#7a6a5a');TXs(q?WD156.text.seen+' '+q.n+' '+WD156.text.times:E.clue,X+w-40,y+4,12,'#6a5040','right')});
  TXs(WD156.text.hint,X+w/2,Y+h-62,12,'#7a6a5a','center');B('ปิด',X+w/2-70,Y+h-48,140,38,()=>{BOOK156.on=false},true,'#8a7a5a');btns[btns.length-1].l='ค้นพบ:ปิด'}
+
+// ===== V1.57 (owner, 10 Nov 2026: Christmas moments 15 Nov – 6 Jan · simple Weekly Challenge · visitor sprites drawn by ChatGPT).
+// Data: core/data/world157.json. 1. Three Christmas moments join the Living World list: the first snow of the year (flakes over
+// the house and garden), the cat by the Christmas tree, a gift under the tree on Christmas Eve / Day (tap it: giftG once a year).
+// 2. Weekly challenges: three goals a week (picked by the week number) counted by themselves and paid when done; a second tab in
+// the discovery book. 3. Visitors use the ChatGPT sprites (assets/v157) when they are there, the V1.56 code sprites otherwise.
+const W157={
+ "_note": "V1.57 (owner, 10 Nov 2026: 'เพิ่มช่วงเวลาตามฤดูกาลสำหรับคริสต์มาส (15 พ.ย. – 6 ม.ค.) เช่น หิมะแรก และแมวกับต้นคริสต์มาส · เพิ่ม Weekly Challenge ง่าย ๆ'). events: more Living World moments (same fields as world156.json) with when.date = [[month, day], [month, day]] (months 1-12, the range may cross New Year). kinds: snow (flakes fall over the whole house and garden), cat with target 'piece' (the pet walks to that house piece), gift (a gift under the Christmas tree on Christmas Eve / Day; tapping it gives giftG once a year). weekly: every week (Monday to Sunday) three challenges from the pool (picked by the week number); each counts by itself and pays its reward when done (no button to press); allBonus when all three are done. count = what is counted: disc (a moment seen), feed (the fish fed, by you or by her), pet (playing with the pet), meal (a meal at home), fridge (filling the fridge), fish (a new fish in the house), xmas (a Christmas moment seen). spriteK: room pixels per pixel of the ChatGPT visitor sprites (assets/v157).",
+ "events": [
+  {
+   "id": "first_snow",
+   "n": "หิมะแรกของปี",
+   "clue": "ช่วงคริสต์มาส (15 พ.ย. – 6 ม.ค.)",
+   "kind": "snow",
+   "need": {},
+   "when": {
+    "date": [
+     [
+      11,
+      15
+     ],
+     [
+      1,
+      6
+     ]
+    ],
+    "rain": false
+   },
+   "dur": 120,
+   "diary": "หิมะโปรยลงมาที่บ้านเป็นครั้งแรก",
+   "weight": 4,
+   "xmas": true
+  },
+  {
+   "id": "cat_xtree",
+   "n": "แมวกับต้นคริสต์มาส",
+   "clue": "มีแมวและต้นคริสต์มาสในบ้าน ช่วงคริสต์มาส",
+   "kind": "cat",
+   "target": "piece",
+   "need": {
+    "pet": "cat",
+    "piece": [
+     "x_tree",
+     "xhs_tree"
+    ]
+   },
+   "when": {
+    "date": [
+     [
+      11,
+      15
+     ],
+     [
+      1,
+      6
+     ]
+    ]
+   },
+   "dur": 40,
+   "bubble": "🎄",
+   "diary": "แมวนั่งมองไฟกะพริบที่ต้นคริสต์มาส",
+   "weight": 4,
+   "xmas": true
+  },
+  {
+   "id": "xmas_gift",
+   "n": "ของขวัญใต้ต้นไม้",
+   "clue": "มีต้นคริสต์มาสในบ้าน คืนวันคริสต์มาส (24–26 ธ.ค.)",
+   "kind": "gift",
+   "need": {
+    "piece": [
+     "x_tree",
+     "xhs_tree"
+    ]
+   },
+   "when": {
+    "date": [
+     [
+      12,
+      24
+     ],
+     [
+      12,
+      26
+     ]
+    ]
+   },
+   "dur": 600,
+   "diary": "พบของขวัญใต้ต้นคริสต์มาส",
+   "weight": 6,
+   "xmas": true
+  }
+ ],
+ "giftG": 300,
+ "snowN": 140,
+ "weekly": {
+  "pool": [
+   {
+    "id": "w_disc",
+    "count": "disc",
+    "n": 3,
+    "t": "ค้นพบช่วงเวลาในบ้าน {n} ครั้ง",
+    "g": 0
+   },
+   {
+    "id": "w_feed",
+    "count": "feed",
+    "n": 10,
+    "t": "ปลาได้กินอาหาร {n} ครั้ง",
+    "g": 0
+   },
+   {
+    "id": "w_pet",
+    "count": "pet",
+    "n": 3,
+    "t": "เล่นกับสัตว์เลี้ยง {n} ครั้ง",
+    "g": 0
+   },
+   {
+    "id": "w_meal",
+    "count": "meal",
+    "n": 5,
+    "t": "กินข้าวที่บ้าน {n} มื้อ",
+    "g": 0
+   },
+   {
+    "id": "w_fridge",
+    "count": "fridge",
+    "n": 1,
+    "t": "เติมของในตู้เย็น {n} ครั้ง",
+    "g": 0
+   },
+   {
+    "id": "w_sleep",
+    "count": "sleep",
+    "n": 3,
+    "t": "นอนหลับบนเตียง {n} คืน",
+    "g": 0
+   },
+   {
+    "id": "w_watch",
+    "count": "watch",
+    "n": 3,
+    "t": "ยืนดูปลาในตู้ {n} ครั้ง",
+    "g": 0
+   }
+  ],
+  "xmasPool": [
+   {
+    "id": "w_xmas",
+    "count": "xmas",
+    "n": 2,
+    "t": "เห็นช่วงเวลาคริสต์มาส {n} ครั้ง",
+    "g": 0
+   }
+  ],
+  "pick": 3,
+  "allBonus": 200
+ },
+ "text": {
+  "tabDisc": "ค้นพบ",
+  "tabWeek": "ภารกิจสัปดาห์",
+  "weekTitle": "ภารกิจสัปดาห์นี้",
+  "weekEnds": "เริ่มใหม่ทุกวันจันทร์",
+  "done": "✅ สำเร็จ",
+  "weekDone": "🏆 ภารกิจสัปดาห์สำเร็จ",
+  "all": "ทำครบ 3 ข้อจาก 5",
+  "gift": "🎁 เปิดของขวัญ",
+  "hint": "ทำ 3 ข้อไหนก็ได้ นับให้เอง ไม่ต้องกดรับ ไม่มีบทลงโทษ"
+ },
+ "spriteK": 0.62
+},VS157={"bird_0": "data:image/webp;base64,UklGRjwDAABXRUJQVlA4TDADAAAvGQAFELXADQDAkNSA/dHZtm3f27Zt2/ZHtlPbZvTlHEuYEr4ECLJtp23F7YG5tfX/F4PDnJgkyw7AtbY9bZO2N9+b6OmIK07dmLki/yAwW4ohOPWfbNLG0K2XAFdxZBK6KDRRbDo674E7CU1K2ud1CZrGrGnIWgdT1LI+NKhi6RpfxdKI3XfZOpm2rNqT7Iyyd5QDWSQdPBZ7V/Aw5TfY/NB1E1RnKO4xr6fsjhNqV95jdQSujq7IQ9swmdqc1YyQ0tnwxsdG0poofdkIXZsXM57u9RzplJzTL6qmuyy9QmLv0s48Nactj6rPEfq0pf31FfMya/b6stif3J9xqHZGZGJZByOtGjzrnJpWrPv7p1+gzaIQfQ3Tf8UW80X+sXt3HqH+qGV0hCkn47asGLK6nNW0MHFUW6ufbYMn4F+RPxh/Ab0D/xYQWfQev3vAMSofo3YhL5u0nmPaENv5yqzbk0jsrRrnR8y9AN0DvzA+L9mAycmwNCWE6rYSMyuTcAoJI6Uljk8uqfMp0TFN6uf+nfAO7BdQtqxD5NIRvlyYt4Wm6tJFs63xR+i5jcqrOb+2UV2IqwOb+nUMz8TX6L6AO6lwHEUMxk2Z2lD4NueHLnZRzqKfXKozZe65mdhrto8Z/90L5xu0/9/Ag1T6s4UNqliQqCfgyJR9bcxak27NKj0x1yWmT7GnomHPlTsf6prw/3Qm8JbzDdob5GdAK/S2kWiI2udFEQoiSEMn1jHtYDN6ahxU802kR2s5l4JNhxNjFrY3aG85XRNfkX1HWiRPYZONyHQtd9k7iaaky1uwriuB7GU6al2jXVRC30nlPBrbYWkPNZxwvuD2ktwD8RGxjvXALu28yaw5bhd0VSM0Se9iha/qdFEvyjZezGtedbBlcF/RvuIjgRcS1qQ18bnjm4IDEScAAI+GbFtPVG7P0YrhOQ/bDvYdHhhcULZF5mLqgctwMNXYvMN4A3UFsi5QZaErmdQDdwqzsmz24PuzA/ldcnlRdrlBs6U7ZCbMnY5W64PW/ZWeo2Wh5vPh8PG0eHfL4ZVrCuWj7K9J68b1dWL4IEOvlpQzuzdbSafWHgA=", "bird_1": "data:image/webp;base64,UklGRvgCAABXRUJQVlA4TOwCAAAvGcADENVAEQDQ2JPWVpVs+7dt2/Zs2/aSl2wmb8k40YczvNuMfRWWbdtpW1WDaL/CET2RmdmSmQJHkiRF0or78PsKSiedyMxMzVXVMDwNyyv1X2Hbto2UpHvcAfJZIjlDNpkBSCaMeDli5EDRQwErANVClhw1eSyoylAEKRPNCqCosrpYpVAU1hNl68hpIGSMu3Fcv0snBQWqHnr2/66VNazKaZHojKyo802grVyxztMaNkKpb4PTUPfGOzdRPhqGOyDJwUUQtsEOywwM/P4VcSVwm+pRCtKambQrrplMtWlwFotmS6EJ+jbeNqsiSBgRuX5bLBK8k/SZ59OsSoKp8UQde2ZWZoAYDjMCr5R0d1ZrnMWSydqaSTXvMmCwdjFdp6idtaH2ubQAuBgWMSJr09B6CVVZYYO+P6AnqksalNhgGchh9XTOxwbWeMmmVbVvovfivp5yISNCpkc8RH7TWsowmUmlCbMeXio+WCjrhLYRFwLROYnmXbbssnGTdZvuOZkmDzH3BRwhHwdFwNFES/vpCKYzpRhdZ2Hmc6m2rjR326GqOGXFrCs33XSIz5ZDlg6URzIcIs5nAIvCclEuVqndBV9NMuNJeU+FtIvdE4HWGrQzmnsKzeavaZMNhyI6EU4GmS+DuwezC9TEavIncSFyaQzQbp3a9y8+IHtP7LxP+nfmolS+6tZdVE0GKyJiQY7jGdAJwLk02xKWpV2TtKvgGOCWwv8Hxe5nG/G3TfhflfXQcUlDVaV9ZghiyNzO+yPwm9zuczpVZlvBPoc9aRYc2iT+lcAFQdsrcVQsNd5vLF5EgDTxPe/0/usUSkhsZHW/qtugKWMNh8Q0vAyh7pRhP+scyW97dUJWHUCzPD1T66+w2zTlUxrK2wxcwu8TAEA6zdFo45Mvj8GOzX1HQ+SxhXp3sdovTS4Kcd/ZHY+3h974DkM72C9C4aPdf0chDc2lkunlh0V99KdHRO4LcB+MrxTeXxEbAEIA", "butterfly2_0": "data:image/webp;base64,UklGRgYEAABXRUJQVlA4TPkDAAAvFcAFEDXBrm3b2Ku6EfPpt2Lbtm3bT7Zt27ZtfbHVx68WdiHpLI2lyzQUhwEAlq2iM+Y1jWvb5kzYAgCaqf7/IWs8Yx7y2LWZbduuh/5PAAAOn+hbVR27rqwMwE3FS327xmQz8NfVm2lXsf6G196wnNVr56VpZAPAv3pp/tjiRokmLviQwD79xg/c7Dei/xr6uma05WcJqR+kxBN0rUbjHbuk9FTvNPFzfMztYs0Xap+QByH4JAjdHV7xhtquUGD5KnG8+qePbQ/7jsL2rY64MUFCW16Rrdb6tdVc0a4O7W2IqqdrqAJ3ILwRA1M/a23npkZDzRWfK5DahWJJE17RjTxwtZ4Tbiaiy1/wX3+LP57j9zDcX5Gqaqfe46Zrxw2h2kqOrI14WXuZrgW5hdyW4al4Qb09OVTRIyV1SsUHkUsrJFtSPTLBgU211/w/4FcMA9MhwKKz4jfVeoVqHkjXCG6g9HjWd3RusIEvcWTXo430QpMhXchQUS7JqEv4FCMAcM0+xlowFTOVL+dkyj6f9Suk3AvavipOpuA7R3+2V4snuiklegB88yFXWC+dK+zXJt7fENVPeMcQHgT9Bmr34H7D8m+49AHTDHFrrIRDgncElX0goBz9wCX7nOrhNdPTNqMdI97XgumEOVQj10j7XXHZWyyG8lRmEfV2fgD4pGMAHD7Jv7NNf9Nk4rsFGkGUfU1cDjyLEX3OYudEPTbIAvJnHaZszCIFH9X0haW/ALeO1EufQyux72Mn30D1RkzegvtdM7AQ4xdYPjbcTfKDgjJUYHM3eR6rTDXphgeYdG7j5Gv1R4Kobwfp+SzfAv2ESysefaKI0zHNQVMbvhk2OtO4W81GbLLlIc8HGlpHUemaK+1MKbUgvN7i+NdGuZQi22ZwLqb0WT/OGk+wAWl78iMLR7bk0tZb9Qk/MCJVL7So9vlZz1bun6tSymfvC3L8RAcTBaZJJtXq4BB17babYDg3YGsAukatZaJej8RITk6m/jskXshg3WObvIiP82bvpOLtZ08tRaWHaDI/hq092PGASwByp2tqG+u+2Rsn0D6BayTfiOo1SF6SxJ7LbIWOuRox0mtafJ8QjU3VtSrc6MMVACirnYaZIUhg1fG2T8QtlAksrbmeqRTb07hzLgTRvAbbxIZDDWkZYc1U2ArcOm6l5Y4TmNuy3DUvZKAlhit8zQnc4tiToISTCo1tveypkbo0MReB9gQ8laRB4Y1qu0HNKzpeEA13+2Ti+dhpBIq7sjoA2Lhz8HXzfhu+jvGc+NzG5kK68wrNh143uSJyusE3m0FQmfPZ0s73Lq4tDx+aXBmrV8upQmg5cDS3Ctber5WbYdEphAUA", "butterfly2_1": "data:image/webp;base64,UklGRoIDAABXRUJQVlA4THYDAAAvFYAFENXArm3b2POeKmzbtm3b+p5i27b1K7Zt23bq+FnCbiOsBWIAAGlbYV/4okiweNLF3eruLQQHAMhG/09mr7bNs23bqtsZp/R/AsCqPA317BcJPQMHFWFITIu5b8yn2hVX+uxIo1TF9KRA19S7a7g0p6tS1ZpSID4bWuQrfqFX7dHcA2Xh3FlYF+NVpfXQ9Cz2uaVflgzEc+kWJ69ax4RZiODGS9PGvQqo1sjXXPqoCmsDVuRRkr7h66+lnhJ/+9ZOkNS4b1QvCW38TlqUc5a8iN4HEFZ7jFzig+EB3DRZ0oiOlGhPCzUvge5dwzY4jywXC/a0GOoBgbkHhrxf/wlzc+Mffvs2ZiKm4lZtXbePsb4VEjGDYxecJi1NXnkCv9wHY0mQpS3Fjn2jv8a6J5DWwx3L9gk2HhSlvmYtg+vgehuRzQeA4MILyj1ATBsQ5cpKClM7uO7Y2LTFB2VuIeSHC/RaNyZT8ssuvgDReEBAEgCAIOjUFtrnh7TsM4MtMhdjV7r7+LcynaCbLrMhdFPvSt95gVsaIyiNQS+i9XI6YzUhZmL2AjrLIbMWsHfa/JYtzqTohqkZePdSJFE1uqY0U4I9GdpnAEf/Yq7GtyzrUpu91ub3TOVAKKfYnY3IX3XxqWIMclyvx30jiTcT0mUkr8eJwdquxz0o6pPk3qrzh8Q5xXPrjjxeAZrsy89MRry3UikkpKiU+3x4SMf/O9Xjryr83Zbdx5LDUWKdYuvl1/w/YmZ7Q6jRhPCiafPF/LPL9TXNor4U7AMQBX2/fLPhAFQdgKxGcwpOtM07c3qXaOzNkbljgeZnljgYNTjvt/oDWfIT5cSXxPxwDIhK/aB8i3Iq1x1qUwl7DeUjk1ubsU2hEeFvOgSnPuaZOg61ec8MdPrA+7b2lgUifm0AQNN56logl4Dtq6FTbN/Js5e6e0T0zQBfjwo1tSArImuexcW+Oc1E9KEMHIDexLshraA9TpJGcDrmVj12MkNmZ/R6BDRFmpSSOXtJcBgoGt1E31dFPTCUA1Fqb7adqsM52dvC0xF5gdSXX7nTXJSnoYEYePmhuZWZm2lwEIOpNv1oWQP3Krvq07NNe9MS45x9MdRBdP6BsCywchIwF5BHceUsuUPqJyKkXdIWLwLyEAjLA/imIViVBl0F7inQQFAZA/CJQrAM", "butterfly_0": "data:image/webp;base64,UklGRugDAABXRUJQVlA4TNwDAAAvFcAFEBXBz7bt+DLNz7aVbbufnW3btm3bHqAW+mmFe6X+arnmarAmgCUAoKHoFvuXa2xV47eTbTfZtuvqEGTbTtuIzGwn3f/iwkllkvTF6v8EABAJTgWiAiR52MGVhYMikniChWdRMGgXrfU22Y+jbjdGZAkbVQDZJ4PbRebvEjOreRR4+Mmc1nnXZScCD0FeOywtr2uqXbExAZEZM2/jYN0VH1tlknjwB9F2XvK281No/UIfvU2qPS/1my6xVRK9IriQ6e9TfZ9YL31Iv6YEpLu4Su68LtrTXD5r2+3MeF7a7fIpvE7a1D+TaSRbdOjTT1N/l5nWLY0x7uIaRd59WU3aoRrKuV9zb5fKeXOjHy/y1jksxUbUZnD3tNrO2dJJSWCMO4WZHPvx2jjPTWE6zqWrvnrWtA3K3YS+iijToAoQ3USbjvRZ0bwiChbI1XmOugMs2mgPU95+zN+OFYvu2lQ3ptxKu7ZhsReHjWJSR1JZJi7YzN7KCAQgU94AwD/Lqlf9v/U4NY/LO1Nc/Ms7XRzGTG+X3pm6MRKDVD87yE0FBPcR3Xo7nz6xV3+Lmc7zZBVfAXWnib+NtJuroM10kIV89aRIz2Hk6BuQq6/Z6orAFGnYNNP5ULTqK5Zd+6Ds7OfL+XhmwYN6zpXiXiFpVatrsvAIQn50Q468AmChMmVcmd/Xln55ElXXQO4l9Hw5DdhsP2HPgdouo3rFaGJJrQYudPAIoSEFXNmoTmzk7aPyzoQLS50D+X0c01M1vJuwBznflEVsyjIRMFC8lf1GI4cbMCElCEWbFfcj9iqib4G6N8SJBTOVtJG3Ew0iQCEK35b435iPz6AfaeBww1OCyEhSxUv4kCa7LgWOLPOgq1ugl0txqENVJBTy3yX6S/iz2dAegxwuwZZv7KKafWu6z/ZJpcuTmBjyC8VsxQ5G/WYRdds5B9Fj1OcLulU71nx4lUAnAImRrOdhtaxbeqyvTfdy9jDr9vO+qcOycjQYxCg9hrNGiR2pyLbre57633H+HQDZKWL7Tfmxt2y7kmV3a5y3xv4c3HeTMFuPc33aN8lVsg/F1xL5G8NulIAkeAUAiMLBvu4/pN/hvyzYDAdxOI7AcIP12HQvZbajJlAy4dSWp3AhdNi5/0hig6soHO27YS2lxyvoN283NY3KuaK/tsSJpeJJ4CKnMcyThTWC3rI4Drc8WmdthuzXn+66jNVw/rbrbZMPia+nbLCgASBVWOHRL4J0z2vbKPvEHuOllHdZ+lssSHaAXtnhLcV5BCVw3n7o67Dy1ZgxbUWyh88kn5QoQQiIQk1cBOAr", "butterfly_1": "data:image/webp;base64,UklGRoQDAABXRUJQVlA4THgDAAAvFYAFEPVAr23b1JMu7OSzEdu2Psa2bdu2bdt28jvdfCxhlw5BAAAy0T3DmG3FIdu2bbue7jAAwLIJa8z/H2fFWNj5nwAoy2ZCa6NmkC7UyGFTv+5Q+Lr0KtGkX1MVjhhaOkpzPrR01uLjsrmdRx/XXCVXwcFVRs3mqdv91MXSJUTa2tKsaTv2fuqTI0nfslIuVh1/Oq0aju9s/ErYT79devq31jGyYLcUdPoE2FaGTsdR83XU9bK02/9j3g9MPelwnLhYmlNx1qgfPpqagj6AKJOV55OlK5fTHZ9d22qWDcY5i3n2fFm42vVM4j4ZPGwyJ/27iNZlyKf8ycJOv2PQ/Obf+4uo4H6evVif6eZepJRUu5Ze0LPUBKJ1UQGLi6XDafLpuGw4zVusGzrtjNVyNZI+OPXSaptvgi5JUOMNiLNkIMbJR7nEWJ0FKH+moNacraB1rXbU5XguEz/bxIlc3dRqnvvs3hJuF0VdAiVSPCLkkwg/v0G/KXJ/Ca3pd/tq8LHPvnfJPVVyLlsuR2Ibz9ZSCuEimIi1i3LogB7d7beM231V9NIw51P1eBm+cetr0Xyogi8kS3NbTYJdN0KOZHlHQmZiqhy46HXHqL2cLM8N/cIwt8PxRiw98ruDFXQsj3Kl1B6W25XPQ+Z1m70PR1l5ZECPi5ZT7fZ2qrxz2zcuczsU7oX+5zJ1W7trIYUx4vea9Fz+JUd/q53UJwG2ZeiYb2fWXC23k2pBCOwKltem/+D0ryx/PVWmd7tWpFmhfh+y9+FfquZ7WEJ902EdAEeMRYN+6nadOJlGNbo+AdDaAJ3lPM8Rj5v5UpkUJEnyvznCf/5D12fAcyv4HYCJANi4L2x3K5fT1MV8qATuJv73Y+lEqc7Pwj4R0MUqA2yxFWGHi6IHrvYg7zvIczrM6v27AHj6tqnXfJe/uyr4dti+dYpnhrkSD+eK4GSHlhRxGmomqGyB49ePlQmIbgjpkOXr24L5fCYVl0zmLR1yOrvtraPDhe16rs6P1hTAjdVYifjLAdR09deFlCGXQdhRlWby/XAiVTd12jOp8syv3hhuhSekYW6EwgtlMYAXPWlRIrFQaCOHhdPptamOF+DePt2bKQWO0BR1kaGzSHHzfhwPxcR/MzSHZ0ym2YN5SAJncCFko5wilKViLpMO2fQ/4VsHILWJUBo=", "dragonfly_0": "data:image/webp;base64,UklGRi4FAABXRUJQVlA4TCEFAAAvH8AGEBVJzrbt2JxlGrD92xh/c9i2bdu2bdu2ddi27S70zXTw7NJE6p1KskqKSglpQaIAgGVj3WwjbVgd//8X7tnG2b5rG6fdpNu2tbQV8SKXfAKfUfc27snI3/v+T1JHPgX6PwGAnk1KQVZy0hIelZAUAcPerMHxTZ9Iq0fRW7aHBo1wNpde+U69h2CFFZOVBFbe8mInd+/6h4IMKTKSi9ESCECDzhy4yXU4VgkzOz0Wq27wsTKjGg+l17MqHdZ0Kc1Mlg0qCd8slNGxRkcG/u1Zx8ZLhwkrABXPbeqkR1wOCzam6EB2Ez3s/QgrNBLILRjUI7NVizYc3FHJvoJBgw6FSlCGdsniGZsOCdbHxZRiE8U/CtJopJGed2BUsm6ePW1YuGbRkYIRnf77pNCCekKIHiGmddqXZys6HbSATgwaGWi2Ldh2cEEn/YIPSTZv8KaDBzKN7PW5WFG6Sgbz6y7OW7KracVGC8imGg0flp3VYM/iTQs2DZzRabcQ44qsGHwtsfnUKQNvRdMBSZry6ynBm1eAHGg0YDNrLxTaduNdC/ZdvGpQD8+GJD+wYN7FfFBl1/0dSbqEGM9YywrSqUGFQNW9MZ5VZEyRWZ2uG7yik16ezWh8rJLCui9AytYSTkreL8m6wgYzDxW4jfpL2eWoIsOCDwgxwLN+nv2c0ORQY99xKwKaOcm6BN0QqdPUQycMzXAJDg1ctfDXmkH/+oRo4ZcrFm86IA6MR3/QnV3OSuYya9G9j3OdZb1n0KHCW3a87sCCwROK/e8TdEOTqkrM9mRGmS7kmeu0BeCEVmI4FOiNSEjdB74GUgnbpmp4pNAi53+mTbLm0LTGbUKsC5HQ7fMsmrHnG8NhF+dLAWD9bx5LPhyGfr+nX93zg/o+8DHJOZjUAXVBM+jZiE9Usm/QroV9mrWLbMJhBpJe61h81iESHX4wafqyWX0kJZWBpoU6+pLi2/sAwJek4PKsw7hT3hqMFWBHkgnJhvKrpBpgYElCxiS7yts/t/x6y9Dj5750gV9unT7SwMSwuB/AqzhnkopNlN3Yq68Fo5wP8cyg47Mr1P5qkvJ5X/xqj1SClyz3nsr5xadW26dAC/Bu7/PH3icZG+55wwNqZOE4oEOAE15Y3oXH6zVMovlAIzhvuIAjIkdDRq1z4ZU/2j1NpPiL2d086ucx692Op93/wvJnvi6b/zk0fSKogWdRGxWJWD9yv3vK+7LJ/7YKPpnopE/FPxbZvxep37ZOtxO9/C7z9zT5YJp8uIg4WcqJJ9XnqeH9yuNor/X8Ku2y4P/H+C9Hg4y9JH8CKO9vN0qNCEsti+jQ41nBh/96t6vkn6fUz4fkr0fT54nx/TTv/SH22zb2z143fXe4Xqd/P0Ud7MNPDs7XK5Hi1v1kH/57G/pr63K84WhFSqUI+nXO/HLyO5jmnD9Zt6JPWAKFFXKtyP5uIuOuXG7mgYfnkOOz5eNK5+U94uAYcHIKODsZplO58toue7Ww97JdwLFsacRoFVeOl1v344PZwzvX6IJMtFAztn989Lh4UyoIJigAABf+kqgkMCkw9LVKob0SWmsi0A9UakSzItRqRKR/gQ1KQlDiogoT5EANS1JYck0GyNDHM/0kNBziqMYk+Y+k+Lr5A7d/jX7fb359jH8+J1+Y5O/3++2vTzsfcCvi1UxogBT+UakEFraisx4pkvDAiOeQpQPgX3psZIDTt7zQwgNzIcsLDQCnr/l8C0AjEh6ThjXcFwA=", "dragonfly_1": "data:image/webp;base64,UklGRnIEAABXRUJQVlA4TGUEAAAvH0AFEPVIr23b2J4vqMB28pqfbdu2bdu2bdu2rdf+FfXxsoNTREr9CoAgAGDZqLPN2j38/w32bPN8jZoMhSAAYJKIxhbXYcd1t/X/x1wTY7KJ8z8BIH2E/p8sVsmCjZCLIMvvetYv0NvWuzncvl2yHzepnEqLJOrkepUsmCgz7e0nZ+8+UpaT++d4CNfsEewl1mxhaLWoXj7WKpgaJZMgmsr1qnrN1qyY6rUqQdYVJV23YiooOlHNm6WiJcvbtePHmZvrZkG0vv189v7lwheLkdVw+fdOUlUpuJG6Ct/M/0apoHG0VbnkdzvBfY27Pa375f271uhs4+B2X/PmQOt2yu5y4N/5ztH9wq9Zu1grysj74unM4X75YDtq/dzl/2p1++XQzfuIvfxMLWpV9L1cuiDufi8eI03V3U92NN62ttYDPm9Wdp92PL+tb6xHbx+6/l5ubryvaqw3tt4Hfl41iYHW0U6Fct2gYqalo00nuPNv2SoMW5NJq8NoSe9109N6wK/40Ug/leyi6v/OkP+NYCsqh+m7i5X97cLpuju4mrR7nDfZzpjtR308dCDL2euXYT9X9SP9amXbsVxtyHj7I823BD8FLOVPzk35jTPBADCpkPcmbG9XtTYLZg/JOa92xdyNHzsW6p/UMlZR0arqEB/0CJIm6W7zZL9bBHeM4PYRWLcQ1Mj06whmZOF4+9zJosk/BLxH9CIU7wDdEO5UEtUJd9iRS2JKp/rFYPzudl1vvam1WTO/6paIftaycpwDAHH59cvFV7T5/Zv5E+F8xdifiUYa5/yNKNSP/c5fHsykMIuBB5hcwvwV4Jf9bpKs1pySx4DXKdv6Pq5eq+NE0yjS7hhOahf8H67/gphE+bAx2kxBPJWgN2zwDNNbQH6gEPyC0BqCHp2Mr/7Mbnq0mnyIlsua5VOVuvnd/C/HOcRWUItV8WYewvcpeezhu5hdBfIBYikU5BPUrXjqkwnuu/I2lKdPsJJaBjAs1hVkVax3Vj6t6PyHSAoDOaz/2sP3CX9D0WsK8xCZkXUbV80dd3TWlemYjsqGP5pFAHXhEKdnxVKS9PNzL4+BNAYeY34TDv+/YTAbs43RZhWxvHqAV9zpNSwKCBxQdAIQlCJey4O4GC1dkgzzPJjBkrtI3EMixYN3CEmBYncsjq3rw0f4FIkz7vgtxpf9dmVZB0m/G9mFQDcP4/uEPsbsDUPpFOQCsi7SrCLq1f7gDeIfVrDMhXRFKvjK/C/RDyO/Gmw+c8UDQjIPg1yC0yhYnwoi9GxAKk5F4omH7yD2gpCXhI4qOuU4h8RIvViW9N+58i8M8lhyKdDuXrV/WkWipvZy/RRCrgF5HfECRPYHuz/rZclAWSn3psJDicaknBttZgHIanmW6z0G8jIY3UX8LUXd6jZI87OVfm+nP5p/AQCnlmf8/gM4fE5h+j/fkIx/NfNSEY5V1YFQpwDDAoQOc70kTQdZWtTs/WPvVKhdUamCbBUkFa+pICkA", "frog_0": "data:image/webp;base64,UklGRqYDAABXRUJQVlA4TJkDAAAvF8AEEPVIrq3t2J6/gb8A27Zt27aNkW3bZj77dWzbtqr4WMI9DgtJB2mBLWRlnCJg2badttW2Kj2QZGbJ8KRnlwaRvwJE27ZNN6N/Hz5ePMa2baNm7KQMa43R/wkA2c3lzftcuMvC45q75EdQoH75rNmqfA85lXAoYIET4mNXPr37oyrWjoPiWhd9PF7Qpg67ch0HImQfy6V/fy00pove/HbuV6/btPXLdz0wiJ8M3ux4YasbmQzuD980axmyHGbP1a6HqW8SDyHbwTD9DzTh01Zx/k050/pMyl6a/flSPdVH+pDA4WNIIUid9vYXaeyfPpTSkcrxsxgcR4BkkYACnG581nktwVmeKuYqLeiPGxo1NEIsjixmgaCVLi0Jdl1ObU/G6hDJkEJAAkMhpAB4yFIsKXW2W8th1mDITFh7n/ExiacsxU2GzVds7RXmncYjoKGA4BHisEhjCWU82kfMdQ8AfjJnBXHNyqNoEyCeN9Z1a8QI4JZhFcvaT3rtP7v77RIid2r2Hl6DuUc/8riPuFbm7wcAMJP97OBjIu4y7n5j5yCHMsII4gRQAghB9mk6oGakla4d+bvvrTsfzUvaejvXR54hAEBZbBxGQoBoH+U/J0BzGtSnQPMBIfAfMeRhJ94ohbvvjVt35Y5W34/lHe245DUAWOftgrfuW4FgcJxoRjA2jOWaqdbWp0liKKT/kp67IYU7H41bWnugtav5pPGeWD0HAID47RoD+htBsCOEkoeTorFVMLZil07M3uF4gQLycBBuSv7WU7v91G/mVvL9rKzfAAD213qltR0iCiHcw/4WF+I4eBJUx1B1EpUFSzs23R1CEkf65OK6nksvY4n13OnrB4jbXy97wUgyO8KeIec+yCTGtIhYPqOjoJmsfYbyttTYjxKBDvaFrX6onAbo2lx2EhyuNcPLdBbbOMxljkAaYUAQdQiIs6CuXaqG5WNoip0ALUYoNE2dZd0wZG2PjQRL2c03nglrH2IPSbSIIJ8gjYWNYMiN55bX1i3OKmLjFKqOIusfpxFHlyAifTtTf/7EwP+a508tGskHgcEQsACPOk/Z3Mhaz9raWNVYtd+fppvgOSD2nDF86xcv9R9FS1tbf8TA+Hkf6cIiFrgs8VlEHE85TDiEeP5rxNrVL59TfZAklhVkD7nPXM8r5tp3CWChW49j6Xau3K6V67lykft/7nJvk58Nyx6sytb1uveUpbVuQSIA", "frog_1": "data:image/webp;base64,UklGRuICAABXRUJQVlA4TNUCAAAvF4AEEO8GOZIkRVJkZQ8tvfZQ1FPyXqcBfRlnukoNOJJtq1bW3ud8F8jIbJyMklRTd7d7DuRIkhRJkVXds3jwPDsJT8TTCF+MXZXzH+NRvt2/1JkKcQZ3UYZBAUsRbJQgrElSYcDKGCM4EAQa2CCExSEYTUBmCWqSwBJjwGmToCEkpsmNbhgI6iRBAgKEZsOhdZtyqEBgCChZoX7K/8SOM6AEYgoepilk8T+OLhGyToasFAuh09QtKVOhLyc5DDRlEhgDUYv+pU2kx7RKDikyTAsEBIlomWgyMYSBRC1KGKhRDnZDJoVogCAICEmhMEgBEAqACYAhESKBEiRpNARJKQhJQi9kLT3LZtumUpTlWaIBpv61/tm/JAl9hK0tC1RxbOTpsJBdfPNkY0QgBUmEJKFqUspfpBybbaRflXkPn3+ffrZBpzfm+YlzmBKn7cmFvrF7zdOUpFEpe2Jq0iCXATODSSsSJL6WjyHn2a+/+Ke+9Xh5r76X1WCUpd/kWAqTQLc+Wi/brwbHpknuTx48XE0f/yf/L5Pzxev93pteDbF8vP6oL/kLW/Tu5a5RxXXl7vgOINq2bbqx7dRuatu2bdu2bdu2bbepbZyf6XtJPiGi/xMABIsKCTIBMbEd88cWVEQgb93/e/EwYCCEll2/9PDjVwvXpIwXt6p76HXC7hOJ+UVYsgwas1Fjjot3bsX4iHNnfHSxPMqPY7hXiI1P3sRkVc/R2LM4DYrulalJbVZ2Snnl8MLazt47IGP8Y+/9MjJTE2MGF1c3Vx4Blc/Vt7crKa4ufWh5fWv2DZDlLDXNumuCokpOTgdGl6a/AZml5a4goi/w4WBju/3S6lXdmguJraGwPw1n/zkzNyXWdqYmHPyFQGHrpF19ni8JpNSUwNNcRIeF/4wONyoiinqygIzRAERWu1s3jnodIFzBs0zCOJKXCGT8SlIBhvREAAABaU4gIgA="},VI157={};
+for(const k in VS157){const im=new Image();im.src=VS157[k];VI157[k]=im}
+for(const E of W157.events)WD156.events.push(E);
+function inDate157(w){const F=typeof CLOCK120!=='undefined'&&CLOCK120.force&&CLOCK120.force.date,d=new Date(),v=F?F[0]*100+F[1]:(d.getMonth()+1)*100+d.getDate(),a=w[0][0]*100+w[0][1],b=w[1][0]*100+w[1][1];return a<=b?v>=a&&v<=b:v>=a||v<=b}
+function piece157(keys){return R2LAY.findIndex(e=>e&&keys.includes(e[0]))}
+ok156=(function(prev){return function(E){const w=E.when||{},n=E.need||{};if(w.date&&!inDate157(w.date))return false;if(n.piece&&piece157(n.piece)<0)return false;
+ if(E.kind==='gift'){const y=new Date().getFullYear();if((book156()[E.id]||{}).y===y)return false}return prev.apply(this,arguments)}})(ok156);
+start156=(function(prev){return function(E){if(typeof E==='string')E=WD156.events.find(q=>q.id===E);if(!E)return false;
+ if(E.kind==='cat'&&E.target==='piece'){const pt=pets156(E.need.pet)[0],i=piece157(E.need.piece);if(!pt||i<0)return false;const[u,v]=front151(i);if(!petGo130(pt,u+.6,v,'ev156')&&!petGo130(pt,u-.6,v,'ev156'))return false;EV156.cur={E,t0:T0,until:T0+E.dur,seen:false,pt};return true}
+ if(E.kind==='snow'){EV156.cur={E,t0:T0,until:T0+E.dur,seen:false,fl:[...Array(W157.snowN)].map(()=>({x:Math.random(),y:Math.random(),v:.4+Math.random()*.6,s:Math.random()}))};return true}
+ if(E.kind==='gift'){const i=piece157(E.need.piece);if(i<0)return false;EV156.cur={E,t0:T0,until:T0+E.dur,seen:false,i};return true}
+ return prev.apply(this,arguments)}})(start156);
+tick156=(function(prev){return function(){const C=EV156.cur;if(C&&(C.E.kind==='snow'||C.E.kind==='gift')){if(T0>=C.until){end156();return}if(T0>C.t0+2)seen156(C);return}return prev.apply(this,arguments)}})(tick156);
+// counters for the weekly challenges
+function wk157(){const d=new Date(),mon=new Date(d.getFullYear(),d.getMonth(),d.getDate()-((d.getDay()+6)%7));return Math.floor(mon.getTime()/6048e5)}
+function week157(){S.meta=S.meta||{};let w=S.meta.week157;const k=wk157();if(!w||w.k!==k){w=S.meta.week157={k,c:{},done:{},all:false,list:pickWeek157(k)}}return w}
+function pickWeek157(k){const P=W157.weekly.pool.slice(),out=[];const xm=inDate157([[11,15],[1,6]]);if(xm)out.push(W157.weekly.xmasPool[0].id);let s=k*9301+49297;while(out.length<W157.weekly.pick&&P.length){s=(s*9301+49297)%233280;out.push(P.splice(s%P.length,1)[0].id)}return out}
+function chal157(id){return W157.weekly.pool.concat(W157.weekly.xmasPool).find(q=>q.id===id)}
+function count157(kind,n){try{const w=week157();w.c[kind]=(w.c[kind]||0)+(n||1);let paid=0;for(const id of w.list){const q=chal157(id);if(!q||w.done[id])continue;if((w.c[q.count]||0)>=q.n){w.done[id]=1;S.player.gold+=q.g;paid++;try{say(W157.text.done+': '+q.t.replace('{n}',q.n)+' (+'+q.g+' G)')}catch(e){}try{log153(W157.text.done+' '+q.t.replace('{n}',q.n))}catch(e){}}}
+  if(!w.all&&w.list.every(id=>w.done[id])){w.all=true;S.player.gold+=W157.weekly.allBonus;try{say(W157.text.weekDone+' (+'+W157.weekly.allBonus+' G)')}catch(e){}}if(paid)try{save()}catch(e){}}catch(e){}}
+seen156=(function(prev){return function(C){const was=C.seen;const r=prev.apply(this,arguments);if(!was&&C.seen){count157('disc');if(C.E.xmas)count157('xmas')}return r}})(seen156);
+feedWith110=(function(prev){return function(){const r=prev.apply(this,arguments);try{count157('feed')}catch(e){}return r}})(feedWith110);
+log153=(function(prev){return function(s){const r=prev.apply(this,arguments);try{if(s===PO155.text.pet)count157('pet');else if(s===LN153.text.ate)count157('meal');else if(s===LN153.text.fridge)count157('fridge')}catch(e){}return r}})(log153);
+function fishTick157(){try{const M=S.meta,ids=Object.keys(S.fish||{});if(!M.fish157){M.fish157=ids.slice(0,500);return}const set=new Set(M.fish157);let n=0;for(const id of ids)if(!set.has(id)){M.fish157.push(id);n++}if(M.fish157.length>800)M.fish157=M.fish157.slice(-500);if(n)count157('fish',n)}catch(e){}}
+// ---------- drawing: snow, the gift, sprite visitors ----------
+function drawSnow157(C,s){const t=T0-C.t0,fade=Math.max(0,Math.min(1,t/3,(C.until-T0)/3));x.save();x.globalAlpha=fade*.9;x.fillStyle='#ffffff';const z=s.z;
+ for(const f of C.fl){const y=((f.y+t*.05*f.v)%1),xx=((f.x+Math.sin(t*.6+f.s*6)*.01)%1+1)%1,r=Math.max(2,z*(1.1+f.s*1.2));x.fillRect(Math.round(xx*W),Math.round(y*H),r,r)}x.restore()}
+function giftBox157(C,s){const e=R2LAY[C.i];if(!e)return null;const b=r2box(e);if(!b)return null;const im=R2SPR.x_gifts,z=s.z,w=(im&&im.width?sprW(im):24)*z*.6,h=(im&&im.width?sprH(im):18)*z*.6;return{x:s.x+(b.x+b.w*.62)*z-w/2,y:s.y+(b.y+b.h)*z-h-2*z,w,h,im}}
+function drawGift157(C,s){const g=giftBox157(C,s);if(!g)return;x.save();x.imageSmoothingEnabled=false;if(g.im&&g.im.width)x.drawImage(g.im,g.x,g.y,g.w,g.h);else{x.fillStyle='#d24a4a';x.fillRect(g.x,g.y,g.w,g.h)}
+ const a=.5+.5*Math.sin(T0*4);x.globalAlpha=a;TXs('✨',g.x+g.w,g.y,14,'#fff6c0','center');x.restore();C.box=g}
+const VMAP157={dragonfly:'dragonfly',butterfly:'butterfly',bird:'bird',frog:'frog'};
+drawVis156=(function(prev){return function(s){const C=EV156.cur;if(!C)return;if(C.E.kind==='snow')return drawSnow157(C,s);if(C.E.kind==='gift')return drawGift157(C,s);
+ if(C.E.kind==='visitor'&&VI157[C.E.v+'_0']&&VI157[C.E.v+'_0'].naturalWidth)return drawVisImg157(C,s);return prev.apply(this,arguments)}})(drawVis156);
+function vimg157(name,f){const im=VI157[name+'_'+f]||VI157[name+'_0'];return im&&im.naturalWidth?im:null}
+function dimg157(im,X,Y,k,flip){const w=im.naturalWidth*k,h=im.naturalHeight*k;x.save();x.imageSmoothingEnabled=false;if(flip){x.translate(Math.round(X+w),Math.round(Y));x.scale(-1,1);x.drawImage(im,0,0,w,h)}else x.drawImage(im,Math.round(X),Math.round(Y),w,h);x.restore()}
+function drawVisImg157(C,s){const b=r2box(C.a);if(!b)return;const z=s.z,k=z*W157.spriteK,cx=s.x+(b.x+b.w/2)*z,top=s.y+b.y*z,bot=s.y+(b.y+b.h)*z,t=T0-C.t0,fade=Math.min(1,t/2,(C.until-T0)/2),v=C.E.v;
+ x.save();x.globalAlpha=Math.max(0,fade);
+ if(v==='dragonfly'){const a=t*.9,dx=Math.sin(a)*b.w*z*.45,dy=Math.sin(a*2)*3*z+b.h*z*.18,im=vimg157('dragonfly',Math.floor(T0*14)%2);if(im)dimg157(im,cx+dx-im.naturalWidth*k/2,top+dy,k,Math.cos(a)<0)}
+ else if(v==='butterfly'){C.parts.forEach((q,i)=>{const a=t*.7+q.ph,dx=Math.sin(a)*b.w*z*.5,dy=Math.sin(a*1.7)*3*z+b.h*z*.15+i*4*z,im=vimg157(i?'butterfly2':'butterfly',Math.floor(T0*8+i)%2);if(im)dimg157(im,cx+dx-im.naturalWidth*k/2,top+dy,k,Math.cos(a)<0)})}
+ else if(v==='bird'){const hop=Math.floor(t/1.4),dx=((hop%5)-2)*4*z,peck=(t%1.4)>.8,im=vimg157('bird',peck?1:0);if(im)dimg157(im,cx+dx-im.naturalWidth*k/2,bot-im.naturalHeight*k-z,k,hop%2===1)}
+ else if(v==='frog'){const hopT=t%5,j=hopT<.35,im=vimg157('frog',j?1:0);if(im)dimg157(im,cx+b.w*z*.18-im.naturalWidth*k/2,top+b.h*z*.38-im.naturalHeight*k-(j?3*z:0),k,false)}
+ else{x.restore();return}
+ x.restore()}
+drawR2C79=(function(prev){return function(s){const r=prev.apply(this,arguments);try{if(homeOk129())fishTick157()}catch(e){}return r}})(drawR2C79);
+// tap the gift
+dragEnd=(function(prev){return function(){try{const p=panDrag,C=EV156.cur;if(p&&!panMoved&&C&&C.E.kind==='gift'&&C.box&&!C.opened){const g=C.box;if(p.px>=g.x-6&&p.px<=g.x+g.w+6&&p.py>=g.y-6&&p.py<=g.y+g.h+6){
+   C.opened=true;const B=book156();B[C.E.id]=B[C.E.id]||{t:Date.now(),n:1};B[C.E.id].y=new Date().getFullYear();S.player.gold+=W157.giftG;try{say(W157.text.gift+' +'+W157.giftG+' G')}catch(e){}try{log153(C.E.diary)}catch(e){}try{save()}catch(e){}C.until=T0+1.5;panDrag=null;panMoved=false;tapPend=null;return}}}catch(e){}return prev.apply(this,arguments)}})(dragEnd);
+// ---------- the book: a second tab with this week's challenges ----------
+BOOK156.tab='disc';
+bookPanel156=(function(prev){return function(){const t=W157.text;if(BOOK156.tab!=='week'){prev.apply(this,arguments)}else weekPanel157();
+ const wk=BOOK156.tab==='week',w=Math.min(620,VW74-40),X=W/2-w/2,L=WD156.events,h=wk?WH157:150+L.length*40,Y=Math.max(70,H/2-h/2),by=Y+h-48;
+ B(t.tabDisc,X+24,by,120,38,()=>{BOOK156.tab='disc'},true,BOOK156.tab!=='week'?'#c0803a':'#8a7a6a');btns[btns.length-1].l='ค้นพบ:แท็บค้นพบ';
+ B(t.tabWeek,X+w-24-170,by,170,38,()=>{BOOK156.tab='week'},true,BOOK156.tab==='week'?'#c0803a':'#8a7a6a');btns[btns.length-1].l='ค้นพบ:แท็บสัปดาห์'}})(bookPanel156);
+const WH157=440;
+function weekPanel157(){const t=W157.text,wk=week157(),w=Math.min(620,VW74-40),h=WH157,X=W/2-w/2,Y=Math.max(70,H/2-h/2);nine84(X,Y,w,h,2);
+ TXB('🗓️ '+t.weekTitle,X+w/2,Y+38,22,'#4a3a2a','center');TXs(t.weekEnds,X+w/2,Y+66,13,'#7a6a5a','center');
+ wk.list.forEach((id,i)=>{const q=chal157(id);if(!q)return;const y=Y+110+i*70,c=Math.min(q.n,wk.c[q.count]||0),dn=!!wk.done[id];
+  x.save();x.fillStyle=dn?'rgba(140,200,120,.35)':'rgba(255,255,255,.3)';x.fillRect(X+24,y-24,w-48,58);x.restore();
+  TXB((dn?'✅ ':'◻️ ')+q.t.replace('{n}',q.n),X+40,y,16,'#4a3a2a');TXs('+'+q.g+' G',X+w-40,y,14,'#7a5a20','right');
+  x.save();x.fillStyle='rgba(0,0,0,.12)';x.fillRect(X+40,y+12,w-200,10);x.fillStyle=dn?'#6ab04a':'#e0a040';x.fillRect(X+40,y+12,(w-200)*c/q.n,10);x.restore();TXs(c+' / '+q.n,X+w-150,y+22,12,'#6a5040')});
+ TXs((wk.all?t.weekDone:t.all+' +'+W157.weekly.allBonus+' G'),X+w/2,Y+h-100,15,wk.all?'#3a7a3a':'#7a5a20','center');
+ TXs(t.hint,X+w/2,Y+h-62,12,'#7a6a5a','center');B('ปิด',X+w/2-70,Y+h-48,140,38,()=>{BOOK156.on=false},true,'#8a7a5a');btns[btns.length-1].l='ค้นพบ:ปิด'}
+
+// ===== V1.58 Fish Behavior Engine Lite (owner, 10 Nov 2026: 'ทำระบบปลาให้แน่น น่าเล่นมากขึ้น'; GPT Cowork Priority 1: fish that
+// answer the world the player makes). Data: core/data/fish158.json. Every fish has a comfort 0-100 from the water temperature
+// (heater or the room by season), pH, water quality, its school, fish it does not get along with and a hiding place; it moves
+// slowly toward its target. Mood happy / normal / stressed shows in how it swims: happy fish speed up, explore and come to the
+// glass; content fish rest now and then; stressed fish slow down and stay low in the hiding corner. Tap a fish: its mood and why.
+// Also (GPT review of V1.56-57): the same moment does not repeat within cooldownMin; while you are away the house keeps a short
+// memory of moments that could have happened (diary + the away card, no reward); weekly: 5 small goals, any 3 pay the reward.
+const FB158={
+ "_note": "V1.58 Fish Behavior Engine Lite (owner, 10 Nov 2026: 'ทำระบบปลาให้แน่น น่าเล่นมากขึ้น' → GPT Cowork: 'ปลามีพฤติกรรมที่ตอบสนองต่อโลกที่ผู้เล่นสร้าง', Priority 1). comfort 0-100 per fish = base minus the penalties that apply: temp (the water outside the species' range), ph, water (quality below waterMin), school (fewer of its kind than it needs), clash (a big fish with tiny ones, two of a 'solo' kind), hide (a hiding kind with no hiding place). Water temperature: the heater's 26 °C, otherwise the room by season (roomTemp). pH from water quality like the test kit: phBase - (100 - quality) x phDrop. comfort moves toward its target by rate points a second (no sudden jumps). mood: happy >= happy, stressed < stressed, else normal. Behaviour (front / iso tank): happy = swims faster (speed.happy), often explores the whole tank and comes to the front glass (explore chance); normal = sometimes rests a few seconds (rest chance, restSec); stressed = slower, stays low in the hiding corner (hide chance). Ranges per species: real fish from fish_real.json (temp / ph text), these overrides, else by group (grp). Not a punishment system: comfort never hurts health, it only shows how the fish feel (GPT: no new death / offline penalties). cooldownMin: a moment seen is not picked again for this long. memMax / memChance / memText: moments remembered while you were away (one try every 2 hours of the time away). weekShow / weekNeed: weekly goals shown and how many pay the weekly reward.",
+ "base": 100,
+ "pen": {
+  "temp": 20,
+  "ph": 15,
+  "water": 25,
+  "school": 15,
+  "clash": 20,
+  "hide": 10
+ },
+ "waterMin": 55,
+ "phBase": 7.4,
+ "phDrop": 0.012,
+ "roomTemp": {
+  "spring": 25,
+  "summer": 28,
+  "autumn": 23,
+  "winter": 19,
+  "rainy": 26,
+  "hot": 30,
+  "cool": 22
+ },
+ "rate": 2.5,
+ "happy": 75,
+ "stressed": 45,
+ "speed": {
+  "happy": 1.3,
+  "normal": 1.0,
+  "stressed": 0.6
+ },
+ "explore": 0.45,
+ "rest": 0.3,
+ "restSec": [
+  2,
+  4
+ ],
+ "hide": 0.95,
+ "grp": {
+  "tank": {
+   "temp": [
+    22,
+    28
+   ],
+   "ph": [
+    6.5,
+    7.8
+   ]
+  },
+  "medaka": {
+   "temp": [
+    8,
+    32
+   ],
+   "ph": [
+    6.5,
+    8.2
+   ]
+  },
+  "wild": {
+   "temp": [
+    8,
+    30
+   ],
+   "ph": [
+    6.5,
+    8.2
+   ]
+  }
+ },
+ "species": {
+  "guppy": {
+   "temp": [
+    22,
+    28
+   ],
+   "ph": [
+    7,
+    8.2
+   ]
+  },
+  "neon_tetra": {
+   "temp": [
+    20,
+    26
+   ],
+   "ph": [
+    5.5,
+    7.2
+   ],
+   "school": 6
+  },
+  "betta": {
+   "temp": [
+    24,
+    30
+   ],
+   "ph": [
+    6,
+    7.5
+   ],
+   "solo": true,
+   "hide": true
+  },
+  "zebra_danio": {
+   "temp": [
+    18,
+    26
+   ],
+   "ph": [
+    6.5,
+    8
+   ],
+   "school": 5
+  },
+  "platy": {
+   "temp": [
+    20,
+    28
+   ],
+   "ph": [
+    7,
+    8.2
+   ]
+  },
+  "molly": {
+   "temp": [
+    22,
+    28
+   ],
+   "ph": [
+    7.2,
+    8.4
+   ]
+  },
+  "corydoras": {
+   "temp": [
+    21,
+    27
+   ],
+   "ph": [
+    6,
+    7.8
+   ],
+   "school": 4,
+   "hide": true
+  },
+  "cardinal_tetra": {
+   "temp": [
+    23,
+    29
+   ],
+   "ph": [
+    5,
+    7
+   ],
+   "school": 6
+  },
+  "harlequin": {
+   "temp": [
+    22,
+    27
+   ],
+   "ph": [
+    6,
+    7.5
+   ],
+   "school": 6
+  },
+  "otocinclus": {
+   "temp": [
+    21,
+    27
+   ],
+   "ph": [
+    6,
+    7.5
+   ],
+   "school": 3,
+   "hide": true
+  },
+  "honey_gourami": {
+   "temp": [
+    22,
+    28
+   ],
+   "ph": [
+    6,
+    7.5
+   ]
+  },
+  "pearl_gourami": {
+   "temp": [
+    24,
+    28
+   ],
+   "ph": [
+    6,
+    7.5
+   ]
+  },
+  "kuhli_loach": {
+   "hide": true
+  },
+  "bristlenose_pleco": {
+   "hide": true
+  },
+  "german_blue_ram": {
+   "hide": true
+  },
+  "electric_blue_ram": {
+   "temp": [
+    27,
+    30
+   ],
+   "ph": [
+    5,
+    7
+   ],
+   "hide": true
+  }
+ },
+ "tinyCm": 3.2,
+ "text": {
+  "happy": "😊 มีความสุข",
+  "normal": "🙂 สบายดี",
+  "stressed": "😟 เครียด",
+  "comfort": "ความสบาย",
+  "ok": "ทุกอย่างพอดี",
+  "tempLow": "น้ำเย็นไป ({t}°C · ชอบ {a}–{b}°C) — ฮีตเตอร์ช่วยได้",
+  "tempHigh": "น้ำร้อนไป ({t}°C · ชอบ {a}–{b}°C)",
+  "ph": "pH {p} ไม่ถูกใจ (ชอบ {a}–{b}) — เปลี่ยนน้ำช่วยได้",
+  "water": "น้ำไม่สะอาด — เปลี่ยนน้ำ/ใส่ไม้น้ำ",
+  "school": "อยากมีเพื่อนชนิดเดียวกัน {n} ตัวขึ้นไป (ตอนนี้ {c})",
+  "clash": "ไม่ถูกกับปลาตัวอื่นในตู้",
+  "hide": "อยากมีที่หลบ (ขอนไม้ ถ้ำ หิน)",
+  "tank": "ปลาในตู้",
+  "tankOf": "มีความสุข {h} · สบายดี {n} · เครียด {s}"
+ },
+ "cooldownMin": 45,
+ "memMax": 2,
+ "memChance": 0.5,
+ "memText": "ระหว่างที่คุณไม่อยู่ · {s}",
+ "weekShow": 5,
+ "weekNeed": 3
+};
+function rng158(s){const m=String(s||'').match(/([\d.]+)\D+([\d.]+)/);return m?[+m[1],+m[2]]:null}
+const REAL158={};try{for(const q of FISH125.fish)REAL158[q.id]={temp:rng158(q.temp),ph:rng158(q.ph)}}catch(e){}
+function need158(id){const db=DB[id]||{},o=FB158.species[id]||{},r=REAL158[id]||{},g=FB158.grp[db.grp]||FB158.grp.tank;
+ return{temp:o.temp||r.temp||g.temp,ph:o.ph||r.ph||g.ph,school:o.school||db.school||0,solo:!!o.solo||db.temper==='solo',big:db.temper==='big',hide:!!o.hide||db.zone==='bottom'&&db.grp==='tank'&&db.temper!=='tiny'}}
+function water158(){const t=tank(),st=(t&&t.stats)||{},q=eq110(t)||{};const temp=q.heater?EQK110.heater.temp:(FB158.roomTemp[season74()]||25),ph=FB158.phBase-(100-(st.water_quality==null?90:st.water_quality))*FB158.phDrop;return{temp,ph:+ph.toFixed(1),wq:st.water_quality==null?90:st.water_quality}}
+// target comfort + the reasons
+function comfort158(f){const N=need158(f.species_id),W=water158(),P=FB158.pen,T=FB158.text,why=[];let c=FB158.base;const t=tank();
+ if(W.temp<N.temp[0]){c-=P.temp;why.push(T.tempLow.replace('{t}',W.temp).replace('{a}',N.temp[0]).replace('{b}',N.temp[1]))}else if(W.temp>N.temp[1]){c-=P.temp;why.push(T.tempHigh.replace('{t}',W.temp).replace('{a}',N.temp[0]).replace('{b}',N.temp[1]))}
+ if(W.ph<N.ph[0]-.05||W.ph>N.ph[1]+.05){c-=P.ph;why.push(T.ph.replace('{p}',W.ph).replace('{a}',N.ph[0]).replace('{b}',N.ph[1]))}
+ if(W.wq<FB158.waterMin){c-=P.water;why.push(T.water)}
+ const all=Object.values(S.fish||{}),same=all.filter(o=>o.species_id===f.species_id).length;
+ if(N.school&&same<N.school){c-=P.school;why.push(T.school.replace('{n}',N.school).replace('{c}',same))}
+ const tiny=o=>{try{return cm152(o.species_id)<=FB158.tinyCm}catch(e){return false}};
+ if((N.solo&&same>1)||(N.big&&all.some(o=>o!==f&&tiny(o)))||(tiny(f)&&all.some(o=>o!==f&&need158(o.species_id).big))){c-=P.clash;why.push(T.clash)}
+ if(N.hide&&!hasHide111(t)){c-=P.hide;why.push(T.hide)}
+ return{c:Math.max(0,Math.min(100,c)),why}}
+function mood158(f){const c=f.cf158==null?comfort158(f).c:f.cf158;return c>=FB158.happy?'happy':c<FB158.stressed?'stressed':'normal'}
+const FT158={t:0};
+function tick158(){const now=T0,dt=Math.min(5,now-(FT158.t||now));if(dt<1&&FT158.t)return;FT158.t=now;try{const W=water158(),t=tank();if(t&&t.stats&&!(eq110(t)||{}).heater)t.stats.temperature=W.temp}catch(e){}
+ for(const f of Object.values(S.fish||{})){const g=comfort158(f).c;if(f.cf158==null)f.cf158=g;else{const d=g-f.cf158;f.cf158+=Math.sign(d)*Math.min(Math.abs(d),FB158.rate*dt)}}}
+// ---------- behaviour in the tank ----------
+iso58Target=(function(prev){return function(f,d){prev.apply(this,arguments);try{const q=f.q,G=geo58(),m=mood158(d);f.md158=m;
+ if(m==='stressed'&&Math.random()<FB158.hide){const c=SWIM58.stressCorner;q.ta=rn(c.a[0],c.a[1]);q.tb=G.LB*rn(c.b[0],c.b[1]);q.tz=iso58Z(q.ta,q.tb,SWIM58.zBot)}
+ else if(m==='happy'&&!pellets.length&&Math.random()<FB158.explore){q.ta=rn(SWIM58.pad,G.LA-SWIM58.pad);q.tb=G.LB-SWIM58.padB-rn(0,G.LB*.25);q.tz=iso58Z(q.ta,q.tb,SWIM58.zMid)}
+ else if(m==='normal'&&!pellets.length&&Math.random()<FB158.rest){q.ta=q.a;q.tb=q.b;q.tz=q.z;q.rest158=T0+rn(FB158.restSec[0],FB158.restSec[1])}}catch(e){}}})(iso58Target);
+iso58Step=(function(prev){return function(f,d,dt){const sp0=f.sp,m=f.md158||mood158(d);f.sp=(sp0||55)*(FB158.speed[m]||1);try{return prev.apply(this,arguments)}finally{f.sp=sp0}}})(iso58Step);
+update=(function(prev){return function(dt){try{tick158()}catch(e){}return prev.apply(this,arguments)}})(update);
+// ---------- the fish card: mood and why ----------
+fishCard=(function(prev){return function(id){const n0=btns.length,r=prev.apply(this,arguments);try{const f=S.fish[id];if(!f||!R55.sel)return r;const C=comfort158(f),m=mood158(f),T=FB158.text;
+ const cl_=btns.slice(n0).filter(q=>q.l==='ปิด').pop(),X=70,Y0=cl_?cl_.b+cl_.h+10:332,Y=Y0+64+8,w=360,lines=C.why.length?C.why.slice(0,3):[T.ok],h=40+lines.length*18;
+ rr(X,Y,w,h,14,'#0d1b26ee');const col=m==='happy'?'#9fe39a':m==='stressed'?'#ff9a8a':'#ffe08a';TXs(T[m],X+16,Y+20,15,col);
+ const c=Math.round(f.cf158==null?C.c:f.cf158);TXs(T.comfort+' '+c+'/100',X+w-16,Y+20,12,'#cfe6f0','right');x.save();x.fillStyle='rgba(255,255,255,.12)';x.fillRect(X+150,Y+14,110,6);x.fillStyle=col;x.fillRect(X+150,Y+14,110*c/100,6);x.restore();
+ lines.forEach((s,i)=>TXs(fit('• '+s,12,w-32),X+16,Y+40+i*18,12,'#d8e6ee'))}catch(e){}return r}})(fishCard);
+// a small line over the tank: how the fish feel
+hud=(function(prev){return function(){const r=prev.apply(this,arguments);try{if(scene==='aq'&&!(typeof AOD89!=='undefined'&&AOD89.on)&&!(typeof R55!=='undefined'&&R55.sel)){const F=Object.values(S.fish||{});if(F.length){const k={happy:0,normal:0,stressed:0};F.forEach(f=>k[mood158(f)]++);
+  const s=FB158.text.tankOf.replace('{h}',k.happy).replace('{n}',k.normal).replace('{s}',k.stressed);rr(W/2-170,H-46,340,30,12,'#0d1b26bb');TXs('🐟 '+s,W/2,H-26,13,'#e8f4f8','center')}}}catch(e){}return r}})(hud);
+// ---------- GPT review of V1.56-57 ----------
+// 1. cooldown: a moment seen in the last cooldownMin minutes is not picked again
+const CD158=FB158.cooldownMin||45;
+seen156=(function(prev){return function(C){const r=prev.apply(this,arguments);try{const B=book156();if(B[C.E.id])B[C.E.id].last=Date.now()}catch(e){}return r}})(seen156);
+pick156=(function(prev){return function(){const B=book156(),bak={},now=Date.now();for(const E of WD156.events){const q=B[E.id];if(q&&q.last&&now-q.last<CD158*60e3){bak[E.id]=E;}}
+ if(!Object.keys(bak).length)return prev.apply(this,arguments);const keep=WD156.events.slice();WD156.events.splice(0,WD156.events.length,...keep.filter(E=>!bak[E.id]));try{return prev.apply(this,arguments)}finally{WD156.events.splice(0,WD156.events.length,...keep)}}})(pick156);
+// 2. memories of moments while away (no reward: only seen moments go into the book)
+away153=(function(prev){return function(N,t0,t1){const r=prev.apply(this,arguments);try{mem158(t0,t1)}catch(e){}return r}})(away153);
+function mem158(t0,t1){const out=[],F0=CLOCK120.force,M0=LIFE151.forceMin,used={};const start=Math.max(t0,t1-2*864e5);
+ try{for(let t=start+36e5;t<t1&&out.length<FB158.memMax;t+=2*36e5){const d=new Date(t);CLOCK120.force={season:season74(),phase:phase120(d),rain:F0&&F0.rain,date:[d.getMonth()+1,d.getDate()]};LIFE151.forceMin=d.getHours()*60+d.getMinutes();
+   const L=WD156.events.filter(E=>!used[E.id]&&(E.kind==='visitor'||E.kind==='snow'||E.kind==='cat')&&E.kind!=='gift'&&ok156(E));if(L.length&&Math.random()<FB158.memChance){const E=L[Math.floor(Math.random()*L.length)];used[E.id]=1;out.push([t,FB158.memText.replace('{s}',E.diary)])}}}
+ finally{CLOCK120.force=F0;LIFE151.forceMin=M0}
+ for(const[t,s]of out){log153(s,t);if(NEED153.away)NEED153.away.lines.push([t,s])}if(NEED153.away){const L=NEED153.away.lines.sort((a,b)=>a[0]-b[0]);if(L.length>LN153.away.lines+FB158.memMax)NEED153.away.lines=L.slice(-(LN153.away.lines+FB158.memMax))}return out}
+// 3. weekly: five small goals, any three pay the reward (no single goal has to be done; none needs buying)
+pickWeek157=function(k){const P=W157.weekly.pool.slice(),out=[];if(inDate157([[11,15],[1,6]]))out.push(W157.weekly.xmasPool[0].id);let s=k*9301+49297;while(out.length<FB158.weekShow&&P.length){s=(s*9301+49297)%233280;out.push(P.splice(s%P.length,1)[0].id)}return out};
+count157=(function(prev){return function(kind,n){try{const w=week157();w.c[kind]=(w.c[kind]||0)+(n||1);let nd=0;for(const id of w.list){const q=chal157(id);if(!q)continue;if(!w.done[id]&&(w.c[q.count]||0)>=q.n){w.done[id]=1;try{say(W157.text.done+': '+q.t.replace('{n}',q.n))}catch(e){}try{log153(W157.text.done+' '+q.t.replace('{n}',q.n))}catch(e){}}if(w.done[id])nd++}
+ if(!w.all&&nd>=FB158.weekNeed){w.all=true;S.player.gold+=W157.weekly.allBonus;try{say(W157.text.weekDone+' (+'+W157.weekly.allBonus+' G)')}catch(e){}try{save()}catch(e){}}}catch(e){}}})(count157);
+// counters for the new weekly goals: a night in bed, standing at the tank
+log153=(function(prev){return function(s){const r=prev.apply(this,arguments);try{if(s===LN153.text.sleep)count157('sleep')}catch(e){}return r}})(log153);
+watch150=(function(prev){return function(){const r=prev.apply(this,arguments);try{if(r)count157('watch')}catch(e){}return r}})(watch150);
 
 // ===== Environment layer (Phase 0) — injected by client/build/build.py right before the game boots =====
 // development : everything on (team mode via 7 taps on the version line, Sandbox Gold, festival preview)
