@@ -3174,7 +3174,7 @@ const _hud67=hud;hud=function(){_hud67();if(LVQ.length||LVSHOW)return;if(!['home
   TXs(lock?'เริ่มที่ Lv '+s.lv:(s.g.st==='gold'?a.toLocaleString()+'/'+b.toLocaleString()+' G':a+'/'+b)+(storyReady()?' · พร้อมรับรางวัล':''),32,y+40,12,storyReady()?'#8fe08a':'#cfe6f2')}
  if(n){gc_(338,y+6,12,'#e8504a');TXB(String(n),338,y+6,13,'#fff','center')}};
 
-const GAME_VER='V1.59';
+const GAME_VER='V1.63';
 // ===== V0.68 STEP 8 — UX/UI: main dock (บ้าน / ตู้ / อ่าง / เมือง / เควส), Lv1-5 tutorial pointers tied to the story,
 // one UI skin drawn by the user's ChatGPT (buttons, tags, icons), Demo/dev tools hidden in real play, online save per player. =====
 const UI_IMG={"btn_blue": "data:image/webp;base64,UklGRj4BAABXRUJQVlA4TDIBAAAvIkAEEL/AJgCANLi/HgFy0P8lh82lBpsAAJNML3fcQxCDgiSgn6viSJKSO1zfEAJJkH9C7vMfkPmcXjc1/ElsyWQDAYsn14oZmTJEcwnaLHRUVJHFNUEQQYDgB37wgR8gTMAfUc2kqTFAjG0rChMDCG4fd+2/VcGYDt6N6P8E3EWH/hnoo/u6hG9iR/O1e9B0ClGp+zi4QsSP/cdtIrib0EV/vT7fDzF5R+jjJZ0c1YUNWCUAG1PriGG8jrd7YS3CNhTSdB6wS0txfc6QpVVWOxaYd1HPAkmydasMq2bIABKgsj1rWpVVsPz2MY1tIUymLMszMrJM2arT0MXg+EmMk60m7aYsWXmWJoYQadyNT4Rx+HQkQte6W/hI+mNM1TZI3t0SPqiVeCmeQujXcT/5V0k=", "btn_gray": "data:image/webp;base64,UklGRlABAABXRUJQVlA4TEMBAAAvIkAEELegKrKVijeoISSBoS3J562hNpKtBA0hhNSd/uuhBIbUvuJIUqKF4gmeL4tEDNJUNYFz/kOEZi6OJBvIMZ+pq48rnbSrfCw3b2u5mR0QEADQRwBAHwCEstnTi82fgwFiJNttGwnhgxkMENh/rYBkuoN3Ef2fgLvr0T8Dw+if7uGwub7cG1CXH+V782SEOk/fx+nHMfhb4m01WBqeTRX5W5Qahs/TS6o4jxtt+MDSX9uLbpaK1eAx6bOw7dKyQhaXhHILp43RY2Na9k3S2gFduX+wnqn2tl1au1dmy9IBEogfziPrUpau3IWTVipfKAeQaZv9OAWSihSiPBrjcOpAqAVJoLYozRY8r4oN5ZTKqXJKTdEpFSkZvP2Nq0RLjxrJmPC3cPX72AIIAcQgOX9LuBhiiAqKfwwxCM/d8q+SAAA=", "btn_green": "data:image/webp;base64,UklGRloBAABXRUJQVlA4TE4BAAAvIkAEELegJpKt5mdiT8VgAv89KlCAgmhDaSRbzfuf6GIFWBz9N0MNGRQK2khS7u75Xbx/ccw4/+G9vaWW3ZdWEYrAEdX2ZKBbra6EZh+VBOgDEMSHAMDgfxSdULIzUjK7t95kgBhJctyGxv8LAAUw/1gPUskZ7Eb0fwKeoybxvyTjvPjjE9Xl7nL9Wp/u6aPb798uow8+OUa5vgUBIGwq/YDvruL99cR9nAD8ptK8Upw3MPvn9iKBVggw2W00gzV3/zzYgBfaOZfkl9UMK8zDkK0SspCZQPL7VMRoojKzYlRZkJNfp9RHH+cqR5WDBfDbamK51KWocpCsHAQQnT0gpkMfzJUcMoMAYrhp9MNNF1PJwCuhgZWZCSAi4Ilw6Ydq0zp65+nov3X0LgKT+gFV2B/XeS+5SWeUU/oBqIw1gDWwZ2OlgTX403wk/xUA", "btn_orange": "data:image/webp;base64,UklGRkoBAABXRUJQVlA4TD4BAAAvIkAEELegNJKk6F7UOX4U5B8gCjYNRZEkNXsHz3uRkwA04N9MskCdgjaSlL17Zg3v3x/T/AdL7PaLIiVtYnjit+20N7eRi7m9v7rjJLQOACgQfwIgEAYw4P4nv2pJYXAY21acGHaQ7Jj0XyvoxA7ejej/BNxDi/4MZPH0CDOFrNf0sO2YruyCyvX5Ln5Mxg5CNi4/HBLG3iLL6Hr6ncBYXA66+Jzj4zy2X9VCcpbg3XVq4ziP4XkA6iS1mLwlpHxuVA5Bp26n7mzwpcTzqHPd6QBpH8/b+sNcZ2CncjBX9n4G1vaNNsO6zdRj3mdgZ4ZVaipeXVJpaz/vLNTBurS1SSVcwVleCV+a1qUtTfu8rJLauMSQmeyNSfgQn1VWeDt7CxNJEBOUcVSfwMkIe0sYN/TOj53vnSQmy93zV0k=", "btn_purple": "data:image/webp;base64,UklGRiwBAABXRUJQVlA4TCABAAAvIkAEEJ+gKJKk5nLgmXnhAf+ecIAPtY0kNe//sZEL6YD+mwMxDQAgDdbcMo3MA1zOH/zhMgnzH9xZz0QYVc4vxlFfJNtbdzpQPUmoOvaDLxogRAAgQoAAIrB3cXtmgBhJctzGeH0SwAO//JMFSdMZ7ET0fwLOywj6X8AI8eUrgtJhP2/Hq0PZxPEQPSTFi2yp1N93ZaR4CiN9dm3vtmqEiIzPtgM+JK2S0EJ3abhasRSxxL7BuJ4k+W2vliPF6ubDpZVx7xoX/UFfHHji9zeaLockH/Knvd2UzgJ98eEdSRqu4RLwLflC37722QWgeTC3euQUT4zyaR2a9zbNrUODmk0hngQjl/quDI4cTxGyvS4lhXhKhPzXpHsinDP/KUk=", "btn_rose": "data:image/webp;base64,UklGRj4BAABXRUJQVlA4TDEBAAAvIkAEEK+gNJKk6PbUD3giQJJ/VEjUpqE0kiTl2D1IcOQ+/8xe7lcpjSQpum/UOXB48s+KGH5q/kNTBisqvMJsq/ksfHobO9X50+vXbEWMjgwGwAokhBRYfDwXw34wQLBtq2qTVP5aeEh1/nMVbTKDcyP6PwHn1KEvAxn36RnLTz54/ffNa+ouvI8cUPl7uPJQ3k1ClnhYMmWeiYXFneLIgUP7Z39TYXGELA7tYEL0NjeporbF4h0KfgdMoC67dEO7VGGkEh0qabcGXYboRr+auglGKt4R11RbpYEJ1OdGF4wHrU66TDcYFXgQRwVabV0Y0w6VAZtn4jXqvNXbzqgDtnhk704KcR2Vcb0Z021NIevtTnwhKn00KhOO4E6xxHK7in8GeS3ulFj8F+U4r3xVEgA=", "close": "data:image/webp;base64,UklGRgABAABXRUJQVlA4TPQAAAAvDsADEK/AJgCANLi7l4BI9H9l68KgkSRFx8z4YIJ1vObXRVEbyVbyP+45dVAKFVA+IZHL/AfUNmaUiog9ixooQxU4LjR/TBAUM0YYIj3/36WZK94aPDp3tWJjz2IuidfBvjIwjGSrifoI/8sP5P57hSIi+q+2bRvGTs+mM/beAPbta4pt4fjKVldbbv4HXGoxsYiIZeyNdyV3M1PShI1k7r2o95LlA4pYn73OWYUCXmctY87pLJTwehapc450y1hPzi6SEyCsfXYeszJ9QFQqTvI7pdbCBksmOd9VFza+rHzcVls47EIiorBCq7hhPs9zWEYA", "ic_coin": "data:image/webp;base64,UklGRtwBAABXRUJQVlA4TM8BAAAvHsAHEJfAIACAJHR35wP9v8cRflEV2VbycPl0JwFd6B+CBqY2kq3kKxZ/WqEZ+s80IrL5DwAaMyEGKPpy09trW9jwsVxiYGze/HEQAqn0s/8k3z4eU1QKNFSAYNtK2Gga/SAKgun+N6sknSVE9F+R27aNHAMZ7Wk94vuukvX9p0q5snLj93qiuNcym7V+fiblorjvex1UJ9W/8u56HzXa2qg2fMqbKWVtThUBeYqrvOfup7bRheGqzjve3E56FnURgakCNVE+cd+cVk9v7cCk2pHXlLaiZUeEs5xo6uCa8OWyVrKqvECJQit4rjXjDlWHJFi14SwubXkz2zZTHc7CREy24auUay3q5rGSxxD47CAbDGzqRiUiMr27DmY66/hghuHhLftIIKzKwAMJm/OFARFSbS90sce8jy0IuzoyatylJZ/gMZhfMfMTI0kA2rQ0ycehmy7gPjrAwgCFan3BSHoXoTGQjypM8bgpBV0b5AhA9rRWn/y1MRofRFiEW4QFAfV5C0ff8diFiLnNqFf5PqL3rpNpK2UBnIN8ewG9D9U5T2bTmYHsZ9pEs9zBIqjl1+urnAVw2vGPd11xxFyv61+vv3ySrtfsf7/Gj+wLAA==", "ic_drop": "data:image/webp;base64,UklGRm4BAABXRUJQVlA4TGIBAAAvF8AHEJ+gIACAItvmmv4v6ZDiSJKSE+znEgApeP5B8aJQ0EaScs/MDIrev5M3MP8BQESIBBEUZTXZvfvcN6kvSGKSFZyRlCR44LDGAANatS++3S7RC3I0OIxtpY424gP/Bk3/xUZ0U0JE/xm4bdvIrqDb+z7xHEv0fCtdF32EPX0DCZ8GQeMn0e9WxqsvbgL2P/qHH1oCAEd/cKqtRry66HxEHX30EgHxdOR+mb0UBtjReaMxtdUaGXJYRE5fptZaswDR0cY9dNqUCDAcnZbN0ds7Ehtt7suttSVGZEfW1WIkQDLBaHWMfo53RG5o6WtqmxFBzCYlDe1bUngjNjHN2U8W2RO3NGMJW0IopdTlvEg92SSOMabSsl3bTR7yyhxshVl0luzJvK3MLDv3nGX5WUrMAPNiDOslaI6yCE21JewvmLzPJb0trWT2xw/lcqnWmnOCc+e/hsht/f8vkelh6gE=", "ic_gear": "data:image/webp;base64,UklGRhgCAABXRUJQVlA4TAsCAAAvH8AHEJegoJGk5nulSEAF/jWBGkWRJDUXyRnkUPgXwRsFCFATSYrEDxkmKETgXwUqiO+S+Q8ATwzmCqyPD8fj80Y2pVObnjWnsIDCqg6qvJt3/IfeP3cXg8TYtuO2iYAPfOwEyP6r1RKX8G5E/yfg+T1+1N/jUDzEP+Pc0qqe4gP8ByAxYVFzigRekV8whci/MddQtRTtWjWH+A2/bkzX0kTgdq2pmkP8hN1LOvcaYtKle02E52/Xep99VEl9sgBayhbfeI032rklba+TvmZLpvBBpCWNekvXvjl4HXMkSyE+n0lrtvuwKafscrzNlSzE59tZ47rPpsAu7JNHrzlFPoCvcd2bEjBpA6qtJnsp8ohymO3ah2DiJdtQfCzp9hwirrmohWNBRHidfbA+epsZi/gaVN3aphAfiXPtYrWpj0x4m4x6l2P+pRjqjPZt0Oq1cXvD9qGo9dGVsUhwatMGTCHC2QdPVUlSDvEh4L1qU7Zb0NlQgrdqChAfCV5VOl42t3R2OZ5qT7IIz0e8Ny8bOBQw1daThfh8xleTKAe8YJJ3GFlfeF29iarsBTfl2kdTX9nil06Doeo5QW0aXaimHOKbyIOeqZ1Wm1SdPrqSLD6fyd2ThTRabT2Z5KMmKT7fMaUQX7NJJAuvmBOKz68AYjQ6SSE+vMTz/3iVyIT4CPSXhHeLz9/zUb8DAA==", "ic_heart": "data:image/webp;base64,UklGRpABAABXRUJQVlA4TIQBAAAvHwAHEJegNpKt5GORu6Sk1EH/fVCCt6Emkq3m/dQHkh704gcXtJSgKJKk5nIgK8AGDvDvhR+v+Q8ARBawEz6Kv451P7Kf/ps5FxeDEhFg6jPMGAUhIPSgVrdBlwFiJMlxGxP/Swp0/skSC1DKYDei/wrbtm0cGzDq7vaKfyiLxf0uuCsdWEK3bGKrWCWl8GfnJgxsIm4oEz9DV8tBhxWjhtRKCsYu0jlu6kxyxsp8hqSemYwspu2eNa7yUG3cVJdqUjgspoDrbDWFOnVNZOfnOU1F6SR7Tm2Al2pyDAaAflbN12DXKak4v6D1e1wIcl2gJE/nFwxd50v1uke9+IpWkttARU39RXOWFfGB2HeUSuYU/WHhXQrJulI1M3mS8C6UQZCb2TBlBhCa8rRS61UE77T9GA+gihrXVDJ2++8SgJmQck252FBLTtM4Qpoh3TI+EEmP6Ua7sCRHLbNB+s6cHLQpm532AzJ2wvQrKqcp8N9RQY/d+i8GBE9N/wPJn0RKehMB", "ic_home": "data:image/webp;base64,UklGRuABAABXRUJQVlA4TNQBAAAvH8AGEJegJgBAxr68rr3rKCWaUJsabAIAaMLecM0A64U4NCcAaAa9FEWS1Fy+A1ygCyOo5p2Z/2Ak5/FDDolPwapGn94Q3DNnC7KX/ap/svIDMKskiaSgl6Hmpq0ODgMAaZuioDIj9P9rTTo+iOi/ArdtlIyO+T7x/iBw5P2HgLu7Hv1xFsiMcIQ3AO3V4CfStQPoXoN+wt0V+y1FNBB+4Li9B9GYY46vSTgor0FjzjWJBnxJWXn4psFrzpMak+CT2XWZ+WZsvBfRnHPQIPiIlW9qXZDXOjbm+KBwmZUvQkVWWnuOo7fKZ1ntRRgpLO6817HTqsENO9bEQ0QjZa0xz/DtbnWZLEJxFhFhFuLb1eHj6KGst+Z5k3B318UN8RPVuwQzb89bcGwNBfHZ7dUapzdCTNm8MQk1NiI8gr7aziAXSd9+SYqqb8RHQ2VscnBJvyIlWSUYrZ6IcLiySMrlG5MVUe2q6vAGU27E7sQk6aqiKepaZlXHTJlEVJBF3CMiUtC6Ve8ndrMqJHURRUZDF/VudbhlLjsSmRkoSCSI2quqV69bE7SKCHevKjMjLDSrk3icO+g9bRkel1V4Ve8ffx8AoHYAdwTrAD99YQC4t/s23hs=", "ic_pond": "data:image/webp;base64,UklGRtYBAABXRUJQVlA4TMkBAAAvH0AGEJegNpKtJPuCu2Y/onxaY2iGcQAAhepnm6u1amvhwDYAgCR0N5zG/1OD+oDL/Ach03KAoAaKwgerD/AbVxATwe8ZZ4/AGav/n7C3g5u7GJyVJENiAQi2rYSNIggKTvKB7n+z1Um3ENF/BW7bKOl2zPCJz5vamz6nfpWYr0Pu9rugNYuoylgrIivDx3uiWVYuVWVVVfOVmYvbi0elMRNRl0PDPDOt/fOsYBY8zyOYgEDGsLXtf5ppp577eeacPmWKjJWhbVM16OQBxKqi5IaMDP/SvIoEc6eeB1SVWSGArFwbqxwApgiJiNdXGSSgdQajKgg3cM8dRVamyc7k2GhWrQ65pW+AwQJgRFpvx1hZFQZAnnMwEsDz63ywMqoqfZDc27uMyIzBTAeeKzN3Qa7la2VlLmNmvXYx+C8y4qg6RwlXZWbuR4wbK2J5+PGkzPQQs1I7HVgb+884nDtx+7QO3PT6JPWIOpMQ2zZgDla3deS+GsrMEJDoQVY43zA3dxtnekIApuuLZy5XCPRoMbRDeCogg493E2F6AyBW7cosIpnOInQdQ6mpzhtwumjrmrZc+eqtvf036MXtRcr082v9+o0vi/gAAA==", "ic_quest": "data:image/webp;base64,UklGRtQBAABXRUJQVlA4TMcBAAAvHcAHEJegJpKkqO6iu+h/Qgoj+LeBBVKMKIokqSG/cs5gAf8O8HACkKE0kq3mf7J7FfwKUFRE/waX4/wHkBD559N6/kpnVNVcAo2Nb1AfKgGfYoRYLtouESoOZP9VFwYDxEi22zbmxwdAgAgM/VebrBLeRfR/Aq7fGujnQALjR/wtqfVWF/sJacxeywbRfsDSx5QoecXtG0ikMTUklQzfcHFR50NXitntDdZtddOYGlKH5vEDYd12jqXMl0aO4YPv2w6hTw0JGrW4XW/h1H5IqfQhaFXavgg//Thr20rtNN3DFxFcbd2A0qqkHOz6iO/kRt8gVqn4n10fWYrWvDU2WsyVYFzvkPoUsa0ba/Ms43qH1MfUUM0btByw6yNe+5g3SlxR8BPjhdiHpoYkWgk4pw4FeymKqT5R/NRtP9xueI4qKQ91aMWPU+Fgh2i3mFODNXcatfgpBd/vp91Ukuct01tVWY4T/2PnOP225OLEtKpR5XYe7IuO/TQuSaScIl5zasrGucNi4XC7HjxDUolq1Z/cOMOTiBkoHlu2i7jDaRfolZglj0WLXeSnz3jKkBa7WHaOXf8QuATX7TT9SwKkm3OBfg76DgA=", "ic_tank": "data:image/webp;base64,UklGRvIBAABXRUJQVlA4TOUBAAAvHsAHEJegNrKVCIghJULNro6tytCxDqO7DzYBAKTB3SLwW1SKUcRZgR2KIklqjpzzEzF4RBBK0BAFUPMfBGX1FlAKn1JC9b+CgRPiZzKbaUnYiLCR+nRLtX8YZ9pdWmOrrTNAjG0raCQEkP8R+B/7rzZodjt4L6L/E3A/hu391wFSjWT48Smwt8pGLlytk1QIEMMmQFptpZ7hfVuQcAPBei1sleXpBhCw9CuM1cjKT8olAfgAAcBCqJveuEhcQP9WCE6uRmKz+La2b1xAA+qm16+rcYEkayMJQMtDWzxZMoCTrL2R12pnflW1ZIhnFJJnYa94w6oo2a6UgYKzEO/qpZD6GZaBImdm4bumJ4Q2wOxz9LIrT1UBlyHJ5sAcLD9RAVGfA1hj0ob+ktSnqPQ11sDEyD+owEH7pLGAbuOXcroSQqQ8RxrGnlnTi1OdAoIpJ8kpA+mqyE/FleTUxImYU7bES53pIcOHOaNhevz4R1z7q2LTSQJAJN0c6Cpu527A6LQJxm9A5VK3UXdzANOckR49wtTZIajNYrhDd0aaG0nBHJgc6LRWPTLABEM6AaPvjei1nZE8Asy3RlIwRCEAerPII+AOJA9w63sjBZFHuAGE9we3Hj0G3H8Y9iSPcP9jAHBvAQA=", "ic_town": "data:image/webp;base64,UklGRuQBAABXRUJQVlA4TNcBAAAvH4AGEJfAIADAMrPtBmfe13sGZ2EbyVYbvPdUAR3QApGvXz0o0ihSENs29Bf7ThkR1NZAAAGk8Gf+Q+jcOCStIqvorNEwM9TL7/dWTRYxnmH6lr9fe56Ou53/gcdzNRSDZYAY2W7cJiB4ExBhqf9qr0kJ/0f0fwKuZ/l4/a8crxtyyeM32W/An/xGkBQAL3J83X8/ngQJQuVB9pdd8vn+eyu1M4CsG8gnfi9KykOf5jS3MOzg736S7PlBaqctkh6lpzw6C8mgViSVC2Kz2jpAxoAWIzmA7tGZ5AIkB81pTtShHU6aMyyyPvFYbZYOZkKju43ZPEjNN9nLly9fvnxBYzht0qNHaQ/LF33RuXhsjT7uFmQjk1xyOBYdBIEU5kY/OXhq475pInMhWHfS041ubm4fakaMrm3qUfV0GEE6IjWmh+gxkBsDm8oEzSXXSPc/uaRHb9ZZ2lyt59A5Ss1lKzOTXBDlsUiCJGsOzgWCXSPrTnJJezz2QSIHSUVCr8HGREFuwARQMXrL1Bj3To1EygUZoX0i12mobMq4Y+QBahJMGyTnY0FPeXaSIxJCWQR9AjDSzWkE3Zw2ENWiQC7Iay2dnACMdHuscn2VzwWdnFWuf5fnCwAA", "panel": "data:image/webp;base64,UklGRrICAABXRUJQVlA4TKUCAAAvKMAJELegqJEkZXb3mNnAvc/sqVcTyVbzPjmH8lcIYDCBMORS4QE1AYA0bHB/XtYxhv1/CzD/ITmyCZHT/o2aX+jkPKK22r1pA8R7DF5e2O66HE0KAUAEACAAgQCQ/nkMEmTbitsomtBkEGAj73+tkp10r+DeiP5PwPt+UP5LDfs5+GeqF7UL2xnsh7/uR7rhjd1G4DScYQFn+bw4L+q0u07d8PZcYQy9TOt159sFQObFy7TOy9SfjtOfr/My/wwG52UatyD71yzut0z9vMxjN3hqOMP+iH/+2Ebohrf9GTzdY+JIFHK5HqiSiPqY1qkf3oYzOJ2PdBRJmmsTAdGSjqjbOl9Og1s0HblahAsCr2e1pCN9GgPsMeWSLbYKiMDzRcXyBU4ze8x3WhtA5tpEvznXy2Exl6wVaIBcLb9Kl9tKA7JNwHL8TS71Nqs0UDziF+NdqdBAQOQG8YjbcjddjtLq1QtyL3DEbbqb12lPxQoNpKgoTUU94rbenZd2eVYwW8xaGqhymbYw3MVWP+aitkwTBcvltP9Ur/kicIHSFFPc1vBNroXPjdwUVDjuwvB2vtFLM9tQRBFKvIy9n0o6cm1ILrnJHZDTEbd17oc3zsu0xyMd2doEMg1fVgXzkb4Y52mP6SDXL6XxoqLZFBcvduGc9uhBqfCs5BvgyYtWc3RZb07DuMd0RxPICE9e1PY8Utzuws2R8g1NAeQJFUyfcGTaYzrIpVXll5riF/My7dHEkUttfMxqgRaTLvMZuuHGqIlWWn3y+pA4SBEfW3icXqaZfo+a5GsBRfdT7Yc3hn2dx+3x55wGT7vBfl9cx3m7V75eNDzOcGIY7NdlZlxcEZxduFVAPQ2j56Wb1mXup9+PTLcqjDq8/elHf/5tpz/DG/w/AQA=", "tag": "data:image/webp;base64,UklGRsQBAABXRUJQVlA4TLgBAAAvLMAEEL/AKJIkRb3MeHcGmP0ru/fYYBtJkpp9ZjLFzPmnJlNSGslW8zNJZYulBPovCsmf/wCgqqZWvvgJ6tAsHPXqf594oByC0xbbc3xlm5bLkkrAAAhADABwIIgAGJD+FwPE2raaSkNGDCiiY/+t6k8dnBvR/wm4Xrrf8qHkAyTe9EG86Z3e0l8ZP0XvD9a9IT8WopTitzN490JmVCrT/8L87ZIGrHsRxzz9w6nKscOqyk6FnQp7ZZnSoCeZcSj/p7bKuvfWW4fWd2jQ93udxzxYpwvJlDwvddW+re187jS67m1fq5Yp5liCk4WcFuraoJ93Wr9t3LRKWuYYxmKdwliCn29942w6NvXWReunpAb7Wm9gnGwhMFeOtnWapC61o7d+So1OY1tmxQLBXbIBjctxblKHQ5vgYHu5Skedp0AJxl0yoQQ7HvXcpNbVOtC0apPWCguzVAIYdyE/FkKc6kLf1rYDfUeqLHOFRUJTigV7CwUfGGctHwoJIUlTTL4Qbsbic1Icvz/4PHgD7gJJ1g+QxdvipQCScdL1LONTTspK+f0BSSkreeOudyVj7+jLTteH+i0vAQ=="};
@@ -14041,6 +14041,289 @@ const _builder159=builder77;builder77=function(){if(!medPond159(POND))return _bu
   y+=Math.ceil(ks.length/cols)*38+8}
  TXs('ความจุบ่อ '+pondCap(POND.item_id)+' ตัว',X+14,y+8,13,'#4a3a2a');B('เสร็จ',X+Wd/2-80,Y+Hd-60,160,46,()=>{BUILD77=false},true,'#4a9a6a')};
 dPond=(function(prev){return function(){try{init159()}catch(err){}return prev()}})(dPond);
+
+// ===== V1.60 Tanks and basins are entered only from the house (owner, 10 Nov 2026: 'อยากให้ตัดเมนูเกี่ยวกับตู้ปลา อ่างปลาออกไป และกดเข้า
+// แค่ตู้ที่เราตั้งไว้ และมีไอคอนแจ้งเตือนต่างๆ แทน'; stone pond → 'บ่อหินเป็นของวางในสวน'). Data: core/data/home160.json.
+//  1. The top menu loses 'ตู้ปลา' and 'อ่าง'; every tank, basin and pond is entered by tapping the piece standing in the house or yard.
+//  2. Alert bubbles over each piece (hungry, dirty water, algae, sick fish, fully grown plants, eggs / fry); tapping one goes in.
+//  3. The V0.69 stone pond becomes a garden piece 'g_stonepond' (free, in the garden catalogue; players who already have the
+//     pond, or reach its level, find it standing in the yard once). Its inside is the same side-view pond as before.
+//  4. The special rooms (Aquascape Room, Medaka Balcony, Breeding Corner) open from the ☰ menu ('✨ ห้องพิเศษ').
+//  5. Quest arrows that used to point at the removed buttons point at the tank / pond in the house (or at 'บ้าน' elsewhere).
+const H160={
+  "_note": "V1.60 (owner, 10 Nov 2026: 'อยากให้ตัดเมนูเกี่ยวกับตู้ปลา อ่างปลาออกไป และกดเข้าแค่ตู้ที่เราตั้งไว้ และมีไอคอนแจ้งเตือนต่างๆ แทน'; stone pond → a garden piece, special rooms → the ☰ menu). dockDrop = top-menu buttons removed. alerts = bubbles over every tank / basin / pond in the house view: hungry when any fish's hunger >= hungry, water when the water quality < water, algae when algae > algae, sick when a fish is sick or health < sick, trim when a plant is fully grown (growth >= trim), eggs when a basin holds eggs or fry. refreshSec = how often the alerts are recomputed. stonePond = the garden piece that opens the V0.69 stone pond (w x d tiles, wall h room px, rim thickness in tiles, water this many room px below the rim, moss specks).",
+  "dockDrop": ["tank", "pond"],
+  "alerts": {"hungry": 70, "water": 60, "algae": 40, "sick": 40, "trim": 100, "refreshSec": 1.5,
+             "icons": {"hungry": "🍽", "water": "💧", "algae": "🧽", "sick": "💊", "trim": "✂", "eggs": "🥚"},
+             "tips": {"hungry": "ปลาหิว", "water": "น้ำเริ่มเสีย", "algae": "ตะไคร่ขึ้น", "sick": "ปลาไม่สบาย", "trim": "ไม้น้ำยาวเต็มที่", "eggs": "มีไข่/ลูกปลา"}},
+  "stonePond": {"id": "g_stonepond", "name": "บ่อหินสวนญี่ปุ่น", "short": "บ่อหิน", "price": 0, "w": 3, "d": 2, "h": 7, "rim": 0.32, "waterDrop": 2, "moss": 12},
+  "specialRooms": "✨ ห้องพิเศษ"
+}
+,SP160=H160.stonePond,AL160=H160.alerts,IMG160={"g_stonepond": "data:image/webp;base64,UklGRhoGAABXRUJQVlA4TA4GAAAvg8AZEIfBNLJtJz+rT5QoNDL2LykCiULlDPe2wSq2bSUXd83A8EkLOpOGBO732XmMattW8tEALBIwIgfZSUAGl5Hb/efNfwzzeJlafbtCPgJw8QPAKz8/zKc9GPlghDUXvwBPkLn49WuQQDivklfLIz4ESM4tfzR41I/Aq4TWWc4NLIr4ohaZ5Kd7PseXKqkU+5ksz7mhljJ8nlJu6ChDbV8Yu0o+NgzUtW1v2zYZyt4LmVoIMgxUYX3+Zwd8i6TY8e99I/ovQZIkuW2qZ6AiTskGFht8wu0qKSO3G085jZTN8wD4B+AlsHEKFeSWd7JStttvrbBst53aarv1z8A2O1Bb7M1XOQWzuSJ5muywkJvc/AT4W+YJIAam//0Y2TDxS2zwCg9GxCW2PX3TE7h/dYrBli1RkQo3+AhQ2g6KKRlSttHnEWHOuaQUNvFPU7bQQNoBp/tWThOG1F65go2bYDd4bkVMIHKq6F0EG6gUI6OmNqpdNfIJmABIzHQaUDGNFhuvRsrtuK0DZhS/jXwEMAGoo9rURLfarqDEsWAGK0mS2jTCFFKyrCyW14E8tiFXtsuIMDPdHIBcs9ijZXmV9SkNnb4QD7moRM8CNGCqGahAHsvVN5exR+2V0bvligsnJIYMv4wegiwFBLmulNzJGFQIa5TnY8AAaAFav1yegG6Y6rSqlIxKcS9147izazPOHTBb9KOpb5cVRezbRe5WhbWs27WYiF5dyjhnbeLZTsJzRY7ZDMHqUnJXZohNwuX6gF21lCxHGCDr4W4c6tt8obGGD7m8DB8bsiiIlal+y1H7Tc6TsYaklEWbQKI4GYA6jqjjAkGTCRekrSKFiY8bCVLXt/oNVbZv8+XhOjKMFN2LTGNb3NYV+QKOth09FEZtFUlkoZoNZJCVMT4fE3dW5tjikkR2QBc1GxhPGhni+NmRRW3Wownn35NyNiAmA8xkhA+0xbbvKr+5jhjkXWWrZznjFfuFUGKg1/yl4q64u7RkQAz8ZznjbSWILcYefznxajFJUsYws1MvIEBM9SKYwl9W//FqNWlAFcd3Ozc5M8slgCGpyxRyecq1RL77MkahCi2ojMNjEmLDEfVjJZEjfsPYX03+x85zeAcpgsDmtaTVLN+B4gJoSONSHnRQ8j3W60jDmO6mBojLTnLu7/L1SJpo+T6/lxyym5j7T2Lin1GnegOw0F58HWJgyJxx6R55R+bHgi+ONp4KkhXsTZKpmHyCEIUhh2Myx+coWPb19VDlRuaZhxIH8NCFj38H81NmodP4UPBi72GIwxf6cpdc5xoILlxMcQjI3UXku4ovl5GHZIriiMkqYj1ArlxkEp9JXri4YrCGdPtjjiMRnr24iRIQhSFfZwnsdt9t5uUeC14wjiuHLg48fhXC8BgdgCT1gCqNTHz1et+hbI9A8TDEAVhIooO6NnZ0HFgCIi9IOhgSGKOlhIp3Bdo8MPDERYmJJSkwRkvxD5OelGnOI93esNzSFwdDDEx5SHeMdsR5seyQhBmcZd7w/VhExMQUhSFJyuwogzCLs857QUwMHHEAk5SF7DKiOAPG4r0kKi6Uz6bDO0i5jAReDobdkLJJ1aMgWxEXF7WDg5CLjLHmjz3H2Y0mFdbiEZ8C+/eaOeKixESIgzf3TjuQYgC0P+yFOcwTB0MMLiNQL2CJMyw/THxmDUC2ucwVE1Mk6ng5x+NDBsbEYWcjlgWYLwaGfO7igONBijjG+PDo6d5soNubbiGWEBcePw/RH9QcT4lxWBp/5Q1t9mMkDLKMeIhvJ/w5niXi+5ZHF5I3tKsbAuxFLyUurtyMKOGwpxeNOJJ7DPMZxltyQXEwRLUsIcOAi1XaAmhbVkxMsRmi7nbB/gW1aQK2ljjfTgixmnT+hbVZuLae+N9OqLs0hrC9jWPrics7CAki9/AwbV1xUWLgmY9h64uDIQrbAmi7DjFxZW+ZJmDXIwaGfBay12bh2nWJC+T7ay/NxrHrExcxWgrzMO06xaVLNx/DrldcuPcx7LrFJWzXLw5B24aYhGw7YhCwbYnCte2JwLGtCkzbrsCwLctKRg=="};
+// ---------- 1. the top menu ----------
+for(let i=DOCK.length-1;i>=0;i--)if(H160.dockDrop.includes(DOCK[i][0]))DOCK.splice(i,1);
+// ---------- 3. the stone pond as a garden piece ----------
+(function(){const k=SP160.id;R2META[k]={n:SP160.name,w:SP160.w,d:SP160.d,flat:false,iw:(SP160.w+SP160.d)*8,ih:(SP160.w+SP160.d)*8};R2PRICE[k]=SP160.price;R2CAT[k]='สวน';
+ if(typeof Image!=='undefined'&&IMG160[k]){const im=new Image();im.__k=R2K;im.onload=()=>{R2META[k].iw=Math.round(im.naturalWidth/R2K);R2META[k].ih=Math.round(im.naturalHeight/R2K);try{R2DIRTY=true}catch(e){}};im.src=IMG160[k];R2SPR[k]=im}
+ CONTK78[k]='stone';CNAME.pond_1=SP160.short})();
+label78=(function(prev){return function(k,n){if(k===SP160.id)return SP160.short;return prev(k,n)}})(label78);
+enterInst78=(function(prev){return function(k,n){if(k===SP160.id)return enterPond('pond_1');return prev(k,n)}})(enterInst78);
+// the garden-pond tags of V1.04/V1.52 only know g_koi and the basins: the stone pond gets its own tag below
+yardConts104=(function(prev){return function(){const L=prev();return TAG160.on?L.filter(c=>c.k!==SP160.id):L}})(yardConts104);
+const TAG160={on:false},AC160={t:0,m:new Map()};
+// once: the stone pond stands in the yard for whoever has it already or can use it now
+function grant160(){if(!S.meta||S.meta.sp160||!S.room2)return;const has=(S.ponds&&S.ponds.pond_1)||!featLocked('pond');if(!has)return;S.meta.sp160=1;
+ const Y=Array.isArray(S.room2.yard)?S.room2.yard:null;if(Y&&Y.some(e=>e[0]===SP160.id))return;let ok=false;
+ if(Y&&(S.room2.cur||'f1')==='f1'){const o=R2.yard;try{R2.yard=true;r2apply52();ok=!!r2place(SP160.id)}catch(e){ok=false}finally{R2.yard=o;r2apply52()}}
+ if(!ok){S.room2.inv=S.room2.inv||{};S.room2.inv[SP160.id]=(S.room2.inv[SP160.id]||0)+1}try{save()}catch(e){}}
+// ---------- 2. alerts ----------
+function tankAl160(c){let D;try{D=cdata(c)}catch(e){return[]}if(!D||!D.tank)return[];const F=Object.values(D.fish||{}),st=D.tank.stats||{},out=[];
+ if(F.some(f=>(f.hunger||0)>=AL160.hungry))out.push('hungry');if((st.water_quality||100)<AL160.water)out.push('water');if((st.algae||0)>AL160.algae)out.push('algae');
+ if(F.some(f=>f.sick||(f.health||100)<AL160.sick))out.push('sick');if(Object.values(D.plants||{}).some(p=>(p.growth||0)>=AL160.trim&&!(typeof keepLong161==='function'&&keepLong161(p))))out.push('trim');return out}
+function topAl160(k,n){const uid=(S.room2.top76||{})[n?k+'#'+n:k],e=uid&&S.home_layout&&(S.home_layout.starter_room||[]).find(q=>q.uid76===uid);if(!e)return[];
+ const L=(e.pond||[]).filter(Boolean),W_=e.pw||{water:92,algae:6},out=[];
+ if(L.some(o=>o.larva==null&&(o.hunger||0)>=AL160.hungry))out.push('hungry');if((W_.water||0)<AL160.water)out.push('water');if((W_.algae||0)>AL160.algae)out.push('algae');
+ if(L.some(o=>(o.health||100)<AL160.sick))out.push('sick');if((e.peggs||[]).length||L.some(o=>o.larva>0))out.push('eggs');return out}
+function alerts160(k,n){const key=k+'#'+n;if(T0-AC160.t>AL160.refreshSec){AC160.t=T0;AC160.m.clear()}if(AC160.m.has(key))return AC160.m.get(key);let a=[];
+ try{if(k==='aquarium')a=n===0?tankAl160('main'):(has2_78()?tankAl160('tank_2'):[]);else if(k==='g_koi')a=S.ponds&&S.ponds[GARDEN104.id]?tankAl160(GARDEN104.id):[];
+  else if(k===SP160.id)a=S.ponds&&S.ponds.pond_1&&!featLocked('pond')?tankAl160('pond_1'):[];else a=lockOf78(k)?[]:topAl160(k,n)}catch(e){a=[]}AC160.m.set(key,a);return a}
+// every piece that holds fish on this floor (and the yard on the ground floor), with its screen spot (centre, top)
+function spots160(){const s=r2screen(),out=[],f=S.room2.cur||'f1';
+ R2LAY.forEach((e,i)=>{const k=e[0];if(!CONTK78[k])return;const b=r2box(e);if(!b)return;out.push({k,n:inst78(k,f,i),x:s.x+(b.x+b.w/2)*s.z,y:s.y+b.y*s.z})});
+ if(f==='f1')for(const c of yardConts104()){const b=r2box(c.e);if(!b)continue;out.push({k:c.k,n:c.n,x:s.x+(b.x+b.w/2)*s.z,y:s.y+b.y*s.z})}return out}
+tags78=(function(prev){return function(){TAG160.on=true;try{prev()}finally{TAG160.on=false}if(!houseView104())return;try{grant160()}catch(e){}
+ const s=r2screen();
+ // the stone pond's name tag (same look as the other tags)
+ for(const c of yardConts104()){if(c.k!==SP160.id)continue;const b=r2box(c.e);if(!b)continue;const lock=featLocked('pond'),P=S.ponds&&S.ponds.pond_1,t=SP160.short+(lock?' · Lv '+FEATURE_LV.pond:' · 🐟'+(P?Object.keys(P.fish||{}).length:0)),cx=s.x+(b.x+b.w/2)*s.z,ty=s.y+b.y*s.z-10;
+  x.font='600 13px '+FONT;const w=x.measureText(t).width+22;rr(cx-w/2,ty-12,w,24,12,lock?'#3a3a42cc':'#0d1b26cc');TXs(t,cx,ty,13,lock?'#c8c0b0':'#bfe8ff','center')}
+ // alert bubbles above the tags
+ for(const p of spots160()){const a=alerts160(p.k,p.n);if(!a.length)continue;const sz=26,gap=4,w=a.length*(sz+gap)-gap,y0=p.y-10-12-sz-6+Math.sin(T0*3+p.x*.01)*2;
+  a.forEach((kind,i)=>{const bx=p.x-w/2+i*(sz+gap);rr(bx,y0,sz,sz,9,'#fff7e6f2');x.strokeStyle='#c9905a';x.lineWidth=2;x.beginPath();x.roundRect?x.roundRect(bx,y0,sz,sz,9):x.rect(bx,y0,sz,sz);x.stroke();
+   TXs(AL160.icons[kind],bx+sz/2,y0+sz/2+1,15,'#4a3020','center');btns.push({a:bx-2,b:y0-2,w:sz+4,h:sz+4,fn:()=>enterInst78(p.k,p.n),l:'alert160:'+p.k+'#'+p.n+':'+kind,ui:1})})}}})(tags78);
+// tapping the stone pond in the yard goes in (the V1.04 yard tap only runs for containers it lists, which now includes it)
+// ---------- 4. the special rooms from the ☰ menu ----------
+homeUI76=(function(f0){return function(){f0();if(!MENU76||scene!=='home')return;const n=MENU76_ITEMS().length,X=VW74-VOX74-24-330,Y=132+18+n*50+58;rr(X,Y-4,330,58,18,'#f6efe0f2');
+ chip(H160.specialRooms,X+12,Y+2,306,42,()=>{MENU76=false;go('habitat')},true,'#7a6aa8');btns[btns.length-1].l='menu160:rooms'}})(homeUI76);
+// ---------- 5. quest arrows ----------
+function find160(kinds){for(const p of (houseView104()?spots160():[]))if(kinds.includes(p.k))return p;return null}
+tutTarget=(function(prev){return function(){const t=prev();if(t)return t;try{if(typeof storyQ!=='function'||(typeof pil152==='function'&&pil152()))return null;const s=storyQ();if(!s||lvNow()<s.lv||storyReady())return null;
+ const ev=s.g.ev||ST2EV76[s.g.st],L=(TUT76[ev]||[]).flatMap(r=>r[1]);const tankEv=L.includes('ตู้ปลา'),pondEv=L.includes('อ่าง');if(!tankEv&&!pondEv)return null;
+ if(scene==='home'){if(STYLEUI||MOODUI||MENU76||R2.homeUI||R2.edit||R2.cat)return null;const p=tankEv?find160(['aquarium']):find160([SP160.id,'medaka_basin','g_koi']);if(p)return{x:p.x,y:p.y-12,t:tankEv?'แตะตู้ปลาเพื่อเข้าไป':'แตะบ่อในสวนเพื่อเข้าไป'};return null}
+ if(scene==='aq'||scene==='pond')return null;const h=findBtn76('บ้าน');if(h)return{x:h.x,y:h.y,t:tankEv?'กลับบ้าน แล้วแตะตู้ปลา':'กลับบ้าน แล้วแตะบ่อ',dock:h.up?1:0}}catch(e){}return null}})(tutTarget);
+
+// ===== V1.61 Plants: let them grow long, or keep them trimmed (owner, 10 Nov 2026: 'บางคนชอบปล่อยยาว บางคนชอบตัดได้ แต่ต้องทำยังไงให้
+// 2 อย่างนี้อยู่ด้วยกันได้'). Data: core/data/plant161.json. Each tank / pond has a style chip under 'อัปเกรดตู้':
+//  ✂ ตัดแต่ง (default, as before): a fully grown plant waits for 'ตัดไม้น้ำ' (cuttings + EXP), the ✂ bubble shows in the house, stems
+//    past full lose half their effect (V0.61).
+//  🌿 ปล่อยยาว: a fully grown plant keeps growing longer (drawn taller, up to the surface), never shows the ✂ bubble, keeps its full
+//    effect and, once long, counts as a hiding place for shy fish (V1.58 comfort). 'ตัดไม้น้ำ' still works: it shortens the long ones.
+const PL161={
+  "_note": "V1.61 (owner, 10 Nov 2026: 'การตัดไม้น้ำ บางคนชอบปล่อยยาว บางคนชอบตัดได้ แต่ต้องทำยังไงให้ 2 อย่างนี้อยู่ด้วยกันได้'). Every tank / pond has a plant style: trim (ตัดแต่ง, the old way: fully grown plants wait for 'ตัดไม้น้ำ', which gives cuttings) or long (ปล่อยยาว: fully grown plants keep growing longer, never nag, never lose their effect, and give fish a hiding place; 'ตัดไม้น้ำ' still shortens them whenever you like). longRate = extra length per growth step (x the plant's own growth rate); maxLen = the longest extra length; stretch = how much taller a plant at maxLen is drawn (never closer than below room px under the water surface); hideLen = extra length that counts as a hiding place; cutLen = extra length that gives a cutting when shortened.",
+  "styles": {"trim": "✂ ไม้น้ำ: ตัดแต่ง", "long": "🌿 ไม้น้ำ: ปล่อยยาว"},
+  "longRate": 0.6, "maxLen": 100, "stretch": 0.75, "hideLen": 40, "cutLen": 40, "below": 5,
+  "say": {"long": "ตั้งเป็นปล่อยยาวแล้ว · ไม้น้ำโตยาวต่อได้ ไม่ต้องตัด ไม่เสียผล และเป็นที่หลบของปลา · กดตัดไม้น้ำเมื่อไหร่ก็ได้ถ้าอยากเล็มให้สั้น",
+          "trim": "ตั้งเป็นตัดแต่งแล้ว · ไม้น้ำที่โตเต็มจะรอให้ตัด (ได้กิ่งไปปลูกต่อ)",
+          "cut": "เล็มไม้น้ำที่ยาวให้สั้นลงแล้ว", "none": "ยังไม่มีต้นที่ยาวพอจะเล็ม"}
+}
+;
+const style161=()=>{const t=tank();return t&&t.plantStyle161==='long'?'long':'trim'};
+function keepLong161(p){return style161()==='long'}
+// the style of a container that is not the one on screen (for the house bubbles)
+tankAl160=(function(prev){return function(c){let D;try{D=cdata(c)}catch(e){return prev(c)}const long=D&&D.tank&&D.tank.plantStyle161==='long';const r=prev(c);return long?r.filter(k=>k!=='trim'):r}})(tankAl160);
+// growth: long plants never sit at 100 during the sim (so V0.61 does not halve them), and grow extra length afterwards
+sim=(function(prev){return function(n,cu){if(style161()!=='long')return prev(n,cu);const P=Object.values(S.plants||{}),full=new Set();
+ for(const p of P)if((p.growth||0)>=100){full.add(p);p.growth=99.9}
+ let r;try{r=prev(n,cu)}finally{const t=tank(),ok=t.light_on!==false&&(t.stats.water_quality||0)>30;
+  for(const p of P){if(full.has(p)||(p.growth||0)>=99.9){p.growth=100;const d=DBP[p.species_id];if(ok&&d&&full.has(p))p.len161=Math.min(PL161.maxLen,(p.len161||0)+d.gr*PL161.longRate*n*(typeof aquaMul==='function'?aquaMul():1))}}}return r}})(sim);
+// trimming: in a long tank it shortens the long plants (a cutting for each long one); in a trim tank it is the old trim, and also
+// clears any length left from a long spell
+trim=(function(prev){return function(){const P=Object.values(S.plants||{});if(style161()!=='long'){for(const p of P)if((p.growth||0)>=100)p.len161=0;return prev()}
+ let n=0;for(const p of P){if((p.len161||0)>=PL161.cutLen){S.inventory['cut_'+p.species_id]=(S.inventory['cut_'+p.species_id]||0)+1;n++}if(p.len161)p.len161=0}
+ if(n){try{gx(8*n);qp('trim')}catch(e){}save();return say(PL161.say.cut+' · ได้กิ่ง '+n)}return say(PL161.say.none)}})(trim);
+// long plants hide shy fish (V1.58 comfort)
+comfort158=(function(prev){return function(f){const r=prev(f);try{const T=FB158.text.hide;if(r.why.includes(T)&&Object.values(S.plants||{}).some(p=>(p.len161||0)>=PL161.hideLen)){r.why=r.why.filter(w=>w!==T);r.c=Math.min(100,r.c+FB158.pen.hide)}}catch(e){}return r}})(comfort158);
+// drawing: a long plant is drawn taller, stretched up from its base
+const CUR161={p:null};
+isoPlantKey=(function(prev){return function(p){CUR161.p=p;return prev(p)}})(isoPlantKey);
+frSprite=(function(prev){return function(k,a,b,flip){const p=CUR161.p;CUR161.p=null;if(!p||!(p.len161>0)||scene!=='aq'||!String(k).startsWith(p.species_id+'_'))return prev(k,a,b,flip);
+ // never past the water surface
+ const K=FR.S,im=(typeof FRS!=='undefined'&&FRS[k])||ISO.im[k],Hs=im&&im.naturalHeight?im.naturalHeight*K:0,Y1=Math.round(frP(a,b,0)[1]/K)*K+K;
+ let s=1+PL161.stretch*Math.min(1,p.len161/PL161.maxLen);if(Hs)s=Math.max(1,Math.min(s,(Y1-(FR_G.YSB+PL161.below)*K)/Hs));if(s<=1.001)return prev(k,a,b,flip);x.save();x.translate(0,Y1);x.scale(1,s);x.translate(0,-Y1);try{return prev(k,a,b,flip)}finally{x.restore()}}})(frSprite);
+// the style chip
+dAq=(function(prev){return function(){prev();if(scene!=='aq'||aqEdit||UPUI||PBUY||(typeof R55!=='undefined'&&R55.sel)||(typeof AOD89!=='undefined'&&AOD89.on))return;const s=style161();
+ chip(PL161.styles[s],16,186,196,36,()=>{const t=tank();t.plantStyle161=s==='long'?'trim':'long';save();say(PL161.say[t.plantStyle161])},true,s==='long'?'#4a8f5a':'#7a8a6a');btns[btns.length-1].l='plant161:style'}})(dAq);
+
+// ===== V1.62 Life in the basin + seasons (owner, 10 Nov 2026: 'ปลารวมฝูงใกล้ผิวน้ำ แห่มากินอาหาร และหลบใต้ใบบัว ใบไม้ร่วงลอยน้ำ
+// หิมะบนขอบอ่าง หิ่งห้อย และแมลงปอเกาะใบบัว'). Data: core/data/life162.json. Top-view ponds (basins, bowls, the garden pond).
+//  fish: medaka school together round a slowly wandering centre; now and then one drifts under a lily pad and lingers; food in the
+//        water makes them rush; a tap still calls them (V0.57); winter makes them slow and sleepy under the pads.
+//  seasons on the water: autumn leaves drifting, snow clumps on the rim in winter, fireflies on summer nights, a dragonfly that lands
+//        on a lily pad in the day (the V1.57 visitor sprite).
+const LF162={
+  "_note": "V1.62 life in the basin (owner, 10 Nov 2026: 'ปลารวมฝูงใกล้ผิวน้ำ แห่มากินอาหาร และหลบใต้ใบบัว ใบไม้ร่วงลอยน้ำ หิมะบนขอบอ่าง หิ่งห้อย และแมลงปอเกาะใบบัว'). Top-view ponds only. school = medaka keep together around a slowly wandering centre (chance per decision, radius = share of the pond, centre speed lo px/s, sec = how long one decision lasts); rest = a fish drifts under a lily pad and lingers (chance, sec, speed); winter makes resting likelier (restWinter) and everyone slower (winterV). rush = speed when food is in the water. tapSec = after a tap the V0.57 'come to the finger' runs untouched this long. leaves (autumn) = floating leaves on the water; snow (winter) = snow clumps on the rim; fireflies (summer, and spring/autumn evenings) = glowing dots after dusk; dragonfly = lands on a lily pad now and then in the day (gap sec, sit sec), spring to autumn.",
+  "school": {"chance": 0.62, "radius": 0.3, "centreV": 9, "sec": [8, 16], "species": "medaka_"},
+  "rest": {"chance": 0.16, "sec": [6, 12], "v": 3, "restWinter": 0.45},
+  "winterV": 0.6,
+  "rush": {"v": 44},
+  "tapSec": 4,
+  "leaves": {"n": 6, "colors": ["#d9632a", "#e0952e", "#b8402a", "#c9a03a"], "drift": 2.2, "px": 2},
+  "snow": {"n": 46},
+  "fireflies": {"n": 12, "phases": ["evening", "night"], "seasons": ["summer"], "alsoEvening": ["spring", "autumn"]},
+  "dragonfly": {"gap": [35, 80], "sit": [6, 12], "seasons": ["spring", "summer", "autumn"], "phases": ["day", "morning", "dawn"], "k": 1.7}
+}
+,LS162={pond:null,sc:null,tapT:-99,leaves:[],ff:[],df:{st:'away',t:0},key:''};
+const sea162=()=>{try{return climate120().vis}catch(e){return season74()}},ph162=()=>{try{return phase120()}catch(e){return 'day'}};
+const rnd162=(a,b)=>a+Math.random()*(b-a);
+function pads162(){try{return floatSprites91()||[]}catch(e){return[]}}
+pondTap=(function(prev){return function(lx,ly){if(pondMode==='view'&&POND&&inPond(lx,ly))LS162.tapT=T0;return prev(lx,ly)}})(pondTap);
+// ---------- fish ----------
+function fish162(out){if(!POND||!out||!out.length)return;const L=pondFish(POND),winter=sea162()==='winter',dt=1/60;
+ if(LS162.pond!==POND){LS162.pond=POND;LS162.sc={x:PC.cx,y:PC.cy,tx:PC.cx,ty:PC.cy,t:0};LS162.leaves=[];LS162.ff=[];LS162.df={st:'away',t:T0+rnd162(...LF162.dragonfly.gap)*.3}}
+ const C=LS162.sc;if(T0>C.t||Math.hypot(C.tx-C.x,C.ty-C.y)<4){const a=rnd162(0,6.283),d=Math.sqrt(Math.random())*.5;C.tx=PC.cx+Math.cos(a)*PC.rx*d;C.ty=PC.cy+Math.sin(a)*PC.ry*d;C.t=T0+rnd162(5,9)}
+ const dd=Math.hypot(C.tx-C.x,C.ty-C.y)||1,cv=LF162.school.centreV*(winter?LF162.winterV:1)*dt;C.x+=(C.tx-C.x)/dd*Math.min(cv,dd);C.y+=(C.ty-C.y)/dd*Math.min(cv,dd);
+ const food=PV.pel.length>0,tapping=T0-LS162.tapT<LF162.tapSec,pads=pads162(),byId=new Map(L.map(o=>[o&&o.id,o]));
+ for(const[id,f]of PV.fish){const o=byId.get(id);if(!o||!out.includes(f))continue;if(o.larva>0)continue;
+  if(food&&o.hunger>5){f.v=Math.max(f.v,LF162.rush.v);f.b162=null;continue}
+  if(tapping){f.b162=null;continue}
+  let b=f.b162;if(!b||T0>b.until){const r=Math.random(),rc=winter?LF162.rest.restWinter:LF162.rest.chance,med=String(o.sp||'').startsWith(LF162.school.species);
+   if(r<rc&&pads.length){const pd=pads[Math.floor(Math.random()*pads.length)];b={m:'rest',pad:pd,until:T0+rnd162(...LF162.rest.sec)*(winter?1.6:1)}}
+   else if(med&&r<rc+LF162.school.chance){const a=rnd162(0,6.283),d=Math.sqrt(Math.random());b={m:'school',ox:Math.cos(a)*d,oy:Math.sin(a)*d,until:T0+rnd162(...LF162.school.sec)}}
+   else b={m:'solo',until:T0+rnd162(4,8)};f.b162=b}
+  if(b.m==='school'){f.tx=C.x+b.ox*PC.rx*LF162.school.radius;f.ty=C.y+b.oy*PC.ry*LF162.school.radius;f.tt=1}
+  else if(b.m==='rest'){const px=b.pad.cx,py=b.pad.cy;if(px==null){f.b162=null;continue}f.tx=px+(f.ph%1-.5)*6;f.ty=py+(f.ph%.7-.35)*6;f.tt=1;if(Math.hypot(px-f.x,py-f.y)<16)f.v=Math.min(f.v,LF162.rest.v)}
+  if(winter)f.v*=1-(1-LF162.winterV)*dt*4}}
+pondFishUpdate=(function(prev){return function(){const out=prev();try{fish162(out)}catch(e){}return out}})(pondFishUpdate);
+// ---------- seasons on the water ----------
+function px162(c,x0,y0,rows,col,s){c.fillStyle=col;for(let j=0;j<rows.length;j++)for(let i=0;i<rows[j].length;i++)if(rows[j][i]!==' ')c.fillRect(x0+i*s,y0+j*s,s,s)}
+const LEAF162=['   #   ',' # # # ','#######',' ##### ','# ### #','   #   ','   #   '];
+function leaves162(c){const N=LF162.leaves.n,A=LS162.leaves;while(A.length<N){const a=rnd162(0,6.283),d=Math.sqrt(Math.random())*.8;A.push({x:PC.cx+Math.cos(a)*PC.rx*d,y:PC.cy+Math.sin(a)*PC.ry*d,vx:rnd162(-1,1),vy:rnd162(-1,1),c:LF162.leaves.colors[A.length%LF162.leaves.colors.length],r:Math.random()<.5})}
+ const dt=1/60,dr=LF162.leaves.drift;for(const l of A){l.vx+=(Math.sin(T0*.3+l.y*.05)*.4-l.vx*.2)*dt;l.vy+=(Math.cos(T0*.27+l.x*.05)*.3-l.vy*.2)*dt;l.x+=l.vx*dr*dt;l.y+=l.vy*dr*dt;
+  for(const f of PV.fish.values()){const e=Math.hypot(f.x-l.x,f.y-l.y);if(e<10&&e>0){l.x+=(l.x-f.x)/e*.25;l.y+=(l.y-f.y)/e*.25}}
+  if(!inPond(l.x,l.y,.9)){const a=Math.atan2((l.y-PC.cy)/PC.ry,(l.x-PC.cx)/PC.rx);l.x=PC.cx+Math.cos(a)*PC.rx*.88;l.y=PC.cy+Math.sin(a)*PC.ry*.88;l.vx*=-.5;l.vy*=-.5}
+  const z=LF162.leaves.px;c.globalAlpha=.25;px162(c,Math.round(l.x)-3*z+1,Math.round(l.y)-3*z+2,LEAF162,'#0b2a2a',z);c.globalAlpha=1;px162(c,Math.round(l.x)-3*z,Math.round(l.y)-3*z,l.r?LEAF162:LEAF162.slice().reverse(),l.c,z)}}
+function snow162(c){const g=typeof geo159==='function'?geo159():null,n=LF162.snow.n,cx=g?g.cx/2:PC.cx,cy=g?g.cy/2:PC.cy,rx=g?g.rx/2*1.13:PC.rx*1.06,ry=g?g.ry/2*1.16:PC.ry*1.08;
+ for(let i=0;i<n;i++){const a=i/n*6.283+Math.sin(i*7.3)*.06,w=4+(i*5%5),hy=2+(i*3%3),x0=Math.round(cx+Math.cos(a)*rx),y0=Math.round(cy+Math.sin(a)*ry);
+  c.fillStyle='#b8c8d8';c.fillRect(x0-w,y0,w*2,hy);c.fillStyle='#eef4fa';c.fillRect(x0-w+1,y0-hy+1,w*2-2,hy);c.fillStyle='#ffffff';c.fillRect(x0-w+2,y0-hy,Math.max(1,w*2-5),1)}}
+function fireflies162(c){const N=LF162.fireflies.n,A=LS162.ff;while(A.length<N)A.push({x:rnd162(20,450),y:rnd162(40,340),a:rnd162(0,6.283),ph:rnd162(0,6.283),s:rnd162(.5,1)});
+ const dt=1/60;for(const f of A){f.a+=Math.sin(T0*.7+f.ph)*dt*1.5;f.x+=Math.cos(f.a)*6*f.s*dt;f.y+=Math.sin(f.a)*4*f.s*dt;if(f.x<10||f.x>460)f.a=Math.PI-f.a;if(f.y<30||f.y>350)f.a=-f.a;
+  const b=Math.max(0,Math.sin(T0*2.2*f.s+f.ph));if(b<.05)continue;const X=Math.round(f.x),Y=Math.round(f.y);c.fillStyle='#e8ff9a';c.globalAlpha=b*.12;c.fillRect(X-6,Y-4,13,9);c.fillRect(X-4,Y-6,9,13);c.globalAlpha=b*.3;c.fillRect(X-3,Y-2,7,5);c.fillRect(X-2,Y-3,5,7);c.globalAlpha=b;c.fillStyle='#fbffd8';c.fillRect(X-1,Y-1,2,2)}c.globalAlpha=1}
+function dragonfly162(c){const D=LS162.df,P=LF162.dragonfly,pads=pads162();const im0=typeof vimg157==='function'?vimg157('dragonfly',0):null,im1=typeof vimg157==='function'?vimg157('dragonfly',1):null;if(!im0)return;
+ if(D.st==='away'){if(T0<D.t||!pads.length)return;const pd=pads[Math.floor(Math.random()*pads.length)];Object.assign(D,{st:'in',pad:pd,x:-30,y:rnd162(60,200),t:T0})}
+ const tx=D.pad.cx,ty=D.pad.cy-6;if(D.st==='in'){const dx=tx-D.x,dy=ty-D.y,d=Math.hypot(dx,dy);if(d<2){D.st='sit';D.t=T0+rnd162(...P.sit)}else{const v=Math.min(d,110/60);D.x+=dx/d*v;D.y+=dy/d*v+Math.sin(T0*9)*.3}}
+ else if(D.st==='sit'){D.x=D.pad.cx;D.y=D.pad.cy-6;if(T0>D.t)D.st='out'}
+ else if(D.st==='out'){D.x+=2.2;D.y-=.9;if(D.x>520||D.y<-30){D.st='away';D.t=T0+rnd162(...P.gap);return}}
+ const flap=D.st!=='sit'||Math.sin(T0*3)>.92,im=flap&&im1?(Math.floor(T0*16)%2?im1:im0):im0,k=P.k,w=im.naturalWidth*k/2,h=im.naturalHeight*k/2;
+ c.save();c.imageSmoothingEnabled=false;c.globalAlpha=.25;c.fillStyle='#0b2a2a';c.fillRect(Math.round(D.x-w*.3),Math.round(D.y+h*.6),Math.round(w*.6),2);c.globalAlpha=1;
+ c.drawImage(im,Math.round(D.x-w/2),Math.round(D.y-h/2),Math.round(w),Math.round(h));c.restore()}
+drawPondScene=(function(prev){return function(ctx){prev(ctx);if(!POND)return;try{const s=sea162(),ph=ph162(),night=ph==='night'||ph==='evening';ctx.save();ctx.setTransform(2,0,0,2,0,0);ctx.imageSmoothingEnabled=false;
+ if(s==='autumn'){ctx.save();ctx.beginPath();pondPath77(ctx);ctx.clip();leaves162(ctx);ctx.restore()}
+ if(s==='winter')snow162(ctx);
+ const FF=LF162.fireflies;if((FF.seasons.includes(s)&&night)||(FF.alsoEvening.includes(s)&&ph==='evening'))fireflies162(ctx);
+ const DF=LF162.dragonfly;if(DF.seasons.includes(s)&&!night)dragonfly162(ctx);else if(LS162.df.st!=='away')LS162.df.st='away';
+ ctx.restore()}catch(e){}}})(drawPondScene);
+
+// ===== V1.63 Swimming from the spine (owner, 10 Nov 2026: 'การว่ายน้ำของปลาในตู้ และบ่อ ยังไม่เป็นธรรมชาติ ... ให้เป็นการเคลื่อนไหวของกระดูกปลา').
+// Data: core/data/swim163.json (the biomechanics, with its sources in the note). One spine model for both views:
+//   y(t) = A(t) * sin(phase - 2*pi*t/lambda)   t = 0 head .. 1 tail, A(t) = a0 + a1 t + a2 t^2 (in body lengths), the phase runs at the
+//   tail-beat frequency, which follows the fish's effort (burst / cruise / glide / hover).
+//  • Basins (seen from above): the wave is the bend you see; burst-and-glide (a few beats, then a glide with the speed dying away);
+//    on a turn the body curves into a C toward the turn. Replaces the V0.92 bend (wavelength 1.85 L, no turning, constant beat).
+//  • Tanks (seen from the side): a sideways bend is not a bend from the side, only foreshortening — every slice of the body is drawn
+//    cos(angle) long, so the rear body and the tail fin narrow and widen on each beat and the head stays steady. Replaces the V0.95
+//    'tail block squeezed by a cosine' with the spine, per swimming type (medaka/guppy/tetra carangiform, wild fish subcarangiform,
+//    kuhli loach anguilliform, betta/angelfish/rams labriform, shrimp and snails none). The V0.95 fin ripple stays.
+const SW163={
+  "_note": "V1.63 swimming from the spine (owner, 10 Nov 2026: 'การว่ายน้ำของปลาในตู้ และบ่อ ยังไม่เป็นธรรมชาติ อยากให้มีการเคลื่อนไหวธรรมชาติมากขึ้น เอาความรู้ ... มาให้เป็นการเคลื่อนไหวของกระดูกปลา'). Fish biomechanics (Lighthill / Videler / Webb): the body is a spine that carries a travelling wave from head to tail, y(t) = A(t) sin(2*pi*f*time - 2*pi*t/lambda), t = 0 head .. 1 tail, all lengths in body lengths. a = the amplitude envelope A(t) = a0 + a1 t + a2 t^2 (carangiform: head ~0.02 L, tail ~0.10 L); lambda = wavelength in body lengths (carangiform ~1, anguilliform ~0.6); f = tail-beat frequency in Hz, from gliding/hovering to a full burst (slowed for a calm game); caudal = from where the tail fin starts and how much more it angles than the body. Seen from ABOVE (basins) the wave is drawn as it is; seen from the SIDE (tanks) a sideways bend cannot be seen as a bend, only as foreshortening: each slice is drawn cos(angle) long, so the rear body and the tail fin narrow and widen on every beat. burst/glide (basins): a few tail beats, then a glide with the speed dying away (glideTau), as real fish swim; turn: the body curves into a C toward the turn, tail outside (bend = tail offset in L at full turn rate maxTurn rad/s). types per species: carangiform (medaka, guppies, tetras), subcarangiform (wild fish, barbs, gourami), anguilliform (kuhli loach), labriform (betta, angelfish, rams: rigid body, the fins do the work), none (shrimp, snails).",
+  "types": {
+    "carangiform":    {"a": [0.02, -0.06, 0.14], "lambda": 1.0,  "f": [0.9, 3.4], "caudal": [0.76, 2.8]},
+    "subcarangiform": {"a": [0.03, -0.07, 0.14], "lambda": 0.95, "f": [0.8, 2.8], "caudal": [0.78, 1.8]},
+    "anguilliform":   {"a": [0.05, 0.0, 0.05],   "lambda": 0.65, "f": [0.7, 2.0], "caudal": [0.9, 1.2]},
+    "labriform":      {"a": [0.01, -0.02, 0.05], "lambda": 1.1,  "f": [0.6, 1.6], "caudal": [0.75, 1.6]},
+    "none":           {"a": [0, 0, 0],          "lambda": 1.0,  "f": [0, 0],     "caudal": [1, 1]}
+  },
+  "byGroup": {"medaka": "carangiform", "wild": "subcarangiform", "retired": "subcarangiform", "tank": "carangiform"},
+  "bySpecies": {"kuhli_loach": "anguilliform", "betta": "labriform", "plakat_betta": "labriform", "royal_plakat": "labriform", "angelfish": "labriform", "black_angelfish": "labriform",
+                "german_blue_ram": "labriform", "electric_blue_ram": "labriform", "honey_gourami": "subcarangiform", "pearl_gourami": "subcarangiform", "dwarf_gourami": "subcarangiform",
+                "corydoras": "subcarangiform", "bristlenose_pleco": "subcarangiform", "otocinclus": "subcarangiform", "siamese_algae_eater": "subcarangiform", "cherry_barb": "subcarangiform",
+                "cherry_shrimp": "none", "amano_shrimp": "none", "blue_dream_shrimp": "none", "orange_sakura_shrimp": "none", "nerite_snail": "none"},
+  "burst": {"beats": [2, 4], "glide": [0.5, 1.4], "glideTau": 0.6, "speed": [1.3, 0.55], "glideEffort": 0.12},
+  "turn": {"bend": 0.16, "maxTurn": 2.6, "smooth": 6},
+  "side": {"flick": 0.3},
+  "quant": {"phase": 12, "effort": 4, "curve": 9}
+}
+,TY163={};
+function type163(id){if(TY163[id])return TY163[id];const db=(typeof DB!=='undefined'&&DB[id])||{},k=SW163.bySpecies[id]||SW163.byGroup[db.grp]||'carangiform';return TY163[id]=SW163.types[k]||SW163.types.carangiform}
+// lateral offset (body lengths) and slope at t
+function spine163(T,t,ph,eff){const[a0,a1,a2]=T.a,s=.35+.65*eff,A=(a0+a1*t+a2*t*t)*s,dA=(a1+2*a2*t)*s,k=6.2832/T.lambda,w=ph-k*t;return{y:A*Math.sin(w),slope:dA*Math.sin(w)-A*k*Math.cos(w)}}
+const hz163=(T,eff)=>T.f[0]+(T.f[1]-T.f[0])*Math.max(0,Math.min(1,eff));
+// ---------- basins: motion ----------
+function medT163(f){const sp=f&&f.im&&typeof MEDSET159!=='undefined'&&MEDSET159.has(f.im);return SW163.types[sp?'carangiform':'carangiform']}
+pondFishUpdate=(function(prev){return function(){const out=prev();try{const dt=1/60,B=SW163.burst,TU=SW163.turn;
+ for(const f of out||[]){if(!f)continue;let s=f.sw163;if(!s){s=f.sw163={burst:true,beats:B.beats[0]+Math.random()*(B.beats[1]-B.beats[0]),glide:0,ph:Math.random()*6.28,eff:1,h0:f.h,curv:0}}
+  const T=medT163(f),fast=f.v>30;
+  // burst-and-glide
+  if(s.burst){s.eff+=(1-s.eff)*Math.min(1,dt*8);const hz=hz163(T,Math.min(1,s.eff*(.55+f.v/40)));s.ph+=6.2832*hz*dt;s.beats-=hz*dt;if(s.beats<=0&&!fast){s.burst=false;s.glide=B.glide[0]+Math.random()*(B.glide[1]-B.glide[0])}}
+  else{s.eff+=(B.glideEffort-s.eff)*Math.min(1,dt*5);s.ph+=6.2832*hz163(T,s.eff)*.35*dt;s.glide-=dt;if(s.glide<=0||fast){s.burst=true;s.beats=B.beats[0]+Math.random()*(B.beats[1]-B.beats[0])}}
+  // the speed follows: a push while beating, an exponential slow-down while gliding (extra step on top of the steering speed)
+  const m=s.burst?B.speed[0]:B.speed[1]*Math.exp(-(1-Math.max(0,s.glide))/B.glideTau*.2),ex=(m-1)*f.v*dt;
+  if(!fast){const nx=f.x+Math.cos(f.h)*ex,ny=f.y+Math.sin(f.h)*ex;if(inPond(nx,ny,.93)){f.x=nx;f.y=ny}}
+  // turning: the body curves into a C
+  let dh=f.h-s.h0;while(dh>Math.PI)dh-=6.2832;while(dh<-Math.PI)dh+=6.2832;s.h0=f.h;const want=Math.max(-1,Math.min(1,(dh/dt)/TU.maxTurn));s.curv+=(want-s.curv)*Math.min(1,dt*TU.smooth)}}catch(e){}return out}})(pondFishUpdate);
+// ---------- basins: drawing (replaces the V0.92 / V0.93 renderer's bend, keeps its look: pixel-exact at 2x, lit edge, outline, crisp eyes) ----------
+function pix163(f,Q){const S0=srcData92(f.im);if(!S0)return null;const sc=SC93,L=Math.max(6,Math.round(f.len*sc)),k=L/S0.w,thick=S0.h*k,R=Math.ceil(Math.hypot(L/2+2,thick/2+2+L*.2))+2,N=R*2+1;
+ if(!FB92.cv||FB92.cv.width<N){FB92.cv=document.createElement('canvas');FB92.cv.width=FB92.cv.height=Math.max(N,96);FB92.g=FB92.cv.getContext('2d')}
+ const T=Q.T,img=FB92.g.createImageData(N,N),o=img.data,ch=Math.cos(Q.h),sh=Math.sin(Q.h),src=S0.px,sw=S0.w,shh=S0.h,mask=new Uint8Array(N*N),bend=SW163.turn.bend;
+ const off=t=>(spine163(T,t,Q.ph,Q.eff).y-Q.curv*bend*t*t)*L;
+ const OFF=new Float32Array(L+2);for(let i=0;i<=L+1;i++)OFF[i]=off(Math.min(1,i/L));
+ for(let py=0;py<N;py++)for(let px=0;px<N;px++){const dx=px-R,dy=py-R;let ar=0,ag=0,ab=0,n=0,dark=null;
+  for(const[ox,oy]of[[-.25,-.25],[.25,-.25],[-.25,.25],[.25,.25]]){const X=dx+ox,Y=dy+oy,al=X*ch+Y*sh,ac=-X*sh+Y*ch,u=al/L+.5;if(u<0||u>1)continue;
+   const t=1-u,ofs=OFF[Math.min(L+1,Math.max(0,Math.round(t*L)))],sx=Math.floor(u*sw),sy=Math.floor((ac-ofs)/k+shh/2);if(sx<0||sy<0||sx>=sw||sy>=shh)continue;
+   const i=(sy*sw+Math.min(sw-1,sx))*4;if(src[i+3]<110)continue;n++;ar+=src[i];ag+=src[i+1];ab+=src[i+2];if(src[i]+src[i+1]+src[i+2]<CRISP92.eye*3)dark=[src[i],src[i+1],src[i+2]]}
+  if(n<2)continue;const j=py*N+px,q=j*4;mask[j]=1;if(dark){o[q]=dark[0];o[q+1]=dark[1];o[q+2]=dark[2]}else{o[q]=ar/n;o[q+1]=ag/n;o[q+2]=ab/n}o[q+3]=255}
+ for(let py=1;py<N-1;py++)for(let px=1;px<N-1;px++){const j=py*N+px,q=j*4;if(mask[j]===1){if(mask[j-N]!==1||mask[j-1]!==1){o[q]=Math.min(255,o[q]*CRISP92.light+10);o[q+1]=Math.min(255,o[q+1]*CRISP92.light+10);o[q+2]=Math.min(255,o[q+2]*CRISP92.light+10)}continue}
+  const nb=[j-1,j+1,j-N,j+N].find(m=>mask[m]===1);if(nb===undefined)continue;const p=nb*4;o[q]=o[p]*CRISP92.outline;o[q+1]=o[p+1]*CRISP92.outline;o[q+2]=o[p+2]*CRISP92.outline;o[q+3]=235;mask[j]=2}
+ FB92.g.clearRect(0,0,FB92.cv.width,FB92.cv.height);FB92.g.putImageData(img,0,0);
+ // crisp eyes on the bent head (V0.93 look)
+ const E=typeof eyeSpec93==='function'?eyeSpec93(f.im):null;if(E){const g=FB92.g,t=1-E.u,ofs=off(t),small=L<30;
+  for(const s of[-1,1]){const al=(E.u-.5)*L,ac=s*E.a*k+ofs,X=al*ch-ac*sh+R,Y=al*sh+ac*ch+R;if(small){g.fillStyle=EYE93.dark;g.fillRect(Math.round(X),Math.round(Y),1,1);continue}
+   const e=L>=70?3:2,x0=Math.round(X-e/2),y0=Math.round(Y-e/2);g.fillStyle=EYE93.dark;g.fillRect(x0,y0,e,e);g.fillStyle=EYE93.light;g.fillRect(x0,y0,1,1);if(e>2)g.fillRect(x0+1,y0,1,1);
+   g.fillStyle=EYE93.ring;g.fillRect(x0+e,y0+1,1,e-1);g.fillRect(x0+1,y0+e,e-1,1)}}
+ return{R,N,mask,sc}}
+// the V0.93 drawer (shadow, order, selection ring) with the spine pose as the cache key
+pondFishDraw92=(function(prev){return function(ctx,fl){const Qn=SW163.quant,TAU=6.2832,[sx0,sy0,sa]=CRISP92.shadow,sx=sx0*SC93,sy=sy0*SC93;if(!fl.some(f=>f&&f.sw163))return prev(ctx,fl);
+ ctx.save();ctx.setTransform(1,0,0,1,0,0);ctx.imageSmoothingEnabled=false;const done=[];
+ for(const f of fl){if(!f||!f.im)continue;const s=f.sw163||{ph:f.ph||0,eff:.6,curv:0},pq=((Math.round(s.ph/TAU*Qn.phase)%Qn.phase)+Qn.phase)%Qn.phase,eq=Math.round(s.eff*(Qn.effort-1)),cq=Math.round(s.curv*(Qn.curve-1)/2),hq=Math.round(f.h/TAU*96);
+  const key='sp|'+hq+'|'+pq+'|'+eq+'|'+cq+'|'+Math.round(f.len)+'|'+(f.im.width||f.im.naturalWidth);let cv=f.cv92;if(!cv)cv=f.cv92=document.createElement('canvas');
+  if(f.key92!==key||!f.mask92){const r=pix163(f,{h:hq/96*TAU,ph:pq/Qn.phase*TAU,eff:eq/(Qn.effort-1),curv:cq/((Qn.curve-1)/2),T:medT163(f)});if(!r)continue;const{R,N,mask}=r;if(cv.width!==N){cv.width=cv.height=N}const cg=cv.getContext('2d');cg.clearRect(0,0,N,N);cg.drawImage(FB92.cv,0,0);f.key92=key;f.mask92=mask;f.R92=R}
+  const R=f.R92,N=cv.width,mask=f.mask92;
+  if(f.shk92!==f.key92){let sc=f.sh92;if(!sc)sc=f.sh92=document.createElement('canvas');if(sc.width!==N){sc.width=sc.height=N}const g2=sc.getContext('2d'),si=g2.createImageData(N,N);for(let j=0;j<N*N;j++)if(mask[j]===1){si.data[j*4]=8;si.data[j*4+1]=24;si.data[j*4+2]=28;si.data[j*4+3]=255}g2.putImageData(si,0,0);f.shk92=f.key92}
+  ctx.globalAlpha=sa;ctx.drawImage(f.sh92,Math.round(f.x*SC93-R+sx),Math.round(f.y*SC93-R+sy));ctx.globalAlpha=1;done.push([f,cv,R])}
+ for(const[f,cv,R]of done){ctx.drawImage(cv,Math.round(f.x*SC93-R),Math.round(f.y*SC93-R));if(f.sel){ctx.fillStyle='#ffe066';for(let a=0;a<6.28;a+=.3)ctx.fillRect(Math.round((f.x+Math.cos(a+T0)*f.len*.6)*SC93),Math.round((f.y+Math.sin(a+T0)*f.len*.6)*SC93),3,3)}}
+ ctx.restore()}})(pondFishDraw92);
+// ---------- tanks (side view): foreshortening along the spine ----------
+iso58Step=(function(prev){return function(f,d,dt){prev(f,d,dt);const T=type163(d.species_id),b=f.beat==null?.5:f.beat;f.tp163=(f.tp163||Math.random()*6)+6.2832*hz163(T,b*(1+Math.min(.4,(f.spd||0)/100)))*dt;f.tp96=f.tp163}})(iso58Step);   // the V0.95 phase now follows the spine's tail-beat frequency
+const SPN163=new Set();   // species drawn with the spine this session (tests)
+function map163(T,w,ph,eff,tail0){// destination column -> source column, head fixed at column 0 (source faces the way lib95 draws it: head at 0)
+ // the body bends slice by slice; the tail fin is a stiff plate pitched by the tail stalk, so it narrows and widens as one piece
+ const cs=new Float32Array(w),c0=tail0||T.caudal[0],cm_=T.caudal[1],sp=spine163(T,c0,ph,eff).slope*cm_,cf=1/Math.sqrt(1+sp*sp);let tot=0;
+ for(let j=0;j<w;j++){const t=(j+.5)/w;if(t>=c0)cs[j]=cf;else{const s=spine163(T,t,ph,eff).slope;cs[j]=1/Math.sqrt(1+s*s)}tot+=cs[j]}
+ const dst=Math.max(2,Math.round(tot)),m=new Int16Array(dst);let acc=0,j=0;for(let X=0;X<dst;X++){while(j<w-1&&acc+cs[j]<X+.5){acc+=cs[j];j++}m[X]=j}return m}
+drawFishSprite=(function(prev){return function(f,d){const im=FSPR[d.species_id];if(!im||!im.__pl||!im.naturalWidth)return prev(f,d);const T=type163(d.species_id);if(!T||T===SW163.types.none)return prev(f,d);
+ const k=(isoOn&&isoOn()&&!aqEdit)?PLF_SCALE(d):Math.max(2,PLF_SCALE(d)+1),hd=k>1?hd93(im,k):im;if(!hd||!(hd.width||hd.naturalWidth))return prev(f,d);
+ const F=fin96(d),w=im.naturalWidth*k,h=(hd!==im&&(hd.height||hd.naturalHeight))?(hd.height||hd.naturalHeight):im.naturalHeight*k,S=pix96(hd,w,h),P=Math.ceil(h*.25)+4,BW=w+P*2,BH=h+P*2;
+ if(!BUF96.cv){BUF96.cv=document.createElement('canvas');BUF96.g=BUF96.cv.getContext('2d')}if(BUF96.cv.width!==BW||BUF96.cv.height!==BH){BUF96.cv.width=BW;BUF96.cv.height=BH}
+ const g=BUF96.g,img=g.createImageData(BW,BH),o=new Uint32Array(img.data.buffer),src=S.u;
+ const beat=f.beat==null?.6:f.beat,ph=f.tp96||0,fp=f.fp96||T0*3,tilt=cm(f.tilt||0,-.3,.3),scale=k/3,M=map163(T,w,ph,beat,F.t0),dw=M.length;
+ // which end is the head: lib95 keeps the tail at the high columns (its tail block starts at t0*w), so the head is column 0
+ const c0=w*F.t0,flick=SW163.side.flick*F.flick*(.4+.6*beat)*h*.08,xr=w*F.ripFrom,amp=F.rip*scale*(.35+.65*beat)*(F.flow?1.15:1),mid=h*.5,maxSh=P-2;
+ for(let X=0;X<BW;X++){const jd=X-P;if(jd<-P||jd>=dw+P)continue;const cx=jd<0?jd:jd>=dw?w-1+(jd-dw+1):M[jd],u=cx>=c0?Math.min(1,(cx-c0)/Math.max(1,w-c0)):0,
+   fl=cx>=c0?Math.sin(ph-1.1-u*1.4)*flick*Math.pow(u,1.2):0,shh=Math.max(-maxSh,Math.min(maxSh,tilt*(w/2-cx))),ramp=Math.max(0,Math.min(1,(cx-xr)/(w*.18)));
+  for(let Y=0;Y<BH;Y++){const yy=Y-P-fl-shh,e=Math.min(1,Math.abs(yy-mid)/(h*.5)),wgt=F.ripEdge+(1-F.ripEdge)*e*e,dx=ramp*amp*wgt*Math.sin(fp*(F.flow?.8:1)-yy*.17/scale-cx*.06/scale),
+    sxp=Math.round(cx-dx),syp=Math.round(yy);if(sxp<0||syp<0||sxp>=w||syp>=h)continue;const v=src[syp*w+sxp];if(v>>>24)o[Y*BW+X]=v}}
+ g.putImageData(img,0,0);
+ const face=f.face===undefined?(f.dir||1):f.face,sx=face<0?-1:1,ws=Math.max(.42,Math.min(1,Math.abs(face))),bob=Math.sin(T0*1.7+(f.wan||0))*(f.hover?1.6:.8),HS=(typeof HDS74!=='undefined'&&HDS74)||1;
+ // V1.24: positions on the screen's own pixels (no whole-game-pixel jumps)
+ x.save();x.translate(Math.round(f.x*HS)/HS,Math.round((f.y+bob)*HS)/HS);const fz_=typeof fz143==='function'?fz143(d,w):1;/* V1.43: fish in proportion to the tank */x.scale(-sx*ws*fz_,fz_);x.globalAlpha=d.sick?.7:1;x.imageSmoothingEnabled=fz_<.95;x.imageSmoothingQuality='high';x.drawImage(BUF96.cv,-Math.round(w/2)-P,-Math.round(h/2)-P);x.restore();x.globalAlpha=1;SPN163.add(d.species_id);return true}})(drawFishSprite);
 
 // ===== Environment layer (Phase 0) — injected by client/build/build.py right before the game boots =====
 // development : everything on (team mode via 7 taps on the version line, Sandbox Gold, festival preview)
