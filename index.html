@@ -14150,7 +14150,7 @@ frSprite=(function(prev){return function(k,a,b,flip){const p=CUR161.p;CUR161.p=n
  const K=FR.S,im=(typeof FRS!=='undefined'&&FRS[k])||ISO.im[k],Hs=im&&im.naturalHeight?im.naturalHeight*K:0,Y1=Math.round(frP(a,b,0)[1]/K)*K+K;
  let s=1+PL161.stretch*Math.min(1,p.len161/PL161.maxLen);if(Hs)s=Math.max(1,Math.min(s,(Y1-(FR_G.YSB+PL161.below)*K)/Hs));if(s<=1.001)return prev(k,a,b,flip);x.save();x.translate(0,Y1);x.scale(1,s);x.translate(0,-Y1);try{return prev(k,a,b,flip)}finally{x.restore()}}})(frSprite);
 // the style chip
-dAq=(function(prev){return function(){prev();if(scene!=='aq'||aqEdit||UPUI||PBUY||(typeof R55!=='undefined'&&R55.sel)||(typeof AOD89!=='undefined'&&AOD89.on))return;const s=style161();
+dAq=(function(prev){return function(){prev();if(scene!=='aq'||aqEdit||UPUI||PBUY||(typeof R55!=='undefined'&&R55.sel)||(typeof AOD89!=='undefined'&&AOD89.on)||(typeof UI110!=='undefined'&&UI110.pick))return;const s=style161();
  chip(PL161.styles[s],16,186,196,36,()=>{const t=tank();t.plantStyle161=s==='long'?'trim':'long';save();say(PL161.say[t.plantStyle161])},true,s==='long'?'#4a8f5a':'#7a8a6a');btns[btns.length-1].l='plant161:style'}})(dAq);
 
 // ===== V1.62 Life in the basin + seasons (owner, 10 Nov 2026: 'ปลารวมฝูงใกล้ผิวน้ำ แห่มากินอาหาร และหลบใต้ใบบัว ใบไม้ร่วงลอยน้ำ
@@ -14299,7 +14299,9 @@ pondFishDraw92=(function(prev){return function(ctx,fl){const Qn=SW163.quant,TAU=
   if(f.shk92!==f.key92){let sc=f.sh92;if(!sc)sc=f.sh92=document.createElement('canvas');if(sc.width!==N){sc.width=sc.height=N}const g2=sc.getContext('2d'),si=g2.createImageData(N,N);for(let j=0;j<N*N;j++)if(mask[j]===1){si.data[j*4]=8;si.data[j*4+1]=24;si.data[j*4+2]=28;si.data[j*4+3]=255}g2.putImageData(si,0,0);f.shk92=f.key92}
   ctx.globalAlpha=sa;ctx.drawImage(f.sh92,Math.round(f.x*SC93-R+sx),Math.round(f.y*SC93-R+sy));ctx.globalAlpha=1;done.push([f,cv,R])}
  for(const[f,cv,R]of done){ctx.drawImage(cv,Math.round(f.x*SC93-R),Math.round(f.y*SC93-R));if(f.sel){ctx.fillStyle='#ffe066';for(let a=0;a<6.28;a+=.3)ctx.fillRect(Math.round((f.x+Math.cos(a+T0)*f.len*.6)*SC93),Math.round((f.y+Math.sin(a+T0)*f.len*.6)*SC93),3,3)}}
- ctx.restore()}})(pondFishDraw92);
+ ctx.restore();
+ // what the later layers draw over the fish (V1.00 eggs carried by the mother, larvae, ...)
+ try{if(typeof over100==='function')over100(ctx)}catch(err){}}})(pondFishDraw92);
 // ---------- tanks (side view): foreshortening along the spine ----------
 iso58Step=(function(prev){return function(f,d,dt){prev(f,d,dt);const T=type163(d.species_id),b=f.beat==null?.5:f.beat;f.tp163=(f.tp163||Math.random()*6)+6.2832*hz163(T,b*(1+Math.min(.4,(f.spd||0)/100)))*dt;f.tp96=f.tp163}})(iso58Step);   // the V0.95 phase now follows the spine's tail-beat frequency
 const SPN163=new Set();   // species drawn with the spine this session (tests)
@@ -14321,7 +14323,9 @@ drawFishSprite=(function(prev){return function(f,d){const im=FSPR[d.species_id];
   for(let Y=0;Y<BH;Y++){const yy=Y-P-fl-shh,e=Math.min(1,Math.abs(yy-mid)/(h*.5)),wgt=F.ripEdge+(1-F.ripEdge)*e*e,dx=ramp*amp*wgt*Math.sin(fp*(F.flow?.8:1)-yy*.17/scale-cx*.06/scale),
     sxp=Math.round(cx-dx),syp=Math.round(yy);if(sxp<0||syp<0||sxp>=w||syp>=h)continue;const v=src[syp*w+sxp];if(v>>>24)o[Y*BW+X]=v}}
  g.putImageData(img,0,0);
- const face=f.face===undefined?(f.dir||1):f.face,sx=face<0?-1:1,ws=Math.max(.42,Math.min(1,Math.abs(face))),bob=Math.sin(T0*1.7+(f.wan||0))*(f.hover?1.6:.8),HS=(typeof HDS74!=='undefined'&&HDS74)||1;
+ // V1.39 turning (edge-on only while turning round) kept; its up-and-down body wave (bw139) is left out on purpose: a fish bends
+ // sideways, which from the side is the foreshortening above, not a vertical wave
+ const face=f.face===undefined?(f.dir||1):f.face,[sx,ws]=typeof fishT139==='function'?fishT139(f,face):[face<0?-1:1,Math.max(.42,Math.min(1,Math.abs(face)))],bob=Math.sin(T0*1.7+(f.wan||0))*(f.hover?1.6:.8),HS=(typeof HDS74!=='undefined'&&HDS74)||1;
  // V1.24: positions on the screen's own pixels (no whole-game-pixel jumps)
  x.save();x.translate(Math.round(f.x*HS)/HS,Math.round((f.y+bob)*HS)/HS);const fz_=typeof fz143==='function'?fz143(d,w):1;/* V1.43: fish in proportion to the tank */x.scale(-sx*ws*fz_,fz_);x.globalAlpha=d.sick?.7:1;x.imageSmoothingEnabled=fz_<.95;x.imageSmoothingQuality='high';x.drawImage(BUF96.cv,-Math.round(w/2)-P,-Math.round(h/2)-P);x.restore();x.globalAlpha=1;SPN163.add(d.species_id);return true}})(drawFishSprite);
 
