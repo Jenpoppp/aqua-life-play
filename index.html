@@ -1836,7 +1836,7 @@ function pondFishUpdate(){const L=pondFish(POND),dt=Math.min(.05,Math.max(0,T0-P
   if(near&&near.p&&near.d<220){tx=near.p.x;ty=near.p.y;want=34;if(near.d<5){PV.pel.splice(PV.pel.indexOf(near.p),1);o.hunger=Math.max(0,o.hunger-14);PV.rip.push({x:f.x,y:f.y,t:T0})}}
   else{f.tt-=dt;if(f.tt<=0||Math.hypot(tx-f.x,ty-f.y)<10){const a=rn(0,6.28),d=Math.sqrt(Math.random())*.8;f.tx=PC.cx+Math.cos(a)*PC.rx*d;f.ty=PC.cy+Math.sin(a)*PC.ry*d;f.tt=rn(3,7);tx=f.tx;ty=f.ty}want=o.hunger>85?7:o.health<40?6:12+Math.sin(T0*.7+f.ph)*4}
   let dh=Math.atan2(ty-f.y,tx-f.x)-f.h;while(dh>Math.PI)dh-=6.283;while(dh<-Math.PI)dh+=6.283;f.h+=cm(dh,-2.6*dt,2.6*dt);f.v+=(want-f.v)*Math.min(1,dt*2);
-  for(const[id,g2]of PV.fish){if(g2===f||!L.some(q=>q.id===id))continue;const d=Math.hypot(g2.x-f.x,g2.y-f.y);if(d<f.len*.7&&d>0){f.x-=(g2.x-f.x)/d*dt*10;f.y-=(g2.y-f.y)/d*dt*10}}
+  for(const[id,g2]of PV.fish){if(g2===f||!L.some(q=>q.id===id))continue;const d=Math.hypot(g2.x-f.x,g2.y-f.y);if(d<f.len*.7&&d>0){const k166=10*(globalThis.REP166??1);f.x-=(g2.x-f.x)/d*dt*k166;f.y-=(g2.y-f.y)/d*dt*k166}}
   f.x+=Math.cos(f.h)*f.v*dt;f.y+=Math.sin(f.h)*f.v*dt;if(!inPond(f.x,f.y,.93)){const a=Math.atan2((f.y-PC.cy)/PC.ry,(f.x-PC.cx)/PC.rx);f.x=PC.cx+Math.cos(a)*PC.rx*.93;f.y=PC.cy+Math.sin(a)*PC.ry*.93;f.h+=Math.PI*.6}
   f.ph+=dt*(4+f.v*.3);f.wob=Math.sin(f.ph)*.12;out.push(f)}return out}
 // ---- scene + UI ----
@@ -3174,7 +3174,7 @@ const _hud67=hud;hud=function(){_hud67();if(LVQ.length||LVSHOW)return;if(!['home
   TXs(lock?'เริ่มที่ Lv '+s.lv:(s.g.st==='gold'?a.toLocaleString()+'/'+b.toLocaleString()+' G':a+'/'+b)+(storyReady()?' · พร้อมรับรางวัล':''),32,y+40,12,storyReady()?'#8fe08a':'#cfe6f2')}
  if(n){gc_(338,y+6,12,'#e8504a');TXB(String(n),338,y+6,13,'#fff','center')}};
 
-const GAME_VER='V1.65';
+const GAME_VER='V1.70';
 // ===== V0.68 STEP 8 — UX/UI: main dock (บ้าน / ตู้ / อ่าง / เมือง / เควส), Lv1-5 tutorial pointers tied to the story,
 // one UI skin drawn by the user's ChatGPT (buttons, tags, icons), Demo/dev tools hidden in real play, online save per player. =====
 const UI_IMG={"btn_blue": "data:image/webp;base64,UklGRj4BAABXRUJQVlA4TDIBAAAvIkAEEL/AJgCANLi/HgFy0P8lh82lBpsAAJNML3fcQxCDgiSgn6viSJKSO1zfEAJJkH9C7vMfkPmcXjc1/ElsyWQDAYsn14oZmTJEcwnaLHRUVJHFNUEQQYDgB37wgR8gTMAfUc2kqTFAjG0rChMDCG4fd+2/VcGYDt6N6P8E3EWH/hnoo/u6hG9iR/O1e9B0ClGp+zi4QsSP/cdtIrib0EV/vT7fDzF5R+jjJZ0c1YUNWCUAG1PriGG8jrd7YS3CNhTSdB6wS0txfc6QpVVWOxaYd1HPAkmydasMq2bIABKgsj1rWpVVsPz2MY1tIUymLMszMrJM2arT0MXg+EmMk60m7aYsWXmWJoYQadyNT4Rx+HQkQte6W/hI+mNM1TZI3t0SPqiVeCmeQujXcT/5V0k=", "btn_gray": "data:image/webp;base64,UklGRlABAABXRUJQVlA4TEMBAAAvIkAEELegKrKVijeoISSBoS3J562hNpKtBA0hhNSd/uuhBIbUvuJIUqKF4gmeL4tEDNJUNYFz/kOEZi6OJBvIMZ+pq48rnbSrfCw3b2u5mR0QEADQRwBAHwCEstnTi82fgwFiJNttGwnhgxkMENh/rYBkuoN3Ef2fgLvr0T8Dw+if7uGwub7cG1CXH+V782SEOk/fx+nHMfhb4m01WBqeTRX5W5Qahs/TS6o4jxtt+MDSX9uLbpaK1eAx6bOw7dKyQhaXhHILp43RY2Na9k3S2gFduX+wnqn2tl1au1dmy9IBEogfziPrUpau3IWTVipfKAeQaZv9OAWSihSiPBrjcOpAqAVJoLYozRY8r4oN5ZTKqXJKTdEpFSkZvP2Nq0RLjxrJmPC3cPX72AIIAcQgOX9LuBhiiAqKfwwxCM/d8q+SAAA=", "btn_green": "data:image/webp;base64,UklGRloBAABXRUJQVlA4TE4BAAAvIkAEELegJpKt5mdiT8VgAv89KlCAgmhDaSRbzfuf6GIFWBz9N0MNGRQK2khS7u75Xbx/ccw4/+G9vaWW3ZdWEYrAEdX2ZKBbra6EZh+VBOgDEMSHAMDgfxSdULIzUjK7t95kgBhJctyGxv8LAAUw/1gPUskZ7Eb0fwKeoybxvyTjvPjjE9Xl7nL9Wp/u6aPb798uow8+OUa5vgUBIGwq/YDvruL99cR9nAD8ptK8Upw3MPvn9iKBVggw2W00gzV3/zzYgBfaOZfkl9UMK8zDkK0SspCZQPL7VMRoojKzYlRZkJNfp9RHH+cqR5WDBfDbamK51KWocpCsHAQQnT0gpkMfzJUcMoMAYrhp9MNNF1PJwCuhgZWZCSAi4Ilw6Ydq0zp65+nov3X0LgKT+gFV2B/XeS+5SWeUU/oBqIw1gDWwZ2OlgTX403wk/xUA", "btn_orange": "data:image/webp;base64,UklGRkoBAABXRUJQVlA4TD4BAAAvIkAEELegNJKk6F7UOX4U5B8gCjYNRZEkNXsHz3uRkwA04N9MskCdgjaSlL17Zg3v3x/T/AdL7PaLIiVtYnjit+20N7eRi7m9v7rjJLQOACgQfwIgEAYw4P4nv2pJYXAY21acGHaQ7Jj0XyvoxA7ejej/BNxDi/4MZPH0CDOFrNf0sO2YruyCyvX5Ln5Mxg5CNi4/HBLG3iLL6Hr6ncBYXA66+Jzj4zy2X9VCcpbg3XVq4ziP4XkA6iS1mLwlpHxuVA5Bp26n7mzwpcTzqHPd6QBpH8/b+sNcZ2CncjBX9n4G1vaNNsO6zdRj3mdgZ4ZVaipeXVJpaz/vLNTBurS1SSVcwVleCV+a1qUtTfu8rJLauMSQmeyNSfgQn1VWeDt7CxNJEBOUcVSfwMkIe0sYN/TOj53vnSQmy93zV0k=", "btn_purple": "data:image/webp;base64,UklGRiwBAABXRUJQVlA4TCABAAAvIkAEEJ+gKJKk5nLgmXnhAf+ecIAPtY0kNe//sZEL6YD+mwMxDQAgDdbcMo3MA1zOH/zhMgnzH9xZz0QYVc4vxlFfJNtbdzpQPUmoOvaDLxogRAAgQoAAIrB3cXtmgBhJctzGeH0SwAO//JMFSdMZ7ET0fwLOywj6X8AI8eUrgtJhP2/Hq0PZxPEQPSTFi2yp1N93ZaR4CiN9dm3vtmqEiIzPtgM+JK2S0EJ3abhasRSxxL7BuJ4k+W2vliPF6ubDpZVx7xoX/UFfHHji9zeaLockH/Knvd2UzgJ98eEdSRqu4RLwLflC37722QWgeTC3euQUT4zyaR2a9zbNrUODmk0hngQjl/quDI4cTxGyvS4lhXhKhPzXpHsinDP/KUk=", "btn_rose": "data:image/webp;base64,UklGRj4BAABXRUJQVlA4TDEBAAAvIkAEEK+gNJKk6PbUD3giQJJ/VEjUpqE0kiTl2D1IcOQ+/8xe7lcpjSQpum/UOXB48s+KGH5q/kNTBisqvMJsq/ksfHobO9X50+vXbEWMjgwGwAokhBRYfDwXw34wQLBtq2qTVP5aeEh1/nMVbTKDcyP6PwHn1KEvAxn36RnLTz54/ffNa+ouvI8cUPl7uPJQ3k1ClnhYMmWeiYXFneLIgUP7Z39TYXGELA7tYEL0NjeporbF4h0KfgdMoC67dEO7VGGkEh0qabcGXYboRr+auglGKt4R11RbpYEJ1OdGF4wHrU66TDcYFXgQRwVabV0Y0w6VAZtn4jXqvNXbzqgDtnhk704KcR2Vcb0Z021NIevtTnwhKn00KhOO4E6xxHK7in8GeS3ulFj8F+U4r3xVEgA=", "close": "data:image/webp;base64,UklGRgABAABXRUJQVlA4TPQAAAAvDsADEK/AJgCANLi7l4BI9H9l68KgkSRFx8z4YIJ1vObXRVEbyVbyP+45dVAKFVA+IZHL/AfUNmaUiog9ixooQxU4LjR/TBAUM0YYIj3/36WZK94aPDp3tWJjz2IuidfBvjIwjGSrifoI/8sP5P57hSIi+q+2bRvGTs+mM/beAPbta4pt4fjKVldbbv4HXGoxsYiIZeyNdyV3M1PShI1k7r2o95LlA4pYn73OWYUCXmctY87pLJTwehapc450y1hPzi6SEyCsfXYeszJ9QFQqTvI7pdbCBksmOd9VFza+rHzcVls47EIiorBCq7hhPs9zWEYA", "ic_coin": "data:image/webp;base64,UklGRtwBAABXRUJQVlA4TM8BAAAvHsAHEJfAIACAJHR35wP9v8cRflEV2VbycPl0JwFd6B+CBqY2kq3kKxZ/WqEZ+s80IrL5DwAaMyEGKPpy09trW9jwsVxiYGze/HEQAqn0s/8k3z4eU1QKNFSAYNtK2Gga/SAKgun+N6sknSVE9F+R27aNHAMZ7Wk94vuukvX9p0q5snLj93qiuNcym7V+fiblorjvex1UJ9W/8u56HzXa2qg2fMqbKWVtThUBeYqrvOfup7bRheGqzjve3E56FnURgakCNVE+cd+cVk9v7cCk2pHXlLaiZUeEs5xo6uCa8OWyVrKqvECJQit4rjXjDlWHJFi14SwubXkz2zZTHc7CREy24auUay3q5rGSxxD47CAbDGzqRiUiMr27DmY66/hghuHhLftIIKzKwAMJm/OFARFSbS90sce8jy0IuzoyatylJZ/gMZhfMfMTI0kA2rQ0ycehmy7gPjrAwgCFan3BSHoXoTGQjypM8bgpBV0b5AhA9rRWn/y1MRofRFiEW4QFAfV5C0ff8diFiLnNqFf5PqL3rpNpK2UBnIN8ewG9D9U5T2bTmYHsZ9pEs9zBIqjl1+urnAVw2vGPd11xxFyv61+vv3ySrtfsf7/Gj+wLAA==", "ic_drop": "data:image/webp;base64,UklGRm4BAABXRUJQVlA4TGIBAAAvF8AHEJ+gIACAItvmmv4v6ZDiSJKSE+znEgApeP5B8aJQ0EaScs/MDIrev5M3MP8BQESIBBEUZTXZvfvcN6kvSGKSFZyRlCR44LDGAANatS++3S7RC3I0OIxtpY424gP/Bk3/xUZ0U0JE/xm4bdvIrqDb+z7xHEv0fCtdF32EPX0DCZ8GQeMn0e9WxqsvbgL2P/qHH1oCAEd/cKqtRry66HxEHX30EgHxdOR+mb0UBtjReaMxtdUaGXJYRE5fptZaswDR0cY9dNqUCDAcnZbN0ds7Ehtt7suttSVGZEfW1WIkQDLBaHWMfo53RG5o6WtqmxFBzCYlDe1bUngjNjHN2U8W2RO3NGMJW0IopdTlvEg92SSOMabSsl3bTR7yyhxshVl0luzJvK3MLDv3nGX5WUrMAPNiDOslaI6yCE21JewvmLzPJb0trWT2xw/lcqnWmnOCc+e/hsht/f8vkelh6gE=", "ic_gear": "data:image/webp;base64,UklGRhgCAABXRUJQVlA4TAsCAAAvH8AHEJegoJGk5nulSEAF/jWBGkWRJDUXyRnkUPgXwRsFCFATSYrEDxkmKETgXwUqiO+S+Q8ATwzmCqyPD8fj80Y2pVObnjWnsIDCqg6qvJt3/IfeP3cXg8TYtuO2iYAPfOwEyP6r1RKX8G5E/yfg+T1+1N/jUDzEP+Pc0qqe4gP8ByAxYVFzigRekV8whci/MddQtRTtWjWH+A2/bkzX0kTgdq2pmkP8hN1LOvcaYtKle02E52/Xep99VEl9sgBayhbfeI032rklba+TvmZLpvBBpCWNekvXvjl4HXMkSyE+n0lrtvuwKafscrzNlSzE59tZ47rPpsAu7JNHrzlFPoCvcd2bEjBpA6qtJnsp8ohymO3ah2DiJdtQfCzp9hwirrmohWNBRHidfbA+epsZi/gaVN3aphAfiXPtYrWpj0x4m4x6l2P+pRjqjPZt0Oq1cXvD9qGo9dGVsUhwatMGTCHC2QdPVUlSDvEh4L1qU7Zb0NlQgrdqChAfCV5VOl42t3R2OZ5qT7IIz0e8Ny8bOBQw1daThfh8xleTKAe8YJJ3GFlfeF29iarsBTfl2kdTX9nil06Doeo5QW0aXaimHOKbyIOeqZ1Wm1SdPrqSLD6fyd2ThTRabT2Z5KMmKT7fMaUQX7NJJAuvmBOKz68AYjQ6SSE+vMTz/3iVyIT4CPSXhHeLz9/zUb8DAA==", "ic_heart": "data:image/webp;base64,UklGRpABAABXRUJQVlA4TIQBAAAvHwAHEJegNpKt5GORu6Sk1EH/fVCCt6Emkq3m/dQHkh704gcXtJSgKJKk5nIgK8AGDvDvhR+v+Q8ARBawEz6Kv451P7Kf/ps5FxeDEhFg6jPMGAUhIPSgVrdBlwFiJMlxGxP/Swp0/skSC1DKYDei/wrbtm0cGzDq7vaKfyiLxf0uuCsdWEK3bGKrWCWl8GfnJgxsIm4oEz9DV8tBhxWjhtRKCsYu0jlu6kxyxsp8hqSemYwspu2eNa7yUG3cVJdqUjgspoDrbDWFOnVNZOfnOU1F6SR7Tm2Al2pyDAaAflbN12DXKak4v6D1e1wIcl2gJE/nFwxd50v1uke9+IpWkttARU39RXOWFfGB2HeUSuYU/WHhXQrJulI1M3mS8C6UQZCb2TBlBhCa8rRS61UE77T9GA+gihrXVDJ2++8SgJmQck252FBLTtM4Qpoh3TI+EEmP6Ua7sCRHLbNB+s6cHLQpm532AzJ2wvQrKqcp8N9RQY/d+i8GBE9N/wPJn0RKehMB", "ic_home": "data:image/webp;base64,UklGRuABAABXRUJQVlA4TNQBAAAvH8AGEJegJgBAxr68rr3rKCWaUJsabAIAaMLecM0A64U4NCcAaAa9FEWS1Fy+A1ygCyOo5p2Z/2Ak5/FDDolPwapGn94Q3DNnC7KX/ap/svIDMKskiaSgl6Hmpq0ODgMAaZuioDIj9P9rTTo+iOi/ArdtlIyO+T7x/iBw5P2HgLu7Hv1xFsiMcIQ3AO3V4CfStQPoXoN+wt0V+y1FNBB+4Li9B9GYY46vSTgor0FjzjWJBnxJWXn4psFrzpMak+CT2XWZ+WZsvBfRnHPQIPiIlW9qXZDXOjbm+KBwmZUvQkVWWnuOo7fKZ1ntRRgpLO6817HTqsENO9bEQ0QjZa0xz/DtbnWZLEJxFhFhFuLb1eHj6KGst+Z5k3B318UN8RPVuwQzb89bcGwNBfHZ7dUapzdCTNm8MQk1NiI8gr7aziAXSd9+SYqqb8RHQ2VscnBJvyIlWSUYrZ6IcLiySMrlG5MVUe2q6vAGU27E7sQk6aqiKepaZlXHTJlEVJBF3CMiUtC6Ve8ndrMqJHURRUZDF/VudbhlLjsSmRkoSCSI2quqV69bE7SKCHevKjMjLDSrk3icO+g9bRkel1V4Ve8ffx8AoHYAdwTrAD99YQC4t/s23hs=", "ic_pond": "data:image/webp;base64,UklGRtYBAABXRUJQVlA4TMkBAAAvH0AGEJegNpKtJPuCu2Y/onxaY2iGcQAAhepnm6u1amvhwDYAgCR0N5zG/1OD+oDL/Ach03KAoAaKwgerD/AbVxATwe8ZZ4/AGav/n7C3g5u7GJyVJENiAQi2rYSNIggKTvKB7n+z1Um3ENF/BW7bKOl2zPCJz5vamz6nfpWYr0Pu9rugNYuoylgrIivDx3uiWVYuVWVVVfOVmYvbi0elMRNRl0PDPDOt/fOsYBY8zyOYgEDGsLXtf5ppp577eeacPmWKjJWhbVM16OQBxKqi5IaMDP/SvIoEc6eeB1SVWSGArFwbqxwApgiJiNdXGSSgdQajKgg3cM8dRVamyc7k2GhWrQ65pW+AwQJgRFpvx1hZFQZAnnMwEsDz63ywMqoqfZDc27uMyIzBTAeeKzN3Qa7la2VlLmNmvXYx+C8y4qg6RwlXZWbuR4wbK2J5+PGkzPQQs1I7HVgb+884nDtx+7QO3PT6JPWIOpMQ2zZgDla3deS+GsrMEJDoQVY43zA3dxtnekIApuuLZy5XCPRoMbRDeCogg493E2F6AyBW7cosIpnOInQdQ6mpzhtwumjrmrZc+eqtvf036MXtRcr082v9+o0vi/gAAA==", "ic_quest": "data:image/webp;base64,UklGRtQBAABXRUJQVlA4TMcBAAAvHcAHEJegJpKkqO6iu+h/Qgoj+LeBBVKMKIokqSG/cs5gAf8O8HACkKE0kq3mf7J7FfwKUFRE/waX4/wHkBD559N6/kpnVNVcAo2Nb1AfKgGfYoRYLtouESoOZP9VFwYDxEi22zbmxwdAgAgM/VebrBLeRfR/Aq7fGujnQALjR/wtqfVWF/sJacxeywbRfsDSx5QoecXtG0ikMTUklQzfcHFR50NXitntDdZtddOYGlKH5vEDYd12jqXMl0aO4YPv2w6hTw0JGrW4XW/h1H5IqfQhaFXavgg//Thr20rtNN3DFxFcbd2A0qqkHOz6iO/kRt8gVqn4n10fWYrWvDU2WsyVYFzvkPoUsa0ba/Ms43qH1MfUUM0btByw6yNe+5g3SlxR8BPjhdiHpoYkWgk4pw4FeymKqT5R/NRtP9xueI4qKQ91aMWPU+Fgh2i3mFODNXcatfgpBd/vp91Ukuct01tVWY4T/2PnOP225OLEtKpR5XYe7IuO/TQuSaScIl5zasrGucNi4XC7HjxDUolq1Z/cOMOTiBkoHlu2i7jDaRfolZglj0WLXeSnz3jKkBa7WHaOXf8QuATX7TT9SwKkm3OBfg76DgA=", "ic_tank": "data:image/webp;base64,UklGRvIBAABXRUJQVlA4TOUBAAAvHsAHEJegNrKVCIghJULNro6tytCxDqO7DzYBAKTB3SLwW1SKUcRZgR2KIklqjpzzEzF4RBBK0BAFUPMfBGX1FlAKn1JC9b+CgRPiZzKbaUnYiLCR+nRLtX8YZ9pdWmOrrTNAjG0raCQEkP8R+B/7rzZodjt4L6L/E3A/hu391wFSjWT48Smwt8pGLlytk1QIEMMmQFptpZ7hfVuQcAPBei1sleXpBhCw9CuM1cjKT8olAfgAAcBCqJveuEhcQP9WCE6uRmKz+La2b1xAA+qm16+rcYEkayMJQMtDWzxZMoCTrL2R12pnflW1ZIhnFJJnYa94w6oo2a6UgYKzEO/qpZD6GZaBImdm4bumJ4Q2wOxz9LIrT1UBlyHJ5sAcLD9RAVGfA1hj0ob+ktSnqPQ11sDEyD+owEH7pLGAbuOXcroSQqQ8RxrGnlnTi1OdAoIpJ8kpA+mqyE/FleTUxImYU7bES53pIcOHOaNhevz4R1z7q2LTSQJAJN0c6Cpu527A6LQJxm9A5VK3UXdzANOckR49wtTZIajNYrhDd0aaG0nBHJgc6LRWPTLABEM6AaPvjei1nZE8Asy3RlIwRCEAerPII+AOJA9w63sjBZFHuAGE9we3Hj0G3H8Y9iSPcP9jAHBvAQA=", "ic_town": "data:image/webp;base64,UklGRuQBAABXRUJQVlA4TNcBAAAvH4AGEJfAIADAMrPtBmfe13sGZ2EbyVYbvPdUAR3QApGvXz0o0ihSENs29Bf7ThkR1NZAAAGk8Gf+Q+jcOCStIqvorNEwM9TL7/dWTRYxnmH6lr9fe56Ou53/gcdzNRSDZYAY2W7cJiB4ExBhqf9qr0kJ/0f0fwKuZ/l4/a8crxtyyeM32W/An/xGkBQAL3J83X8/ngQJQuVB9pdd8vn+eyu1M4CsG8gnfi9KykOf5jS3MOzg736S7PlBaqctkh6lpzw6C8mgViSVC2Kz2jpAxoAWIzmA7tGZ5AIkB81pTtShHU6aMyyyPvFYbZYOZkKju43ZPEjNN9nLly9fvnxBYzht0qNHaQ/LF33RuXhsjT7uFmQjk1xyOBYdBIEU5kY/OXhq475pInMhWHfS041ubm4fakaMrm3qUfV0GEE6IjWmh+gxkBsDm8oEzSXXSPc/uaRHb9ZZ2lyt59A5Ss1lKzOTXBDlsUiCJGsOzgWCXSPrTnJJezz2QSIHSUVCr8HGREFuwARQMXrL1Bj3To1EygUZoX0i12mobMq4Y+QBahJMGyTnY0FPeXaSIxJCWQR9AjDSzWkE3Zw2ENWiQC7Iay2dnACMdHuscn2VzwWdnFWuf5fnCwAA", "panel": "data:image/webp;base64,UklGRrICAABXRUJQVlA4TKUCAAAvKMAJELegqJEkZXb3mNnAvc/sqVcTyVbzPjmH8lcIYDCBMORS4QE1AYA0bHB/XtYxhv1/CzD/ITmyCZHT/o2aX+jkPKK22r1pA8R7DF5e2O66HE0KAUAEACAAgQCQ/nkMEmTbitsomtBkEGAj73+tkp10r+DeiP5PwPt+UP5LDfs5+GeqF7UL2xnsh7/uR7rhjd1G4DScYQFn+bw4L+q0u07d8PZcYQy9TOt159sFQObFy7TOy9SfjtOfr/My/wwG52UatyD71yzut0z9vMxjN3hqOMP+iH/+2Ebohrf9GTzdY+JIFHK5HqiSiPqY1qkf3oYzOJ2PdBRJmmsTAdGSjqjbOl9Og1s0HblahAsCr2e1pCN9GgPsMeWSLbYKiMDzRcXyBU4ze8x3WhtA5tpEvznXy2Exl6wVaIBcLb9Kl9tKA7JNwHL8TS71Nqs0UDziF+NdqdBAQOQG8YjbcjddjtLq1QtyL3DEbbqb12lPxQoNpKgoTUU94rbenZd2eVYwW8xaGqhymbYw3MVWP+aitkwTBcvltP9Ur/kicIHSFFPc1vBNroXPjdwUVDjuwvB2vtFLM9tQRBFKvIy9n0o6cm1ILrnJHZDTEbd17oc3zsu0xyMd2doEMg1fVgXzkb4Y52mP6SDXL6XxoqLZFBcvduGc9uhBqfCs5BvgyYtWc3RZb07DuMd0RxPICE9e1PY8Utzuws2R8g1NAeQJFUyfcGTaYzrIpVXll5riF/My7dHEkUttfMxqgRaTLvMZuuHGqIlWWn3y+pA4SBEfW3icXqaZfo+a5GsBRfdT7Yc3hn2dx+3x55wGT7vBfl9cx3m7V75eNDzOcGIY7NdlZlxcEZxduFVAPQ2j56Wb1mXup9+PTLcqjDq8/elHf/5tpz/DG/w/AQA=", "tag": "data:image/webp;base64,UklGRsQBAABXRUJQVlA4TLgBAAAvLMAEEL/AKJIkRb3MeHcGmP0ru/fYYBtJkpp9ZjLFzPmnJlNSGslW8zNJZYulBPovCsmf/wCgqqZWvvgJ6tAsHPXqf594oByC0xbbc3xlm5bLkkrAAAhADABwIIgAGJD+FwPE2raaSkNGDCiiY/+t6k8dnBvR/wm4Xrrf8qHkAyTe9EG86Z3e0l8ZP0XvD9a9IT8WopTitzN490JmVCrT/8L87ZIGrHsRxzz9w6nKscOqyk6FnQp7ZZnSoCeZcSj/p7bKuvfWW4fWd2jQ93udxzxYpwvJlDwvddW+re187jS67m1fq5Yp5liCk4WcFuraoJ93Wr9t3LRKWuYYxmKdwliCn29942w6NvXWReunpAb7Wm9gnGwhMFeOtnWapC61o7d+So1OY1tmxQLBXbIBjctxblKHQ5vgYHu5Skedp0AJxl0yoQQ7HvXcpNbVOtC0apPWCguzVAIYdyE/FkKc6kLf1rYDfUeqLHOFRUJTigV7CwUfGGctHwoJIUlTTL4Qbsbic1Icvz/4PHgD7gJJ1g+QxdvipQCScdL1LONTTspK+f0BSSkreeOudyVj7+jLTteH+i0vAQ=="};
@@ -6909,6 +6909,37 @@ const RW103={
    "gold": 10000,
    "xp": 0,
    "rp": 10
+  }
+ ],
+ "charGift": {
+  "gold": 80,
+  "xp": 20
+ },
+ "bond": [
+  {
+   "level": 2,
+   "gold": 100,
+   "xp": 20
+  },
+  {
+   "level": 3,
+   "gold": 150,
+   "xp": 30
+  },
+  {
+   "level": 4,
+   "gold": 200,
+   "xp": 40
+  },
+  {
+   "level": 5,
+   "gold": 300,
+   "xp": 50
+  },
+  {
+   "level": 6,
+   "gold": 500,
+   "xp": 80
   }
  ]
 }
@@ -14355,6 +14386,448 @@ function swap164(){const k='medaka_basin',want=homeArt164();if(T0-FR164.t>=FR164
  try{delete R2MASK[k]}catch(e){}for(const C of[typeof SEAS_SPR!=='undefined'?SEAS_SPR:null,typeof SS84!=='undefined'?SS84:null])if(C)for(const s in C)if(s.startsWith(k))delete C[s];   // the seasonal copies (V0.72 / V0.84)
  R2DIRTY=true}
 tags78=(function(prev){return function(){try{swap164()}catch(e){}return prev()}})(tags78);
+
+// ===== V1.66 Smooth fish in the basins (owner, 26 Nov 2026: 'Test ระบบปลาและดูความ Smooth'). Data: core/data/smooth166.json.
+// Measured in the medaka basin before this layer: fish near their school slot twitched (~120 deg/s, against 2-7 deg/s cruising),
+// resting fish spun round a jittering point under the pad, fish snapped 108 deg at the wall, and the V1.63 pixel renderer took
+// ~13 ms a frame for 10 fish (frames up to ~50 ms).
+//  1. Steering before the base step: near its slot a fish swims on with the school; near its pad it circles a small slow ring; a
+//     fish heading for the wall turns toward the middle first. The steering point is always 'lead' px ahead, so the base engine
+//     never re-targets at random.
+//     Neighbours closer than ~1 body length turn the fish away, and the school keeps GPT's spacing (1.3 L), so fish no longer slide
+//     sideways when the base engine pushes them apart.
+//  2. pix163 draws the same picture but only looks at pixels that can touch the fish (the old one sampled the whole square).
+const SM166={
+ "_note": "V1.66 (owner, 26 Nov 2026: 'Test ระบบปลาและดูความ Smooth'). Measured in the medaka basin: a schooling fish within ~15 px of its slot turned at ~120 deg/s (the base engine picks a random target whenever the target is under 10 px away, and the slot moves every frame), a resting fish circled its jittering pad point, and a fish touching the wall snapped 108 deg in one frame. Steering (applied before the base step, in px of the 640x360 pond canvas): school: within arrive x align.matchIn of its slot a fish swims the school's way with a sideways pull toward its slot (align.side per px) and closes the gap along the way by speed (match); farther away it heads for the slot; when the school centre stands still, a fish at its slot just drifts on (earlier tries - holding its own heading, or aiming just ahead of the slot - overshot and swung up to 180 deg back and forth); lead = the steering point is always this far ahead, so the base never re-targets at random. rest: near its lily pad (near px) a fish circles a small ring (orbit px, orbitW rad/s, flattened by squash). wall: a point look x length ahead (at least lookMin px) outside inside x the water ellipse turns the fish toward the middle (weight centre) before it reaches the wall. pix: the basin fish renderer skips pixels that cannot touch the fish (same picture, fewer pixels). school: GPT Cowork 'Fish Swimming Biomechanics V1.0' gives school spacing 1.3-2.5 body lengths, separation under 0.8 L; V1.62 packed the school at 0.9 L so the base engine pushed fish apart sideways (they slid). spacingL replaces life162's school spacing; sep: a neighbour closer than sep x length (GPT: separation under 0.8 L; a basin holds ~10 fish of 35 px in a 234 x 185 px ellipse, so a wider zone would be on all the time) turns the fish away (weight), before the base push (0.7 L) is needed. turn: the steering direction itself turns at most turn rad/s (it is smoothed), so neighbours passing by do not flip it frame to frame. keep: school slots and lily-pad points are pulled inside keep x the water ellipse (V1.62 slots could sit at up to 1.1 x the radius, so fish swam into the wall and the V0.77 layer yanked them back in one frame: sideways jumps up to ~280 px/s). The wall rule also turns a fish already past wall.inside. Several fish resting at one pad share a ring: they sit evenly round it and the ring is wide enough that neighbours are at least ringGap x length apart (two fish on the old 8 px ring overlapped and were pushed sideways every frame). push: the base engine pushed overlapping pond fish straight apart at 10 px/s (about their swimming speed), so they slid sideways; with the turn-away rule above that push is scaled by push. match: near its slot a fish swims at the school centre's speed plus gain x (how far its slot is ahead of it), between min and max px/s (it used to overtake the slot, U-turn and overtake again). ringSpeed (V1.70 fix): a point on the ring moves at most ringSpeed x the resting speed (life162 rest.v), so a resting fish can reach its place (a wide ring at orbitW moved faster than the fish could swim).",
+ "arrive": 18,
+ "lead": 30,
+ "align": {
+  "side": 0.04,
+  "matchIn": 3
+ },
+ "rest": {
+  "near": 18,
+  "orbit": 8,
+  "orbitW": 0.25,
+  "squash": 0.8,
+  "ringGap": 0.9,
+  "ringSpeed": 0.6
+ },
+ "wall": {
+  "look": 1.0,
+  "lookMin": 18,
+  "inside": 0.82,
+  "centre": 1.3
+ },
+ "school": {
+  "spacingL": 1.3
+ },
+ "sep": {
+  "len": 0.8,
+  "weight": 1.0
+ },
+ "turn": 1.2,
+ "keep": 0.78,
+ "push": 0.25,
+ "match": {
+  "gain": 0.6,
+  "min": 3,
+  "max": 18,
+  "rate": 3
+ }
+}
+;
+// ---------- 1. steering ----------
+// a point pulled inside k x the water ellipse
+function in166(x,y,k){const u=(x-PC.cx)/PC.rx,v=(y-PC.cy)/PC.ry,r=Math.hypot(u,v);return r<=k?[x,y]:[PC.cx+u/r*k*PC.rx,PC.cy+v/r*k*PC.ry]}
+const r166=(x,y)=>Math.hypot((x-PC.cx)/PC.rx,(y-PC.cy)/PC.ry);
+function steer166(){if(typeof PV==='undefined'||!PV.fish||!POND||PV.pel.length)return;const tap=typeof LS162!=='undefined'&&T0-LS162.tapT<((typeof LF162!=='undefined'&&LF162.tapSec)||0);if(tap)return;
+ const A=SM166,C=typeof LS162!=='undefined'&&LS162.sc,W_=A.wall,pads={};
+ for(const f of PV.fish.values()){const b=f&&f.b162;if(b&&b.m==='rest'&&b.pad&&b.pad.cx!=null){const k=b.pad.cx+','+b.pad.cy;(pads[k]=pads[k]||[]).push(f)}}
+ for(const f of PV.fish.values()){if(!f||f.x==null)continue;const t166=f.t166;f.t166=T0;f.t166p=t166;const b=f.b162;let vx=null,vy=null;f.c166='';
+  if(b&&b.m==='school'&&C){const[sx_,sy_]=in166(f.tx,f.ty,A.keep),dx=sx_-f.x,dy=sy_-f.y,d=Math.hypot(dx,dy),cx_=C.tx-C.x,cy_=C.ty-C.y,cl_=Math.hypot(cx_,cy_),G=A.align,near=d<A.arrive*G.matchIn;
+   // near the school: swim the school's way, a small sideways correction toward the slot; the gap along the way is closed by speed
+   if(near&&cl_>4){const ux=cx_/cl_,uy=cy_/cl_,al=dx*ux+dy*uy,px_=dx-al*ux,py_=dy-al*uy;f.c166+=d<A.arrive?'A':'a';vx=ux+px_*G.side;vy=uy+py_*G.side;
+    const M=A.match,cv=(LF162.school.centreV||8)*(sea162()==='winter'?LF162.winterV:1),want=Math.max(M.min,Math.min(M.max,cv+al*M.gain)),dtm=Math.min(.05,Math.max(0,T0-(f.t166p||T0)));f.v+=(want-f.v)*Math.min(1,dtm*M.rate)}
+   else if(d>=A.arrive){f.c166+='a';vx=dx/d;vy=dy/d}else f.c166+='A'}
+  else if(b&&b.m==='rest'&&b.pad&&b.pad.cx!=null){const R=A.rest,[px,py]=in166(b.pad.cx,b.pad.cy,A.keep),dp=Math.hypot(px-f.x,py-f.y);
+   const ring=pads[b.pad.cx+','+b.pad.cy]||[f],n=ring.length,i=Math.max(0,ring.indexOf(f)),rad=n>1?Math.max(R.orbit,(f.len||20)*R.ringGap/(2*Math.sin(Math.PI/n))):R.orbit;
+   if(dp<R.near+rad){f.c166+='R';const th=(b.pad.cx*.37+b.pad.cy*.11)+T0*Math.min(R.orbitW,R.ringSpeed*(LF162.rest.v||3)/rad)+i*6.2832/n,[ox,oy]=in166(px+Math.cos(th)*rad,py+Math.sin(th)*rad*R.squash,A.keep),dx=ox-f.x,dy=oy-f.y,d=Math.hypot(dx,dy),w=Math.min(1,d/R.orbit);
+    vx=dx/(d||1)*w+Math.cos(th+1.5708)*(1-w);vy=dy/(d||1)*w+Math.sin(th+1.5708)*(1-w)}
+   else{f.c166+='r';vx=(px-f.x)/dp;vy=(py-f.y)/dp}}
+  // neighbours: turn away before the base engine has to push the fish sideways
+  const SP=A.sep,rl=(f.len||20)*SP.len;let rx=0,ry=0;for(const g of PV.fish.values()){if(g===f||g.x==null)continue;const ex=f.x-g.x,ey=f.y-g.y,e=Math.hypot(ex,ey);if(e>0&&e<rl){const w=(1-e/rl)*SP.weight;rx+=ex/e*w;ry+=ey/e*w}}
+  if(rx||ry){f.c166+='S';if(vx==null){vx=Math.cos(f.h);vy=Math.sin(f.h)}const l=Math.hypot(vx,vy)||1;vx=vx/l+rx;vy=vy/l+ry}
+  // the wall: look ahead along the heading (and a fish already near the wall)
+  const look=Math.max(W_.lookMin,(f.len||20)*W_.look),rn_=r166(f.x+Math.cos(f.h)*look,f.y+Math.sin(f.h)*look),r0=r166(f.x,f.y);
+  if(rn_>W_.inside||r0>W_.inside){f.c166+='W';const cx=PC.cx-f.x,cy=PC.cy-f.y,cl=Math.hypot(cx,cy)||1,k=W_.centre*(1+Math.max(0,r0-W_.inside)*8);if(vx==null){vx=Math.cos(f.h);vy=Math.sin(f.h)}const l=Math.hypot(vx,vy)||1;vx=vx/l+cx/cl*k;vy=vy/l+cy/cl*k}
+  if(vx==null||Math.hypot(vx,vy)<1e-6){f.a166=null;continue}
+  // the steering direction turns smoothly (at most A.turn rad/s) from where the fish is heading
+  const want=Math.atan2(vy,vx),dt=Math.min(.05,Math.max(0,T0-(f.t166p||T0)));let a=f.a166==null?f.h:f.a166,dd=want-a;while(dd>Math.PI)dd-=6.2832;while(dd<-Math.PI)dd+=6.2832;
+  a+=Math.max(-A.turn*dt,Math.min(A.turn*dt,dd));f.a166=a;f.tx=f.x+Math.cos(a)*A.lead;f.ty=f.y+Math.sin(a)*A.lead;f.tt=Math.max(f.tt||0,.5)}}
+// the base sideways push between overlapping fish is softened (they turn away instead)
+globalThis.REP166=SM166.push;
+// the school keeps GPT's spacing (1.3 body lengths and more)
+try{if(typeof LF162!=='undefined'&&LF162.school)LF162.school.spacingL=SM166.school.spacingL}catch(e){}
+pondFishUpdate=(function(prev){return function(){try{steer166()}catch(e){}return prev.apply(this,arguments)}})(pondFishUpdate);
+// ---------- 2. the basin fish renderer: same picture, fewer pixels ----------
+const pix163_v163=pix163,IMG166={};
+pix163=function(f,Q){const S0=srcData92(f.im);if(!S0)return null;const sc=SC93,L=Math.max(6,Math.round(f.len*sc)),k=L/S0.w,thick=S0.h*k,R=Math.ceil(Math.hypot(L/2+2,thick/2+2+L*.2))+2,N=R*2+1;
+ if(!FB92.cv||FB92.cv.width<N){FB92.cv=document.createElement('canvas');FB92.cv.width=FB92.cv.height=Math.max(N,96);FB92.g=FB92.cv.getContext('2d')}
+ const T=Q.T;let img=IMG166[N];if(!img)img=IMG166[N]=FB92.g.createImageData(N,N);const o=img.data;o.fill(0);
+ const ch=Math.cos(Q.h),sh=Math.sin(Q.h),src=S0.px,sw=S0.w,shh=S0.h,mask=new Uint8Array(N*N),bend=SW163.turn.bend,eye3=CRISP92.eye*3;
+ const off=t=>(spine163(T,t,Q.ph,Q.eff).y-Q.curv*bend*t*t)*L;
+ const OFF=new Float32Array(L+2);let mo=0;for(let i=0;i<=L+1;i++){OFF[i]=off(Math.min(1,i/L));mo=Math.max(mo,Math.abs(OFF[i]))}
+ // a pixel whose four samples are all off the body is skipped: the samples sit within .36 px of the pixel centre
+ const AL=L/2+.5,AC=shh/2*k+mo+1.5,SM=[-.25,-.25,.25,-.25,-.25,.25,.25,.25];let y0=N,y1=-1,x0=N,x1=-1;
+ for(let py=0;py<N;py++){const dy=py-R;for(let px=0;px<N;px++){const dx=px-R,ca=dx*ch+dy*sh,cc=-dx*sh+dy*ch;if(ca>AL||ca<-AL||cc>AC||cc<-AC)continue;
+   let ar=0,ag=0,ab=0,n=0,dk=false,d0=0,d1=0,d2=0;
+   for(let s=0;s<8;s+=2){const X=dx+SM[s],Y=dy+SM[s+1],al=X*ch+Y*sh,ac=-X*sh+Y*ch,u=al/L+.5;if(u<0||u>1)continue;
+    const t=1-u,ofs=OFF[Math.min(L+1,Math.max(0,Math.round(t*L)))],sx=Math.floor(u*sw),sy=Math.floor((ac-ofs)/k+shh/2);if(sx<0||sy<0||sx>=sw||sy>=shh)continue;
+    const i=(sy*sw+Math.min(sw-1,sx))*4;if(src[i+3]<110)continue;n++;ar+=src[i];ag+=src[i+1];ab+=src[i+2];if(src[i]+src[i+1]+src[i+2]<eye3){dk=true;d0=src[i];d1=src[i+1];d2=src[i+2]}}
+   if(n<2)continue;const j=py*N+px,q=j*4;mask[j]=1;if(dk){o[q]=d0;o[q+1]=d1;o[q+2]=d2}else{o[q]=ar/n;o[q+1]=ag/n;o[q+2]=ab/n}o[q+3]=255;
+   if(py<y0)y0=py;if(py>y1)y1=py;if(px<x0)x0=px;if(px>x1)x1=px}}
+ // lit top edge and dark outline: only around the body (same order as before, so the same pixels)
+ const ya=Math.max(1,y0-1),yb=Math.min(N-2,y1+1),xa=Math.max(1,x0-1),xb=Math.min(N-2,x1+1),LI=CRISP92.light,OU=CRISP92.outline;
+ for(let py=ya;py<=yb;py++)for(let px=xa;px<=xb;px++){const j=py*N+px,q=j*4;if(mask[j]===1){if(mask[j-N]!==1||mask[j-1]!==1){o[q]=Math.min(255,o[q]*LI+10);o[q+1]=Math.min(255,o[q+1]*LI+10);o[q+2]=Math.min(255,o[q+2]*LI+10)}continue}
+  const nb=mask[j-1]===1?j-1:mask[j+1]===1?j+1:mask[j-N]===1?j-N:mask[j+N]===1?j+N:-1;if(nb<0)continue;const p=nb*4;o[q]=o[p]*OU;o[q+1]=o[p+1]*OU;o[q+2]=o[p+2]*OU;o[q+3]=235;mask[j]=2}
+ FB92.g.clearRect(0,0,FB92.cv.width,FB92.cv.height);FB92.g.putImageData(img,0,0);
+ const E=typeof eyeSpec93==='function'?eyeSpec93(f.im):null;if(E){const g=FB92.g,t=1-E.u,ofs=off(t),small=L<30;
+  for(const s of[-1,1]){const al=(E.u-.5)*L,ac=s*E.a*k+ofs,X=al*ch-ac*sh+R,Y=al*sh+ac*ch+R;if(small){g.fillStyle=EYE93.dark;g.fillRect(Math.round(X),Math.round(Y),1,1);continue}
+   const e=L>=70?3:2,x0_=Math.round(X-e/2),y0_=Math.round(Y-e/2);g.fillStyle=EYE93.dark;g.fillRect(x0_,y0_,e,e);g.fillStyle=EYE93.light;g.fillRect(x0_,y0_,1,1);if(e>2)g.fillRect(x0_+1,y0_,1,1);
+   g.fillStyle=EYE93.ring;g.fillRect(x0_+e,y0_+1,1,e-1);g.fillRect(x0_+1,y0_+e,e-1,1)}}
+ return{R,N,mask,sc}};
+
+// ===== V1.67 Five needs, filled by the house (owner, 26 Nov 2026: 'อยากได้ Logic เหมือนเลี้ยง Tamagotchi ให้ตัวละครที่เราเลือกตอนแรก
+// มีชีวิตของเขาโดยเอาสภาพแวดล้อม ของในบ้าน เป็นแง่ความสุขให้เขา แง่ความเป็นอยู่' → 5 needs). Data: core/data/needs167.json.
+//  1. ความสะอาด and ความสนุก join อิ่ม / พลังงาน / ความสุข (V1.53); they fall by the real clock (also while the game is closed).
+//  2. The pieces in the house fill them: the bathtub (she soaks, her head above the water), the toilet, a sink; the TV (from the
+//     nearest seat), a computer, the record player, a bookcase, an easel, a toy chest; watching the fish tank and petting the pet.
+//  3. In her free time she looks after her lowest need by herself (a weighted pick among the pieces in the house); very dirty she
+//     washes before anything but eating / sleeping when those are urgent. Low needs pull her mood down; all needs high lift it.
+//  4. When a need is low and nothing in the house can fill it, a thought bubble asks for it (🛁? / 📺?) and her card says what to
+//     put in the house. Her card shows all five needs.
+const N167={
+ "_note": "V1.67 (owner, 26 Nov 2026: 'อยากได้ Logic เหมือนเลี้ยง Tamagotchi ให้ตัวละครที่เราเลือกตอนแรกมีชีวิตของเขาโดยเอาสภาพแวดล้อม ของในบ้าน เป็นแง่ความสุขให้เขา แง่ความเป็นอยู่' → chose 5 needs). Two needs join อิ่ม / พลังงาน / ความสุข (V1.53): clean (ความสะอาด) and fun (ความสนุก), 0..100, per real hour (decay: awake / asleep). The pieces in the house are what fills them: acts lists what she can do with a piece (words = any piece key containing one of them; how: hide = she goes in and is not seen (head = her head shows, as in the bath), stand = stands at it facing it, sit = sits on the seat nearest it within seatNear tiles, else stands at it; sec = how long; gain = the need it fills; mood = extra mood; bubble = shown over her while doing it; text = the diary line). seek: in her free time, below these she looks for a piece that fills the lowest need (a random pick weighted by gain among those in the house); urgent.clean: below it she drops free time and washes first (after eating / sleeping when those are urgent). mood: what low needs take from her mood target (low = below urgent, dull = below dull) and what all needs above good add. watch: watching the fish tank (V1.50) gives fun per second; pet: petting the cat / dog (V1.55) gives fun. wish: when a need is below wish and there is nothing in the house for it, a thought bubble asks for it every wishEvery s (shown for wishSec s); wishes names what to put in the house. away: coming back after more than awayH hours, she used the bath / fun pieces meanwhile (needs raised to at least these if the house has them).",
+ "decay": {"clean": {"awake": -5, "asleep": -1.5}, "fun": {"awake": -9, "asleep": 0}},
+ "start": {"clean": 85, "fun": 75},
+ "seek": {"clean": 55, "fun": 65},
+ "urgent": {"clean": 15, "fun": 15},
+ "dull": 40,
+ "mood": {"dirty": -12, "bored": -12, "dull": -4, "good": 70, "goodBonus": 6},
+ "seatNear": 7,
+ "acts": [
+  {"id": "bath", "need": "clean", "words": ["bathtub"], "how": "hide", "head": true, "sec": 20, "gain": 70, "mood": 4, "bubble": "🛁", "text": "แช่น้ำอุ่นในอ่างอาบน้ำ"},
+  {"id": "toilet", "need": "clean", "words": ["toilet"], "how": "hide", "sec": 6, "gain": 15, "mood": 0, "bubble": "🚻", "text": "เข้าห้องน้ำ"},
+  {"id": "sink", "need": "clean", "words": ["sink"], "how": "stand", "sec": 4, "gain": 10, "mood": 0, "bubble": "🧼", "text": "ล้างหน้าล้างมือ"},
+  {"id": "tv", "need": "fun", "words": ["tv"], "notWords": ["tv_stand"], "how": "sit", "sec": 22, "gain": 30, "mood": 3, "bubble": "📺", "text": "ดูทีวี"},
+  {"id": "computer", "need": "fun", "words": ["computer"], "how": "stand", "sec": 16, "gain": 25, "mood": 2, "bubble": "💻", "text": "เล่นคอมพิวเตอร์"},
+  {"id": "music", "need": "fun", "words": ["record_player"], "how": "stand", "sec": 14, "gain": 20, "mood": 4, "bubble": "🎵", "text": "ฟังแผ่นเสียง"},
+  {"id": "read", "need": "fun", "words": ["bookcase", "white_shelf", "library", "bookshelf", "fish_books"], "how": "stand", "sec": 14, "gain": 18, "mood": 2, "bubble": "📖", "text": "อ่านหนังสือ"},
+  {"id": "paint", "need": "fun", "words": ["easel"], "how": "stand", "sec": 16, "gain": 22, "mood": 3, "bubble": "🎨", "text": "วาดรูป"},
+  {"id": "toys", "need": "fun", "words": ["toy_chest"], "how": "stand", "sec": 10, "gain": 15, "mood": 2, "bubble": "🧸", "text": "เล่นของเล่น"}
+ ],
+ "watch": {"funPerSec": 0.5},
+ "pet": {"fun": 20},
+ "wish": {"below": 30, "every": 22, "sec": 4},
+ "wishes": {"clean": {"bubble": "🛁?", "text": "อยากอาบน้ำ · วางอ่างอาบน้ำหรือชักโครกในบ้าน"}, "fun": {"bubble": "📺?", "text": "เบื่อจัง · วางทีวี ชั้นหนังสือ หรือเครื่องเล่นแผ่นเสียง"}},
+ "away": {"awayH": 6, "clean": 75, "fun": 60},
+ "card": {"labels": {"full": "อิ่ม", "energy": "พลังงาน", "clean": "สะอาด", "fun": "สนุก", "mood": "ความสุข"}, "colors": {"full": "#e0a040", "energy": "#4a9ad0", "clean": "#4ab8b0", "fun": "#9a70d0", "mood": "#e07090"}}
+}
+;
+const NEEDS167=['full','energy','clean','fun','mood'];
+const cl167=v=>Math.max(0,Math.min(100,v));
+// ---------- 1. the two new needs ----------
+nd153=(function(prev){return function(){const N=prev();if(N.clean==null)N.clean=N167.start.clean;if(N.fun==null)N.fun=N167.start.fun;return N}})(nd153);
+step153=(function(prev){return function(N,h,sleep,bed){prev.apply(this,arguments);const D=N167.decay;N.clean=cl167(N.clean+h*(sleep?D.clean.asleep:D.clean.awake));N.fun=cl167(N.fun+h*(sleep?D.fun.asleep:D.fun.awake))}})(step153);
+moodTarget153=(function(prev){return function(N){let t=prev(N);const U=N167.urgent,M=N167.mood;
+ if(N.clean<U.clean)t+=M.dirty;else if(N.clean<N167.dull)t+=M.dull;if(N.fun<U.fun)t+=M.bored;else if(N.fun<N167.dull)t+=M.dull;
+ if(N.full>=M.good&&N.energy>=M.good&&N.clean>=M.good&&N.fun>=M.good)t+=M.goodBonus;return cl167(t)}})(moodTarget153);
+// ---------- 2. what the house offers ----------
+function fits167(e,a){return!!e&&!r2flat(e[0])&&a.words.some(w=>e[0].indexOf(w)>=0)&&!(a.notWords||[]).some(w=>e[0].indexOf(w)>=0)}
+function near167(a){let best=-1,bd=1e9;R2LAY.forEach((e,i)=>{if(!fits167(e,a))return;const[w,d]=r2dim(e),dd=Math.hypot(e[1]+w/2-PC129.u,e[2]+d/2-PC129.v);if(dd<bd){bd=dd;best=i}});return best}
+function offers167(need){return N167.acts.filter(a=>a.need===need).map(a=>({a,i:near167(a)})).filter(q=>q.i>=0)}
+function petsOk167(){try{return typeof pets155==='function'&&has155(sp148())&&pets155().length>0}catch(e){return false}}
+function hasFor167(need){if(offers167(need).length)return true;if(need==='fun')return petsOk167()||(typeof tank150==='function'&&tank150()>=0);return false}
+// the seat nearest a piece (TV), within seatNear tiles
+function seatBy167(i){const e=R2LAY[i];if(!e)return-1;const[w,d]=r2dim(e),cu=e[1]+w/2,cv=e[2]+d/2;let best=-1,bd=N167.seatNear;
+ R2LAY.forEach((q,j)=>{if(j===i||!(typeof seat149==='function'&&seat149(q)))return;const[w2,d2]=r2dim(q),dd=Math.hypot(q[1]+w2/2-cu,q[2]+d2/2-cv);if(dd<bd){bd=dd;best=j}});return best}
+// ---------- 3. doing it ----------
+const ST167={last:null};
+function start167(a,i,urgent){const e=R2LAY[i];if(!e)return false;W150.on=false;W150.go=false;const A={kind:a.need==='clean'?'wash':'fun',a,key:key151(e),step:'go',t:T0,urgent:!!urgent};
+ if(a.how==='sit'){const s=seatBy167(i);if(s>=0&&sitOn151(s)){A.sit=1;LIFE151.act=A;ST167.last=a.id;return true}}
+ const[u,v]=front151(i);if(!walk151(u,v))return false;LIFE151.act=A;ST167.last=a.id;return true}
+function pick167(need){const L=offers167(need);if(!L.length)return null;const fresh=L.filter(q=>q.a.id!==ST167.last),P=fresh.length?fresh:L;
+ // a very dirty / very bored character wants the biggest fill; otherwise a pick weighted by gain
+ const N=nd153();if(N[need]<N167.urgent[need])return P.reduce((b,q)=>q.a.gain>b.a.gain?q:b);let r=Math.random()*P.reduce((s,q)=>s+q.a.gain,0);for(const q of P){r-=q.a.gain;if(r<=0)return q}return P[P.length-1]}
+function finish167(A){const N=nd153(),a=A.a;N[a.need]=cl167(N[a.need]+a.gain);N.mood=cl167(N.mood+a.mood);try{log153(a.text)}catch(e){}try{save()}catch(e){}}
+function tick167(A){const a=A.a,i=at151(A.key),arrived=!PC129.mv&&!SIT149.pend;PC129.idle=0;W150.next=Math.max(W150.next||0,T0+20);
+ if(i<0){end151();return}
+ if(A.step==='go'){if(T0-A.t>30){end151();return}if(!arrived)return;
+  if(A.sit&&!SIT149.on){end151();return}
+  A.step='do';A.until=T0+a.sec;if(a.how==='hide'){A.bedKey=A.key;LIFE151.hide=true;PC129.mv=false;PC129.path=[]}return}
+ if(A.step==='do'){if(a.how==='stand'||(a.how==='sit'&&!A.sit))F137.home='u';
+  if(A.sit&&!SIT149.on&&!SIT149.pend){end151();return}
+  if(T0>=A.until){finish167(A);end151();bubble151(a.need==='clean'?'✨':'😊',2.5)}}}
+tick151=(function(prev){return function(){const A=LIFE151.act;
+ if(A&&(A.kind==='wash'||A.kind==='fun')){
+  // an urgent meal / nap comes first (a bath already begun is finished)
+  if(A.kind==='fun'&&typeof urgent153==='function'&&urgent153()){end151();return prev.apply(this,arguments)}
+  tick167(A);return}
+ // free time: look after the lowest of clean / fun before resting (V1.51) or petting (V1.55)
+ if(!A&&T0>=LIFE151.enter+LF151.startDelay&&LIFE151.restAt&&T0>=LIFE151.restAt&&!W150.on&&!W150.go&&!SIT149.on&&!PC129.mv&&!due151()){
+  const N=nd153(),S_=N167.seek,want=['clean','fun'].filter(k=>N[k]<S_[k]).sort((p,q)=>N[p]/S_[p]-N[q]/S_[q]);
+  for(const k of want){const q=pick167(k);if(q&&start167(q.a,q.i)){const R=LF151.free;LIFE151.restAt=T0+R.restEvery[0]+Math.random()*(R.restEvery[1]-R.restEvery[0]);return}}}
+ return prev.apply(this,arguments)}})(tick151);
+// very dirty: wash first (after an urgent meal / nap, before the routine)
+due151=(function(prev){return function(){const d=prev.apply(this,arguments);if(d&&(d.snack||d.tired||d.kind==='sleep'))return d;
+ const N=nd153();if(N.clean<N167.urgent.clean&&offers167('clean').length)return{kind:'wash',urgent:1};return d}})(due151);
+start151=(function(prev){return function(A){if(A&&A.kind==='wash'&&!A.a){const q=pick167('clean');if(!q||!start167(q.a,q.i,true)){LIFE151.act=null;LIFE151.restAt=T0+10}return}return prev.apply(this,arguments)}})(start151);
+// the tank and the pet are fun too
+drawR2C79=(function(prev){return function(s){const on0=W150.on,t0=ST167.wt||T0;ST167.wt=T0;const r=prev.apply(this,arguments);
+ try{if(on0&&W150.on){const N=nd153();N.fun=cl167(N.fun+N167.watch.funPerSec*Math.min(.25,Math.max(0,T0-t0)))}}catch(e){}return r}})(drawR2C79);
+if(typeof tickPet155==='function')tickPet155=(function(prev){return function(A){const ending=A&&A.step==='pet'&&T0>=A.until;const r=prev.apply(this,arguments);
+ if(ending){try{const N=nd153();N.fun=cl167(N.fun+N167.pet.fun)}catch(e){}}return r}})(tickPet155);
+// in the bath her head shows above the water (the V1.54 / V1.55 bed drawing); at the toilet nothing shows
+drawSleep154=(function(prev){return function(g){const A=LIFE151.act;if(A&&(A.kind==='wash'||A.kind==='fun')){if(A.a&&A.a.head)return prev.apply(this,arguments);return true}return prev.apply(this,arguments)}})(drawSleep154);
+// ---------- 4. bubbles, wishes, the card ----------
+function wish167(){const N=nd153(),W_=N167.wish;for(const k of['clean','fun'])if(N[k]<W_.below&&!hasFor167(k))return k;return null}
+bubbleOf151=(function(prev){return function(){const A=LIFE151.act;if(T0<LIFE151.bubT&&LIFE151.bub)return LIFE151.bub;
+ if(A&&(A.kind==='wash'||A.kind==='fun'))return A.step==='do'&&(A.a.how!=='sit'||SIT149.on)?A.a.bubble:null;
+ const b=prev.apply(this,arguments);if(b||A)return b;const w=wish167(),W_=N167.wish;if(w&&(T0%W_.every)<W_.sec)return N167.wishes[w].bubble;return null}})(bubbleOf151);
+doing153=(function(prev){return function(){const A=LIFE151.act;if(A&&(A.kind==='wash'||A.kind==='fun'))return A.step==='do'?A.a.text:(A.a.need==='clean'?'ไปทำความสะอาดตัว':'ไปหาอะไรสนุก ๆ ทำ');return prev.apply(this,arguments)}})(doing153);
+// later layers add rows under the needs (V1.68 illness): {h:()=>px, draw:(X,y,w)=>{}}
+const CARDX167=[];
+card153=function(){const N=nd153(),C=N167.card,X=16,Y=236,w=300,rows=NEEDS167.length,wk=wish167(),ex=CARDX167.map(q=>q.h()),h=78+rows*24+(wk?22:0)+40+ex.reduce((a,b)=>a+b,0);nine84(X,Y,w,h,2);TXB(face153(N)+' '+doing153(),X+22,Y+34,16,'#4a3a2a');
+ NEEDS167.forEach((k,j)=>bar153(C.labels[k],N[k],X+22,Y+52+j*24,w-80,C.colors[k]));let y=Y+52+rows*24+14;
+ if(wk){TXs(N167.wishes[wk].text,X+22,y,12,'#c0503a');y+=22}
+ TXs('🧊 ตู้เย็น: อาหาร '+N.food+' มื้อ'+(has153('fridge')?'':' (ยังไม่มีตู้เย็น)'),X+22,y,13,N.food>0?'#5a7a4a':'#c0503a');TXs('แตะตู้เย็น = เติมอาหาร · แตะโซฟา/โต๊ะ = ชวน',X+22,y+20,11,'#8a7a6a');y+=40;CARDX167.forEach((q,j)=>{if(ex[j]>0){q.draw(X,y,w);y+=ex[j]}})};
+// ---------- time away: she used the bath / fun pieces meanwhile ----------
+away153=(function(prev){return function(N,t0,t1){prev.apply(this,arguments);try{const A=N167.away;if((t1-t0)/36e5<A.awayH)return;const T=NEED153.away;
+  const oc=offers167('clean');if(oc.length&&N.clean<A.clean){N.clean=A.clean;log153(oc[0].a.text,t1-36e5);if(T)T.lines.push([t1-36e5,'ทำความสะอาดตัว'])}
+  if(hasFor167('fun')&&N.fun<A.fun){N.fun=A.fun;if(T)T.lines.push([t1-18e5,'หาอะไรสนุก ๆ ทำ'])}
+  if(T)T.lines=T.lines.slice(-LN153.away.lines);try{save()}catch(e){}}catch(e){}}})(away153);
+// a tap on her (or on the bath she is in) while she is busy here shows her card and does not stop her
+dragEnd=(function(prev){return function(){try{const A=LIFE151.act,p=panDrag;if(A&&(A.kind==='wash'||A.kind==='fun')&&p&&!panMoved&&homeOk129()){const B=PC129.box,hit=r2itemAt(p.px,p.py,true),e=hit>=0&&R2LAY[hit];
+  const onHer=!LIFE151.hide&&B&&p.px>=B.x&&p.px<=B.x+B.w&&p.py>=B.y&&p.py<=B.y+B.h,onIt=e&&key151(e)===A.key;if(onHer||onIt){NEED153.card=T0+7;panDrag=null;panMoved=false;tapPend=null;return}}}catch(err){}return prev.apply(this,arguments)}})(dragEnd);
+
+// ===== V1.68 She can fall ill (owner, 26 Nov 2026: Tamagotchi logic → 'แบบ Tamagotchi จริง'). Data: core/data/sick168.json.
+//  1. Neglect adds up: every hour she spends very hungry, very tired or very dirty (or very unhappy) adds risk points; looked after
+//     well, the points fall again. At sickAt points she falls ill with the illness of her lowest need: ปวดท้อง / อ่อนเพลีย /
+//     เป็นหวัด. Time away counts too.
+//  2. Ill: an icon over her head, her mood falls, she tires faster, walks slowly, has no fun and naps in bed in her free time.
+//  3. Getting well: medicine from her card (one dose per illness) + rest in a bed for a few minutes; without medicine it takes
+//     hours of good care. She never dies. The diary and the away card tell what happened.
+const SK168={
+ "_note": "V1.68 (owner, 26 Nov 2026: Tamagotchi logic → 'แบบ Tamagotchi จริง' — neglect makes her ill and she needs care to get well; she never dies). risk: every real hour each need below its line (the V1.53 / V1.67 urgent lines: full 25, energy 15, clean 15) adds perHour points, a very low mood (below mood) adds moodPerHour; when all of full / energy / clean are at least safe the points fall by recoverPerHour. At sickAt points she falls ill with the illness of the need that was lowest (kinds: name, icon, what the diary says). While ill: her mood target drops by mood, energy falls energyX times faster while awake, she walks at walk of her speed, she does nothing for fun and in her free time lies down for a nap (in bed if there is one). Getting well: medicine (bought for medPrice G from her card, one dose per illness) and restMin real minutes of sleep / naps in a bed → well; without medicine, naturalH real hours with full / energy / clean all at least safe (and rest in bed) → well. The points go back to 0. Time away counts the same way (the V1.53 catch-up steps).",
+ "risk": {"lines": {"full": 25, "energy": 15, "clean": 15}, "perHour": 1, "mood": 20, "moodPerHour": 0.5, "safe": 50, "recoverPerHour": 0.5},
+ "sickAt": 6,
+ "kinds": {
+  "full": {"name": "ปวดท้อง", "icon": "🤢", "text": "ไม่สบาย ปวดท้องเพราะหิวนานเกินไป"},
+  "energy": {"name": "อ่อนเพลีย", "icon": "😵", "text": "ไม่สบาย อ่อนเพลียเพราะพักผ่อนไม่พอ"},
+  "clean": {"name": "เป็นหวัด", "icon": "🤧", "text": "ไม่สบาย เป็นหวัดเพราะไม่ได้อาบน้ำนาน"}
+ },
+ "while": {"mood": -20, "energyX": 1.5, "walk": 0.6},
+ "cure": {"medPrice": 120, "restMin": 3, "naturalH": 6},
+ "text": {"med": "กินยาแล้ว", "well": "หายป่วยแล้ว", "rest": "นอนพักให้หาย", "noBed": "ไม่มีเตียง พักไม่สบาย", "needMed": "ยังไม่ได้กินยา", "bought": "ให้ยาแล้ว · ให้เขานอนพักบนเตียงนะ"}
+}
+;
+function sk168(){const N=nd153();if(N.risk168==null)N.risk168=0;return N}
+function ill168(){const N=nd153();return N.sick168||null}
+function fallIll168(N){const L=SK168.risk.lines,k=Object.keys(L).reduce((b,q)=>N[q]/L[q]<N[b]/L[b]?q:b,'full');N.sick168={kind:k,t:Date.now(),med:0,rest:0,nat:0};N.risk168=0;try{log153(SK168.kinds[k].text)}catch(e){}}
+function well168(N){N.sick168=null;N.risk168=0;try{log153(SK168.text.well)}catch(e){}try{bubble151('😊',3)}catch(e){}}
+// ---------- 1 + 3. risk, illness and getting well, per step of real time (also the away catch-up) ----------
+step153=(function(prev){return function(N,h,sleep,bed){const sick=N.sick168;prev.apply(this,arguments);if(N.risk168==null)N.risk168=0;const R=SK168.risk,C=SK168.cure;
+ if(sick){if(!sleep)N.energy=Math.max(0,N.energy+h*LN153.needs.energy.awake*(SK168.while.energyX-1));
+  if(sleep&&bed)sick.rest+=h*60;const safe=['full','energy','clean'].every(k=>N[k]>=R.safe);if(safe)sick.nat+=h;
+  if((sick.med&&sick.rest>=C.restMin)||sick.nat>=C.naturalH)well168(N);return}
+ let low=0;for(const k in R.lines)if(N[k]<R.lines[k])low+=R.perHour;if(N.mood<R.mood)low+=R.moodPerHour;
+ if(low)N.risk168+=low*h;else if(['full','energy','clean'].every(k=>N[k]>=R.safe))N.risk168=Math.max(0,N.risk168-R.recoverPerHour*h);
+ if(N.risk168>=SK168.sickAt)fallIll168(N)}})(step153);
+// ---------- 2. while ill ----------
+moodTarget153=(function(prev){return function(N){const t=prev(N);return N.sick168?Math.max(0,t+SK168.while.mood):t}})(moodTarget153);
+step129=(function(prev){return function(dt){let k=1;try{if(scene==='home'&&ill168())k=SK168.while.walk}catch(e){}return prev.call(this,dt*k)}})(step129);
+// no fun while ill; in free time she lies down (a nap in bed, or on a seat)
+tick151=(function(prev){return function(){const A=LIFE151.act;
+ try{if(ill168()){if(A&&A.kind==='fun'){end151();return}
+   if(!A&&T0>=LIFE151.enter+LF151.startDelay&&LIFE151.restAt&&T0>=LIFE151.restAt&&!W150.on&&!W150.go&&!SIT149.on&&!PC129.mv&&!due151()){const R=LF151.free;LIFE151.restAt=T0+R.restEvery[0]+Math.random()*(R.restEvery[1]-R.restEvery[0]);
+    const bi=find151('bed');start151(bi>=0?{kind:'nap',bed:bi,sick:1}:{kind:'nap',sick:1});return}}}catch(e){}
+ return prev.apply(this,arguments)}})(tick151);
+// a nap while ill lasts until she is well (or the night)
+start151=(function(prev){return function(A){const r=prev.apply(this,arguments);try{if(A&&A.kind==='nap'&&ill168()&&LIFE151.act)LIFE151.act.sick=1}catch(e){}return r}})(start151);
+tick151=(function(prev){return function(){const A=LIFE151.act;if(A&&A.kind==='nap'&&A.sick&&A.step==='in'&&ill168()){
+  // she gets up to eat (very hungry, or a meal is due) and lies down again afterwards
+  let need=false;try{need=!!urgent153()||!!due151()}catch(e){}if(need){end151();LIFE151.restAt=T0+5}else A.until=Math.max(A.until||0,T0+5)}
+ return prev.apply(this,arguments)}})(tick151);
+bubbleOf151=(function(prev){return function(){const b=prev.apply(this,arguments),s=ill168();if(!s)return b;const ic=SK168.kinds[s.kind].icon;
+ if(T0<LIFE151.bubT&&LIFE151.bub)return b;if(!b)return ic;if(b===LF151.bubble.sleep)return ic+b;return b}})(bubbleOf151);
+doing153=(function(prev){return function(){const s=ill168(),d=prev.apply(this,arguments);return s?SK168.kinds[s.kind].icon+' '+SK168.kinds[s.kind].name+' · '+d:d}})(doing153);
+// ---------- 3. medicine from her card ----------
+function giveMed168(){const s=ill168();if(!s||s.med)return false;const P=SK168.cure.medPrice;if(!DEV_UNLIMITED_GOLD&&S.player.gold<P){say('Gold ไม่พอ');return false}
+ if(!DEV_UNLIMITED_GOLD)S.player.gold-=P;s.med=1;try{log153(SK168.text.med)}catch(e){}try{save()}catch(e){}say(SK168.text.bought);bubble151('💊',3);NEED153.card=T0+7;return true}
+CARDX167.push({h:()=>ill168()?96:0,draw:(X,y,w)=>{const s=ill168(),K=SK168.kinds[s.kind],C=SK168.cure,hasBed=has153('bed');rr(X+16,y-6,w-32,88,12,'#fbe4dc');
+ TXB(K.icon+' ไม่สบาย: '+K.name,X+28,y+14,14,'#a0402a');
+ const line=s.med?(hasBed?SK168.text.med+' · '+SK168.text.rest+' อีก '+Math.max(1,Math.ceil(C.restMin-s.rest))+' นาที':SK168.text.noBed):SK168.text.needMed+' · ดูแลดี ๆ หายเองใน ~'+Math.max(1,Math.ceil(C.naturalH-s.nat))+' ชม.';
+ TXs(line,X+28,y+36,12,'#7a4a3a');
+ if(!s.med){B('💊 ให้ยา · '+C.medPrice+' G',X+28,y+46,w-56,32,()=>giveMed168(),true,'#c06a5a');btns[btns.length-1].l='sick168:med'}}});
+// time away: the away card (made after the catch-up) tells if she fell ill or got well meanwhile
+away153=(function(prev){return function(N,t0,t1){const was=N.sick168&&N.sick168.t;prev.apply(this,arguments);try{const T=NEED153.away;if(!T)return;const s=N.sick168;
+  if(s&&s.t!==was)T.lines.push([t1,SK168.kinds[s.kind].text]);else if(was&&!s)T.lines.push([t1,SK168.text.well]);T.lines=T.lines.slice(-LN153.away.lines)}catch(e){}}})(away153);
+
+// ===== V1.69 A happy character gives back (owner, 26 Nov 2026: 'ช่วยดูแลปลาเอง, โบนัส Gold/EXP, ความผูกพัน + ท่าใหม่').
+// Data: core/data/life169.json; Gold / EXP amounts in core/data/rewards.json (charGift, bond) = server reward rules char_gift
+// (daily) and bond_2..bond_6 (once), as every reward (Phase 0: fixed amounts, no double claims).
+//  1. In a good mood she helps with the house aquarium by herself: scrubs a little algae or looks after the water (once a day,
+//     twice from bond Lv 4).
+//  2. Very happy, once a day she has a gift for you (🎁 over her head; a tap on her takes it).
+//  3. Bond (ความผูกพัน): grows every hour she is happy and well (also while the game is closed) and when you greet her; six
+//     levels, each with a reward and something new: she waves when you come back (Lv 2), a happy pose when she is very happy
+//     (Lv 3, the V1.55 frame), two fish jobs a day (Lv 4), twice the fun from watching the fish (Lv 5), a diary line for you each
+//     day (Lv 6). Her card shows the level, the points to the next one and what it opens.
+const LV169={
+ "_note": "V1.69 (owner, 26 Nov 2026: rewards for a happy character → 'ช่วยดูแลปลาเอง, โบนัส Gold/EXP, ความผูกพัน + ท่าใหม่'). help: in her free time, with mood at least mood and not ill, she walks to the house aquarium and does a light job (jobs: the tank stat, over / under which the job is worth doing, delta applied, sec at the tank) — perDay jobs a day (perDayBond from bond level bondLv). gift: with mood at least mood and not ill, once a day a 🎁 shows over her; a tap on her takes it (Gold / EXP fixed in rewards.json charGift = server rule char_gift, daily). bond: points grow perHour every real hour her mood is at least mood and she is well (also while the game is closed), plus greet for a tap on her (at most greetMax a day); levels = points needed for Lv 1..6; unlock = what each level opens (index = level - 1); level rewards in rewards.json bond (server rules bond_2 .. bond_6, once). Unlocks: Lv 2 she waves when you come back after greetAwayMin; Lv 3 the happy pose (V1.55 frame) now and then when mood is at least joy.mood (chance per free-time pick, sec long); Lv 4 two fish jobs a day; Lv 5 watching the fish is twice the fun; Lv 6 a diary line for you each day.",
+ "help": {"mood": 65, "perDay": 1, "perDayBond": 2, "bondLv": 4, "sec": 4,
+  "jobs": [
+   {"id": "algae", "stat": "algae", "over": 15, "delta": -12, "bubble": "🧽", "text": "ช่วยขัดตะไคร่ในตู้ปลาให้"},
+   {"id": "water", "stat": "water_quality", "under": 85, "delta": 8, "bubble": "💧", "text": "ช่วยดูแลน้ำในตู้ปลาให้"}
+  ]},
+ "gift": {"mood": 75, "bubble": "🎁", "text": "ของขวัญจากเพื่อนร่วมบ้าน"},
+ "bond": {"perHour": 1, "mood": 60, "greet": 1, "greetMax": 3, "levels": [0, 10, 30, 60, 100, 160],
+  "unlock": ["", "ทักทายเมื่อคุณกลับมา", "ท่าดีใจเมื่ออารมณ์ดีมาก", "ช่วยดูแลตู้ปลาได้วันละ 2 อย่าง", "ดูปลาแล้วสนุกขึ้น 2 เท่า", "เขียนไดอารีถึงคุณทุกวัน"]},
+ "greetAwayMin": 30,
+ "joy": {"mood": 80, "chance": 0.35, "sec": 2.5, "bubble": "✨", "text": "อารมณ์ดีจนเต้นดีใจ"},
+ "watchX": 2,
+ "diary": "วันนี้ดีใจที่ได้อยู่บ้านหลังนี้กับคุณ",
+ "text": {"lv": "ความผูกพัน Lv", "next": "ถัดไป", "giftReady": "🎁 แตะตัวเขาเพื่อรับของขวัญวันนี้"}
+}
+;
+function day169(){const d=new Date();return d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate()}
+function q169(){const N=nd153();if(!N.b169)N.b169={pts:0,lv:1,greet:{day:'',n:0},jobs:{day:'',n:0},gift:'',diary:''};return N.b169}
+function lvOf169(pts){const L=LV169.bond.levels;let lv=1;for(let i=0;i<L.length;i++)if(pts>=L[i])lv=i+1;return lv}
+function well169(){try{return!(typeof ill168==='function'&&ill168())}catch(e){return true}}
+// ---------- 3. bond points and level-ups ----------
+const UP169=[];
+function addBond169(n){const B=q169();B.pts+=n;const lv=lvOf169(B.pts);while(B.lv<lv){B.lv++;UP169.push(B.lv)}}
+step153=(function(prev){return function(N,h,sleep,bed){prev.apply(this,arguments);try{if(!N.b169)return;if(N.mood>=LV169.bond.mood&&!N.sick168)addBond169(h*LV169.bond.perHour)}catch(e){}}})(step153);
+function levelUp169(lv){const R=(typeof RW103!=='undefined'&&RW103.bond||[]).find(b=>b.level===lv);const u=LV169.bond.unlock[lv-1]||'';
+ try{log153('💞 '+LV169.text.lv+' '+lv+(u?' · '+u:''))}catch(e){}if(R)qReward(R.gold,R.xp,0,'💞 '+LV169.text.lv+' '+lv+(u?' · ปลดล็อก: '+u:''));else say('💞 '+LV169.text.lv+' '+lv)}
+// ---------- 2. the daily gift ----------
+function giftReady169(){const N=nd153(),B=q169();return N.mood>=LV169.gift.mood&&well169()&&B.gift!==day169()}
+function takeGift169(){if(!giftReady169())return false;const B=q169(),G=typeof RW103!=='undefined'&&RW103.charGift;B.gift=day169();if(G)qReward(G.gold,G.xp,0,'🎁 '+LV169.gift.text);try{log153('🎁 '+LV169.gift.text)}catch(e){}bubble151('😊',2.5);return true}
+// a tap on her (V1.43 wave): the gift if there is one, and a greeting point (a few a day)
+wave143=(function(prev){return function(){const r=prev.apply(this,arguments);if(GR169.auto)return r;try{if(!takeGift169()){const B=q169(),d=day169();if(B.greet.day!==d){B.greet.day=d;B.greet.n=0}
+  if(B.greet.n<LV169.bond.greetMax){B.greet.n++;addBond169(LV169.bond.greet)}}save()}catch(e){}return r}})(wave143);
+// ---------- 1. helping with the fish ----------
+function tankStats169(){try{const D=cdata('main');return D&&D.tank&&D.tank.stats||null}catch(e){return null}}
+function job169(){const st=tankStats169();if(!st||typeof tank150!=='function'||tank150()<0)return null;if(!Object.keys(S.fish||{}).length)return null;
+ for(const j of LV169.help.jobs){const v=st[j.stat];if(v==null)continue;if((j.over!=null&&v>j.over)||(j.under!=null&&v<j.under))return j}return null}
+function jobsLeft169(){const B=q169(),d=day169();if(B.jobs.day!==d){B.jobs.day=d;B.jobs.n=0}const H=LV169.help;return(B.lv>=H.bondLv?H.perDayBond:H.perDay)-B.jobs.n}
+function startJob169(j){const i=tank150();const[u,v]=front151(i);W150.on=false;W150.go=false;if(!walk151(u,v))return false;LIFE151.act={kind:'care',job:j,step:'go',t:T0};return true}
+function tickJob169(A){PC129.idle=0;W150.next=Math.max(W150.next||0,T0+20);const arrived=!PC129.mv&&!SIT149.pend;
+ if(A.step==='go'){if(T0-A.t>30){end151();return}if(arrived){A.step='do';A.until=T0+LV169.help.sec}return}
+ F137.home='u';if(T0>=A.until){const st=tankStats169(),j=A.job;if(st&&st[j.stat]!=null){st[j.stat]=Math.max(0,Math.min(100,st[j.stat]+j.delta))}
+  const B=q169();jobsLeft169();B.jobs.n++;try{log153(j.text)}catch(e){}try{save()}catch(e){}end151();bubble151('😊',2.5)}}
+// ---------- the joy pose (Lv 3) ----------
+function startJoy169(){LIFE151.act={kind:'joy',step:'do',t:T0,until:T0+LV169.joy.sec};try{log153(LV169.joy.text)}catch(e){}}
+plDraw129=(function(prev){return function(g,id,dir,i,flip,cx,by,h,tint){try{const A=LIFE151.act,sp=sp148();
+ if(A&&A.kind==='joy'&&sp&&scene==='home'&&typeof has155==='function'&&has155(sp)&&PREV136.k==null&&!PREV136.on){PREV136.k=PO155.frames.happy;try{return prev.call(this,g,id,dir,i,false,cx,by-Math.abs(Math.sin(T0*9))*h*.03,h,tint)}finally{PREV136.k=null}}}catch(e){}
+ return prev.apply(this,arguments)}})(plDraw129);
+// ---------- the life loop ----------
+const GR169={pending:false,auto:false};
+tick151=(function(prev){return function(){const A=LIFE151.act;
+ // a level reached (also while away or while she is busy): its reward and news
+ try{while(UP169.length)levelUp169(UP169.shift())}catch(e){}
+ if(A&&A.kind==='care'){if(!well169()||(typeof urgent153==='function'&&urgent153())){end151();return prev.apply(this,arguments)}tickJob169(A);return}
+ if(A&&A.kind==='joy'){PC129.idle=0;if(T0>=A.until){LIFE151.act=null;PC129.idle=0}return}
+ try{const B=q169();
+  // Lv 2: she waves when you come back
+  if(GR169.pending&&!A&&!LIFE151.hide&&!PC129.mv&&!SIT149.on&&T0>=LIFE151.enter+LF151.startDelay){GR169.pending=false;GR169.auto=true;try{wave143()}catch(e){}finally{GR169.auto=false}bubble151('👋',3)}
+  // Lv 5: watching the fish is twice the fun
+  if(!LV169.watch0)LV169.watch0=N167.watch.funPerSec;N167.watch.funPerSec=LV169.watch0*(B.lv>=5?LV169.watchX:1);
+  // Lv 6: a diary line for you each day
+  if(B.lv>=6&&B.diary!==day169()&&nd153().mood>=LV169.bond.mood){B.diary=day169();log153('💌 '+LV169.diary)}
+  // free time: a fish job in a good mood, the joy pose when very happy (Lv 3)
+  if(!A&&T0>=LIFE151.enter+LF151.startDelay&&LIFE151.restAt&&T0>=LIFE151.restAt&&!W150.on&&!W150.go&&!SIT149.on&&!PC129.mv&&!due151()&&well169()){const N=nd153(),R=LF151.free,next=()=>{LIFE151.restAt=T0+R.restEvery[0]+Math.random()*(R.restEvery[1]-R.restEvery[0])};
+   const N_=N167.seek,needy=N.clean<N_.clean||N.fun<N_.fun;
+   if(!needy&&N.mood>=LV169.help.mood&&jobsLeft169()>0){const j=job169();if(j&&startJob169(j)){next();return}}
+   if(B.lv>=3&&N.mood>=LV169.joy.mood&&Math.random()<LV169.joy.chance){startJoy169();next();return}}}catch(e){}
+ return prev.apply(this,arguments)}})(tick151);
+live153=(function(prev){return function(){const first=!NEED153.loaded,N=nd153(),gap=Date.now()-(N.t||Date.now());const r=prev.apply(this,arguments);
+ try{if(first&&gap>LV169.greetAwayMin*60e3&&q169().lv>=2)GR169.pending=true}catch(e){}return r}})(live153);
+bubbleOf151=(function(prev){return function(){const A=LIFE151.act;if(T0<LIFE151.bubT&&LIFE151.bub)return LIFE151.bub;
+ if(A&&A.kind==='care')return A.step==='do'?A.job.bubble:null;if(A&&A.kind==='joy')return LV169.joy.bubble;
+ const b=prev.apply(this,arguments);try{if(!A&&!LIFE151.hide&&giftReady169()&&(!b||b===LF151.bubble.watch))return LV169.gift.bubble}catch(e){}return b}})(bubbleOf151);
+doing153=(function(prev){return function(){const A=LIFE151.act;if(A&&A.kind==='care')return A.step==='do'?A.job.text:'ไปดูตู้ปลา';if(A&&A.kind==='joy')return LV169.joy.text;return prev.apply(this,arguments)}})(doing153);
+// her card: the bond level and the gift
+CARDX167.push({h:()=>giftReady169()?86:66,draw:(X,y,w)=>{const B=q169(),L=LV169.bond.levels,lv=B.lv,cur=L[lv-1],nx=L[lv],bw=w-44;
+ TXB('💞 '+LV169.text.lv+' '+lv,X+22,y+8,14,'#a04a6a');if(nx!=null)TXs(Math.floor(B.pts)+' / '+nx,X+w-22,y+8,12,'#8a6a7a','right');
+ rr(X+22,y+20,bw,10,5,'#ecdde4');rr(X+22,y+20,nx!=null?Math.max(6,bw*Math.min(1,(B.pts-cur)/(nx-cur))):bw,10,5,'#d07098');
+ TXs(nx!=null?LV169.text.next+': '+LV169.bond.unlock[lv]:'ผูกพันกันเต็มที่แล้ว',X+22,y+46,11,'#8a6a7a');
+ if(giftReady169())TXs(LV169.text.giftReady,X+22,y+68,12,'#b0603a')}});
+
+// ===== V1.70 Personality, favourite things and wishes (owner, 26 Nov 2026: 'มีของที่ชอบ + คำขอ'). Data: core/data/traits170.json.
+//  1. Every character has a personality (หนอนหนังสือ, คนรักต้นไม้, นักฟังเพลง, สายเกมเมอร์, ศิลปินในบ้าน, คนรักปลา, ทาสแมวหมา, สายนอนชิล):
+//     the activities she likes fill her needs more, lift her mood and are picked more often; the pieces she loves lift her mood
+//     just by standing in the house; the fish lover enjoys watching the tank more, the pet lover enjoys the pet more.
+//  2. Wishes: now and then she asks for one piece she would love (cheap ones first). A 💭 bubble and her card show it; placing it
+//     in the house makes her very happy (mood, bond, diary, ❤️). A wish not granted in a few days is let go without a penalty.
+const TR170={
+ "_note": "V1.70 (owner, 26 Nov 2026: 'มีของที่ชอบ + คำขอ'). Each character has one personality (types; chars maps every character sheet id to a type — edit freely; an id not listed gets a type from its number). A type: name + icon; likes = the V1.67 activities she enjoys more (gain x likeX, mood + likeMood, picked likeW times as often); items = pieces she loves to have in the house (each one placed lifts her mood target by itemMood, at most itemMax in all); wishes = pieces she may ask for. A wish: when she has none, is well and her mood is at least wish.mood, every wish.everyH real hours she asks for one of her wishes not in the house yet (the cheapest third first, so early wishes are affordable); a 💭 bubble now and then and a line on her card show it; when the piece stands in the house (any floor of the current house view) the wish comes true: mood + done.mood, bond + done.bond, a diary line, a ❤️ bubble; a wish not granted in wish.days days is let go (no penalty) and a new one comes later.",
+ "likeX": 1.5, "likeMood": 2, "likeW": 2,
+ "itemMood": 2, "itemMax": 8,
+ "wish": {"mood": 45, "everyH": 6, "days": 3, "bubbleEvery": 26, "bubbleSec": 4},
+ "done": {"mood": 15, "bond": 5},
+ "types": {
+  "reader": {"name": "หนอนหนังสือ", "icon": "📚", "likes": ["read"], "items": ["bookcase", "library", "bookshelf_plant", "floor_lamp", "lamp_brass", "armchair"], "wishes": ["floor_lamp", "bookcase", "armchair", "lamp_brass", "library", "bookshelf_plant"]},
+  "green": {"name": "คนรักต้นไม้", "icon": "🌿", "likes": ["read"], "items": ["plant_big", "plant_small", "jp_bonsai", "jp_ikebana", "side_vase", "bookshelf_plant"], "wishes": ["plant_small", "plant_big", "side_vase", "jp_ikebana", "jp_bonsai", "bookshelf_plant"]},
+  "music": {"name": "นักฟังเพลง", "icon": "🎵", "likes": ["music", "tv"], "items": ["record_player", "bean_bag", "paper_lamp"], "wishes": ["bean_bag", "paper_lamp", "record_player"]},
+  "gamer": {"name": "สายเกมเมอร์", "icon": "🎮", "likes": ["computer", "tv"], "items": ["computer", "tv", "tv_retro", "bean_bag"], "wishes": ["bean_bag", "computer", "tv", "tv_retro"]},
+  "artist": {"name": "ศิลปินในบ้าน", "icon": "🎨", "likes": ["paint", "music"], "items": ["koi_easel", "side_vase", "jp_andon", "paper_lamp"], "wishes": ["side_vase", "jp_andon", "paper_lamp", "koi_easel"]},
+  "aquarist": {"name": "คนรักปลา", "icon": "🐟", "likes": ["read"], "watchX": 1.5, "items": ["fish_books", "betta_jars", "shrimp_cube", "planted_tank"], "wishes": ["fish_books", "shrimp_cube", "betta_jars", "planted_tank"]},
+  "petlover": {"name": "ทาสแมวหมา", "icon": "🐾", "likes": ["toys"], "petX": 1.5, "items": ["cat_tree", "pet_bed", "toy_chest"], "wishes": ["pet_bed", "toy_chest", "cat_tree"]},
+  "homebody": {"name": "สายนอนชิล", "icon": "☕", "likes": ["tv", "bath"], "items": ["daybed", "jp_kotatsu", "bean_bag", "nightstand", "armchair"], "wishes": ["nightstand", "bean_bag", "armchair", "jp_kotatsu", "daybed"]}
+ },
+ "chars": {
+  "f1": "green", "f2": "reader", "f3": "music", "f4": "artist", "f5": "gamer", "f6": "reader", "f7": "petlover", "f8": "artist",
+  "f9": "aquarist", "f10": "homebody", "f11": "music", "f12": "petlover", "f13": "green", "f14": "gamer", "f15": "aquarist",
+  "m1": "aquarist", "m2": "gamer", "m3": "reader", "m4": "homebody", "m5": "music", "m6": "green", "m7": "artist", "m8": "petlover",
+  "m9": "gamer", "m10": "aquarist", "m11": "homebody", "m12": "reader", "m13": "music", "m14": "green", "m15": "petlover"
+ },
+ "text": {"trait": "นิสัย", "likes": "ชอบ", "wish": "อยากได้", "done": "ได้ของที่อยากได้แล้ว ดีใจมาก", "ask": "ขอของ", "drop": "ไม่เป็นไร ไว้วันหลังนะ"}
+}
+;
+function type170(){const id=sp148()||(S.profile86&&S.profile86.sp148)||'';let k=TR170.chars[id];if(!TR170.types[k]){const ks=Object.keys(TR170.types),n=parseInt(String(id).replace(/\D/g,''),10)||0;k=ks[n%ks.length]}return Object.assign({k},TR170.types[k])}
+function likes170(id){return type170().likes.includes(id)}
+// every piece in this house: the floors, the room on screen and the yard
+function inHouse170(k){const has=L=>Array.isArray(L)&&L.some(e=>e&&e[0]===k);try{if(has(R2LAY)||has(S.room2&&S.room2.lay)||has(S.room2&&S.room2.yard))return true;const F=S.room2&&S.room2.floors;if(F)for(const f in F)if(has(F[f]))return true}catch(e){}return false}
+// ---------- 1. likes ----------
+pick167=function(need){const L=offers167(need);if(!L.length)return null;const fresh=L.filter(q=>q.a.id!==ST167.last),P=fresh.length?fresh:L,w=q=>q.a.gain*(likes170(q.a.id)?TR170.likeW:1);
+ const N=nd153();if(N[need]<N167.urgent[need])return P.reduce((b,q)=>q.a.gain>b.a.gain?q:b);let r=Math.random()*P.reduce((s,q)=>s+w(q),0);for(const q of P){r-=w(q);if(r<=0)return q}return P[P.length-1]};
+finish167=(function(prev){return function(A){prev.apply(this,arguments);try{if(likes170(A.a.id)){const N=nd153();N[A.a.need]=cl167(N[A.a.need]+A.a.gain*(TR170.likeX-1));N.mood=cl167(N.mood+TR170.likeMood)}}catch(e){}}})(finish167);
+if(typeof tickPet155==='function')tickPet155=(function(prev){return function(A){const ending=A&&A.step==='pet'&&T0>=A.until;const r=prev.apply(this,arguments);
+ try{const X=type170().petX;if(ending&&X){const N=nd153();N.fun=cl167(N.fun+N167.pet.fun*(X-1))}}catch(e){}return r}})(tickPet155);
+function loved170(){const T=type170();return T.items.filter(k=>inHouse170(k))}
+moodTarget153=(function(prev){return function(N){const t=prev(N);try{return cl167(t+Math.min(TR170.itemMax,loved170().length*TR170.itemMood))}catch(e){return t}}})(moodTarget153);
+// ---------- 2. wishes ----------
+function w170(){const N=nd153();if(!N.w170)N.w170={item:null,t:0,next:0,done:[]};return N.w170}
+function nameOf170(k){return(R2META[k]&&R2META[k].n)||k}
+function newWish170(){const W_=w170(),T=type170(),C=T.wishes.filter(k=>R2META[k]&&!inHouse170(k)&&!W_.done.includes(k));if(!C.length)return null;
+ C.sort((a,b)=>(R2PRICE[a]||0)-(R2PRICE[b]||0));const n=Math.max(1,Math.ceil(C.length/3)),k=C[Math.floor(Math.random()*n)];W_.item=k;W_.t=Date.now();
+ try{log153('💭 '+TR170.text.wish+' '+nameOf170(k))}catch(e){}try{save()}catch(e){}return k}
+function checkWish170(){const W_=w170(),N=nd153(),D=TR170.done,now=Date.now();
+ if(W_.item){if(inHouse170(W_.item)){const k=W_.item;W_.done.push(k);W_.item=null;W_.next=now+TR170.wish.everyH*36e5;N.mood=cl167(N.mood+D.mood);try{addBond169(D.bond)}catch(e){}
+   try{log153('❤️ '+TR170.text.done+' ('+nameOf170(k)+')')}catch(e){}bubble151('❤️',4);try{save()}catch(e){}return}
+  if(now-W_.t>TR170.wish.days*864e5){W_.item=null;W_.next=now+TR170.wish.everyH*36e5;try{log153(TR170.text.drop)}catch(e){}}return}
+ const well=!(typeof ill168==='function'&&ill168());if(well&&N.mood>=TR170.wish.mood&&now>=W_.next)newWish170()}
+const CK170={t:0};
+tick151=(function(prev){return function(){try{if(T0-CK170.t>2){CK170.t=T0;checkWish170()}}catch(e){}const r=prev.apply(this,arguments);
+ // the fish lover: watching the tank is more fun (on top of bond Lv 5)
+ try{const X=type170().watchX;if(X&&typeof LV169!=='undefined'&&LV169.watch0){N167.watch.funPerSec=LV169.watch0*(q169().lv>=5?LV169.watchX:1)*X}}catch(e){}return r}})(tick151);
+bubbleOf151=(function(prev){return function(){const b=prev.apply(this,arguments);try{const W_=w170(),B=TR170.wish;if(!b&&W_.item&&!LIFE151.act&&!LIFE151.hide&&(T0%B.bubbleEvery)<B.bubbleSec){const n=nameOf170(W_.item);return'💭 '+(n.length>12?n.slice(0,11)+'…':n)}}catch(e){}return b}})(bubbleOf151);
+// her card: personality, what she likes, her wish
+CARDX167.push({h:()=>w170().item?50:30,draw:(X,y,w)=>{const T=type170(),L=T.likes.map(id=>{const a=N167.acts.find(q=>q.id===id);return a?a.text:id});
+ TXs(T.icon+' '+TR170.text.trait+': '+T.name+' · '+TR170.text.likes+L.join(', '),X+22,y+8,12,'#5a4a6a');
+ const W_=w170();if(W_.item)TXs('💭 '+TR170.text.wish+': '+nameOf170(W_.item)+' ('+(R2PRICE[W_.item]||0)+' G)',X+22,y+30,12,'#6a5aa0')}});
 
 // ===== Environment layer (Phase 0) — injected by client/build/build.py right before the game boots =====
 // development : everything on (team mode via 7 taps on the version line, Sandbox Gold, festival preview)
