@@ -1767,9 +1767,9 @@ function pondDeco(e){if(!e.pdeco){const r=(i,k)=>hs(i*7+k,(e.gx*13+e.gy*7)|0);co
 const pondHungry=e=>pondFish(e).some(f=>f.hunger>=70);
 // ---- simulation (10 s ticks, offline-safe like tank fish) ----
 function pondSim(n,cu){for(const e of S.home_layout.starter_room){if(!e.pond||!e.pond.length||!WATER[e.item_id])continue;const L=pondFish(e),W_=pondW(e),plants=pondDeco(e).filter(d=>/lily|lotus|lettuce/.test(d.t)).length;
- for(let i=0;i<n;i++){for(const f of L){f.hunger=cu?Math.max(f.hunger,Math.min(70,f.hunger+.55)):Math.min(100,f.hunger+.55);f.age+=TICK/86400;
+ for(let i=0;i<n;i++){for(const f of L){f.hunger=cu?Math.max(f.hunger,Math.min(70,f.hunger+(globalThis.PHPT176??.55))):Math.min(100,f.hunger+(globalThis.PHPT176??.55));f.age+=TICK/86400;
    if(!cu){if(f.hunger>=90||W_.water<35)f.health=Math.max(10,f.health-.25);else if(f.hunger<70&&W_.water>55)f.health=Math.min(100,f.health+.2);if(f.hunger<60&&f.health>70&&f.size<1.4)f.size=Math.min(1.4,f.size+.0012)}}
-  W_.water=cl(W_.water-(L.length*.03)+plants*.006);if(cu)W_.water=Math.max(W_.water,45);W_.algae=cl(W_.algae+.04+(100-W_.water)*.002-plants*.004);if(cu)W_.algae=Math.min(W_.algae,45)}}}
+  W_.water=cl(W_.water+(-(L.length*.03)+plants*.006)*(globalThis.PGROW176??1));if(cu)W_.water=Math.max(W_.water,45);W_.algae=cl(W_.algae+(.04+(100-W_.water)*.002-plants*.004)*(globalThis.PGROW176??1));if(cu)W_.algae=Math.min(W_.algae,45)}}}
 const _sim38=sim;sim=function(n,cu){_sim38(n,cu);try{if(!globalThis.__noPond108)pondSim(n,cu)}catch(err){}};
 // ---- open from home ----
 const _homeTap38=homeTap;homeTap=function(px,py){const hit=screenHitF(px,py);if(hit&&WATER[hit.item_id]){openPond(hit);return}_homeTap38(px,py)};
@@ -3174,7 +3174,7 @@ const _hud67=hud;hud=function(){_hud67();if(LVQ.length||LVSHOW)return;if(!['home
   TXs(lock?'เริ่มที่ Lv '+s.lv:(s.g.st==='gold'?a.toLocaleString()+'/'+b.toLocaleString()+' G':a+'/'+b)+(storyReady()?' · พร้อมรับรางวัล':''),32,y+40,12,storyReady()?'#8fe08a':'#cfe6f2')}
  if(n){gc_(338,y+6,12,'#e8504a');TXB(String(n),338,y+6,13,'#fff','center')}};
 
-const GAME_VER='V1.73';
+const GAME_VER='V1.76';
 // ===== V0.68 STEP 8 — UX/UI: main dock (บ้าน / ตู้ / อ่าง / เมือง / เควส), Lv1-5 tutorial pointers tied to the story,
 // one UI skin drawn by the user's ChatGPT (buttons, tags, icons), Demo/dev tools hidden in real play, online save per player. =====
 const UI_IMG={"btn_blue": "data:image/webp;base64,UklGRj4BAABXRUJQVlA4TDIBAAAvIkAEEL/AJgCANLi/HgFy0P8lh82lBpsAAJNML3fcQxCDgiSgn6viSJKSO1zfEAJJkH9C7vMfkPmcXjc1/ElsyWQDAYsn14oZmTJEcwnaLHRUVJHFNUEQQYDgB37wgR8gTMAfUc2kqTFAjG0rChMDCG4fd+2/VcGYDt6N6P8E3EWH/hnoo/u6hG9iR/O1e9B0ClGp+zi4QsSP/cdtIrib0EV/vT7fDzF5R+jjJZ0c1YUNWCUAG1PriGG8jrd7YS3CNhTSdB6wS0txfc6QpVVWOxaYd1HPAkmydasMq2bIABKgsj1rWpVVsPz2MY1tIUymLMszMrJM2arT0MXg+EmMk60m7aYsWXmWJoYQadyNT4Rx+HQkQte6W/hI+mNM1TZI3t0SPqiVeCmeQujXcT/5V0k=", "btn_gray": "data:image/webp;base64,UklGRlABAABXRUJQVlA4TEMBAAAvIkAEELegKrKVijeoISSBoS3J562hNpKtBA0hhNSd/uuhBIbUvuJIUqKF4gmeL4tEDNJUNYFz/kOEZi6OJBvIMZ+pq48rnbSrfCw3b2u5mR0QEADQRwBAHwCEstnTi82fgwFiJNttGwnhgxkMENh/rYBkuoN3Ef2fgLvr0T8Dw+if7uGwub7cG1CXH+V782SEOk/fx+nHMfhb4m01WBqeTRX5W5Qahs/TS6o4jxtt+MDSX9uLbpaK1eAx6bOw7dKyQhaXhHILp43RY2Na9k3S2gFduX+wnqn2tl1au1dmy9IBEogfziPrUpau3IWTVipfKAeQaZv9OAWSihSiPBrjcOpAqAVJoLYozRY8r4oN5ZTKqXJKTdEpFSkZvP2Nq0RLjxrJmPC3cPX72AIIAcQgOX9LuBhiiAqKfwwxCM/d8q+SAAA=", "btn_green": "data:image/webp;base64,UklGRloBAABXRUJQVlA4TE4BAAAvIkAEELegJpKt5mdiT8VgAv89KlCAgmhDaSRbzfuf6GIFWBz9N0MNGRQK2khS7u75Xbx/ccw4/+G9vaWW3ZdWEYrAEdX2ZKBbra6EZh+VBOgDEMSHAMDgfxSdULIzUjK7t95kgBhJctyGxv8LAAUw/1gPUskZ7Eb0fwKeoybxvyTjvPjjE9Xl7nL9Wp/u6aPb798uow8+OUa5vgUBIGwq/YDvruL99cR9nAD8ptK8Upw3MPvn9iKBVggw2W00gzV3/zzYgBfaOZfkl9UMK8zDkK0SspCZQPL7VMRoojKzYlRZkJNfp9RHH+cqR5WDBfDbamK51KWocpCsHAQQnT0gpkMfzJUcMoMAYrhp9MNNF1PJwCuhgZWZCSAi4Ilw6Ydq0zp65+nov3X0LgKT+gFV2B/XeS+5SWeUU/oBqIw1gDWwZ2OlgTX403wk/xUA", "btn_orange": "data:image/webp;base64,UklGRkoBAABXRUJQVlA4TD4BAAAvIkAEELegNJKk6F7UOX4U5B8gCjYNRZEkNXsHz3uRkwA04N9MskCdgjaSlL17Zg3v3x/T/AdL7PaLIiVtYnjit+20N7eRi7m9v7rjJLQOACgQfwIgEAYw4P4nv2pJYXAY21acGHaQ7Jj0XyvoxA7ejej/BNxDi/4MZPH0CDOFrNf0sO2YruyCyvX5Ln5Mxg5CNi4/HBLG3iLL6Hr6ncBYXA66+Jzj4zy2X9VCcpbg3XVq4ziP4XkA6iS1mLwlpHxuVA5Bp26n7mzwpcTzqHPd6QBpH8/b+sNcZ2CncjBX9n4G1vaNNsO6zdRj3mdgZ4ZVaipeXVJpaz/vLNTBurS1SSVcwVleCV+a1qUtTfu8rJLauMSQmeyNSfgQn1VWeDt7CxNJEBOUcVSfwMkIe0sYN/TOj53vnSQmy93zV0k=", "btn_purple": "data:image/webp;base64,UklGRiwBAABXRUJQVlA4TCABAAAvIkAEEJ+gKJKk5nLgmXnhAf+ecIAPtY0kNe//sZEL6YD+mwMxDQAgDdbcMo3MA1zOH/zhMgnzH9xZz0QYVc4vxlFfJNtbdzpQPUmoOvaDLxogRAAgQoAAIrB3cXtmgBhJctzGeH0SwAO//JMFSdMZ7ET0fwLOywj6X8AI8eUrgtJhP2/Hq0PZxPEQPSTFi2yp1N93ZaR4CiN9dm3vtmqEiIzPtgM+JK2S0EJ3abhasRSxxL7BuJ4k+W2vliPF6ubDpZVx7xoX/UFfHHji9zeaLockH/Knvd2UzgJ98eEdSRqu4RLwLflC37722QWgeTC3euQUT4zyaR2a9zbNrUODmk0hngQjl/quDI4cTxGyvS4lhXhKhPzXpHsinDP/KUk=", "btn_rose": "data:image/webp;base64,UklGRj4BAABXRUJQVlA4TDEBAAAvIkAEEK+gNJKk6PbUD3giQJJ/VEjUpqE0kiTl2D1IcOQ+/8xe7lcpjSQpum/UOXB48s+KGH5q/kNTBisqvMJsq/ksfHobO9X50+vXbEWMjgwGwAokhBRYfDwXw34wQLBtq2qTVP5aeEh1/nMVbTKDcyP6PwHn1KEvAxn36RnLTz54/ffNa+ouvI8cUPl7uPJQ3k1ClnhYMmWeiYXFneLIgUP7Z39TYXGELA7tYEL0NjeporbF4h0KfgdMoC67dEO7VGGkEh0qabcGXYboRr+auglGKt4R11RbpYEJ1OdGF4wHrU66TDcYFXgQRwVabV0Y0w6VAZtn4jXqvNXbzqgDtnhk704KcR2Vcb0Z021NIevtTnwhKn00KhOO4E6xxHK7in8GeS3ulFj8F+U4r3xVEgA=", "close": "data:image/webp;base64,UklGRgABAABXRUJQVlA4TPQAAAAvDsADEK/AJgCANLi7l4BI9H9l68KgkSRFx8z4YIJ1vObXRVEbyVbyP+45dVAKFVA+IZHL/AfUNmaUiog9ixooQxU4LjR/TBAUM0YYIj3/36WZK94aPDp3tWJjz2IuidfBvjIwjGSrifoI/8sP5P57hSIi+q+2bRvGTs+mM/beAPbta4pt4fjKVldbbv4HXGoxsYiIZeyNdyV3M1PShI1k7r2o95LlA4pYn73OWYUCXmctY87pLJTwehapc450y1hPzi6SEyCsfXYeszJ9QFQqTvI7pdbCBksmOd9VFza+rHzcVls47EIiorBCq7hhPs9zWEYA", "ic_coin": "data:image/webp;base64,UklGRtwBAABXRUJQVlA4TM8BAAAvHsAHEJfAIACAJHR35wP9v8cRflEV2VbycPl0JwFd6B+CBqY2kq3kKxZ/WqEZ+s80IrL5DwAaMyEGKPpy09trW9jwsVxiYGze/HEQAqn0s/8k3z4eU1QKNFSAYNtK2Gga/SAKgun+N6sknSVE9F+R27aNHAMZ7Wk94vuukvX9p0q5snLj93qiuNcym7V+fiblorjvex1UJ9W/8u56HzXa2qg2fMqbKWVtThUBeYqrvOfup7bRheGqzjve3E56FnURgakCNVE+cd+cVk9v7cCk2pHXlLaiZUeEs5xo6uCa8OWyVrKqvECJQit4rjXjDlWHJFi14SwubXkz2zZTHc7CREy24auUay3q5rGSxxD47CAbDGzqRiUiMr27DmY66/hghuHhLftIIKzKwAMJm/OFARFSbS90sce8jy0IuzoyatylJZ/gMZhfMfMTI0kA2rQ0ycehmy7gPjrAwgCFan3BSHoXoTGQjypM8bgpBV0b5AhA9rRWn/y1MRofRFiEW4QFAfV5C0ff8diFiLnNqFf5PqL3rpNpK2UBnIN8ewG9D9U5T2bTmYHsZ9pEs9zBIqjl1+urnAVw2vGPd11xxFyv61+vv3ySrtfsf7/Gj+wLAA==", "ic_drop": "data:image/webp;base64,UklGRm4BAABXRUJQVlA4TGIBAAAvF8AHEJ+gIACAItvmmv4v6ZDiSJKSE+znEgApeP5B8aJQ0EaScs/MDIrev5M3MP8BQESIBBEUZTXZvfvcN6kvSGKSFZyRlCR44LDGAANatS++3S7RC3I0OIxtpY424gP/Bk3/xUZ0U0JE/xm4bdvIrqDb+z7xHEv0fCtdF32EPX0DCZ8GQeMn0e9WxqsvbgL2P/qHH1oCAEd/cKqtRry66HxEHX30EgHxdOR+mb0UBtjReaMxtdUaGXJYRE5fptZaswDR0cY9dNqUCDAcnZbN0ds7Ehtt7suttSVGZEfW1WIkQDLBaHWMfo53RG5o6WtqmxFBzCYlDe1bUngjNjHN2U8W2RO3NGMJW0IopdTlvEg92SSOMabSsl3bTR7yyhxshVl0luzJvK3MLDv3nGX5WUrMAPNiDOslaI6yCE21JewvmLzPJb0trWT2xw/lcqnWmnOCc+e/hsht/f8vkelh6gE=", "ic_gear": "data:image/webp;base64,UklGRhgCAABXRUJQVlA4TAsCAAAvH8AHEJegoJGk5nulSEAF/jWBGkWRJDUXyRnkUPgXwRsFCFATSYrEDxkmKETgXwUqiO+S+Q8ATwzmCqyPD8fj80Y2pVObnjWnsIDCqg6qvJt3/IfeP3cXg8TYtuO2iYAPfOwEyP6r1RKX8G5E/yfg+T1+1N/jUDzEP+Pc0qqe4gP8ByAxYVFzigRekV8whci/MddQtRTtWjWH+A2/bkzX0kTgdq2pmkP8hN1LOvcaYtKle02E52/Xep99VEl9sgBayhbfeI032rklba+TvmZLpvBBpCWNekvXvjl4HXMkSyE+n0lrtvuwKafscrzNlSzE59tZ47rPpsAu7JNHrzlFPoCvcd2bEjBpA6qtJnsp8ohymO3ah2DiJdtQfCzp9hwirrmohWNBRHidfbA+epsZi/gaVN3aphAfiXPtYrWpj0x4m4x6l2P+pRjqjPZt0Oq1cXvD9qGo9dGVsUhwatMGTCHC2QdPVUlSDvEh4L1qU7Zb0NlQgrdqChAfCV5VOl42t3R2OZ5qT7IIz0e8Ny8bOBQw1daThfh8xleTKAe8YJJ3GFlfeF29iarsBTfl2kdTX9nil06Doeo5QW0aXaimHOKbyIOeqZ1Wm1SdPrqSLD6fyd2ThTRabT2Z5KMmKT7fMaUQX7NJJAuvmBOKz68AYjQ6SSE+vMTz/3iVyIT4CPSXhHeLz9/zUb8DAA==", "ic_heart": "data:image/webp;base64,UklGRpABAABXRUJQVlA4TIQBAAAvHwAHEJegNpKt5GORu6Sk1EH/fVCCt6Emkq3m/dQHkh704gcXtJSgKJKk5nIgK8AGDvDvhR+v+Q8ARBawEz6Kv451P7Kf/ps5FxeDEhFg6jPMGAUhIPSgVrdBlwFiJMlxGxP/Swp0/skSC1DKYDei/wrbtm0cGzDq7vaKfyiLxf0uuCsdWEK3bGKrWCWl8GfnJgxsIm4oEz9DV8tBhxWjhtRKCsYu0jlu6kxyxsp8hqSemYwspu2eNa7yUG3cVJdqUjgspoDrbDWFOnVNZOfnOU1F6SR7Tm2Al2pyDAaAflbN12DXKak4v6D1e1wIcl2gJE/nFwxd50v1uke9+IpWkttARU39RXOWFfGB2HeUSuYU/WHhXQrJulI1M3mS8C6UQZCb2TBlBhCa8rRS61UE77T9GA+gihrXVDJ2++8SgJmQck252FBLTtM4Qpoh3TI+EEmP6Ua7sCRHLbNB+s6cHLQpm532AzJ2wvQrKqcp8N9RQY/d+i8GBE9N/wPJn0RKehMB", "ic_home": "data:image/webp;base64,UklGRuABAABXRUJQVlA4TNQBAAAvH8AGEJegJgBAxr68rr3rKCWaUJsabAIAaMLecM0A64U4NCcAaAa9FEWS1Fy+A1ygCyOo5p2Z/2Ak5/FDDolPwapGn94Q3DNnC7KX/ap/svIDMKskiaSgl6Hmpq0ODgMAaZuioDIj9P9rTTo+iOi/ArdtlIyO+T7x/iBw5P2HgLu7Hv1xFsiMcIQ3AO3V4CfStQPoXoN+wt0V+y1FNBB+4Li9B9GYY46vSTgor0FjzjWJBnxJWXn4psFrzpMak+CT2XWZ+WZsvBfRnHPQIPiIlW9qXZDXOjbm+KBwmZUvQkVWWnuOo7fKZ1ntRRgpLO6817HTqsENO9bEQ0QjZa0xz/DtbnWZLEJxFhFhFuLb1eHj6KGst+Z5k3B318UN8RPVuwQzb89bcGwNBfHZ7dUapzdCTNm8MQk1NiI8gr7aziAXSd9+SYqqb8RHQ2VscnBJvyIlWSUYrZ6IcLiySMrlG5MVUe2q6vAGU27E7sQk6aqiKepaZlXHTJlEVJBF3CMiUtC6Ve8ndrMqJHURRUZDF/VudbhlLjsSmRkoSCSI2quqV69bE7SKCHevKjMjLDSrk3icO+g9bRkel1V4Ve8ffx8AoHYAdwTrAD99YQC4t/s23hs=", "ic_pond": "data:image/webp;base64,UklGRtYBAABXRUJQVlA4TMkBAAAvH0AGEJegNpKtJPuCu2Y/onxaY2iGcQAAhepnm6u1amvhwDYAgCR0N5zG/1OD+oDL/Ach03KAoAaKwgerD/AbVxATwe8ZZ4/AGav/n7C3g5u7GJyVJENiAQi2rYSNIggKTvKB7n+z1Um3ENF/BW7bKOl2zPCJz5vamz6nfpWYr0Pu9rugNYuoylgrIivDx3uiWVYuVWVVVfOVmYvbi0elMRNRl0PDPDOt/fOsYBY8zyOYgEDGsLXtf5ppp577eeacPmWKjJWhbVM16OQBxKqi5IaMDP/SvIoEc6eeB1SVWSGArFwbqxwApgiJiNdXGSSgdQajKgg3cM8dRVamyc7k2GhWrQ65pW+AwQJgRFpvx1hZFQZAnnMwEsDz63ywMqoqfZDc27uMyIzBTAeeKzN3Qa7la2VlLmNmvXYx+C8y4qg6RwlXZWbuR4wbK2J5+PGkzPQQs1I7HVgb+884nDtx+7QO3PT6JPWIOpMQ2zZgDla3deS+GsrMEJDoQVY43zA3dxtnekIApuuLZy5XCPRoMbRDeCogg493E2F6AyBW7cosIpnOInQdQ6mpzhtwumjrmrZc+eqtvf036MXtRcr082v9+o0vi/gAAA==", "ic_quest": "data:image/webp;base64,UklGRtQBAABXRUJQVlA4TMcBAAAvHcAHEJegJpKkqO6iu+h/Qgoj+LeBBVKMKIokqSG/cs5gAf8O8HACkKE0kq3mf7J7FfwKUFRE/waX4/wHkBD559N6/kpnVNVcAo2Nb1AfKgGfYoRYLtouESoOZP9VFwYDxEi22zbmxwdAgAgM/VebrBLeRfR/Aq7fGujnQALjR/wtqfVWF/sJacxeywbRfsDSx5QoecXtG0ikMTUklQzfcHFR50NXitntDdZtddOYGlKH5vEDYd12jqXMl0aO4YPv2w6hTw0JGrW4XW/h1H5IqfQhaFXavgg//Thr20rtNN3DFxFcbd2A0qqkHOz6iO/kRt8gVqn4n10fWYrWvDU2WsyVYFzvkPoUsa0ba/Ms43qH1MfUUM0btByw6yNe+5g3SlxR8BPjhdiHpoYkWgk4pw4FeymKqT5R/NRtP9xueI4qKQ91aMWPU+Fgh2i3mFODNXcatfgpBd/vp91Ukuct01tVWY4T/2PnOP225OLEtKpR5XYe7IuO/TQuSaScIl5zasrGucNi4XC7HjxDUolq1Z/cOMOTiBkoHlu2i7jDaRfolZglj0WLXeSnz3jKkBa7WHaOXf8QuATX7TT9SwKkm3OBfg76DgA=", "ic_tank": "data:image/webp;base64,UklGRvIBAABXRUJQVlA4TOUBAAAvHsAHEJegNrKVCIghJULNro6tytCxDqO7DzYBAKTB3SLwW1SKUcRZgR2KIklqjpzzEzF4RBBK0BAFUPMfBGX1FlAKn1JC9b+CgRPiZzKbaUnYiLCR+nRLtX8YZ9pdWmOrrTNAjG0raCQEkP8R+B/7rzZodjt4L6L/E3A/hu391wFSjWT48Smwt8pGLlytk1QIEMMmQFptpZ7hfVuQcAPBei1sleXpBhCw9CuM1cjKT8olAfgAAcBCqJveuEhcQP9WCE6uRmKz+La2b1xAA+qm16+rcYEkayMJQMtDWzxZMoCTrL2R12pnflW1ZIhnFJJnYa94w6oo2a6UgYKzEO/qpZD6GZaBImdm4bumJ4Q2wOxz9LIrT1UBlyHJ5sAcLD9RAVGfA1hj0ob+ktSnqPQ11sDEyD+owEH7pLGAbuOXcroSQqQ8RxrGnlnTi1OdAoIpJ8kpA+mqyE/FleTUxImYU7bES53pIcOHOaNhevz4R1z7q2LTSQJAJN0c6Cpu527A6LQJxm9A5VK3UXdzANOckR49wtTZIajNYrhDd0aaG0nBHJgc6LRWPTLABEM6AaPvjei1nZE8Asy3RlIwRCEAerPII+AOJA9w63sjBZFHuAGE9we3Hj0G3H8Y9iSPcP9jAHBvAQA=", "ic_town": "data:image/webp;base64,UklGRuQBAABXRUJQVlA4TNcBAAAvH4AGEJfAIADAMrPtBmfe13sGZ2EbyVYbvPdUAR3QApGvXz0o0ihSENs29Bf7ThkR1NZAAAGk8Gf+Q+jcOCStIqvorNEwM9TL7/dWTRYxnmH6lr9fe56Ou53/gcdzNRSDZYAY2W7cJiB4ExBhqf9qr0kJ/0f0fwKuZ/l4/a8crxtyyeM32W/An/xGkBQAL3J83X8/ngQJQuVB9pdd8vn+eyu1M4CsG8gnfi9KykOf5jS3MOzg736S7PlBaqctkh6lpzw6C8mgViSVC2Kz2jpAxoAWIzmA7tGZ5AIkB81pTtShHU6aMyyyPvFYbZYOZkKju43ZPEjNN9nLly9fvnxBYzht0qNHaQ/LF33RuXhsjT7uFmQjk1xyOBYdBIEU5kY/OXhq475pInMhWHfS041ubm4fakaMrm3qUfV0GEE6IjWmh+gxkBsDm8oEzSXXSPc/uaRHb9ZZ2lyt59A5Ss1lKzOTXBDlsUiCJGsOzgWCXSPrTnJJezz2QSIHSUVCr8HGREFuwARQMXrL1Bj3To1EygUZoX0i12mobMq4Y+QBahJMGyTnY0FPeXaSIxJCWQR9AjDSzWkE3Zw2ENWiQC7Iay2dnACMdHuscn2VzwWdnFWuf5fnCwAA", "panel": "data:image/webp;base64,UklGRrICAABXRUJQVlA4TKUCAAAvKMAJELegqJEkZXb3mNnAvc/sqVcTyVbzPjmH8lcIYDCBMORS4QE1AYA0bHB/XtYxhv1/CzD/ITmyCZHT/o2aX+jkPKK22r1pA8R7DF5e2O66HE0KAUAEACAAgQCQ/nkMEmTbitsomtBkEGAj73+tkp10r+DeiP5PwPt+UP5LDfs5+GeqF7UL2xnsh7/uR7rhjd1G4DScYQFn+bw4L+q0u07d8PZcYQy9TOt159sFQObFy7TOy9SfjtOfr/My/wwG52UatyD71yzut0z9vMxjN3hqOMP+iH/+2Ebohrf9GTzdY+JIFHK5HqiSiPqY1qkf3oYzOJ2PdBRJmmsTAdGSjqjbOl9Og1s0HblahAsCr2e1pCN9GgPsMeWSLbYKiMDzRcXyBU4ze8x3WhtA5tpEvznXy2Exl6wVaIBcLb9Kl9tKA7JNwHL8TS71Nqs0UDziF+NdqdBAQOQG8YjbcjddjtLq1QtyL3DEbbqb12lPxQoNpKgoTUU94rbenZd2eVYwW8xaGqhymbYw3MVWP+aitkwTBcvltP9Ur/kicIHSFFPc1vBNroXPjdwUVDjuwvB2vtFLM9tQRBFKvIy9n0o6cm1ILrnJHZDTEbd17oc3zsu0xyMd2doEMg1fVgXzkb4Y52mP6SDXL6XxoqLZFBcvduGc9uhBqfCs5BvgyYtWc3RZb07DuMd0RxPICE9e1PY8Utzuws2R8g1NAeQJFUyfcGTaYzrIpVXll5riF/My7dHEkUttfMxqgRaTLvMZuuHGqIlWWn3y+pA4SBEfW3icXqaZfo+a5GsBRfdT7Yc3hn2dx+3x55wGT7vBfl9cx3m7V75eNDzOcGIY7NdlZlxcEZxduFVAPQ2j56Wb1mXup9+PTLcqjDq8/elHf/5tpz/DG/w/AQA=", "tag": "data:image/webp;base64,UklGRsQBAABXRUJQVlA4TLgBAAAvLMAEEL/AKJIkRb3MeHcGmP0ru/fYYBtJkpp9ZjLFzPmnJlNSGslW8zNJZYulBPovCsmf/wCgqqZWvvgJ6tAsHPXqf594oByC0xbbc3xlm5bLkkrAAAhADABwIIgAGJD+FwPE2raaSkNGDCiiY/+t6k8dnBvR/wm4Xrrf8qHkAyTe9EG86Z3e0l8ZP0XvD9a9IT8WopTitzN490JmVCrT/8L87ZIGrHsRxzz9w6nKscOqyk6FnQp7ZZnSoCeZcSj/p7bKuvfWW4fWd2jQ93udxzxYpwvJlDwvddW+re187jS67m1fq5Yp5liCk4WcFuraoJ93Wr9t3LRKWuYYxmKdwliCn29942w6NvXWReunpAb7Wm9gnGwhMFeOtnWapC61o7d+So1OY1tmxQLBXbIBjctxblKHQ5vgYHu5Skedp0AJxl0yoQQ7HvXcpNbVOtC0apPWCguzVAIYdyE/FkKc6kLf1rYDfUeqLHOFRUJTigV7CwUfGGctHwoJIUlTTL4Qbsbic1Icvz/4PHgD7gJJ1g+QxdvipQCScdL1LONTTspK+f0BSSkreeOudyVj7+jLTteH+i0vAQ=="};
@@ -6941,7 +6941,12 @@ const RW103={
    "gold": 500,
    "xp": 80
   }
- ]
+ ],
+ "charGiftXmas": {
+  "gold": 80,
+  "xp": 20,
+  "rp": 1
+ }
 }
 ;
 (function(){if(typeof STORY==='undefined')return;for(let i=STORY.length;i<RW103.story.length;i++)STORY.push(RW103.story[i])})();
@@ -14364,7 +14369,7 @@ drawFishSprite=(function(prev){return function(f,d){const im=FSPR[d.species_id];
  // sideways, which from the side is the foreshortening above, not a vertical wave
  const face=f.face===undefined?(f.dir||1):f.face,[sx,ws]=typeof fishT139==='function'?fishT139(f,face):[face<0?-1:1,Math.max(.42,Math.min(1,Math.abs(face)))],bob=Math.sin(T0*1.7+(f.wan||0))*(f.hover?1.6:.8),HS=(typeof HDS74!=='undefined'&&HDS74)||1;
  // V1.24: positions on the screen's own pixels (no whole-game-pixel jumps)
- x.save();x.translate(Math.round(f.x*HS)/HS,Math.round((f.y+bob)*HS)/HS);const fz_=typeof fz143==='function'?fz143(d,w):1;/* V1.43: fish in proportion to the tank */x.scale(-sx*ws*fz_,fz_);x.globalAlpha=d.sick?.7:1;x.imageSmoothingEnabled=fz_<.95;x.imageSmoothingQuality='high';x.drawImage(BUF96.cv,-Math.round(w/2)-P,-Math.round(h/2)-P);x.restore();x.globalAlpha=1;SPN163.add(d.species_id);return true}})(drawFishSprite);
+ x.save();x.translate(Math.round(f.x*HS)/HS,Math.round((f.y+bob)*HS)/HS);const fz_=typeof fz143==='function'?fz143(d,w):1;/* V1.43: fish in proportion to the tank */x.scale(-sx*ws*fz_,fz_);x.globalAlpha=d.sick?.7:1;x.imageSmoothingEnabled=fz_<.95&&!CRISP176.cur;x.imageSmoothingQuality='high';blit176(x,BUF96.cv,-Math.round(w/2)-P,-Math.round(h/2)-P,-Math.round(w/2),-Math.round(h/2));x.restore();x.globalAlpha=1;SPN163.add(d.species_id);return true}})(drawFishSprite);
 
 // ===== V1.64 The new basins in the house view, and a lighter page.
 //  1. The medaka basin piece in the house / yard wears the ready-made basin chosen in 'ปรับแต่งบ่อ' (V1.59): indigo ceramic,
@@ -14895,7 +14900,7 @@ drawSleep154=(function(prev){return function(g){const A=LIFE151.act;if(A&&A.kind
 // ===== V1.72 New poses for the activities (owner, 26 Nov 2026: 'ผ่าน' → item 5). Data: core/data/pose172.json; art: the owner's
 // ChatGPT pose sheets (client/build/art/src172, made from each character's own V1.55 sheet), cut by art172.py into frames 39-45.
 // Reading (a book in both hands, turning a page), music (headphones, swaying), the computer (typing, from behind) and painting
-// (brush raised, from behind) — for the characters that have the frames (ผมบ็อบ f2, ผมสั้นแดง f5, m3 so far); others as before.
+// (brush raised, from behind) — for the characters that have the frames (V1.72: f2, f5, m3; V1.74: f1, f3, f4, f12, m1, m2); others as before.
 const PS172={
  "_note": "V1.72 (owner, 26 Nov 2026: 'ผ่าน' → item 5, new pose sheets from the owner's ChatGPT for 2-3 characters; client/build/art/src172, cut by art172.py into strip frames 39-45). While she does a V1.67 activity, a character whose strip has these frames shows them (others keep standing / sitting as before): frames = the strip frames per activity id (cycled every sec seconds); read and music face you, computer and paint are seen from behind at the piece. bob = how much (share of her height) she bounces to the music.",
  "frames": {"read": [39, 40], "music": [41, 42], "computer": [43, 44], "paint": [45]},
@@ -15002,6 +15007,184 @@ function season173(){try{const s=season74(),C=LF173.seasons[s];if(!C)return null
 moodTarget153=(function(prev){return function(N){const t=prev(N);try{const q=season173();if(q)return cl167(t+(q.ok?q.C.good:q.C.bad))}catch(e){}return t}})(moodTarget153);
 bubbleOf151=(function(prev){return function(){const b=prev.apply(this,arguments);try{if(b||LIFE151.act||LIFE151.hide)return b;const q=season173(),B_=LF173.seasons.bubble;if(q&&!q.ok&&(T0%B_.every)<B_.sec)return q.C.bubble}catch(e){}return b}})(bubbleOf151);
 CARDX167.push({h:()=>season173()?24:0,draw:(X,y,w)=>{const q=season173();TXs(q.C.text[q.ok?'good':'bad'],X+22,y+6,12,q.ok?'#4a7a5a':'#b0603a')}});
+
+// ===== V1.74 Christmas in her life (owner, 26 Nov 2026: 'ของขวัญและคำขอช่วงคริสต์มาส'). Data: core/data/xmas174.json; the gift's
+// Gold / EXP / RP in core/data/rewards.json charGiftXmas = server rule char_gift_xmas (daily).
+//  1. While the Christmas set is open (15 Nov - 6 Jan) her wishes are Christmas pieces her personality would love, and her card's
+//     shop button opens the Christmas shelf.
+//  2. Her daily gift is a Christmas gift (🎄🎁) that also brings RP — the points the Christmas pieces cost.
+//  3. A Christmas tree in the house warms her mood.
+const XM174={
+ "_note": "V1.74 (owner, 26 Nov 2026: 'ของขวัญและคำขอช่วงคริสต์มาส'). While the Christmas set is open (festival.json, 15 Nov - 6 Jan): her wishes (V1.70) come from the Christmas pieces her personality would love (wishes, cheapest third first, by RP then Gold); her card's shop button opens the 'คริสต์มาส' shelf; the daily gift (V1.69) is a Christmas gift 🎄🎁 that also gives RP (rewards.json charGiftXmas = server rule char_gift_xmas, daily); a Christmas tree in the house (any of trees) lifts her mood target by treeMood.",
+ "wishes": {
+  "reader": ["x_candles", "x_armchair", "x_cocoa", "x_advent", "x_star"],
+  "green": ["x_poinsettia", "x_wreath", "x_garland", "x_tree"],
+  "music": ["x_bells", "x_train", "x_piano", "x_star"],
+  "gamer": ["x_lights", "x_globe", "x_train", "x_village"],
+  "artist": ["x_star", "x_candles", "x_ginger", "x_village"],
+  "aquarist": ["x_globe", "x_poinsettia", "x_aquarium", "x_tree"],
+  "petlover": ["x_stockings", "x_cookie", "x_sack", "x_rug"],
+  "homebody": ["x_rug", "x_cocoa", "x_armchair", "x_fireplace"]
+ },
+ "trees": ["x_tree", "g_xtree"],
+ "treeMood": 3,
+ "bubble": "🎄🎁",
+ "text": {"gift": "ของขวัญคริสต์มาสจากเพื่อนร่วมบ้าน", "card": "🎄 ช่วงคริสต์มาส: คำขอเป็นของแต่งคริสต์มาส · ของขวัญรายวันได้ RP ด้วย", "tree": "🎄 มีต้นคริสต์มาสในบ้าน อบอุ่นใจ"}
+}
+;
+const xmasOn174=()=>{try{return festOpen85()}catch(e){return false}};
+type170=(function(prev){return function(){const T=prev();try{if(xmasOn174()){const L=(XM174.wishes[T.k]||[]).filter(k=>R2META[k]);if(L.length)T.wishes=L.slice().sort((a,b)=>((FEST85[a]||[0])[0]-(FEST85[b]||[0])[0])||((FEST85[a]||[0,0])[1]-(FEST85[b]||[0,0])[1]))}}catch(e){}return T}})(type170);
+// a Christmas piece sorts by its RP + Gold (R2PRICE may not hold the festival price)
+newWish170=(function(prev){return function(){if(!xmasOn174())return prev.apply(this,arguments);const saved={};try{for(const k of type170().wishes){const F=FEST85[k];if(F){saved[k]=R2PRICE[k];R2PRICE[k]=F[0]*100+F[1]}}return prev.apply(this,arguments)}finally{for(const k in saved){if(saved[k]===undefined)delete R2PRICE[k];else R2PRICE[k]=saved[k]}}}})(newWish170);
+openWish171=(function(prev){return function(){const r=prev.apply(this,arguments);try{const wk=wishKey171();if(wk&&FEST85[wk])R2.catF='คริสต์มาส'}catch(e){}return r}})(openWish171);
+// ---------- 2. the Christmas gift ----------
+takeGift169=(function(prev){return function(){if(!xmasOn174())return prev.apply(this,arguments);if(!giftReady169())return false;const B=q169(),G=typeof RW103!=='undefined'&&RW103.charGiftXmas;B.gift=day169();
+ if(G)qReward(G.gold,G.xp,G.rp||0,'🎄🎁 '+XM174.text.gift);try{log153('🎄🎁 '+XM174.text.gift)}catch(e){}bubble151('😊',2.5);return true}})(takeGift169);
+bubbleOf151=(function(prev){return function(){const b=prev.apply(this,arguments);return b===LV169.gift.bubble&&xmasOn174()?XM174.bubble:b}})(bubbleOf151);
+face173=(function(prev){return function(){const f=prev.apply(this,arguments);return f==='🎁'&&xmasOn174()?'🎄':f}})(face173);
+// ---------- 3. the tree ----------
+const tree174=()=>xmasOn174()&&XM174.trees.some(k=>inHouse170(k));
+moodTarget153=(function(prev){return function(N){const t=prev(N);try{if(tree174())return cl167(t+XM174.treeMood)}catch(e){}return t}})(moodTarget153);
+CARDX167.push({h:()=>xmasOn174()?(tree174()?44:24):0,draw:(X,y,w)=>{TXs(fit(XM174.text.card,11,w-44),X+22,y+6,11,'#a0402a');if(tree174())TXs(XM174.text.tree,X+22,y+26,11,'#4a7a5a')}});
+
+// ===== V1.74 Player accounts (owner, 26 Nov 2026: 'ระบบ Login'; roadmap Phase 1). Data: core/data/auth174.json.
+// Supabase Auth over its REST API: an online guest, email sign-in with a 6-digit code, linking a guest to an email, sign-out; after a
+// sign-in the server's ensure_player() makes the wallet. URL + public anon key come from env/.env.<env> (APP_CFG). Without them
+// the panel says the server is not connected yet and nothing changes (the game stays offline, saved on this device).
+// Opened from the title screen and from the ☰ menu.
+const AU174={
+ "_note": "V1.74 (owner, 26 Nov 2026: 'ระบบ Login'; roadmap Phase 1 'Login / Guest'). Supabase Auth through its REST API (no extra library): an online guest (anonymous sign-in), email sign-in with a 6-digit code (OTP), linking a guest to an email (to play on other devices later), sign-out; after a sign-in the server function ensure_player() makes the player's wallet once. The project URL and the public anon key come from env/.env.<env> (APP_CFG); without them the account panel says the server is not connected yet and the game stays offline as before. The session (access / refresh token) is kept in localStorage key; it is refreshed when less than refreshMin minutes are left. The service-role key never ships (build.py refuses to build with one). Cloud save (save_game) is Phase 4 and not part of this step.",
+ "key": "ALS_AUTH",
+ "refreshMin": 5,
+ "codeLen": 6,
+ "text": {
+  "title": "🔐 บัญชีผู้เล่น",
+  "off": "ระบบบัญชียังไม่เปิด (รอเชื่อม server) · เล่นต่อได้ เซฟอยู่ในเครื่องนี้",
+  "none": "ยังไม่ได้เข้าสู่ระบบ · เซฟอยู่ในเครื่องนี้",
+  "guest": "เล่นแบบ Guest ออนไลน์",
+  "guestOn": "Guest ออนไลน์ · ผูกอีเมลไว้เพื่อเล่นต่อเครื่องอื่นได้",
+  "email": "📧 เข้าสู่ระบบด้วยอีเมล",
+  "link": "📧 ผูกอีเมลกับบัญชีนี้",
+  "emailHint": "อีเมลของคุณ",
+  "send": "ส่งรหัส 6 หลัก",
+  "codeHint": "รหัส 6 หลักจากอีเมล",
+  "verify": "ยืนยันรหัส",
+  "signedIn": "เข้าสู่ระบบแล้ว",
+  "logout": "ออกจากระบบ",
+  "close": "ปิด",
+  "badEmail": "อีเมลไม่ถูกต้อง",
+  "badCode": "รหัสต้องเป็นตัวเลข 6 หลัก",
+  "sent": "ส่งรหัสไปที่อีเมลแล้ว · ดูในกล่องจดหมาย",
+  "fail": "เชื่อมต่อไม่สำเร็จ · ลองใหม่อีกครั้ง",
+  "menu": "🔐 บัญชีผู้เล่น",
+  "wrongCode": "รหัสไม่ถูกต้องหรือหมดอายุ · ลองใหม่หรือขอรหัสใหม่"
+ }
+}
+,ACC174={on:false,step:'menu',email:'',msg:'',busy:false,input:null};
+function cfg174(){const C=typeof APP_CFG!=='undefined'?APP_CFG:{};return C&&C.supabaseUrl&&C.supabaseAnonKey&&!/YOUR-/.test(C.supabaseUrl)?C:null}
+function sess174(){try{return JSON.parse(localStorage.getItem(AU174.key)||'null')}catch(e){return null}}
+function setSess174(s){try{if(s)localStorage.setItem(AU174.key,JSON.stringify(s));else localStorage.removeItem(AU174.key)}catch(e){}}
+function fromAuth174(r){if(!r||!r.access_token)return null;const u=r.user||{};return{at:r.access_token,rt:r.refresh_token,exp:Date.now()+(r.expires_in||3600)*1000,id:u.id,email:u.email||'',anon:!!u.is_anonymous}}
+async function api174(path,body,method,token){const C=cfg174();if(!C)throw new Error('off');const h={'apikey':C.supabaseAnonKey,'Content-Type':'application/json'};if(token)h.Authorization='Bearer '+token;
+ const r=await fetch(C.supabaseUrl.replace(/\/$/,'')+path,{method:method||'POST',headers:h,body:body===undefined?undefined:JSON.stringify(body)});const t=await r.text();let j=null;try{j=t?JSON.parse(t):null}catch(e){}
+ if(!r.ok)throw new Error((j&&(j.msg||j.error_description||j.message))||('HTTP '+r.status));return j}
+async function fresh174(){const s=sess174();if(!s)return null;if(s.exp-Date.now()>AU174.refreshMin*60e3)return s;try{const n=fromAuth174(await api174('/auth/v1/token?grant_type=refresh_token',{refresh_token:s.rt}));if(n){setSess174(n);return n}}catch(e){}return s}
+async function after174(s){setSess174(s);try{await api174('/rest/v1/rpc/ensure_player',{},'POST',s.at)}catch(e){}S.meta=S.meta||{};S.meta.auth174={id:s.id,email:s.email,anon:s.anon};try{save()}catch(e){}}
+async function run174(fn){if(ACC174.busy)return;ACC174.busy=true;ACC174.msg='';ACC174.ok=false;try{await fn()}catch(e){ACC174.msg=AU174.text.fail+(e&&e.message&&e.message!=='off'?' ('+String(e.message).slice(0,60)+')':'')}finally{ACC174.busy=false}}
+function guest174(){return run174(async()=>{const s=fromAuth174(await api174('/auth/v1/signup',{}));if(!s)throw new Error('no session');await after174(s);ACC174.step='menu'})}
+function emailOk174(v){return/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)}
+function sendCode174(){const v=String(ACC174.input&&ACC174.input.value||'').trim();if(!emailOk174(v)){ACC174.msg=AU174.text.badEmail;return}
+ return run174(async()=>{const s=sess174();if(s&&s.anon){const t=await fresh174();await api174('/auth/v1/user',{email:v},'PUT',t.at);ACC174.link=true}else{await api174('/auth/v1/otp',{email:v,create_user:true});ACC174.link=false}
+  ACC174.email=v;ACC174.step='code';input174(false);ACC174.msg=AU174.text.sent;ACC174.ok=true})}
+function verify174(){const v=String(ACC174.input&&ACC174.input.value||'').trim();if(!new RegExp('^\\d{'+AU174.codeLen+'}$').test(v)){ACC174.msg=AU174.text.badCode;return}
+ return run174(async()=>{let r;try{r=await api174('/auth/v1/verify',{type:ACC174.link?'email_change':'email',email:ACC174.email,token:v})}catch(e){if(/HTTP 4|invalid|expired/i.test(String(e.message))){ACC174.msg=AU174.text.wrongCode;return}throw e}let s=fromAuth174(r);if(!s&&ACC174.link){const o=sess174();s=Object.assign({},o,{email:ACC174.email,anon:false})}if(!s)throw new Error('no session');
+  await after174(s);ACC174.step='menu';input174(false);say(AU174.text.signedIn+' · '+s.email)})}
+function logout174(){return run174(async()=>{const s=sess174();try{if(s)await api174('/auth/v1/logout',{},'POST',s.at)}catch(e){}setSess174(null);if(S.meta)delete S.meta.auth174;try{save()}catch(e){}ACC174.step='menu'})}
+// a real text box over the canvas (like the house name, V0.87)
+function input174(show,ph,type,gy0){const cvs=typeof c!=='undefined'?c:null;if(typeof document==='undefined'||!cvs)return;let el=ACC174.input;
+ if(!show){if(el){el.remove();ACC174.input=null}return}
+ if(!el||el.dataset.k!==ph){if(el)el.remove();el=document.createElement('input');el.dataset.k=ph;el.type=type||'text';el.autocomplete='off';el.spellcheck=false;el.placeholder=ph;
+  Object.assign(el.style,{position:'fixed',zIndex:21,border:'3px solid #8a5a30',borderRadius:'12px',background:'#fffaf0',color:'#4a3a2a',font:"600 18px "+FONT,padding:'0 14px',outline:'none',boxSizing:'border-box',textAlign:'center'});
+  el.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();ACC174.step==='code'?verify174():sendCode174()}});document.body.appendChild(el);ACC174.input=el;setTimeout(()=>{try{el.focus()}catch(_){}},50)}
+ const r=cvs.getBoundingClientRect(),k=r.width/VW74,gx=W/2-200,gy=gy0==null?H/2-6:gy0;Object.assign(el.style,{left:(r.left+(gx+VOX74)*k)+'px',top:(r.top+gy*k)+'px',width:(400*k)+'px',height:(50*k)+'px',fontSize:Math.max(14,18*k)+'px'})}
+function close174(){ACC174.on=false;ACC174.step='menu';ACC174.msg='';input174(false)}
+function panel174(){if(ACC174.drawn===T0)return;ACC174.drawn=T0;   /* hud can run twice a frame */
+ const T=AU174.text,w=520,h=330,X=W/2-w/2,Y=H/2-h/2-30,C=cfg174(),s=sess174();btns.push({a:-VOX74,b:0,w:VW74,h:H,fn:()=>{},ui:1});
+ x.save();x.globalAlpha=.45;x.fillStyle='#0b1020';x.fillRect(-VOX74,0,VW74,H);x.restore();nine84(X,Y,w,h,2);TXB(T.title,X+w/2,Y+40,22,'#4a3a2a','center');
+ const line=!C?T.off:!s?T.none:s.anon?T.guestOn:T.signedIn+' · '+s.email;TXs(fit(line,13,w-60),X+w/2,Y+72,13,!C?'#a0603a':'#5a4636','center');
+ if(ACC174.msg)TXs(fit(ACC174.msg,12,w-60),X+w/2,Y+h-48,12,ACC174.ok?'#3f7a4a':'#a0402a','center');if(ACC174.busy)TXs('…',X+w/2,Y+h-70,16,'#8a6a4a','center');
+ const btn=(l,y,fn,col,lab)=>{B(l,X+60,y,w-120,44,fn,!ACC174.busy,col);btns[btns.length-1].l=lab};
+ if(C&&ACC174.step==='menu'){input174(false);if(!s){btn(T.guest,Y+100,()=>guest174(),'#4a9a6a','acc174:guest');btn(T.email,Y+154,()=>{ACC174.step='email';ACC174.msg=''},'#2b8fb8','acc174:email')}
+  else if(s.anon){btn(T.link,Y+110,()=>{ACC174.step='email';ACC174.msg=''},'#2b8fb8','acc174:link');btn(T.logout,Y+164,()=>logout174(),'#8a6a5a','acc174:logout')}
+  else btn(T.logout,Y+130,()=>logout174(),'#8a6a5a','acc174:logout')}
+ if(C&&ACC174.step==='email'){input174(true,T.emailHint,'email',Y+104);btn(T.send,Y+174,()=>sendCode174(),'#2b8fb8','acc174:send')}
+ if(C&&ACC174.step==='code'){input174(true,T.codeHint,'text',Y+104);btn(T.verify,Y+174,()=>verify174(),'#4a9a6a','acc174:verify')}
+ B(T.close,X+w-110,Y+12,96,36,()=>close174(),true,'#8a7a5a');btns[btns.length-1].l='acc174:close'}
+hud=(function(prev){return function(){const r=prev.apply(this,arguments);try{
+  // the title screen: an account button under the start card
+  if(typeof TITLE86!=='undefined'&&TITLE86.on&&TITLE86.step==='menu'&&!ACC174.on&&!btns.some(q=>q.l==='acc174:open')){chip(AU174.text.menu,W/2-110,H-112,220,36,()=>{ACC174.on=true},true,'#7a6aa8');btns[btns.length-1].l='acc174:open'}
+  if(ACC174.on)panel174()}catch(e){}return r}})(hud);
+// the ☰ menu: under the special rooms (V1.60)
+homeUI76=(function(f0){return function(){f0();try{if(!MENU76||scene!=='home')return;const n=MENU76_ITEMS().length,X=VW74-VOX74-24-330,Y=132+18+n*50+58+62;rr(X,Y-4,330,58,18,'#f6efe0f2');
+ chip(AU174.text.menu,X+12,Y+2,306,42,()=>{MENU76=false;ACC174.on=true},true,'#7a6aa8');btns[btns.length-1].l='menu174:account'}catch(e){}}})(homeUI76);
+// keep the session fresh on start
+if(typeof window!=='undefined')setTimeout(()=>{try{if(cfg174()&&sess174())fresh174()}catch(e){}},1500);
+
+// ===== V1.75 The town is a tap map (owner, 27 Nov 2026: 'แผนที่ต้องมีไหม หรือกดมาเมืองแล้วให้กดเลือกเข้าได้เลย' → the tap map).
+// Data: core/data/town175.json. The whole town picture; a tap on a sign or a building goes straight in (no walking — her life is at
+// home now); drag to pan, − / + to zoom; the townspeople still walk about. S.opt.townWalk175 = true brings the V1.35 walk back.
+const TN175={
+ "_note": "V1.75 (owner, 27 Nov 2026: 'พอระบบเป็นแบบทามาก็อตแล้ว แผนที่ต้องมีไหม หรือกดมาเมืองแล้วให้กดเลือกเข้าได้เลย' → chose the tap map). The town is the whole town picture: a tap on a sign or a building opens it at once (no walking: the player's character lives at home now), a drag pans, − / + zoom; townspeople still walk about. S.opt.townWalk175 = true brings back the V1.35 walk (kept for tests and for anyone who wants it).",
+ "hint": "แตะป้ายหรืออาคารเพื่อเข้าร้าน · ลากเพื่อเลื่อน"
+}
+;
+function walk175(){return!!((typeof window!=='undefined'&&window.TOWNWALK175)||(S&&S.opt&&S.opt.townWalk175))}   // TOWNWALK175: the V1.35 walk tests
+townOk129=(function(prev){return function(){return walk175()?prev.apply(this,arguments):false}})(townOk129);
+
+// V1.76 fish system accuracy (data: core/data/fish176.json; audits: tools/pixaudit.js, tools/simaudit.js)
+// 1. crisp tank fish: fz143 (the fish's size in the tank) is rounded so one art pixel is a whole number of screen pixels, the
+//    fish is drawn without smoothing (build patch on lib163's draw: fz_<.95 && !CRISP176.on) and blit176 shifts the drawing so
+//    the art-pixel grid starts on a screen pixel. Turning fish (foreshortened sideways) still squeeze as before.
+// 2. hunger pacing: the live hunger rise per tick of every fish times hungerMul (tank: DB[].hpt, the original kept as hpt0;
+//    basins / ponds: PHPT176, read by the build patch on pondSim).
+const FISH176={
+ "_note": "V1.76 fish system accuracy (owner, 27 Nov 2026: 'รันระบบปลาให้แม่นยำถึงที่สุด ตรวจสอบ Pixel ปลา อ่าง ตู้ ไม้น้ำ และทุกอย่างของระบบปลา'). crisp: tank fish are drawn without smoothing at a whole number of screen pixels per art pixel, their art-pixel grid snapped to the screen's pixels (before V1.76 they were scaled to 1.6-3 game px per art pixel with smoothing on, so they looked soft next to the crisp plants and stones). hungerMul: the live hunger rise per 10-second tick of every fish (tank hpt and the basin's 0.55) times this. The audit (tools/simaudit.js) found a fed fish very hungry after 8 minutes of active play, sick after 21 and dead after 63, so a player who played an hour a day and fed once lost every fish in two days; the auto feeder (equipment.json: every 20 min of play when hunger is 60+) could not keep up either. 1/6 was tried: a feeding then lasted about 45 minutes, so one feeding per hour of play still made fish sick. With 1/12 the hungriest fish (guppy) goes from fed (0) to very hungry (90) in about two hours of play, one feeding on arrival covers an hour-long session (after time away hunger is at most 70, a feeding takes it to 20) and the feeder keeps up. Time away and calm watching keep their own caps (hunger stops at 70). growMul / stressMul (V1.76, same audit): in active play the tank's algae and hair algae grew 0.5-0.7 a tick (0 to 100 in about 25 minutes with the light on) and a fish's stress rose up to 1.5 a tick, so coming back to a closed game (algae held at 50) and not scrubbing at once made every fish stressed (99) in 40 minutes and sick within the hour. The live rise (never the fall) of tank algae, hair algae and each fish's stress is now times these, and so is the basin's water fall and algae change per tick (8 medaka took the water from 45 to 35 in 7 minutes); time away and calm watching are unchanged. riskMul: the chance per tick of a healthy fish falling sick (risk82: water under 60, stress, starving, crowding, shock) times this — at the away floor of water (55) a fish had a 25% chance an hour of play to fall sick. Once sick, a fish still gets worse at the old speed (medicine or good water and calm heal it). maxSizeErr: a fish is drawn crisp only when rounding changes its size by at most this share (11%, inside the 12% the V1.52 real-length check allows); on a coarse screen (devicePixelRatio 1, one art pixel ~1.6 screen pixels) a neon tetra would grow by a fifth, so it stays smooth there.",
+ "crisp": true,
+ "hungerMul": 0.0833,
+ "pondHunger": 0.55,
+ "growMul": 0.0833,
+ "stressMul": 0.0833,
+ "riskMul": 0.0833,
+ "maxSizeErr": 0.11
+}
+;
+var CRISP176={on:!!FISH176.crisp,cur:false};
+fz143=(function(prev){return function(d,w){const z=prev(d,w);CRISP176.cur=false;if(!CRISP176.on||!(z>0))return z;
+ try{const im=FSPR[d.species_id],k=(w>0&&im&&im.naturalWidth)?w/im.naturalWidth:3,H=(typeof HDS74!=='undefined'&&HDS74)||1,e=k*z*H,n=Math.max(1,Math.round(e));
+  // on a coarse screen (one art pixel ~1.6 screen pixels) rounding would change a fish's size by a fifth or more: keep it smooth there
+  if(Math.abs(n-e)/e>(+FISH176.maxSizeErr||.11))return z;CRISP176.cur=true;return n/(k*H)}catch(e){return z}}})(fz143);
+// draws cv at (ox,oy) with the art grid (which starts at (ax,ay) in cv's pixels) on whole screen pixels
+// (the game wraps x.setTransform to add the screen scale, so the context's own (native) one is used here)
+function blit176(x,cv,ox,oy,ax,ay){const C=Object.getPrototypeOf(x);if(!CRISP176.cur||!C||typeof C.getTransform!=='function'||typeof C.setTransform!=='function')return x.drawImage(cv,ox,oy);
+ const t=C.getTransform.call(x);if(Math.abs(t.b)>1e-6||Math.abs(t.c)>1e-6)return x.drawImage(cv,ox,oy);
+ const X=t.a*ax+t.e,Y=t.d*ay+t.f;C.setTransform.call(x,t.a,0,0,t.d,t.e+Math.round(X)-X,t.f+Math.round(Y)-Y);x.drawImage(cv,ox,oy);C.setTransform.call(x,t.a,t.b,t.c,t.d,t.e,t.f)}
+// the art-pixel size of a fish on the screen right now (screen pixels per art pixel), for the tests and the audit
+function artPx176(d){try{const im=FSPR[d.species_id],k=PLF_SCALE(d),w=im.naturalWidth*k,H=(typeof HDS74!=='undefined'&&HDS74)||1;return k*fz143(d,w)*H}catch(e){return null}}
+(function(){const m=+FISH176.hungerMul||1;for(const k in DB){const d=DB[k];if(d&&typeof d.hpt==='number'&&d.hpt0==null){d.hpt0=d.hpt;d.hpt=+(d.hpt*m).toFixed(4)}}globalThis.PHPT176=(+FISH176.pondHunger||.55)*m;globalThis.PGROW176=+FISH176.growMul||1})();
+// 3. tank pacing in active play: the live rise of algae, hair algae and each fish's stress per tick times growMul / stressMul
+//    (falls — scrubbing, calm, good water — are left as they are; catch-up and calm watching (cu) are not touched)
+sim=(function(prev){return function(n,cu){if(cu||!(n>0))return prev(n,cu);const gm=+FISH176.growMul||1,sm=+FISH176.stressMul||1;
+ for(let i=0;i<n;i++){const t=tank(),st=t&&t.stats,a0=st?(st.algae||0):0,h0=st?(st.hair||0):0,S0=new Map();for(const[id,f]of Object.entries(S.fish||{}))S0.set(id,f.stress||0);
+  prev(1,false);
+  if(st&&tank()===t){if((st.algae||0)>a0)st.algae=a0+((st.algae||0)-a0)*gm;if((st.hair||0)>h0)st.hair=h0+((st.hair||0)-h0)*gm}
+  for(const[id,f]of Object.entries(S.fish||{})){const s0=S0.get(id);if(s0!=null&&(f.stress||0)>s0)f.stress=s0+(f.stress-s0)*sm}}}})(sim);
+// 4. the chance per tick of falling sick times riskMul (lib82's risk82; UV / salt layers multiply on top as before)
+//    only in live play: diseaseTick tells risk82 whether this tick is a catch-up (away keeps its own riskMul, lib82)
+var LIVE176=false;diseaseTick=(function(prev){return function(f,cu,st){LIVE176=!cu;try{return prev(f,cu,st)}finally{LIVE176=false}}})(diseaseTick);
+risk82=(function(prev){return function(f,st){const r=prev(f,st);return LIVE176?r*(+FISH176.riskMul||1):r}})(risk82);
+// 5. the tank forecast (tankStep: the water / algae panel) follows the same live pacing as sim
+tankStep=(function(prev){return function(st,fish,light){const a0=st.algae||0,h0=st.hair||0,r=prev(st,fish,light),gm=+FISH176.growMul||1;
+ if(r&&r.st){if((r.st.algae||0)>a0)r.st.algae=a0+(r.st.algae-a0)*gm;if((r.st.hair||0)>h0)r.st.hair=h0+(r.st.hair-h0)*gm}return r}})(tankStep);
 
 // ===== Environment layer (Phase 0) — injected by client/build/build.py right before the game boots =====
 // development : everything on (team mode via 7 taps on the version line, Sandbox Gold, festival preview)
