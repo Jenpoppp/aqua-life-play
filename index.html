@@ -3169,12 +3169,12 @@ dQuest=function(){q7Roll();const gd=x.createLinearGradient(0,0,0,H);gd.addColorS
  B('ออเดอร์ชาวเมือง',740,604,240,60,()=>go('orders'),true,'#d98b3a');B('ย้อนกลับ',1000,604,190,60,()=>go(R2&&S.opt&&S.opt.room52!==false?'home':'home'),true,'#6a5acd')};
 // ---------- HUD quest tracker (story) ----------
 const _hud67=hud;hud=function(){_hud67();if(LVQ.length||LVSHOW)return;if(!['home','aq','town'].includes(scene))return;if(scene==='aq'&&aqEdit)return;if(scene==='home'&&typeof R2!=='undefined'&&R2.edit)return;if(scene==='town'&&typeof SHOP123!=='undefined'&&SHOP123.in)return;if(typeof SHOW128!=='undefined'&&SHOW128.on||typeof PC129!=='undefined'&&PC129.pick)return;
- const s=storyQ(),y=scene==='home'?150:scene==='town'?184:74,n=qClaimable();if(!s&&!n)return;rr(16,y,330,58,18,'#0d1b26cc');btns.push({a:16,b:y,w:330,h:58,fn:()=>go('quest'),ui:1});
+ if(typeof hide178==='function'&&hide178())return;const s=storyQ(),y=scene==='home'?150:scene==='town'?184:74,n=qClaimable();if(!s&&!n)return;rr(16,y,330,58,18,'#0d1b26cc');btns.push({a:16,b:y,w:330,h:58,fn:()=>go('quest'),ui:1});
  if(!s){TXs('เควส · จบเนื้อเรื่องช่วงนี้แล้ว',32,y+29,14,'#ffe7a0')}else{const[a,b]=storyProg(),lock=lvNow()<s.lv;TXs('📜 '+fit(s.t,14,250),32,y+20,14,'#ffe7a0');
   TXs(lock?'เริ่มที่ Lv '+s.lv:(s.g.st==='gold'?a.toLocaleString()+'/'+b.toLocaleString()+' G':a+'/'+b)+(storyReady()?' · พร้อมรับรางวัล':''),32,y+40,12,storyReady()?'#8fe08a':'#cfe6f2')}
  if(n){gc_(338,y+6,12,'#e8504a');TXB(String(n),338,y+6,13,'#fff','center')}};
 
-const GAME_VER='V1.77';
+const GAME_VER='V1.82';
 // ===== V0.68 STEP 8 — UX/UI: main dock (บ้าน / ตู้ / อ่าง / เมือง / เควส), Lv1-5 tutorial pointers tied to the story,
 // one UI skin drawn by the user's ChatGPT (buttons, tags, icons), Demo/dev tools hidden in real play, online save per player. =====
 const UI_IMG={"btn_blue": "data:image/webp;base64,UklGRj4BAABXRUJQVlA4TDIBAAAvIkAEEL/AJgCANLi/HgFy0P8lh82lBpsAAJNML3fcQxCDgiSgn6viSJKSO1zfEAJJkH9C7vMfkPmcXjc1/ElsyWQDAYsn14oZmTJEcwnaLHRUVJHFNUEQQYDgB37wgR8gTMAfUc2kqTFAjG0rChMDCG4fd+2/VcGYDt6N6P8E3EWH/hnoo/u6hG9iR/O1e9B0ClGp+zi4QsSP/cdtIrib0EV/vT7fDzF5R+jjJZ0c1YUNWCUAG1PriGG8jrd7YS3CNhTSdB6wS0txfc6QpVVWOxaYd1HPAkmydasMq2bIABKgsj1rWpVVsPz2MY1tIUymLMszMrJM2arT0MXg+EmMk60m7aYsWXmWJoYQadyNT4Rx+HQkQte6W/hI+mNM1TZI3t0SPqiVeCmeQujXcT/5V0k=", "btn_gray": "data:image/webp;base64,UklGRlABAABXRUJQVlA4TEMBAAAvIkAEELegKrKVijeoISSBoS3J562hNpKtBA0hhNSd/uuhBIbUvuJIUqKF4gmeL4tEDNJUNYFz/kOEZi6OJBvIMZ+pq48rnbSrfCw3b2u5mR0QEADQRwBAHwCEstnTi82fgwFiJNttGwnhgxkMENh/rYBkuoN3Ef2fgLvr0T8Dw+if7uGwub7cG1CXH+V782SEOk/fx+nHMfhb4m01WBqeTRX5W5Qahs/TS6o4jxtt+MDSX9uLbpaK1eAx6bOw7dKyQhaXhHILp43RY2Na9k3S2gFduX+wnqn2tl1au1dmy9IBEogfziPrUpau3IWTVipfKAeQaZv9OAWSihSiPBrjcOpAqAVJoLYozRY8r4oN5ZTKqXJKTdEpFSkZvP2Nq0RLjxrJmPC3cPX72AIIAcQgOX9LuBhiiAqKfwwxCM/d8q+SAAA=", "btn_green": "data:image/webp;base64,UklGRloBAABXRUJQVlA4TE4BAAAvIkAEELegJpKt5mdiT8VgAv89KlCAgmhDaSRbzfuf6GIFWBz9N0MNGRQK2khS7u75Xbx/ccw4/+G9vaWW3ZdWEYrAEdX2ZKBbra6EZh+VBOgDEMSHAMDgfxSdULIzUjK7t95kgBhJctyGxv8LAAUw/1gPUskZ7Eb0fwKeoybxvyTjvPjjE9Xl7nL9Wp/u6aPb798uow8+OUa5vgUBIGwq/YDvruL99cR9nAD8ptK8Upw3MPvn9iKBVggw2W00gzV3/zzYgBfaOZfkl9UMK8zDkK0SspCZQPL7VMRoojKzYlRZkJNfp9RHH+cqR5WDBfDbamK51KWocpCsHAQQnT0gpkMfzJUcMoMAYrhp9MNNF1PJwCuhgZWZCSAi4Ilw6Ydq0zp65+nov3X0LgKT+gFV2B/XeS+5SWeUU/oBqIw1gDWwZ2OlgTX403wk/xUA", "btn_orange": "data:image/webp;base64,UklGRkoBAABXRUJQVlA4TD4BAAAvIkAEELegNJKk6F7UOX4U5B8gCjYNRZEkNXsHz3uRkwA04N9MskCdgjaSlL17Zg3v3x/T/AdL7PaLIiVtYnjit+20N7eRi7m9v7rjJLQOACgQfwIgEAYw4P4nv2pJYXAY21acGHaQ7Jj0XyvoxA7ejej/BNxDi/4MZPH0CDOFrNf0sO2YruyCyvX5Ln5Mxg5CNi4/HBLG3iLL6Hr6ncBYXA66+Jzj4zy2X9VCcpbg3XVq4ziP4XkA6iS1mLwlpHxuVA5Bp26n7mzwpcTzqHPd6QBpH8/b+sNcZ2CncjBX9n4G1vaNNsO6zdRj3mdgZ4ZVaipeXVJpaz/vLNTBurS1SSVcwVleCV+a1qUtTfu8rJLauMSQmeyNSfgQn1VWeDt7CxNJEBOUcVSfwMkIe0sYN/TOj53vnSQmy93zV0k=", "btn_purple": "data:image/webp;base64,UklGRiwBAABXRUJQVlA4TCABAAAvIkAEEJ+gKJKk5nLgmXnhAf+ecIAPtY0kNe//sZEL6YD+mwMxDQAgDdbcMo3MA1zOH/zhMgnzH9xZz0QYVc4vxlFfJNtbdzpQPUmoOvaDLxogRAAgQoAAIrB3cXtmgBhJctzGeH0SwAO//JMFSdMZ7ET0fwLOywj6X8AI8eUrgtJhP2/Hq0PZxPEQPSTFi2yp1N93ZaR4CiN9dm3vtmqEiIzPtgM+JK2S0EJ3abhasRSxxL7BuJ4k+W2vliPF6ubDpZVx7xoX/UFfHHji9zeaLockH/Knvd2UzgJ98eEdSRqu4RLwLflC37722QWgeTC3euQUT4zyaR2a9zbNrUODmk0hngQjl/quDI4cTxGyvS4lhXhKhPzXpHsinDP/KUk=", "btn_rose": "data:image/webp;base64,UklGRj4BAABXRUJQVlA4TDEBAAAvIkAEEK+gNJKk6PbUD3giQJJ/VEjUpqE0kiTl2D1IcOQ+/8xe7lcpjSQpum/UOXB48s+KGH5q/kNTBisqvMJsq/ksfHobO9X50+vXbEWMjgwGwAokhBRYfDwXw34wQLBtq2qTVP5aeEh1/nMVbTKDcyP6PwHn1KEvAxn36RnLTz54/ffNa+ouvI8cUPl7uPJQ3k1ClnhYMmWeiYXFneLIgUP7Z39TYXGELA7tYEL0NjeporbF4h0KfgdMoC67dEO7VGGkEh0qabcGXYboRr+auglGKt4R11RbpYEJ1OdGF4wHrU66TDcYFXgQRwVabV0Y0w6VAZtn4jXqvNXbzqgDtnhk704KcR2Vcb0Z021NIevtTnwhKn00KhOO4E6xxHK7in8GeS3ulFj8F+U4r3xVEgA=", "close": "data:image/webp;base64,UklGRgABAABXRUJQVlA4TPQAAAAvDsADEK/AJgCANLi7l4BI9H9l68KgkSRFx8z4YIJ1vObXRVEbyVbyP+45dVAKFVA+IZHL/AfUNmaUiog9ixooQxU4LjR/TBAUM0YYIj3/36WZK94aPDp3tWJjz2IuidfBvjIwjGSrifoI/8sP5P57hSIi+q+2bRvGTs+mM/beAPbta4pt4fjKVldbbv4HXGoxsYiIZeyNdyV3M1PShI1k7r2o95LlA4pYn73OWYUCXmctY87pLJTwehapc450y1hPzi6SEyCsfXYeszJ9QFQqTvI7pdbCBksmOd9VFza+rHzcVls47EIiorBCq7hhPs9zWEYA", "ic_coin": "data:image/webp;base64,UklGRtwBAABXRUJQVlA4TM8BAAAvHsAHEJfAIACAJHR35wP9v8cRflEV2VbycPl0JwFd6B+CBqY2kq3kKxZ/WqEZ+s80IrL5DwAaMyEGKPpy09trW9jwsVxiYGze/HEQAqn0s/8k3z4eU1QKNFSAYNtK2Gga/SAKgun+N6sknSVE9F+R27aNHAMZ7Wk94vuukvX9p0q5snLj93qiuNcym7V+fiblorjvex1UJ9W/8u56HzXa2qg2fMqbKWVtThUBeYqrvOfup7bRheGqzjve3E56FnURgakCNVE+cd+cVk9v7cCk2pHXlLaiZUeEs5xo6uCa8OWyVrKqvECJQit4rjXjDlWHJFi14SwubXkz2zZTHc7CREy24auUay3q5rGSxxD47CAbDGzqRiUiMr27DmY66/hghuHhLftIIKzKwAMJm/OFARFSbS90sce8jy0IuzoyatylJZ/gMZhfMfMTI0kA2rQ0ycehmy7gPjrAwgCFan3BSHoXoTGQjypM8bgpBV0b5AhA9rRWn/y1MRofRFiEW4QFAfV5C0ff8diFiLnNqFf5PqL3rpNpK2UBnIN8ewG9D9U5T2bTmYHsZ9pEs9zBIqjl1+urnAVw2vGPd11xxFyv61+vv3ySrtfsf7/Gj+wLAA==", "ic_drop": "data:image/webp;base64,UklGRm4BAABXRUJQVlA4TGIBAAAvF8AHEJ+gIACAItvmmv4v6ZDiSJKSE+znEgApeP5B8aJQ0EaScs/MDIrev5M3MP8BQESIBBEUZTXZvfvcN6kvSGKSFZyRlCR44LDGAANatS++3S7RC3I0OIxtpY424gP/Bk3/xUZ0U0JE/xm4bdvIrqDb+z7xHEv0fCtdF32EPX0DCZ8GQeMn0e9WxqsvbgL2P/qHH1oCAEd/cKqtRry66HxEHX30EgHxdOR+mb0UBtjReaMxtdUaGXJYRE5fptZaswDR0cY9dNqUCDAcnZbN0ds7Ehtt7suttSVGZEfW1WIkQDLBaHWMfo53RG5o6WtqmxFBzCYlDe1bUngjNjHN2U8W2RO3NGMJW0IopdTlvEg92SSOMabSsl3bTR7yyhxshVl0luzJvK3MLDv3nGX5WUrMAPNiDOslaI6yCE21JewvmLzPJb0trWT2xw/lcqnWmnOCc+e/hsht/f8vkelh6gE=", "ic_gear": "data:image/webp;base64,UklGRhgCAABXRUJQVlA4TAsCAAAvH8AHEJegoJGk5nulSEAF/jWBGkWRJDUXyRnkUPgXwRsFCFATSYrEDxkmKETgXwUqiO+S+Q8ATwzmCqyPD8fj80Y2pVObnjWnsIDCqg6qvJt3/IfeP3cXg8TYtuO2iYAPfOwEyP6r1RKX8G5E/yfg+T1+1N/jUDzEP+Pc0qqe4gP8ByAxYVFzigRekV8whci/MddQtRTtWjWH+A2/bkzX0kTgdq2pmkP8hN1LOvcaYtKle02E52/Xep99VEl9sgBayhbfeI032rklba+TvmZLpvBBpCWNekvXvjl4HXMkSyE+n0lrtvuwKafscrzNlSzE59tZ47rPpsAu7JNHrzlFPoCvcd2bEjBpA6qtJnsp8ohymO3ah2DiJdtQfCzp9hwirrmohWNBRHidfbA+epsZi/gaVN3aphAfiXPtYrWpj0x4m4x6l2P+pRjqjPZt0Oq1cXvD9qGo9dGVsUhwatMGTCHC2QdPVUlSDvEh4L1qU7Zb0NlQgrdqChAfCV5VOl42t3R2OZ5qT7IIz0e8Ny8bOBQw1daThfh8xleTKAe8YJJ3GFlfeF29iarsBTfl2kdTX9nil06Doeo5QW0aXaimHOKbyIOeqZ1Wm1SdPrqSLD6fyd2ThTRabT2Z5KMmKT7fMaUQX7NJJAuvmBOKz68AYjQ6SSE+vMTz/3iVyIT4CPSXhHeLz9/zUb8DAA==", "ic_heart": "data:image/webp;base64,UklGRpABAABXRUJQVlA4TIQBAAAvHwAHEJegNpKt5GORu6Sk1EH/fVCCt6Emkq3m/dQHkh704gcXtJSgKJKk5nIgK8AGDvDvhR+v+Q8ARBawEz6Kv451P7Kf/ps5FxeDEhFg6jPMGAUhIPSgVrdBlwFiJMlxGxP/Swp0/skSC1DKYDei/wrbtm0cGzDq7vaKfyiLxf0uuCsdWEK3bGKrWCWl8GfnJgxsIm4oEz9DV8tBhxWjhtRKCsYu0jlu6kxyxsp8hqSemYwspu2eNa7yUG3cVJdqUjgspoDrbDWFOnVNZOfnOU1F6SR7Tm2Al2pyDAaAflbN12DXKak4v6D1e1wIcl2gJE/nFwxd50v1uke9+IpWkttARU39RXOWFfGB2HeUSuYU/WHhXQrJulI1M3mS8C6UQZCb2TBlBhCa8rRS61UE77T9GA+gihrXVDJ2++8SgJmQck252FBLTtM4Qpoh3TI+EEmP6Ua7sCRHLbNB+s6cHLQpm532AzJ2wvQrKqcp8N9RQY/d+i8GBE9N/wPJn0RKehMB", "ic_home": "data:image/webp;base64,UklGRuABAABXRUJQVlA4TNQBAAAvH8AGEJegJgBAxr68rr3rKCWaUJsabAIAaMLecM0A64U4NCcAaAa9FEWS1Fy+A1ygCyOo5p2Z/2Ak5/FDDolPwapGn94Q3DNnC7KX/ap/svIDMKskiaSgl6Hmpq0ODgMAaZuioDIj9P9rTTo+iOi/ArdtlIyO+T7x/iBw5P2HgLu7Hv1xFsiMcIQ3AO3V4CfStQPoXoN+wt0V+y1FNBB+4Li9B9GYY46vSTgor0FjzjWJBnxJWXn4psFrzpMak+CT2XWZ+WZsvBfRnHPQIPiIlW9qXZDXOjbm+KBwmZUvQkVWWnuOo7fKZ1ntRRgpLO6817HTqsENO9bEQ0QjZa0xz/DtbnWZLEJxFhFhFuLb1eHj6KGst+Z5k3B318UN8RPVuwQzb89bcGwNBfHZ7dUapzdCTNm8MQk1NiI8gr7aziAXSd9+SYqqb8RHQ2VscnBJvyIlWSUYrZ6IcLiySMrlG5MVUe2q6vAGU27E7sQk6aqiKepaZlXHTJlEVJBF3CMiUtC6Ve8ndrMqJHURRUZDF/VudbhlLjsSmRkoSCSI2quqV69bE7SKCHevKjMjLDSrk3icO+g9bRkel1V4Ve8ffx8AoHYAdwTrAD99YQC4t/s23hs=", "ic_pond": "data:image/webp;base64,UklGRtYBAABXRUJQVlA4TMkBAAAvH0AGEJegNpKtJPuCu2Y/onxaY2iGcQAAhepnm6u1amvhwDYAgCR0N5zG/1OD+oDL/Ach03KAoAaKwgerD/AbVxATwe8ZZ4/AGav/n7C3g5u7GJyVJENiAQi2rYSNIggKTvKB7n+z1Um3ENF/BW7bKOl2zPCJz5vamz6nfpWYr0Pu9rugNYuoylgrIivDx3uiWVYuVWVVVfOVmYvbi0elMRNRl0PDPDOt/fOsYBY8zyOYgEDGsLXtf5ppp577eeacPmWKjJWhbVM16OQBxKqi5IaMDP/SvIoEc6eeB1SVWSGArFwbqxwApgiJiNdXGSSgdQajKgg3cM8dRVamyc7k2GhWrQ65pW+AwQJgRFpvx1hZFQZAnnMwEsDz63ywMqoqfZDc27uMyIzBTAeeKzN3Qa7la2VlLmNmvXYx+C8y4qg6RwlXZWbuR4wbK2J5+PGkzPQQs1I7HVgb+884nDtx+7QO3PT6JPWIOpMQ2zZgDla3deS+GsrMEJDoQVY43zA3dxtnekIApuuLZy5XCPRoMbRDeCogg493E2F6AyBW7cosIpnOInQdQ6mpzhtwumjrmrZc+eqtvf036MXtRcr082v9+o0vi/gAAA==", "ic_quest": "data:image/webp;base64,UklGRtQBAABXRUJQVlA4TMcBAAAvHcAHEJegJpKkqO6iu+h/Qgoj+LeBBVKMKIokqSG/cs5gAf8O8HACkKE0kq3mf7J7FfwKUFRE/waX4/wHkBD559N6/kpnVNVcAo2Nb1AfKgGfYoRYLtouESoOZP9VFwYDxEi22zbmxwdAgAgM/VebrBLeRfR/Aq7fGujnQALjR/wtqfVWF/sJacxeywbRfsDSx5QoecXtG0ikMTUklQzfcHFR50NXitntDdZtddOYGlKH5vEDYd12jqXMl0aO4YPv2w6hTw0JGrW4XW/h1H5IqfQhaFXavgg//Thr20rtNN3DFxFcbd2A0qqkHOz6iO/kRt8gVqn4n10fWYrWvDU2WsyVYFzvkPoUsa0ba/Ms43qH1MfUUM0btByw6yNe+5g3SlxR8BPjhdiHpoYkWgk4pw4FeymKqT5R/NRtP9xueI4qKQ91aMWPU+Fgh2i3mFODNXcatfgpBd/vp91Ukuct01tVWY4T/2PnOP225OLEtKpR5XYe7IuO/TQuSaScIl5zasrGucNi4XC7HjxDUolq1Z/cOMOTiBkoHlu2i7jDaRfolZglj0WLXeSnz3jKkBa7WHaOXf8QuATX7TT9SwKkm3OBfg76DgA=", "ic_tank": "data:image/webp;base64,UklGRvIBAABXRUJQVlA4TOUBAAAvHsAHEJegNrKVCIghJULNro6tytCxDqO7DzYBAKTB3SLwW1SKUcRZgR2KIklqjpzzEzF4RBBK0BAFUPMfBGX1FlAKn1JC9b+CgRPiZzKbaUnYiLCR+nRLtX8YZ9pdWmOrrTNAjG0raCQEkP8R+B/7rzZodjt4L6L/E3A/hu391wFSjWT48Smwt8pGLlytk1QIEMMmQFptpZ7hfVuQcAPBei1sleXpBhCw9CuM1cjKT8olAfgAAcBCqJveuEhcQP9WCE6uRmKz+La2b1xAA+qm16+rcYEkayMJQMtDWzxZMoCTrL2R12pnflW1ZIhnFJJnYa94w6oo2a6UgYKzEO/qpZD6GZaBImdm4bumJ4Q2wOxz9LIrT1UBlyHJ5sAcLD9RAVGfA1hj0ob+ktSnqPQ11sDEyD+owEH7pLGAbuOXcroSQqQ8RxrGnlnTi1OdAoIpJ8kpA+mqyE/FleTUxImYU7bES53pIcOHOaNhevz4R1z7q2LTSQJAJN0c6Cpu527A6LQJxm9A5VK3UXdzANOckR49wtTZIajNYrhDd0aaG0nBHJgc6LRWPTLABEM6AaPvjei1nZE8Asy3RlIwRCEAerPII+AOJA9w63sjBZFHuAGE9we3Hj0G3H8Y9iSPcP9jAHBvAQA=", "ic_town": "data:image/webp;base64,UklGRuQBAABXRUJQVlA4TNcBAAAvH4AGEJfAIADAMrPtBmfe13sGZ2EbyVYbvPdUAR3QApGvXz0o0ihSENs29Bf7ThkR1NZAAAGk8Gf+Q+jcOCStIqvorNEwM9TL7/dWTRYxnmH6lr9fe56Ou53/gcdzNRSDZYAY2W7cJiB4ExBhqf9qr0kJ/0f0fwKuZ/l4/a8crxtyyeM32W/An/xGkBQAL3J83X8/ngQJQuVB9pdd8vn+eyu1M4CsG8gnfi9KykOf5jS3MOzg736S7PlBaqctkh6lpzw6C8mgViSVC2Kz2jpAxoAWIzmA7tGZ5AIkB81pTtShHU6aMyyyPvFYbZYOZkKju43ZPEjNN9nLly9fvnxBYzht0qNHaQ/LF33RuXhsjT7uFmQjk1xyOBYdBIEU5kY/OXhq475pInMhWHfS041ubm4fakaMrm3qUfV0GEE6IjWmh+gxkBsDm8oEzSXXSPc/uaRHb9ZZ2lyt59A5Ss1lKzOTXBDlsUiCJGsOzgWCXSPrTnJJezz2QSIHSUVCr8HGREFuwARQMXrL1Bj3To1EygUZoX0i12mobMq4Y+QBahJMGyTnY0FPeXaSIxJCWQR9AjDSzWkE3Zw2ENWiQC7Iay2dnACMdHuscn2VzwWdnFWuf5fnCwAA", "panel": "data:image/webp;base64,UklGRrICAABXRUJQVlA4TKUCAAAvKMAJELegqJEkZXb3mNnAvc/sqVcTyVbzPjmH8lcIYDCBMORS4QE1AYA0bHB/XtYxhv1/CzD/ITmyCZHT/o2aX+jkPKK22r1pA8R7DF5e2O66HE0KAUAEACAAgQCQ/nkMEmTbitsomtBkEGAj73+tkp10r+DeiP5PwPt+UP5LDfs5+GeqF7UL2xnsh7/uR7rhjd1G4DScYQFn+bw4L+q0u07d8PZcYQy9TOt159sFQObFy7TOy9SfjtOfr/My/wwG52UatyD71yzut0z9vMxjN3hqOMP+iH/+2Ebohrf9GTzdY+JIFHK5HqiSiPqY1qkf3oYzOJ2PdBRJmmsTAdGSjqjbOl9Og1s0HblahAsCr2e1pCN9GgPsMeWSLbYKiMDzRcXyBU4ze8x3WhtA5tpEvznXy2Exl6wVaIBcLb9Kl9tKA7JNwHL8TS71Nqs0UDziF+NdqdBAQOQG8YjbcjddjtLq1QtyL3DEbbqb12lPxQoNpKgoTUU94rbenZd2eVYwW8xaGqhymbYw3MVWP+aitkwTBcvltP9Ur/kicIHSFFPc1vBNroXPjdwUVDjuwvB2vtFLM9tQRBFKvIy9n0o6cm1ILrnJHZDTEbd17oc3zsu0xyMd2doEMg1fVgXzkb4Y52mP6SDXL6XxoqLZFBcvduGc9uhBqfCs5BvgyYtWc3RZb07DuMd0RxPICE9e1PY8Utzuws2R8g1NAeQJFUyfcGTaYzrIpVXll5riF/My7dHEkUttfMxqgRaTLvMZuuHGqIlWWn3y+pA4SBEfW3icXqaZfo+a5GsBRfdT7Yc3hn2dx+3x55wGT7vBfl9cx3m7V75eNDzOcGIY7NdlZlxcEZxduFVAPQ2j56Wb1mXup9+PTLcqjDq8/elHf/5tpz/DG/w/AQA=", "tag": "data:image/webp;base64,UklGRsQBAABXRUJQVlA4TLgBAAAvLMAEEL/AKJIkRb3MeHcGmP0ru/fYYBtJkpp9ZjLFzPmnJlNSGslW8zNJZYulBPovCsmf/wCgqqZWvvgJ6tAsHPXqf594oByC0xbbc3xlm5bLkkrAAAhADABwIIgAGJD+FwPE2raaSkNGDCiiY/+t6k8dnBvR/wm4Xrrf8qHkAyTe9EG86Z3e0l8ZP0XvD9a9IT8WopTitzN490JmVCrT/8L87ZIGrHsRxzz9w6nKscOqyk6FnQp7ZZnSoCeZcSj/p7bKuvfWW4fWd2jQ93udxzxYpwvJlDwvddW+re187jS67m1fq5Yp5liCk4WcFuraoJ93Wr9t3LRKWuYYxmKdwliCn29942w6NvXWReunpAb7Wm9gnGwhMFeOtnWapC61o7d+So1OY1tmxQLBXbIBjctxblKHQ5vgYHu5Skedp0AJxl0yoQQ7HvXcpNbVOtC0apPWCguzVAIYdyE/FkKc6kLf1rYDfUeqLHOFRUJTigV7CwUfGGctHwoJIUlTTL4Qbsbic1Icvz/4PHgD7gJJ1g+QxdvipQCScdL1LONTTspK+f0BSSkreeOudyVj7+jLTteH+i0vAQ=="};
@@ -3191,9 +3191,9 @@ function slice3(im,a,b,w,h){const iw=im.naturalWidth,ih=im.naturalHeight;let k=M
  x.imageSmoothingEnabled=false;x.drawImage(im,0,0,cap,ih,a,y,cw,dh);if(mw>0)x.drawImage(im,cap,0,iw-cap*2,ih,a+cw,y,mw,dh);x.drawImage(im,iw-cap,0,cap,ih,a+cw+mw,y,cw,dh)}
 const _B68=B;B=function(l,a,b,w,h,fn,on=true,col='#2b8fb8'){const sk=on?skinFor(col):'btn_gray';if(NOUI||!uiOk(sk))return _B68(l,a,b,w,h,fn,on,col);if(h>=90){b+=h-62;h=62}
  btns.push({a,b,w,h,fn:on?fn:()=>say('เร็ว ๆ นี้'),ui:1});x.save();x.globalAlpha=.28;rr(a+3,b+6,w-4,h-2,Math.min(18,h/2.4),'#000');x.restore();slice3(UI[sk],a,b,w,h);
- TX(l,a+w/2+1,b+h/2+1,h>=50?21:Math.max(14,h*.42),'#00000070','center');TX(l,a+w/2,b+h/2-1,h>=50?21:Math.max(14,h*.42),on?'#fff':'#e4dde8','center')};
+ fitB178(l,a,b,w,h,on)};
 const _chip68=chip;chip=function(l,a,b,w,h,fn,on,col){const sk=on?skinFor(col||'#d9903a'):'tag';if(!uiOk(sk))return _chip68(l,a,b,w,h,fn,on,col);btns.push({a,b,w,h,fn,ui:1});slice3(UI[sk],a,b,w,h);
- TXs(fit(l,14,w-16),a+w/2,b+h/2,14,on?'#fff':'#5a4030','center')};
+ fitChip178(l,a,b,w,h,on)};
 const ICO68={coin:'ic_coin',drop:'ic_drop',heart:'ic_heart',gear:'ic_gear'};
 const _ico68=ico;ico=function(n,cx,cy,sz,col){const k=ICO68[n];if(!k||!uiOk(k))return _ico68(n,cx,cy,sz,col);const im=UI[k],s=Math.max(1,Math.floor(sz*2.4/30))*(sz>=11?1:1),w=im.naturalWidth*s,h=im.naturalHeight*s;x.imageSmoothingEnabled=false;x.drawImage(im,Math.round(cx-w/2),Math.round(cy-h/2),w,h)};
 // ---------- main dock ----------
@@ -4944,14 +4944,14 @@ function aodHUD89(){const now=new Date(),hh=now.getHours(),L=VW74,X0=-VOX74;toas
  // clock drifts a few pixels every minute so nothing stays burned in on always-on screens
  const m=now.getMinutes(),dx=((m*37)%41)-20,dy=((m*53)%23)-11;const t=String(hh).padStart(2,'0')+':'+String(m).padStart(2,'0');
  const room=scene==='aq'&&typeof tankRoom90==='function'&&tankRoom90(),cx=room?224+dx:X0+64+dx,cy=room?118+dy:H-118+dy;x.save();x.globalAlpha=AOD89.ui>0?.95:.78;x.shadowColor='rgba(0,0,0,.45)';x.shadowBlur=10;
- TXB(t,cx,cy,64,'#fff7e6','left');TXs('วัน'+TH_DAY89[now.getDay()]+' '+now.getDate()+' '+TH_MON89[now.getMonth()]+'  ·  '+(AOD89.last||''),cx+4,cy+50,16,'#fff1d6','left');x.restore();
+ if(typeof info181==='function')info181(cx,cy,now,room);else TXB(t,cx,cy,64,'#fff7e6','left');x.restore();
  if(AOD89.ui>0){AOD89.ui-=1/60;const a=Math.min(1,AOD89.ui);x.save();x.globalAlpha=a;
   const per2=AOD89.per[AOD89.perI],pl=per2?'⏱ เปลี่ยนทุก '+(per2/60)+' นาที':'⏱ ไม่สลับเอง',hasM=MUSIC89.tracks.length>0;
   const items=[['◀',()=>{aodNext89(-1);AOD89.ui=6},56,'#5a7a8a'],['▶',()=>{aodNext89(1);AOD89.ui=6},56,'#5a7a8a'],[pl,()=>{AOD89.perI=(AOD89.perI+1)%AOD89.per.length;S.opt.aodPer89=AOD89.perI;AOD89.since=performance.now();save();AOD89.ui=6},200,'#8a6a4a'],
    [(S.opt.amb89?'🌊 เสียงน้ำ: เปิด':'🌊 เสียงน้ำ: ปิด'),()=>{S.opt.amb89=!S.opt.amb89;amb89(!!S.opt.amb89);save();AOD89.ui=6},170,S.opt.amb89?'#2b8fb8':'#7a8a90'],
    [hasM?(S.opt.music89?'♪ เพลง: เปิด':'♪ เพลง: ปิด'):'♪ เพลง Lofi (เร็ว ๆ นี้)',()=>{if(!hasM){say('เพลง Lofi กำลังมา · ตอนนี้ฟังเสียงน้ำไปก่อนนะ');return}S.opt.music89=!S.opt.music89;music89(!!S.opt.music89);save();AOD89.ui=6},hasM?140:200,hasM&&S.opt.music89?'#8a5aa8':'#7a8a90']];
   if(scene==='aq'&&Object.keys(S.fish||{}).length)items.push(['🍤 ให้อาหาร',()=>{feed();AOD89.ui=6},140,'#d98b3a']);
-  items.push(['✕ ออก',aodExit89,110,'#b0503a']);
+  if(typeof PICK181!=='undefined')items.push([A181.text.pick,()=>{PICK181.on=true;PICK181.sel=null;AOD89.ui=6},150,'#4a8a9a']);items.push(['✕ ออก',aodExit89,110,'#b0503a']);
   const tw=items.reduce((s,q)=>s+q[2]+8,-8),bx=Math.round(W/2-tw/2),by=H-64;rr(bx-14,by-12,tw+28,62,22,'#2a1c12cc');let xx=bx;for(const[l,fn,w,col]of items){chip(l,xx,by,w,38,fn,true,col);xx+=w+8}
   TXs('🛡 เปิดทิ้งไว้ได้ทั้งวัน · ปลาไม่อด ไม่ป่วยเพิ่ม น้ำไม่เสีย (ไม่ได้ XP เพิ่มระหว่างดู) · แตะเพื่อเปิดปุ่ม',W/2,by-26,13,'#fff1d6','center');x.restore()}}
 // the scenes draw only the picture while watching
@@ -6946,6 +6946,54 @@ const RW103={
   "gold": 80,
   "xp": 20,
   "rp": 1
+ },
+ "visit": [
+  {
+   "day": 1,
+   "gold": 100,
+   "xp": 10,
+   "rp": 0
+  },
+  {
+   "day": 2,
+   "gold": 150,
+   "xp": 15,
+   "rp": 0
+  },
+  {
+   "day": 3,
+   "gold": 200,
+   "xp": 20,
+   "rp": 0
+  },
+  {
+   "day": 4,
+   "gold": 250,
+   "xp": 25,
+   "rp": 1
+  },
+  {
+   "day": 5,
+   "gold": 300,
+   "xp": 30,
+   "rp": 0
+  },
+  {
+   "day": 6,
+   "gold": 400,
+   "xp": 40,
+   "rp": 1
+  },
+  {
+   "day": 7,
+   "gold": 800,
+   "xp": 80,
+   "rp": 2
+  }
+ ],
+ "momentDaily": {
+  "gold": 30,
+  "xp": 10
  }
 }
 ;
@@ -15214,6 +15262,646 @@ function hit177(f,key){if(f.key92===key)return;const C=f.c177||(f.c177=new Map()
  const e=C.get(key);if(e){C.delete(key);C.set(key,e);f.cv92=e.cv;f.mask92=e.mask;f.R92=e.R;f.key92=key;if(e.sh){f.sh92=e.sh;f.shk92=key}else{f.sh92=null;f.shk92=null}return}
  // a new frame: fresh canvases (the old ones now belong to the cache)
  if(f.key92&&C.has(f.key92)){f.cv92=null;f.sh92=null;f.shk92=null}f.key92=null}
+
+// V1.78 a clearer start (data: core/data/intro178.json): every character has a name and a short story and is introduced on a card
+// before you pick; a how-to-play book after the house name (again from the ☰ menu); the first chapter goes straight to the tank and
+// says the tank and the medaka basin are free; story quests come one at a time (a card from the townsperson, the tracker only after
+// you accept, a card when done, the next one a little later); today's care and the discovery book wait until Lv 3; the quest's
+// button says where it goes and opens that place; button and chip labels shrink to fit their frame instead of being cut off.
+const IN178={
+ "_note": "V1.78 (owner, 27 Nov 2026: 'เควสมันเร็ว และงงไป อยากให้ทำ Title แนะนำการเล่น ปุ่มเตือนกดในเควสก็ยังงงๆ ... อยากให้พอกดเข้าเกมส์เลือกตัวละครแล้ว มี Title การอธิบาย ... อธิบายตัวละครแต่ละตัวที่เราจะเอามาเลือกเล่น เลือกให้มาดูแลบ้านละปลาให้เรา'; names: 'ตั้งชื่อเรียกง่ายน่ารักและเขียนเรื่องสั้นให้ แล้วตรวจทีหลัง'; 'อ่างหน้าบ้าน ... บอกผู้เล่นด้วย'; 'ตัวอักษรในหน้า เมนูต่างๆ มันหล่นหาย อยากให้ปรับให้มีขนาดอ่านง่าย เท่ากรอบ หรือถ้าไม่พอก็ขยายกรอบ'). chars: every character's name (shown in the creator instead of the hairstyle), a short story (why they come to look after your house and fish) and a greeting — the owner reviews and edits these freely. howto: the how-to-play pages shown once after the house name (again from the ☰ menu). quest: the story quests come one at a time: a card from the townsperson (who, why, what to do, the reward) that you accept, the tracker only after that, a card when it is done (the reward is taken there), and the next one only gapSec seconds of play later. The first-session chapter (V1.52) no longer asks tank or basin: it goes to the tank and says both are free. hideUntilLv: today's care on the tank and the discovery book stay hidden until this level. go: the quest card's button says where it takes you.",
+ "chars": {
+  "f1": {
+   "name": "ใบเตย",
+   "story": "เด็กสาวที่ปลูกผักสวนครัวเต็มระเบียง ได้ยินว่าบ้านนี้มีอ่างเมดากะหน้าบ้าน เลยขอมาช่วยดูแลสวนกับปลาให้",
+   "hi": "ต้นไม้กับปลาเป็นเพื่อนกันนะ ฝากด้วยน้า"
+  },
+  "f2": {
+   "name": "มุก",
+   "story": "หนอนหนังสือตัวจริง อ่านตำราเลี้ยงปลามาครบทุกเล่มแล้ว อยากลองดูแลตู้จริง ๆ สักครั้ง",
+   "hi": "อ่านมาเยอะแล้ว คราวนี้ขอลงมือจริงบ้างนะ"
+  },
+  "f3": {
+   "name": "ฟ้า",
+   "story": "ชอบเปิดเพลงคลอเวลาทำงานบ้าน บอกว่าปลาว่ายตามจังหวะเพลงได้ เลยอยากมาเปิดเพลงให้ปลาที่นี่ฟัง",
+   "hi": "วันนี้เปิดเพลงอะไรให้ปลาฟังดีนะ"
+  },
+  "f4": {
+   "name": "ปุยฝ้าย",
+   "story": "นักวาดสีน้ำที่ชอบวาดปลา มาอยู่บ้านนี้เพราะอยากเห็นปลาตัวจริงทุกวัน แล้ววาดเก็บไว้ทีละตัว",
+   "hi": "ขอวาดปลาตัวแรกของบ้านนี้นะ"
+  },
+  "f5": {
+   "name": "เจลลี่",
+   "story": "สายเกมที่เล่นเกมเลี้ยงปลามาหลายเกม รอบนี้อยากเลี้ยงของจริงในบ้านจริง ช่วยจับตาดูน้ำให้เป๊ะ",
+   "hi": "ภารกิจเลี้ยงปลา เริ่มได้!"
+  },
+  "f6": {
+   "name": "ข้าวหอม",
+   "story": "เรียบร้อย ใจเย็น ชอบนั่งอ่านหนังสือข้างตู้ปลาตอนบ่าย มาช่วยดูแลบ้านให้สะอาดน่าอยู่",
+   "hi": "บ้านนี้เงียบดีจัง ปลาก็สวย"
+  },
+  "f7": {
+   "name": "โกโก้",
+   "story": "รักสัตว์ทุกชนิด ทั้งหมา แมว และปลา ใจดีกับทุกตัว ตั้งใจจะทำให้บ้านนี้เป็นบ้านของสัตว์เลี้ยงทุกตัว",
+   "hi": "ปลาตัวเล็กก็ต้องได้รับความรักนะ"
+  },
+  "f8": {
+   "name": "น้ำผึ้ง",
+   "story": "ศิลปินผมเปียสีทอง ชอบแต่งห้องให้สวยเหมือนภาพวาด อยากจัดตู้ปลาให้เป็นงานศิลปะชิ้นแรกของบ้าน",
+   "hi": "มาแต่งตู้ให้สวยที่สุดในเมืองกัน"
+  },
+  "f9": {
+   "name": "ปลาย",
+   "story": "เงียบ ๆ แต่รู้เรื่องปลาเยอะมาก เคยช่วยงานร้านปลาในเมือง เลยถูกส่งมาดูแลตู้ของบ้านนี้",
+   "hi": "ถ้าปลาป่วย บอกนะ ฉันรู้วิธี"
+  },
+  "f10": {
+   "name": "นุ่น",
+   "story": "สายนอนชิล ชอบห้องอุ่น ๆ ผ้าห่มนุ่ม ๆ บอกว่าเสียงน้ำจากตู้ปลาช่วยให้หลับสบายที่สุด",
+   "hi": "ขอผ้าห่มกับเสียงน้ำ แค่นี้ก็พอแล้ว"
+  },
+  "f11": {
+   "name": "ปิ่น",
+   "story": "ใส่แว่นกลม ชอบฟังเพลงเก่าจากแผ่นเสียง จดบันทึกทุกวันว่าปลากินอะไร ว่ายยังไง",
+   "hi": "สมุดบันทึกปลาเล่มใหม่ เริ่มวันนี้"
+  },
+  "f12": {
+   "name": "มิ้นต์",
+   "story": "ร่าเริงสดใส เลี้ยงแมวมาตั้งแต่เด็ก อยากให้บ้านนี้มีทั้งปลา แมว และหมา อยู่ด้วยกันอย่างมีความสุข",
+   "hi": "บ้านนี้น่ารักจัง มีที่ให้น้องแมวไหม"
+  },
+  "f13": {
+   "name": "ใบชา",
+   "story": "สาวสายสวน ใส่รองเท้าบูทเหลืองคู่โปรด ชำนาญเรื่องไม้น้ำ อยากเห็นตู้นี้เขียวชอุ่มเหมือนป่าใต้น้ำ",
+   "hi": "ปลูกไม้น้ำต้นแรกด้วยกันนะ"
+  },
+  "f14": {
+   "name": "บัตเตอร์",
+   "story": "สายเกมผมหยิกสีทอง ชอบสะสมของครบเซ็ต ตั้งเป้าว่าจะสะสมปลาให้ครบสมุดสะสมของบ้านนี้",
+   "hi": "สมุดสะสมปลา ต้องครบทุกหน้า!"
+  },
+  "f15": {
+   "name": "ส้มจี๊ด",
+   "story": "สาวเปียสีส้ม คนรักปลาตัวจริง เลี้ยงหางนกยูงที่บ้านจนออกลูกเต็มตู้ อยากมาช่วยดูแลปลาที่นี่",
+   "hi": "ปลาหางนกยูงตัวแรก เลือกสีอะไรดี"
+  },
+  "m1": {
+   "name": "ภู",
+   "story": "หนุ่มผมยุ่ง ใส่เสื้อเขียวตัวโปรด เคยตกปลาในแม่น้ำหลังบ้านตั้งแต่เด็ก ฝันอยากมีตู้ปลาสวย ๆ ของตัวเอง",
+   "hi": "ให้ผมช่วยดูแลตู้นี้นะครับ"
+  },
+  "m2": {
+   "name": "เกม",
+   "story": "สายเกม แสกข้างเนี้ยบ คิดทุกอย่างเป็นแผน ตั้งใจจะทำให้บ้านนี้เป็นบ้านปลาเลเวลสูงสุดในเมือง",
+   "hi": "วางแผนเสร็จแล้ว ลุยกันเลย"
+  },
+  "m3": {
+   "name": "ปุณ",
+   "story": "ทรงอันเดอร์คัต ชอบอ่านนิยายผจญภัยใต้ทะเล อยากมีตู้ปลาไว้เป็นทะเลเล็ก ๆ ในบ้าน",
+   "hi": "ทะเลเล็ก ๆ ในบ้าน ฟังดูดีใช่ไหม"
+  },
+  "m4": {
+   "name": "ขุน",
+   "story": "สายนอนชิล มัดผมลอนต่ำ ทำอะไรช้า ๆ แต่ไม่เคยลืมให้อาหารปลา ชอบนอนกลางวันข้างตู้",
+   "hi": "ค่อย ๆ ไปก็ได้ ปลาไม่รีบหรอก"
+  },
+  "m5": {
+   "name": "โน้ต",
+   "story": "นักดนตรีผมเกรียน ฮัมเพลงตลอดเวลา บอกว่าฟองอากาศในตู้ปลาเป็นเสียงกลองที่เพราะที่สุด",
+   "hi": "ฟังเสียงฟองอากาศสิ เป็นจังหวะเลย"
+  },
+  "m6": {
+   "name": "ต้นกล้า",
+   "story": "หนุ่มเสื้อฮู้ดแดง รักต้นไม้ ชอบปลูกไม้น้ำจากกิ่งเล็ก ๆ จนเต็มตู้ มาช่วยให้บ้านนี้เขียวขึ้น",
+   "hi": "ต้นเล็ก ๆ วันนี้ วันหน้าโตเต็มตู้"
+  },
+  "m7": {
+   "name": "พู่กัน",
+   "story": "ศิลปินมัดมวย ไว้หนวดนิด ๆ ชอบวาดภาพปลาคาร์ปบนผ้า อยากได้แรงบันดาลใจจากปลาของบ้านนี้",
+   "hi": "ปลาว่ายสวยแบบนี้ ต้องวาดเก็บไว้"
+  },
+  "m8": {
+   "name": "ฝน",
+   "story": "ใส่เสื้อกันฝนสีเหลืองตลอด รักสัตว์ ชอบเก็บสัตว์ที่หลงทางมาดูแล อยากให้บ้านนี้อบอุ่นสำหรับทุกชีวิต",
+   "hi": "ฝนตกแบบนี้ ปลาคงชอบนะ"
+  },
+  "m9": {
+   "name": "ปิง",
+   "story": "หนุ่มผมหยักศก ชอบเกมแข่งขัน ท้าตัวเองว่าจะเลี้ยงปลาให้แข็งแรงที่สุดจนส่งออเดอร์ได้คะแนนเต็ม",
+   "hi": "ออเดอร์แรก ต้องผ่านแบบเต็มคะแนน"
+  },
+  "m10": {
+   "name": "วาฬ",
+   "story": "หนุ่มผมแดง เสื้อฮู้ดเหลือง หลงรักปลาตั้งแต่ไปพิพิธภัณฑ์สัตว์น้ำครั้งแรก ฝันอยากมีปลาครบทุกชนิด",
+   "hi": "ปลาตัวแรกของเรา ต้องตั้งชื่อเท่ ๆ"
+  },
+  "m11": {
+   "name": "หมอก",
+   "story": "หนุ่มฮู้ดดำ พูดน้อย ชอบนั่งชิลดูปลาตอนกลางคืน บอกว่าแสงไฟในตู้ตอนดึกสวยที่สุด",
+   "hi": "คืนนี้เปิดไฟตู้ทิ้งไว้นะ"
+  },
+  "m12": {
+   "name": "ดิน",
+   "story": "ใจดี เป็นพี่ใหญ่ของเพื่อน ๆ ชอบอ่านหนังสือวิธีดูแลบ้าน รับปากว่าจะดูแลบ้านและปลาให้อย่างดี",
+   "hi": "ไว้ใจผมได้เลย บ้านนี้อยู่ในมือผม"
+  },
+  "m13": {
+   "name": "บีท",
+   "story": "หนุ่มผมเดรด ร่าเริง ชอบเต้นและฟังเพลง ทำให้ทุกคนในบ้านอารมณ์ดี ปลาก็ด้วย",
+   "hi": "เปิดเพลงหน่อย ปลาจะได้เต้นด้วย"
+  },
+  "m14": {
+   "name": "บอน",
+   "story": "ใส่แว่นกลม เสื้อไหมพรมแดง หลงใหลไม้น้ำหายาก เลี้ยงบอนสีไว้เต็มห้อง ตั้งใจจะจัดตู้ไม้น้ำสวยที่สุด",
+   "hi": "ไม้น้ำต้นนี้ ต้องปลูกตรงไหนดีนะ"
+  },
+  "m15": {
+   "name": "โมจิ",
+   "story": "หนุ่มยิ้มง่าย ใจดีกับสัตว์ทุกตัว ชอบเล่นกับหมาแมวของเพื่อนบ้าน อยากให้ปลาของบ้านนี้มีเพื่อนเยอะ ๆ",
+   "hi": "สวัสดีครับ ฝากเนื้อฝากตัวด้วยนะ"
+  }
+ },
+ "text": {
+  "meet": "มาทำความรู้จักกัน",
+  "role": "จะมาอยู่บ้านนี้ ดูแลบ้านและปลาให้คุณ",
+  "trait": "นิสัย",
+  "likes": "ชอบ",
+  "pick": "เลือกคนนี้ ▶",
+  "back": "◀ ดูคนอื่น",
+  "acts": {
+   "read": "อ่านหนังสือ",
+   "music": "ฟังเพลง",
+   "tv": "ดูทีวี",
+   "computer": "เล่นคอม",
+   "paint": "วาดรูป",
+   "toys": "เล่นกับสัตว์เลี้ยง",
+   "bath": "แช่น้ำอุ่น"
+  },
+  "helps": "อยู่ด้วยกันแล้วจะ…",
+  "help": [
+   "ใช้ชีวิตเองตามเวลาจริง กิน นอน อาบน้ำ เล่น และดูปลา",
+   "อารมณ์ดีเมื่อไหร่ จะช่วยดูแลตู้ปลาให้คุณ",
+   "มีของที่อยากได้ และให้ของขวัญเมื่อมีความสุข"
+  ]
+ },
+ "howto": {
+  "title": "วิธีเล่น",
+  "next": "ต่อไป ▶",
+  "prev": "◀ ก่อนหน้า",
+  "done": "เริ่มเล่นเลย ✨",
+  "skip": "ข้าม",
+  "menu": "📖 วิธีเล่น",
+  "pages": [
+   {
+    "icon": "🎁",
+    "t": "ของขวัญบ้านใหม่",
+    "d": [
+     "บ้านนี้ได้ตู้ปลาในบ้าน 1 ตู้ และอ่างเมดากะหน้าบ้าน 1 อ่าง ฟรี!",
+     "เปิดอ่างหน้าบ้านครั้งแรก ได้เมดากะ 3 ตัวเป็นของขวัญ",
+     "เริ่มต้นมีเงิน 5,000 G ไว้ซื้อปลา ไม้น้ำ และของแต่งบ้าน"
+    ],
+    "show": "gift"
+   },
+   {
+    "icon": "🐟",
+    "t": "เลี้ยงปลา",
+    "d": [
+     "ซื้อปลาที่ร้านปลาในเมือง แล้วปล่อยลงตู้",
+     "ให้อาหารเมื่อปลาหิว · เปลี่ยนน้ำเมื่อน้ำขุ่น · ขัดตะไคร่เมื่อกระจกเขียว",
+     "ไอคอนเหนือตู้และอ่างจะบอกว่าปลาต้องการอะไร"
+    ],
+    "show": "fish"
+   },
+   {
+    "icon": "🏠",
+    "t": "แต่งบ้าน",
+    "d": [
+     "กด \"แต่งห้อง\" เพื่อซื้อและวางเฟอร์นิเจอร์",
+     "ของแต่ละชิ้นทำให้ตัวละครทำกิจกรรมได้ เช่น เตียงให้นอน ตู้เย็นให้กิน",
+     "บ้านยิ่งน่าอยู่ ค่า Cozy ยิ่งสูง"
+    ],
+    "show": "home"
+   },
+   {
+    "icon": "💛",
+    "t": "เพื่อนร่วมบ้าน",
+    "d": [
+     "ตัวละครใช้ชีวิตเองตามเวลาจริง: กิน นอน อาบน้ำ เล่น และดูปลา",
+     "แตะที่ตัวละครเพื่อดูว่าหิว ง่วง หรืออยากได้อะไร",
+     "ถ้ามีความสุข เขาจะช่วยดูแลตู้ปลาและให้ของขวัญคุณ"
+    ],
+    "show": "char"
+   },
+   {
+    "icon": "📜",
+    "t": "เควสและเมือง",
+    "d": [
+     "ชาวเมืองจะมาขอให้ช่วยทีละเรื่อง ทำแล้วได้ Gold และ EXP",
+     "กดปุ่มในการ์ดเควสเพื่อไปที่ที่ต้องทำได้ทันที",
+     "เปิดหน้านี้อีกได้จากเมนู ☰ → วิธีเล่น"
+    ],
+    "show": "quest"
+   }
+  ]
+ },
+ "quest": {
+  "gapSec": 25,
+  "firstGapSec": 4,
+  "says": "ฝากเรื่องนี้หน่อยนะ",
+  "goal": "สิ่งที่ต้องทำ",
+  "reward": "รางวัล",
+  "accept": "รับเควส ✓",
+  "later": "ไว้ทีหลัง",
+  "doneT": "เควสสำเร็จ!",
+  "take": "รับรางวัล 🎁",
+  "next": "เควสต่อไปจะมาในอีกไม่ช้า",
+  "waiting": "รอเควสถัดไป…",
+  "open": "📜 มีเควสใหม่"
+ },
+ "pilot": {
+  "tank": [
+   "บ้านนี้ได้ตู้ปลาในบ้าน และอ่างเมดากะหน้าบ้าน ฟรี!",
+   "ไปร้านปลาในเมือง เลือกปลาตัวแรก 1 ตัวมาใส่ตู้กัน"
+  ]
+ },
+ "hideUntilLv": 3,
+ "go": {
+  "buy_fish": [
+   "shop",
+   "ไปร้านปลา ▶"
+  ],
+  "buy_plant": [
+   "pshop",
+   "ไปร้านไม้น้ำ ▶"
+  ],
+  "feed": [
+   "aq",
+   "ไปที่ตู้ปลา ▶"
+  ],
+  "scape": [
+   "aq",
+   "ไปจัดตู้ ▶"
+  ],
+  "wc": [
+   "aq",
+   "ไปเปลี่ยนน้ำ ▶"
+  ],
+  "clean": [
+   "aq",
+   "ไปขัดตะไคร่ ▶"
+  ],
+  "trim": [
+   "aq",
+   "ไปตัดแต่ง ▶"
+  ],
+  "floater": [
+   "aq",
+   "ไปที่ตู้ปลา ▶"
+  ],
+  "decor": [
+   "home",
+   "ไปแต่งห้อง ▶"
+  ],
+  "sell_fish": [
+   "aq",
+   "ไปขายปลา ▶"
+  ],
+  "order": [
+   "orders",
+   "ไปบอร์ดออเดอร์ ▶"
+  ]
+ },
+ "fit": {
+  "btnMin": 12,
+  "chipMin": 11
+ },
+ "gift": "ของขวัญบ้านใหม่: เมดากะ 3 ตัวในอ่างหน้าบ้าน ฟรี! · ลองให้อาหารดูนะ"
+}
+;
+const INTRO178={id:null,done:null,t:0},HOWTO178={on:false,p:0},QD178={mode:null,later:0};
+function on178(){return!!(S.meta&&S.meta.q178&&S.meta.q178.on)}   // a game started through the title (V1.78 on); older saves and tests keep the old start
+function nm178(id){const c=IN178.chars[id];return c?c.name:''}
+// ---------- names in the creator (the hairstyle stays as q.hair) ----------
+(function(){try{for(const q of SP148.sheets){const c=IN178.chars[q.id];if(c&&!q.hair){q.hair=q.n;q.n=c.name}}}catch(e){}})();
+// ---------- text that fits its frame ----------
+function fitSz178(t,w,sz,min,wt){t=String(t);let s=sz;x.font=(wt||500)+' '+s+'px '+FONT;while(s>min&&x.measureText(t).width>w){s--;x.font=(wt||500)+' '+s+'px '+FONT}return s}
+function fitB178(l,a,b,w,h,on){if(NOUI)return;const z=h>=50?21:Math.max(14,h*.42),fs=z>=30?22:z>=22?19:z>=16?16:15,s=fitSz178(l,w-18,fs,IN178.fit.btnMin);
+ const t=x.measureText(String(l)).width>w-18?fit(String(l),s,w-18):String(l);TXs(t,a+w/2+1,b+h/2+1,s,'#00000070','center');TXs(t,a+w/2,b+h/2-1,s,on?'#fff':'#e4dde8','center')}
+function fitChip178(l,a,b,w,h,on){const s=fitSz178(l,w-16,14,IN178.fit.chipMin);TXs(fit(String(l),s,w-16),a+w/2,b+h/2,s,on?'#fff':'#5a4030','center')}
+// ---------- the character card ----------
+function intro178(X,Y,w,h){const id=INTRO178.id,c=IN178.chars[id]||{name:id,story:'',hi:''},T=typeof type170==='function'?(()=>{const p=S.profile86||{},k=p.sp148;try{p.sp148=id;return type170()}finally{p.sp148=k}})():null,tx=IN178.text;
+ btns.length=0;TXB(tx.meet,X+w/2,Y+40,24,'#4a3a2a','center');
+ const pw=Math.min(340,Math.round(w*.34)),ph=h-150,px=X+30,py=Y+70;card84(px,py,pw,ph,'#eef4ea');
+ // a little show of what they do at home: walk, read, music, paint, wave
+ const seq=[[0,8,1.6],[39,2,1.4],[41,2,1.4],[43,2,1.2],[45,1,1.2],[27,2,1.2]],tot=seq.reduce((s,q)=>s+q[2],0);let tt=(T0-INTRO178.t)%tot,k=0;while(tt>seq[k][2]){tt-=seq[k][2];k++}
+ const[f0,n]=seq[k],fr=f0+(n>1?Math.floor(T0*(n>2?9:2.5))%n:0),hh=Math.min(ph-60,Math.round((pw-40)*SP148.fh/SP148.fw));
+ x.fillStyle='rgba(60,80,60,.18)';x.beginPath();x.ellipse(px+pw/2,py+ph-30,hh*.2,7,0,0,6.283);x.fill();frame148(id,fr,px+pw/2,py+ph-30-hh*146/150,hh,false);
+ // speech bubble
+ const by=py+18,bw=pw-30;rr(px+15,by,bw,46,16,'#fffdf6');rr(px+pw/2-8,by+40,16,12,4,'#fffdf6');const hs=fitSz178('“'+c.hi+'”',bw-20,16,12);TXs(fit('“'+c.hi+'”',hs,bw-20),px+pw/2,by+23,hs,'#5a4636','center');
+ // the right side: name, personality, likes, story
+ const rx=px+pw+30,rw=X+w-30-rx;let y=py+30;TXB(c.name,rx,y,34,'#3a5a44');y+=40;TXs(tx.role,rx,y,15,'#8a6a4a');y+=34;
+ if(T){rr(rx,y-16,rw,40,14,'#f3ead6');TXs((T.icon||'')+' '+tx.trait+': '+T.name,rx+14,y+4,16,'#4a3a2a');y+=50;
+  const L=(T.likes||[]).map(a=>tx.acts[a]||a);if(L.length){TXs(tx.likes+': '+L.join(' · '),rx,y,15,'#5a6a4a');y+=30}}
+ const words=c.story.split(' '),lines=[];let cur='';x.font='500 17px '+FONT;for(const wd of words){const t=cur?cur+' '+wd:wd;if(x.measureText(t).width>rw&&cur){lines.push(cur);cur=wd}else cur=t}if(cur)lines.push(cur);
+ y+=8;lines.slice(0,6).forEach((l,i)=>TXs(l,rx,y+i*28,17,'#4a3a2a'));y+=Math.min(6,lines.length)*28+22;
+ TXB(tx.helps,rx,y,16,'#3a5a44');tx.help.forEach((l,i)=>TXs('· '+l,rx+6,y+30+i*27,15,'#5a4636'));
+ B(tx.back,X+30,Y+h-66,220,52,()=>{INTRO178.id=null},true,'#8a7a5a');btns[btns.length-1].l='intro178:back';
+ B(tx.pick,X+w-30-300,Y+h-66,300,52,()=>{const d=INTRO178.done;INTRO178.id=null;INTRO178.done=null;if(d)d()},true,'#4a9a6a');btns[btns.length-1].l='intro178:pick'}
+// tests of the older start (V1.47-V1.77 behaviour) set window.OLDSTART178 before the page loads: no card, book, quest pacing, square room or kit
+function old178(){return typeof window!=='undefined'&&!!window.OLDSTART178}
+maker148=(function(prev){return function(X,Y,w,h,done){if(INTRO178.id){intro178(X,Y,w,h);return}
+ return prev(X,Y,w,h,done&&!old178()?()=>{const p=S.profile86||{};INTRO178.id=p.sp148;INTRO178.done=done;INTRO178.t=T0}:done)}})(maker148);
+// ---------- how to play ----------
+function howto178(){const H_=IN178.howto,P=H_.pages,i=Math.max(0,Math.min(P.length-1,HOWTO178.p)),pg=P[i];btns.length=0;
+ x.fillStyle='rgba(20,28,34,.55)';x.fillRect(-VOX74,0,VW74,H);const w=Math.min(880,VW74-60),h=470,X0=W/2-w/2,Y0=H/2-h/2-10;nine84(X0,Y0,w,h,3);
+ TXs(H_.title+' · '+(i+1)+'/'+P.length,X0+30,Y0+36,15,'#8a6a4a');TXB(pg.icon+' '+pg.t,W/2,Y0+80,28,'#4a3a2a','center');
+ // a small picture for the page
+ const cy=Y0+170;try{if(pg.show==='char'&&sp148()){const hh=120;frame148(sp148(),[24,39,41,45][Math.floor(T0/1.2)%4],W/2,cy-60,hh,false)}
+  else if(pg.show==='fish'||pg.show==='gift'){const L=['guppy','neon_tetra','betta'].filter(k=>FSPR[k]);L.forEach((k,j)=>{const im=FSPR[k],s=3,ww=im.naturalWidth*s,hh=im.naturalHeight*s,fx=W/2+(j-1)*130-ww/2,fy=cy-hh/2+Math.sin(T0*2+j)*4;x.imageSmoothingEnabled=false;x.drawImage(im,fx,fy,ww,hh)})}
+  else{TXB(pg.icon,W/2,cy,64,'#4a3a2a','center')}}catch(e){}
+ pg.d.forEach((l,j)=>TXs(fit(l,17,w-80),W/2,Y0+262+j*32,17,'#5a4636','center'));
+ for(let j=0;j<P.length;j++){x.fillStyle=j===i?'#4a9a6a':'#cdbf9f';x.beginPath();x.arc(W/2+(j-(P.length-1)/2)*20,Y0+h-92,5,0,7);x.fill()}
+ const end=()=>{HOWTO178.on=false;S.meta.howto178=1;try{save()}catch(e){}};
+ if(i>0){B(H_.prev,X0+30,Y0+h-70,200,50,()=>{HOWTO178.p=i-1},true,'#8a7a5a');btns[btns.length-1].l='howto178:prev'}
+ else{chip(H_.skip,X0+30,Y0+h-62,120,36,end,true,'#8a7a5a');btns[btns.length-1].l='howto178:skip'}
+ if(i<P.length-1){B(H_.next,X0+w-30-220,Y0+h-70,220,50,()=>{HOWTO178.p=i+1},true,'#4a9a6a');btns[btns.length-1].l='howto178:next'}
+ else{B(H_.done,X0+w-30-240,Y0+h-70,240,50,end,true,'#4a9a6a');btns[btns.length-1].l='howto178:done'}}
+// ---------- the first chapter: straight to the tank, both are free ----------
+const PT152tank0=(typeof PT152!=='undefined'&&PT152.tank)?PT152.tank.d.slice():null;
+function pilotText178(){try{PT152.tank.d=on178()?IN178.pilot.tank.slice():PT152tank0}catch(e){}}
+// ---------- story quests one at a time ----------
+function q178(){S.meta.q178=S.meta.q178||{acc:-1,next:0};return S.meta.q178}
+function busy178(){return(typeof TITLE86!=='undefined'&&TITLE86.on)||HOWTO178.on||(typeof LVQ!=='undefined'&&(LVQ.length||LVSHOW))||(typeof pil152==='function'&&pil152())||(typeof AOD89!=='undefined'&&AOD89.on)}
+function hide178(){try{if(!on178())return false;if(typeof pil152==='function'&&pil152())return true;const s=storyQ();if(!s||lvNow()<s.lv)return false;const Q=q178();return Q.acc!==q7().si||storyReady()}catch(e){return false}}   // not accepted yet, or done (the done card shows)
+function npc178(s){const k=s&&s.npc||'mika';let n=k;try{n=(NPCQ[k]&&NPCQ[k].n)||(typeof NAMEQ123!=='undefined'&&NAMEQ123[k])||k}catch(e){}let im=null;try{im=typeof IMG123!=='undefined'&&IMG123['q_'+k];if(im&&typeof imgOk123==='function'&&!imgOk123(im))im=null}catch(e){}return{n,im}}
+function qcard178(kind){const s=storyQ();if(!s)return;const Qt=IN178.quest,N=npc178(s);btns.length=0;x.fillStyle='rgba(20,28,34,.45)';x.fillRect(-VOX74,0,VW74,H);
+ const w=Math.min(720,VW74-60),h=300,X0=W/2-w/2,Y0=H/2-h/2;nine84(X0,Y0,w,h,3);
+ if(N.im){const ih=150,iw=N.im.width*ih/N.im.height;x.imageSmoothingEnabled=false;x.drawImage(N.im,X0+40,Y0+50,iw,ih)}else{TXB('🧑',X0+90,Y0+120,64,'#4a3a2a','center')}
+ const rx=X0+200,rw=w-230;
+ if(kind==='offer'){TXs(N.n+' · '+Qt.says,rx,Y0+40,14,'#8a6a4a');TXB('📜 '+s.t,rx,Y0+74,24,'#4a3a2a');
+  const words=s.l.split(' '),L=[];let cur='';x.font='500 16px '+FONT;for(const wd of words){const t=cur?cur+' '+wd:wd;if(x.measureText(t).width>rw&&cur){L.push(cur);cur=wd}else cur=t}if(cur)L.push(cur);
+  L.slice(0,3).forEach((l,i)=>TXs(l,rx,Y0+110+i*26,16,'#5a4636'));
+  TXs(Qt.reward+': '+(s.gold?s.gold.toLocaleString()+' G · ':'')+s.xp+' EXP',rx,Y0+196,15,'#b8782a');
+  chip(Qt.later,X0+40,Y0+h-60,150,40,()=>{QD178.later=T0+60},true,'#8a7a5a');btns[btns.length-1].l='q178:later';
+  B(Qt.accept,X0+w-40-260,Y0+h-70,260,52,()=>{q178().acc=q7().si;try{save()}catch(e){}},true,'#4a9a6a');btns[btns.length-1].l='q178:accept'}
+ else{TXB('🎉 '+Qt.doneT,rx,Y0+60,26,'#3a6a44');TXs('📜 '+s.t,rx,Y0+100,18,'#4a3a2a');TXs(Qt.reward+': '+(s.gold?s.gold.toLocaleString()+' G · ':'')+s.xp+' EXP · RP +1',rx,Y0+140,17,'#b8782a');TXs(Qt.next,rx,Y0+176,14,'#8a7a6a');
+  B(Qt.take,X0+w-40-260,Y0+h-70,260,52,()=>{QD178.mode=null;const Q=q178();claimStory();Q.next=Date.now()+Qt.gapSec*1000;try{save()}catch(e){}},true,'#4a9a6a');btns[btns.length-1].l='q178:take'}}
+let pil178=false;
+function questTick178(){if(on178()){const pl=!!(typeof pil152==='function'&&pil152());if(pil178&&!pl){q178().next=Math.max(q178().next,Date.now()+IN178.quest.gapSec*1000)}pil178=pl}
+ if(!on178()||busy178()||!['home','aq','town'].includes(scene)||(scene==='town'&&typeof SHOP123!=='undefined'&&SHOP123.in)||(scene==='home'&&typeof R2!=='undefined'&&(R2.edit||R2.cat))||(scene==='aq'&&aqEdit))return null;
+ const s=storyQ();if(!s||lvNow()<s.lv)return null;const Q=q178(),si=q7().si;
+ if(Q.acc===si&&storyReady())return'done';
+ if(Q.acc!==si&&Date.now()>=Q.next&&T0>=QD178.later)return storyReady()?(Q.acc=si,'done'):'offer';return null}
+// the tracker and its arrows wait until the quest is accepted; the go button says where and opens it
+tutTarget=(function(prev){return function(){if(hide178())return null;return prev.apply(this,arguments)}})(tutTarget);
+chip=(function(prev){return function(l,a,b,w,h,fn,on,col){
+ if(l==='ไปเลย ▶'&&on178()){if(hide178())return;const s=storyQ(),g=s&&s.g&&IN178.go[s.g.ev];if(g){const f0=fn;fn=()=>{try{GOTAP76=true}catch(e){}go(g[0]==='decor'?'home':g[0]);if(g[0]==='home'){try{R2.edit=true}catch(e){}}};const r=prev(g[1],a-60,b,w+60,h,fn,on,col);if(btns.length)btns[btns.length-1].l='ไปเลย ▶';return r}}
+ if(typeof WD156!=='undefined'&&WD156.text&&String(l).startsWith(WD156.text.book)&&on178()&&lvNow()<IN178.hideUntilLv){btns.push({a:-9999,b:-9999,w:0,h:0,fn(){},ui:1});return}   // a stand-in: the caller renames the last button
+ return prev(l,a,b,w,h,fn,on,col)}})(chip);
+care141=(function(prev){return function(){if(on178()&&lvNow()<IN178.hideUntilLv)return;return prev.apply(this,arguments)}})(care141);
+// ---------- every frame: the how-to book, the quest cards, the ☰ entry ----------
+hud=(function(prev){return function(){const r=prev.apply(this,arguments);try{
+ // the first chapter no longer asks tank or basin
+ pilotText178();const P=on178()&&typeof pil152==='function'&&pil152();if(P&&P.step==='choose')choose152('tank');
+ if(!HOWTO178.on&&on178()&&S.meta.howto178===0&&scene==='home'&&!(typeof TITLE86!=='undefined'&&TITLE86.on)&&typeof sp148==='function'&&sp148()){HOWTO178.on=true;HOWTO178.p=0}
+ if(HOWTO178.on){howto178();return r}
+ const m=questTick178();QD178.mode=m;if(m)qcard178(m);
+ else if(on178()&&!busy178()&&['home','aq','town'].includes(scene)){const s=storyQ(),Q=q178();if(s&&lvNow()>=s.lv&&Q.acc!==q7().si&&Date.now()>=Q.next&&T0<QD178.later){const y=scene==='home'?150:scene==='town'?184:74;chip(IN178.quest.open,16,y,220,40,()=>{QD178.later=0},true,'#c08a3a');btns[btns.length-1].l='q178:open'}}
+}catch(e){}return r}})(hud);
+homeUI76=(function(f0){return function(){f0();try{if(!MENU76||scene!=='home')return;const n=MENU76_ITEMS().length,X=VW74-VOX74-24-330,Y=132+18+n*50+58+62+62;rr(X,Y-4,330,58,18,'#f6efe0f2');
+ chip(IN178.howto.menu,X+12,Y+2,150,42,()=>{MENU76=false;HOWTO178.on=true;HOWTO178.p=0},true,'#4a8a9a');btns[btns.length-1].l='menu178:howto'}catch(e){}}})(homeUI76);
+// a new game from the title turns all of this on (the step after the house name starts the game)
+title86=(function(prev){return function(){const was=typeof TITLE86!=='undefined'&&TITLE86.on&&TITLE86.step==='start';const r=prev.apply(this,arguments);
+ if(was&&!old178()){try{S.meta.q178={on:1,acc:-1,next:Date.now()+IN178.quest.firstGapSec*1000};S.meta.howto178=0;save()}catch(e){}}return r}})(title86);
+// the basin out front is free and open from the start: the first visit puts 3 grown medaka in it
+pondLv152=(function(prev){return function(){prev();try{if(on178())FEATURE_LV.pond=Math.min(FEATURE_LV.pond,ST152.pondLv)}catch(e){}}})(pondLv152);
+openPond=(function(prev){return function(e){const r=prev.apply(this,arguments);try{if(on178()&&!S.meta.gift178&&e&&/^medaka_basin/.test(e.key78||'')){const L=pondFish(e);S.meta.gift178=1;
+ if(!L.length){const ids=(typeof MEDAKA_SPECIES!=='undefined'?MEDAKA_SPECIES.map(q=>q.speciesId):[]).sort((a,b)=>{const A=DB[a.replace(/^medaka_/,'')]||{},B_=DB[b.replace(/^medaka_/,'')]||{};return(A.lv||1)-(B_.lv||1)||(A.price||0)-(B_.price||0)});
+  for(let i=0;i<3&&ids.length;i++)L.push({id:'g'+(Date.now()%1e7)+'_'+i,sp:ids[i%ids.length],hunger:55,health:100,size:1,age:400});say(IN178.gift);try{save()}catch(err){}}}}catch(err){}return r}})(openPond);
+
+// V1.79 a square first room and a wider garden for a game started from the title (data: core/data/room179.json)
+const RM179={
+ "_note": "V1.79 (owner, 27 Nov 2026: 'ปรับพื้นที่เริ่มเกมส์เป็นทรงจตุรัส และขยายพื้นที่ด้านนอกตอนเริ่มเกมส์อีก 2 ช่อง'; size chosen 21 x 21). A game started from the title gets a square first room of W x D tiles (V1.50 started at 33 x 13) and a garden ring yardPlus tiles wider all round (5 → 7; the two 'สวนกว้างขึ้น' steps still add 2 each). The 'ห้องกว้างขึ้น' (+4) and 'ห้องลึกขึ้น' (+3) steps still add on top; the camera fits the room as if it were fullW x fullD (what both steps of each give), so the room keeps one size on screen as it grows. Older saves keep their room. yardMove: garden pieces moved apart in the wider garden (the stone pond sat right by the medaka basin and their name tags overlapped).",
+ "W": 21,
+ "D": 21,
+ "yardPlus": 2,
+ "fullW": 29,
+ "fullD": 27,
+ "yardMove": {
+  "g_stonepond": [
+   "W/2+2.5",
+   "D+3.6"
+  ]
+ }
+}
+;
+function sq179(){try{return!!(S.room2&&S.room2.home&&S.room2.home.s179)}catch(e){return false}}
+// the room: the V1.50 small room (33 x 13 + the steps taken) becomes W x D + the same steps
+cfgFor=(function(prev){return function(f){const c=prev(f);try{if(f==='f1'&&sq179()&&small150()){const dw=RM179.W-(R150.room.fullW-R150.room.lessW),dd=RM179.D-(R150.room.fullD-R150.room.lessD);
+ c.W+=dw;c.D+=dd;if(c.part)c.part.a+=dw;if(c.bath)c.bath.a0+=dw;c.winB=(c.winB||[]).filter(([p,n])=>p+n<=c.W-1)}}catch(e){}return c}})(cfgFor);
+// the garden ring
+yardG=(function(prev){return function(){const g=prev();return sq179()?g+RM179.yardPlus:g}})(yardG);
+// the camera: the square room is fitted as if it had all its steps (like V1.50 did for its room)
+fitZoom74=(function(prev){return function(){if(!sq179())return prev();const fw=R150.room.fullW,fd=R150.room.fullD;R150.room.fullW=RM179.fullW;R150.room.fullD=RM179.fullD;try{return prev()}finally{R150.room.fullW=fw;R150.room.fullD=fd}}})(fitZoom74);
+// a new game from the title (the step after the house name) starts square
+const START179={on:false};
+start147=(function(prev){return function(){START179.on=typeof TITLE86!=='undefined'&&TITLE86.on&&TITLE86.step==='start'&&!old178();try{return prev.apply(this,arguments)}finally{START179.on=false}}})(start147);
+applyStart87=(function(prev){return function(kind){const r=prev.apply(this,arguments);try{if(START179.on&&kind==='empty'){home70().s179=1;r2apply52();
+ for(const e of R2LAY){const[w,d]=r2dim(e);e[1]=Math.max(0,Math.min(e[1],R2.W-w));e[2]=Math.max(0,Math.min(e[2],R2.D-d))}R2DIRTY=true}}catch(e){}return r}})(applyStart87);
+// the garden pieces a new game gets (some arrive a moment after the start) are moved apart once
+hud=(function(prev){return function(){const r=prev.apply(this,arguments);try{if(sq179()&&!(S.meta&&S.meta.yard179)&&S.room2&&S.room2.yard){let n=0;
+ for(const e of S.room2.yard){const m=RM179.yardMove[e[0]];if(m){e[1]=+Function('W','D','return '+m[0])(R2.W,R2.D).toFixed(1);e[2]=+Function('W','D','return '+m[1])(R2.W,R2.D).toFixed(1);n++}}
+ if(n){S.meta.yard179=1;R2DIRTY=true;try{save()}catch(e){}}}}catch(e){}return r}})(hud);
+
+// V1.80 a home to live in (data: core/data/life180.json): a game started from the title gets 5 free pieces (bed, fridge, bathtub,
+// sofa, bookcase), and in her free time she does things that need no furniture — stretches, reads on the floor, dances with her
+// headphones, sweeps, wipes the aquarium glass, looks out of the window, hums, jumps for joy — so watching the fish is one thing
+// among many (she walks to the tank less often).
+const L180={
+ "_note": "V1.80 (owner, 27 Nov 2026: 'ตัวละครยังไม่มีแอคชั่นอะไรมาก ยืนดูแต่ตู้ปลา'; 'ชุดของเริ่มต้น ฟรี 5 ชิ้น: ให้'). kit: a game started from the title gets these 5 pieces free in its first room (bed = sleep, fridge = meals, bathtub = keeping clean, sofa = rest, bookcase = reading), each at [a, b] (a along the back wall, b along the left wall; strings may use W and D) or the nearest free spot. free: in her free time, every every[0]..every[1] seconds she picks one of these things to do that need no furniture (a frame list from her sheet, how long, a bubble, where: here / floor = a free spot in the room / tank = in front of the aquarium / window = by the back wall; fun and mood she gains; 'happy' = only when her mood is at least moodMin). watchEvery: how often she walks to the aquarium to watch the fish (V1.50: every 35-70 s, so watching was nearly all she did).",
+ "kit": [["bed_quilt", 0.3, 0.3], ["bookcase", 0.2, 5.4], ["fridge_retro", "W-2.4", 0.2], ["sofa_cream", "W/2-1.75", "D/2-1"], ["bathtub", 0.2, "D-4.2"]],
+ "kitSay": "ของขวัญบ้านใหม่: เตียง ตู้เย็น อ่างอาบน้ำ โซฟา และชั้นหนังสือ ฟรี 5 ชิ้น!",
+ "free": {
+  "every": [24, 48],
+  "first": 12,
+  "acts": [
+   {"id": "stretch", "where": "here", "frames": [27, 28], "frameSec": 0.6, "sec": 6, "bubble": "🙆", "fun": 4, "mood": 1},
+   {"id": "readFloor", "where": "floor", "frames": [39, 40], "frameSec": 1.6, "sec": 14, "bubble": "📖", "fun": 10, "mood": 2},
+   {"id": "dance", "where": "floor", "frames": [41, 42], "frameSec": 0.45, "sec": 10, "bubble": "🎧", "fun": 10, "mood": 3, "bob": 0.03, "happy": 1},
+   {"id": "sweep", "where": "floor", "frames": [35, 36], "frameSec": 0.35, "sec": 9, "bubble": "🧹", "fun": 3, "mood": 2, "spots": 2},
+   {"id": "wipeTank", "where": "tank", "frames": [31, 24], "frameSec": 0.5, "sec": 8, "bubble": "✨", "fun": 4, "mood": 2, "back": 1},
+   {"id": "window", "where": "window", "frames": [25], "frameSec": 1, "sec": 8, "bubble": "🌤️", "fun": 3, "mood": 2},
+   {"id": "hum", "where": "here", "frames": [24], "frameSec": 1, "sec": 7, "bubble": "🎵", "fun": 4, "mood": 2, "bob": 0.015},
+   {"id": "happyJump", "where": "here", "frames": [34, 24], "frameSec": 0.4, "sec": 4, "bubble": "✨", "fun": 3, "mood": 2, "happy": 1}
+  ],
+  "moodMin": 70
+ },
+ "watchEvery": [80, 160]
+}
+;const FREE180={next:0};
+function val180(v){return typeof v==='string'?Function('W','D','return '+v)(R2.W,R2.D):v}
+// ---------- the starter kit ----------
+// the piece goes into the room at [a, b] or the nearest free spot (r2rectOk checks a piece already in the list)
+function put180(k,a,b){const e=[k,a,b,0];R2LAY.push(e);const i=R2LAY.length-1,[w,d]=r2dim(e);const ok=(x,y)=>{try{return r2rectOk(i,x,y,w,d)}catch(err){return false}};
+ const set=(x,y)=>{e[1]=+x.toFixed(1);e[2]=+y.toFixed(1);return true};if(ok(a,b))return set(a,b);
+ for(let r=0.5;r<Math.max(R2.W,R2.D);r+=0.5)for(let dx=-r;dx<=r;dx+=0.5)for(const dy of[-r,r]){if(ok(a+dx,b+dy))return set(a+dx,b+dy);if(ok(a+dy,b+dx))return set(a+dy,b+dx)}
+ R2LAY.pop();return false}
+function kit180(){let n=0;for(const[k,ea,eb]of L180.kit){if(!R2META[k])continue;const[w,d]=r2dim([k,0,0,0]);const a=Math.max(0,Math.min(R2.W-w,val180(ea))),b=Math.max(0,Math.min(R2.D-d,val180(eb)));if(put180(k,a,b))n++}
+ if(n){R2DIRTY=true;try{r2changed()}catch(e){}S.meta.kit180=n;try{save()}catch(e){}}return n}
+start147=(function(prev){return function(){const fromTitle=typeof TITLE86!=='undefined'&&TITLE86.on&&TITLE86.step==='start'&&!old178();const r=prev.apply(this,arguments);
+ if(fromTitle){try{kit180();toast=L180.kitSay}catch(e){}}return r}})(start147);
+// ---------- free time ----------
+function has180(id,k){const im=PI148[id];return!!(im&&im.naturalWidth>=(k+1)*SP148.fw)}
+function pick180(){const N=typeof nd153==='function'?nd153():{mood:60};const L=L180.free.acts.filter(a=>(!a.happy||N.mood>=L180.free.moodMin)&&a.frames.every(k=>has180(sp148(),k))&&(a.where!=='tank'||tank150()>=0));return L.length?L[Math.floor(Math.random()*L.length)]:null}
+function floor180(){for(let i=0;i<30;i++){const u=1+Math.random()*(R2.W-2),v=1+Math.random()*(R2.D-2);if(walk151(u,v))return true}return false}
+function go180(a){const A=LIFE151.act;if(a.where==='floor')return floor180();if(a.where==='tank'){const i=tank150();if(i<0)return false;const[u,v]=front151(i);return walk151(u,v)}
+ if(a.where==='window'){for(let i=0;i<20;i++){if(walk151(1+Math.random()*(R2.W-2),0.9))return true}return false}return true}
+function start180(a){LIFE151.act={kind:'free180',a,step:'go',t:T0,spots:a.spots||1};W150.on=false;W150.go=false;if(!go180(a)){LIFE151.act=null;return false}return true}
+function frame180(){const A=LIFE151.act;if(!A||A.kind!=='free180'||A.step!=='do')return null;const F=A.a.frames;return{k:F[Math.floor(T0/A.a.frameSec)%F.length],bob:A.a.bob||0}}
+tick151=(function(prev){return function(){const A=LIFE151.act;
+ if(A&&A.kind==='free180'){PC129.idle=0;W150.next=Math.max(W150.next||0,T0+20);const arrived=!PC129.mv&&!SIT149.pend;
+  if(A.step==='go'&&arrived){A.step='do';A.until=T0+A.a.sec/(A.spots||1);bubble151(A.a.bubble,Math.min(4,A.a.sec))}
+  if(A.a.back&&A.step==='do')F137.home='u';
+  if(A.step==='do'&&T0>=A.until){A.spots--;if(A.spots>0&&floor180()){A.step='go';return}
+   try{const N=nd153();N.fun=Math.min(100,(N.fun||0)+(A.a.fun||0));N.mood=Math.min(100,(N.mood||0)+(A.a.mood||0))}catch(e){}LIFE151.act=null;FREE180.next=T0+L180.free.every[0]+Math.random()*(L180.free.every[1]-L180.free.every[0])}
+  if(T0-A.t>60)LIFE151.act=null;return}
+ const r=prev.apply(this,arguments);
+ try{if(!LIFE151.act&&homeOk129()&&sp148()&&!W150.on&&!W150.go&&!SIT149.on&&!SIT149.pend&&!PC129.mv&&!(typeof PC129!=='undefined'&&PC129.pick)){
+  if(!FREE180.next)FREE180.next=T0+L180.free.first;
+  if(T0>=FREE180.next){FREE180.next=T0+L180.free.every[0]+Math.random()*(L180.free.every[1]-L180.free.every[0]);if(!due151()){const a=pick180();if(a)start180(a)}}}}catch(e){}
+ return r}})(tick151);
+plDraw129=(function(prev){return function(g,id,dir,i,flip,cx,by,h,tint){
+ try{if(scene==='home'&&!PREV136.on&&PREV136.k==null&&!(typeof WAVE143!=='undefined'&&T0<WAVE143.until)){const f=frame180();
+   if(f&&has180(sp148(),f.k)){PREV136.k=f.k;try{return prev.call(this,g,id,dir,i,false,cx,by-Math.abs(Math.sin(T0*6))*h*f.bob,h,tint)}finally{PREV136.k=null}}}}catch(e){}
+ return prev.apply(this,arguments)}})(plDraw129);
+// ---------- watching the fish: one thing among many ----------
+try{R150.pose.watch.every=L180.watchEvery.slice()}catch(e){}
+
+// V1.81 the always-on display (data: core/data/aod181.json): a picker for what to show (life at home, each tank, basin and pond;
+// one stays, several take turns) and a clock card (time, Thai date, weather — the game's or, if allowed, the real one — and what
+// is on screen). The old clock line of V0.89 is replaced by the card (build patch).
+const A181={
+ "_note": "V1.81 (owner, 27 Nov 2026: 'ระบบ Always On display เลือก Show หน้าตู้ปลา อ่างปลา หรือ บ่อปลา เพื่อให้คนเล่นอยากเปิดมองเวลา วันที่ ภูมิอากาศ ตามเวลาปัจจุบัน เพื่อให้มองได้ตลอด'). The fish-watching mode (V0.89) opens with a picker: choose which tank / basin / pond (and life at home) to show — one stays on, several take turns. The clock becomes a card: the time (the colon blinks), the Thai date with the Buddhist year, the weather and what is on screen (fish, water, what your character is doing). Weather: the game's season and weather, or — if the player turns it on and allows location — the real weather where they are from Open-Meteo (free, no key; the position is rounded to wx.round decimals and kept only in this browser, never in the save), refreshed every wx.everyMin minutes.",
+ "text": {
+  "pick": "🖼 เลือกจอโชว์",
+  "pickT": "เลือกจอที่อยากเปิดโชว์",
+  "pickD": "เลือกได้หลายที่ · ถ้าเลือกหลายที่จะสลับให้ดูทีละที่",
+  "all": "ทุกที่",
+  "start": "เริ่มโชว์ ▶",
+  "need": "เลือกอย่างน้อย 1 ที่",
+  "wxGame": "🌦 สภาพอากาศในเกม",
+  "wxReal": "📍 สภาพอากาศจริง (ขอตำแหน่ง)",
+  "wxAsk": "ใช้ตำแหน่งคร่าว ๆ เพื่อดูสภาพอากาศจริง · เก็บไว้ในเครื่องนี้เท่านั้น",
+  "wxFail": "ดูสภาพอากาศจริงไม่ได้ · ใช้สภาพอากาศในเกมแทน",
+  "fish": "ปลา",
+  "water": "น้ำ",
+  "be": "พ.ศ."
+ },
+ "wx": {"everyMin": 20, "round": 1, "url": "https://api.open-meteo.com/v1/forecast?latitude={lat}&longitude={lon}&current=temperature_2m,weather_code,is_day&timezone=auto"},
+ "codes": [[0, "☀️", "🌙", "ท้องฟ้าแจ่มใส"], [1, "🌤️", "🌙", "มีเมฆเล็กน้อย"], [2, "⛅", "☁️", "มีเมฆบางส่วน"], [3, "☁️", "☁️", "เมฆมาก"], [45, "🌫️", "🌫️", "หมอก"], [48, "🌫️", "🌫️", "หมอกน้ำค้างแข็ง"], [51, "🌦️", "🌧️", "ฝนปรอย"], [56, "🌧️", "🌧️", "ฝนปรอยเย็นจัด"], [61, "🌧️", "🌧️", "ฝนตก"], [66, "🌧️", "🌧️", "ฝนเย็นจัด"], [71, "🌨️", "🌨️", "หิมะตก"], [77, "🌨️", "🌨️", "เกล็ดหิมะ"], [80, "🌦️", "🌧️", "ฝนตกเป็นช่วง"], [85, "🌨️", "🌨️", "หิมะตกเป็นช่วง"], [95, "⛈️", "⛈️", "พายุฝนฟ้าคะนอง"]],
+ "season": {"spring": ["🌸", "ฤดูใบไม้ผลิ · ลมเย็นสบาย"], "summer": ["☀️", "ฤดูร้อน · แดดจ้า"], "autumn": ["🍂", "ฤดูใบไม้ร่วง · ใบไม้ปลิว"], "winter": ["❄️", "ฤดูหนาว · หิมะโปรย"]},
+ "night": ["🌙", "กลางคืน"]
+}
+;const PICK181={on:false,sel:null},WX181={busy:false,at:0,cur:null,err:''};
+function key181(c){return c.k+'#'+c.n}
+// what to show: the player's choice (S.opt.aod181 = keys), else everything as before
+const aodAll181=aodList89;
+aodList89=function(){const L=aodAll181();const k=S.opt&&S.opt.aod181;if(!Array.isArray(k)||!k.length)return L;const F=L.filter(c=>k.includes(key181(c)));return F.length?F:L};
+aodEnter89=(function(prev){return function(){const r=prev.apply(this,arguments);try{if(!Array.isArray(S.opt.aod181)){PICK181.on=true;PICK181.sel=null}}catch(e){}return r}})(aodEnter89);
+function picker181(){const T=A181.text,L=aodAll181();if(!PICK181.sel){const k=S.opt.aod181;PICK181.sel=new Set(Array.isArray(k)&&k.length?k:L.map(key181))}const sel=PICK181.sel;
+ btns.length=0;x.fillStyle='rgba(10,16,22,.6)';x.fillRect(-VOX74,0,VW74,H);const cols=Math.min(4,L.length),cw=230,ch=64,w=Math.max(560,cols*(cw+12)+48),rows=Math.ceil(L.length/cols),h=200+rows*(ch+12)+70,X0=W/2-w/2,Y0=Math.max(20,H/2-h/2);nine84(X0,Y0,w,h,3);
+ TXB(T.pickT,W/2,Y0+40,24,'#4a3a2a','center');TXs(T.pickD,W/2,Y0+68,14,'#8a6a4a','center');
+ L.forEach((c,i)=>{const a=X0+24+(i%cols)*(cw+12),b=Y0+92+Math.floor(i/cols)*(ch+12),on=sel.has(key181(c)),ic=c.k==='home'?'🏠':c.k==='aquarium'?'🐠':/pond|koi/.test(c.k)?'🪨':'🪴';
+  chip((on?'✓ ':'')+ic+' '+c.l,a,b,cw,ch-12,()=>{on?sel.delete(key181(c)):sel.add(key181(c))},true,on?'#4a9a6a':'#8a7a5a');btns[btns.length-1].l='aod181:'+key181(c)});
+ const by=Y0+92+rows*(ch+12)+8;chip(T.all,X0+24,by,140,40,()=>{L.forEach(c=>sel.add(key181(c)))},true,'#5a7a8a');btns[btns.length-1].l='aod181:all';
+ const real=S.opt.wx181==='real';chip(real?T.wxReal:T.wxGame,X0+176,by,w-200,40,()=>{if(real){S.opt.wx181='game';save()}else askWx181()},true,real?'#2b8fb8':'#7a8a90');btns[btns.length-1].l='aod181:wx';
+ if(!real)TXs(T.wxAsk,X0+176+(w-200)/2,by+52,12,'#8a6a4a','center');else if(WX181.err)TXs(WX181.err,X0+176+(w-200)/2,by+52,12,'#b0503a','center');
+ B(T.start,W/2-130,Y0+h-66,260,52,()=>{if(!sel.size){say(T.need);return}S.opt.aod181=[...sel];save();PICK181.on=false;AOD89.list=aodList89();AOD89.i=0;aodShow89();AOD89.ui=4},true,'#4a9a6a');btns[btns.length-1].l='aod181:start'}
+aodHUD89=(function(prev){return function(){const r=prev.apply(this,arguments);try{if(PICK181.on)picker181()}catch(e){}return r}})(aodHUD89);
+// ---------- weather ----------
+function code181(c){let best=A181.codes[0];for(const q of A181.codes)if(c>=q[0])best=q;return best}
+function askWx181(){const T=A181.text;try{if(!navigator.geolocation){WX181.err=T.wxFail;return}navigator.geolocation.getCurrentPosition(p=>{const k=Math.pow(10,A181.wx.round);
+  const pos={lat:Math.round(p.coords.latitude*k)/k,lon:Math.round(p.coords.longitude*k)/k};try{localStorage.setItem('ALS_WX181',JSON.stringify(pos))}catch(e){}S.opt.wx181='real';WX181.err='';WX181.at=0;save();fetchWx181()},
+  ()=>{WX181.err=T.wxFail;S.opt.wx181='game';save()},{maximumAge:36e5,timeout:15000})}catch(e){WX181.err=T.wxFail}}
+function fetchWx181(){if(WX181.busy)return;let pos=null;try{pos=JSON.parse(localStorage.getItem('ALS_WX181')||'null')}catch(e){}if(!pos)return;WX181.busy=true;
+ const u=A181.wx.url.replace('{lat}',pos.lat).replace('{lon}',pos.lon);fetch(u).then(r=>r.json()).then(j=>{const c=j&&j.current;if(c)WX181.cur={t:c.temperature_2m,code:c.weather_code,day:!!c.is_day};WX181.at=Date.now();WX181.busy=false})
+  .catch(()=>{WX181.at=Date.now();WX181.busy=false;WX181.err=A181.text.wxFail})}
+function wxLine181(){if(S.opt&&S.opt.wx181==='real'){if(Date.now()-WX181.at>A181.wx.everyMin*6e4)fetchWx181();const c=WX181.cur;if(c){const q=code181(c.code);return(c.day?q[1]:q[2])+' '+Math.round(c.t)+'° '+q[3]}}
+ let s='spring',n=false;try{s=season74();n=nightNow()}catch(e){}const q=A181.season[s]||A181.season.spring;return(n?A181.night[0]+' '+A181.night[1]+' · ':q[0]+' ')+q[1]}
+// ---------- the clock card ----------
+function what181(){const T=A181.text;try{const c=AOD89.list[AOD89.i%AOD89.list.length];if(c&&c.k==='home'&&sp148()){const nm=(typeof nm178==='function'&&nm178(sp148()))||'';const A=LIFE151.act,b=LIFE151.bub&&T0<LIFE151.bubT?LIFE151.bub:'';return'🏠 '+nm+(b?' '+b:'')}
+  if(scene==='aq'||scene==='pond'){const n=scene==='aq'?Object.keys(S.fish||{}).length:(POND?pondFish(POND).length:0);const wq=scene==='aq'?Math.round(tank().stats.water_quality):(POND?Math.round(pondW(POND).water):0);
+   return(AOD89.last||'')+' · '+T.fish+' '+n+' ตัว · '+T.water+' '+wq+'%'}}catch(e){}return AOD89.last||''}
+function info181(cx,cy,now,room){if(cy>H/2&&AOD89.ui>0)cy-=72;   // above the control bar
+ const T=A181.text,hh=String(now.getHours()).padStart(2,'0'),mm=String(now.getMinutes()).padStart(2,'0'),col=now.getSeconds()%2?':':' ';
+ const date='วัน'+TH_DAY89[now.getDay()]+' '+now.getDate()+' '+TH_MON89[now.getMonth()]+' '+(now.getFullYear()+543),wx=wxLine181(),wh=what181();
+ x.font='700 72px '+FONT;const tw=x.measureText('00:00').width;x.font='500 17px '+FONT;const w=Math.max(tw,x.measureText(date).width,x.measureText(wx).width,x.measureText(wh).width)+44,h=176,X=cx-22,Y=cy-62;
+ x.save();x.shadowBlur=0;rr(X,Y,w,h,24,'rgba(14,24,32,.42)');x.restore();
+ TXB(hh,cx,cy,72,'#fff7e6','left');x.font='700 72px '+FONT;const hw=x.measureText(hh).width;TXB(col,cx+hw,cy-4,72,'#fff7e6','left');x.font='700 72px '+FONT;const cw_=x.measureText(':').width;TXB(mm,cx+hw+cw_,cy,72,'#fff7e6','left');
+ TXs(date,cx+4,cy+50,17,'#fff1d6','left');TXs(wx,cx+4,cy+76,17,'#d8f0ff','left');TXs(wh,cx+4,cy+100,15,'#e8f4e0','left')}
+// the always-on screen shows only the picture and the card (no today's-care list)
+care141=(function(prev){return function(){if(AOD89.on)return;return prev.apply(this,arguments)}})(care141);
+
+// V1.82 reasons to come back and to watch (data: core/data/stay182.json; amounts: rewards.json visit / momentDaily = server rules)
+// 1. the 7-day visit calendar: a card the first time the house is opened on a new day (new games; anyone from the ☰ menu).
+// 2. fish moments: watching the tank (left alone, or the always-on display), now and then something lovely happens.
+const ST182={
+ "_note": "V1.82 (owner, 27 Nov 2026: 'ทำระบบให้น่าเล่น น่าเฝ้าจอ น่าเข้ามาตกแต่ง เลี้ยงปลาให้คนอยู่กับเกมส์ยาวๆ'). visit: a 7-day visit calendar — the first time you open the house on a new day (a game started from the title; anyone from the ☰ menu) a card shows the 7 days and today's gift (Gold / EXP / RP, fixed = server rules visit_1..visit_7, rewards.json visit). A missed day does not reset it (cozy): it moves on one day per day you come. moments: while you watch the tank (the tank view left alone for idleSec, or the always-on display) every every[0]..every[1] seconds something lovely happens — a banner and sparkles over the fish; the moments seen are counted in the diary, and the first one each day pays momentDaily (server rule moment_daily).",
+ "visit": {"title": "📅 ปฏิทินมาเยี่ยมบ้าน", "d": "มาเยี่ยมบ้านทุกวัน รับของขวัญทุกวัน · ขาดวันไหนก็ไม่เริ่มใหม่", "take": "รับของขวัญวันนี้ 🎁", "later": "ไว้ทีหลัง", "got": "รับแล้ว", "day": "วันที่", "menu": "📅 ปฏิทินมาเยี่ยม", "done": "รับของขวัญวันนี้แล้ว · พรุ่งนี้มาอีกนะ"},
+ "moments": {
+  "idleSec": 40,
+  "every": [100, 200],
+  "sec": 6,
+  "list": [
+   ["🐟✨", "ปลาว่ายเป็นฝูงพร้อมกัน สวยจัง"],
+   ["🫧", "ปลาเล่นฟองอากาศจากหัวทราย"],
+   ["💕", "ปลาสองตัวว่ายเคียงกัน"],
+   ["🌿", "ปลาแอบพักหลังใบไม้น้ำ"],
+   ["☀️", "แสงส่องลงมาเป็นริ้วในตู้"],
+   ["🎶", "ปลาว่ายวนตามจังหวะน้ำ"],
+   ["🔍", "ปลาตัวเล็กมาจ้องมองคุณ"],
+   ["🌙", "ปลาค่อย ๆ ลอยนิ่งเหมือนกำลังฝัน"]
+  ],
+  "toast": "ช่วงเวลาดี ๆ ในตู้ปลา",
+  "first": "ช่วงเวลาดี ๆ ครั้งแรกของวันนี้"
+ }
+}
+;const VIS182={on:false},MOM182={next:0,cur:null,until:0,touch:0};
+function day182(){const d=new Date();return d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate()}
+function v182(){S.meta.visit182=S.meta.visit182||{n:0,last:''};return S.meta.visit182}
+function due182(){const v=v182();return v.last!==day182()}
+// a new game's first day is for the opening chapter and its quests: the calendar starts the next day
+function first182(){const v=v182();if(!v.start)v.start=day182();return v.n===0&&v.start===day182()}
+function take182(){const v=v182();if(!due182())return;const R=RW103.visit[v.n%7];v.n++;v.last=day182();S.player.gold+=R.gold||0;S.home_progress=S.home_progress||{};S.home_progress.renovation_points=(S.home_progress.renovation_points||0)+(R.rp||0);
+ gx(R.xp||0);try{save()}catch(e){}say(ST182.visit.title+' · '+ST182.visit.day+' '+R.day+' +'+R.gold+' G · +'+R.xp+' EXP'+(R.rp?' · RP +'+R.rp:''))}
+function card182(){const T=ST182.visit,v=v182(),today=v.n%7,can=due182();btns.length=0;x.fillStyle='rgba(20,28,34,.5)';x.fillRect(-VOX74,0,VW74,H);
+ const w=Math.min(900,VW74-60),h=330,X0=W/2-w/2,Y0=H/2-h/2;nine84(X0,Y0,w,h,3);TXB(T.title,W/2,Y0+40,24,'#4a3a2a','center');TXs(T.d,W/2,Y0+68,14,'#8a6a4a','center');
+ const cw=Math.floor((w-48-6*10)/7);RW103.visit.forEach((R,i)=>{const a=X0+24+i*(cw+10),b=Y0+90,got=i<today||(i===today&&!can),cur=i===today&&can;
+  card84(a,b,cw,130,cur?'#fff3c4':got?'#e4eadc':'#fff7e6');if(cur){x.strokeStyle='#e0a030';x.lineWidth=3;x.strokeRect(a+1.5,b+1.5,cw-3,127)}
+  TXs(T.day+' '+R.day,a+cw/2,b+20,13,'#8a6a4a','center');TXB(i===6?'🎁':'💰',a+cw/2,b+56,i===6?34:28,'#4a3a2a','center');
+  TXs(R.gold+' G',a+cw/2,b+90,14,'#b8782a','center');TXs((R.rp?'RP +'+R.rp+' · ':'')+R.xp+' EXP',a+cw/2,b+110,11,'#6a5a4a','center');if(got)TXB('✓',a+cw-14,b+16,18,'#4a9a6a','center')});
+ if(can){chip(T.later,X0+24,Y0+h-62,150,40,()=>{VIS182.on=false;VIS182.skip=day182()},true,'#8a7a5a');btns[btns.length-1].l='visit182:later';
+  B(T.take,X0+w-24-300,Y0+h-70,300,52,()=>{take182();VIS182.on=false},true,'#4a9a6a');btns[btns.length-1].l='visit182:take'}
+ else{TXs(T.done,W/2,Y0+h-80,15,'#4a9a6a','center');B('ปิด',W/2-90,Y0+h-66,180,50,()=>{VIS182.on=false},true,'#8a7a5a');btns[btns.length-1].l='visit182:close'}}
+// ---------- fish moments ----------
+try{addEventListener("pointerdown",()=>{MOM182.touch=T0},true)}catch(e){}   // any touch: not just watching
+function watching182(){if(scene!=='aq'||(typeof aqEdit!=='undefined'&&aqEdit))return false;if(typeof AOD89!=='undefined'&&AOD89.on)return true;return T0-MOM182.touch>=ST182.moments.idleSec}
+function moment182(){const M=ST182.moments;if(!watching182()||!Object.keys(S.fish||{}).length){if(!MOM182.next)MOM182.next=T0+M.every[0];return}
+ if(!MOM182.next)MOM182.next=T0+M.every[0]*.5;if(!MOM182.cur&&T0>=MOM182.next){const L=M.list,q=L[Math.floor(Math.random()*L.length)];MOM182.cur=q;MOM182.until=T0+M.sec;MOM182.next=T0+M.every[0]+Math.random()*(M.every[1]-M.every[0]);
+  const m=S.meta.mom182=S.meta.mom182||{n:0,day:''};m.n++;if(m.day!==day182()){m.day=day182();const R=RW103.momentDaily;if(R){S.player.gold+=R.gold;gx(R.xp);say(M.first+' +'+R.gold+' G · +'+R.xp+' EXP')}}
+  try{log153&&log153(q[0]+' '+q[1])}catch(e){}try{save()}catch(e){}}
+ if(MOM182.cur){if(T0>=MOM182.until){MOM182.cur=null;return}const k=Math.min(1,(MOM182.until-T0)/1.2,(T0-(MOM182.until-M.sec))/0.6);x.save();x.globalAlpha=Math.max(0,k);
+  const t=MOM182.cur[0]+'  '+MOM182.cur[1];x.font='600 18px '+FONT;const tw=x.measureText(t).width+44,bx=W/2-tw/2,by=AOD89&&AOD89.on?28:96;rr(bx,by,tw,44,22,'rgba(255,248,230,.92)');TXs(t,W/2,by+22,18,'#5a4030','center');
+  try{for(const s of fishSpr.slice(0,6)){const q=isoFishPos(s),[fx,fy]=isoP(q.a,q.b,q.z),ph=(T0*1.3+fx*.013)%1;x.globalAlpha=Math.max(0,k)*(1-ph);TXs('✨',fx+Math.sin(T0*2+fy)*6,fy-14-ph*26,14,'#fff','center')}}catch(e){}x.restore()}}
+// ---------- every frame ----------
+hud=(function(prev){return function(){const r=prev.apply(this,arguments);try{
+ moment182();
+ const busy=(typeof busy178==='function'&&busy178())||(typeof QD178!=='undefined'&&QD178.mode)||(typeof HOWTO178!=='undefined'&&HOWTO178.on);
+ if(!VIS182.on&&!busy&&scene==='home'&&typeof on178==='function'&&on178()&&due182()&&!first182()&&VIS182.skip!==day182()&&!(S.meta.pilot152&&!S.meta.pilot152.done))VIS182.on=true;
+ if(VIS182.on&&!busy)card182()}catch(e){}return r}})(hud);
+homeUI76=(function(f0){return function(){f0();try{if(!MENU76||scene!=='home')return;const n=MENU76_ITEMS().length,X=VW74-VOX74-24-330,Y=132+18+n*50+58+62+62;
+ chip(ST182.visit.menu,X+168,Y+2,150,42,()=>{MENU76=false;VIS182.on=true},true,'#c08a3a');btns[btns.length-1].l='menu182:visit'}catch(e){}}})(homeUI76);
 
 // ===== Environment layer (Phase 0) — injected by client/build/build.py right before the game boots =====
 // development : everything on (team mode via 7 taps on the version line, Sandbox Gold, festival preview)
