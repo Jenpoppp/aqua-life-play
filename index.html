@@ -17520,7 +17520,7 @@ function tr183(s){if(!TR183.on||typeof s!=='string'||!/[฀-๿]/.test(s))return
  if(TR183.cache.size>20000)TR183.cache.clear();TR183.cache.set(s,r);return r}
 // every text drawn or measured on a canvas
 function wrap183(o){for(const k of['fillText','strokeText','measureText']){const f=o[k];if(typeof f!=='function'||f.__183)continue;const g=function(t,...a){return f.call(this,TR183.on?tr183(String(t)):t,...a)};g.__183=1;o[k]=g}}
-wrap183(CanvasRenderingContext2D.prototype);
+if(typeof CanvasRenderingContext2D!=='undefined')wrap183(CanvasRenderingContext2D.prototype);
 // the game's main context has its own fillText / strokeText (V1.09 bigger text etc.): wrap those too, again if they are replaced
 function hook183(){try{if(typeof x!=='undefined'&&x)for(const k of['fillText','strokeText','measureText'])if(Object.prototype.hasOwnProperty.call(x,k)&&!x[k].__183){wrap183(x);break}}catch(e){}}
 hook183();
