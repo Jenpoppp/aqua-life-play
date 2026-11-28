@@ -1,8 +1,8 @@
 // Aqua Life Story — V1.97 service worker for the public play page (GitHub Pages). The page asks for it only there.
 // The pictures (img/, named by their content), the songs and the character sheets are kept on the phone: the next visit starts
 // without downloading them again. The page itself is always asked from the network first (new versions show at once) and kept
-// for offline. A new version (V2.00) starts a fresh store and removes the old one.
-const V='als-V2.00';
+// for offline. A new version (V2.01) starts a fresh store and removes the old one.
+const V='als-V2.01';
 self.addEventListener('install',e=>{self.skipWaiting()});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(K=>Promise.all(K.filter(k=>k.startsWith('als-')&&k!==V).map(k=>caches.delete(k)))).then(()=>self.clients.claim()))});
 self.addEventListener('fetch',e=>{const r=e.request;if(r.method!=='GET')return;const u=new URL(r.url);if(u.origin!==location.origin)return;const p=u.pathname;
